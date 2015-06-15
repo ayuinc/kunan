@@ -34,7 +34,17 @@ $xxl-desktop: 1980px;
 @media only screen and (min-width: $xl-desktop) {}
 @media only screen and (min-width: $xxl-desktop) {}
 
-@font-face src;
+@font-face{
+	font-family: "Roboto-Regular";
+	src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face{
+	font-family: "Ailerons";
+	src: url(../fonts/Ailerons.ttf);
+}
+* {
+	font-size: "Roboto-Regular";
+}
 /*MENU*/
 #menu {
 	position: fixed;
@@ -52,6 +62,8 @@ $xxl-desktop: 1980px;
 
 /*HER0 IMAGE*/
 #hero-image {
+	background-repeat: no-repeat;
+  background-size: cover!important;
 	.overlay {
 		width: 100%;
 		background-color: rgba(0,0,0,0.3);
@@ -59,23 +71,45 @@ $xxl-desktop: 1980px;
 	}
 	.central-text {
 		position: absolute;
-		bottom: 20%;
+		bottom: 45%;
 		left: 50%;
 		@include transform(translateX(-50%));
 		h2 {
 			font-size: 40px;
 			font-size: rem(40px);
+			font-family: "Ailerons";
 		}
 		p {
 			font-size: 26px;
 			font-size: rem(26px);
 			line-height: 1.2;
 		}
+		.fecha {
+			font-size: 16px;
+			font-size: rem(16px);
+		}
 		.botons {
 			.btn {
-				width: 203px;
+				/*width: 203px;*/
 				height: 40px;
+				font-size: 13px;
+				font-size: rem(13px);
 			}
+		}
+	}
+}
+/*DESCRIPTION*/
+#description {
+	.container {
+		padding: 4% 10%;
+		p {
+			font-size: 24px;
+			font-size: rem(24px);
+			/*Roboto light*/
+		}
+		h3 {
+			font-size: 30px;
+			font-size: rem(30px);/*Ailerons regular*/
 		}
 	}
 }
