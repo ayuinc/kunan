@@ -33,3 +33,34 @@ $xxl-desktop: 1980px;
 @media #{$lg-up} {}
 @media only screen and (min-width: $xl-desktop) {}
 @media only screen and (min-width: $xxl-desktop) {}
+
+@font-face src;
+/*MENU*/
+#menu {
+	position: fixed;
+	z-index: 10;
+	padding-top: 18px;
+	nav {
+		a {
+			font-size: 14px;
+			font-size: rem(14px);
+			padding: 0 10px; 
+		}
+	}
+}
+
+/*HER0 IMAGE*/
+#hero-image {
+	.overlay {
+		width: 100%;
+		background-color: rgba(0,0,0,0.3);
+		position: absolute;
+	}
+	.central-text {
+		position: absolute;
+		h2 {
+			font-size: 40px;
+			font-size: rem(40px);
+		}
+	}
+}
