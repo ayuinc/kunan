@@ -341,7 +341,7 @@ module.exports = function (grunt) {
   // Watch for images in the src/img folder 
   grunt.registerTask('responsive', [
     'coffee:dev',
-    'sass:ebm',
+    // 'sass:ebm',
     'sass:dev',
     // 'bower:dev',
     // 'responsive_images:dev',
@@ -355,7 +355,7 @@ module.exports = function (grunt) {
   // JavaScript Ninja task
   grunt.registerTask('js-ninja', [
     'coffee:dev',
-    'sass:ebm',
+    // 'sass:ebm',
     'sass:dev',
     // 'bower:dev',
     // 'jshint',
