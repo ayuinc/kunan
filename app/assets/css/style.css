@@ -1004,6 +1004,7 @@ body {
   font-size: 14px;
   font-size: 0.875rem;
   padding: 0 10px;
+  text-decoration: none;
 }
 
 /*HER0 IMAGE*/
@@ -1014,10 +1015,26 @@ body {
 }
 #hero-image .central-text {
   position: absolute;
+  bottom: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 #hero-image .central-text h2 {
   font-size: 40px;
   font-size: 2.5rem;
+}
+#hero-image .central-text p {
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 1.2;
+}
+#hero-image .central-text .botons .btn {
+  width: 203px;
+  height: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

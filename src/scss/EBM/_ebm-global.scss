@@ -45,6 +45,7 @@ $xxl-desktop: 1980px;
 			font-size: 14px;
 			font-size: rem(14px);
 			padding: 0 10px; 
+			text-decoration: none;
 		}
 	}
 }
@@ -58,9 +59,23 @@ $xxl-desktop: 1980px;
 	}
 	.central-text {
 		position: absolute;
+		bottom: 20%;
+		left: 50%;
+		@include transform(translateX(-50%));
 		h2 {
 			font-size: 40px;
 			font-size: rem(40px);
+		}
+		p {
+			font-size: 26px;
+			font-size: rem(26px);
+			line-height: 1.2;
+		}
+		.botons {
+			.btn {
+				width: 203px;
+				height: 40px;
+			}
 		}
 	}
 }
