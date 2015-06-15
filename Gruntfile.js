@@ -329,12 +329,12 @@ module.exports = function (grunt) {
 
   // Default task
   grunt.registerTask('default', [
-    'sass:ebm',
+    // 'sass:ebm',
     'sass:dev',
     // 'bower:dev',
-    // 'connect:livereload',
-    // 'uglify',
-    // 'open',
+    'connect:livereload',
+    'uglify',
+    'open',
     'watch'
   ]);
 
