@@ -34,6 +34,9 @@ $xxl-desktop: 1980px;
 @media only screen and (min-width: $xl-desktop) {}
 @media only screen and (min-width: $xxl-desktop) {}
 
+
+/* Fonts */
+
 @font-face{
 	font-family: "Roboto-Regular";
 	src: url(../fonts/Roboto-Regular.ttf);
@@ -46,9 +49,25 @@ $xxl-desktop: 1980px;
 	font-family: "Roboto-Light";
 	src: url(../fonts/Roboto-Light.ttf);
 }
+
 * {
 	font-size: "Roboto-Regular";
 }
+
+
+h1, h2, h3, h4, h5, h6{
+	font-family: "Ailerons";
+}
+
+p{
+	font-family: "Roboto";
+}
+
+span{
+	font-family: "Museo-sans";
+}
+
+
 /*MENU*/
 #menu {
 	position: fixed;

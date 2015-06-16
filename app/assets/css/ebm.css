@@ -346,7 +346,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.71429;
   color: #707274;
@@ -363,11 +363,11 @@ textarea {
 }
 
 a {
-  color: #337ab7;
+  color: #5A5A5A;
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: #23527c;
+  color: #343434;
   text-decoration: underline;
 }
 a:focus {
@@ -593,11 +593,11 @@ mark,
 }
 
 .text-primary {
-  color: #337ab7;
+  color: #5A5A5A;
 }
 
 a.text-primary:hover {
-  color: #286090;
+  color: #414141;
 }
 
 .text-success {
@@ -637,11 +637,11 @@ a.text-danger:hover {
 }
 
 .bg-primary {
-  background-color: #337ab7;
+  background-color: #5A5A5A;
 }
 
 a.bg-primary:hover {
-  background-color: #286090;
+  background-color: #414141;
 }
 
 .bg-success {
@@ -2368,23 +2368,23 @@ select[multiple].input-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: #5A5A5A;
+  border-color: #4d4d4d;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: #414141;
+  border-color: #2f2f2f;
 }
 .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
   background-image: none;
 }
 .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: #5A5A5A;
+  border-color: #4d4d4d;
 }
 .btn-primary .badge {
-  color: #337ab7;
+  color: #5A5A5A;
   background-color: #fff;
 }
 
@@ -2477,7 +2477,7 @@ select[multiple].input-lg {
 }
 
 .btn-link {
-  color: #337ab7;
+  color: #5A5A5A;
   font-weight: normal;
   border-radius: 0;
 }
@@ -2490,7 +2490,7 @@ select[multiple].input-lg {
   border-color: transparent;
 }
 .btn-link:hover, .btn-link:focus {
-  color: #23527c;
+  color: #343434;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -2845,6 +2845,18 @@ input[type="button"].btn-block {
   Used in text-control partials
 */
 /* PROJECT ESPECIFIC FONTS */
+.light {
+  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.medium {
+  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .p-0 {
   padding: 0px !important;
   padding: 0rem !important;
@@ -4567,17 +4579,17 @@ input[type="button"].btn-block {
   =================
 */
 .text-primary {
-  color: #337ab7;
+  color: #5A5A5A;
 }
 .text-primary a:not(.btn) {
-  color: #337ab7;
+  color: #5A5A5A;
 }
 .text-primary a:not(.btn):hover {
-  color: #1c4364;
+  color: #242424;
 }
 
 a.text-primary:not(.btn):hover {
-  color: #1c4364;
+  color: #242424;
 }
 
 .text-success {
@@ -4895,11 +4907,11 @@ a.text-linkedin:not(.btn):hover {
 */
 /* EBM:Brand colors */
 .bg-primary {
-  background-color: #337ab7;
+  background-color: #5A5A5A;
 }
 
 .bg-primary-shade {
-  background-color: #1c4364;
+  background-color: #242424;
 }
 
 .bg-success {
@@ -8475,16 +8487,16 @@ button.btn.btn-primary,
 input[type="submit"].btn.btn-primary,
 .btn.btn-primary {
   color: white;
-  border-color: #337ab7;
-  background-color: #337ab7;
+  border-color: #5A5A5A;
+  background-color: #5A5A5A;
 }
 a.btn.btn-primary:hover,
 button.btn.btn-primary:hover,
 input[type="submit"].btn.btn-primary:hover,
 .btn.btn-primary:hover {
-  background-color: #1f4a70;
+  background-color: #2c2c2c;
   color: #f7f7f7;
-  border-color: #3072ab;
+  border-color: #525252;
 }
 a.btn.btn-success,
 button.btn.btn-success,
