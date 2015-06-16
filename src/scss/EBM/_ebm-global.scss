@@ -9,6 +9,15 @@ html {
 
 body {
 	background-color: $body-bg;	
+	h1, h2, h3, h4, h5, h6{
+		font-family: "Ailerons";
+	}
+	p{
+		font-family: $font-family-sans-serif;
+	}
+	span{
+		font-family: $font-family-serif;
+	}
 }
 
 .site-wrapper,
@@ -38,33 +47,8 @@ $xxl-desktop: 1980px;
 /* Fonts */
 
 @font-face{
-	font-family: "Roboto-Regular";
-	src: url(../fonts/Roboto-Regular.ttf);
-}
-@font-face{
 	font-family: "Ailerons";
 	src: url(../fonts/Ailerons.ttf);
-}
-@font-face{
-	font-family: "Roboto-Light";
-	src: url(../fonts/Roboto-Light.ttf);
-}
-
-* {
-	font-size: "Roboto-Regular";
-}
-
-
-h1, h2, h3, h4, h5, h6{
-	font-family: "Ailerons";
-}
-
-p{
-	font-family: "Roboto";
-}
-
-span{
-	font-family: "Museo-sans";
 }
 
 
@@ -83,7 +67,7 @@ span{
 			font-size: rem(14px);
 			padding: 0 10px; 
 			text-decoration: none;
-			font-family: museo-sans;
+			// font-family: museo-sans;
 			img {
 				position: absolute;
 			}
@@ -113,58 +97,18 @@ span{
 	}
 }
 
+.text-black{
+	color: black;
+}
+
 /*HER0 IMAGE*/
 #hero-image {
 	background-repeat: no-repeat;
-  background-size: cover!important;
-	.overlay {
-		width: 100%;
-		background-color: rgba(0,0,0,0.4);
-		position: absolute;
-	}
-	.central-text {
-		position: absolute;
-		bottom: 45%;
-		left: 50%;
-		@include transform(translateX(-50%));
-		h2 {
-			font-size: 40px;
-			font-size: rem(40px);
-			font-family: "Ailerons";
-		}
-		p {
-			font-size: 26px;
-			font-size: rem(26px);
-			line-height: 1.2;
-			font-family: "Roboto-Light";
-		}
-		.fecha {
-			font-size: 16px;
-			font-size: rem(16px);
-			padding-top: 10px;
-		}
-		.botons {
-			.btn {
-				/*width: 203px;*/
-				height: 40px;
-				font-size: 13px;
-				font-size: rem(13px);
-			}
-		}
-	}
-}
-/*DESCRIPTION*/
-#description {
-	.container {
-		padding: 4% 10%;
-		p {
-			font-size: 24px;
-			font-size: rem(24px);
-			/*Roboto light*/
-		}
-		h3 {
-			font-size: 30px;
-			font-size: rem(30px);/*Ailerons regular*/
-		}
+  	background-size: cover!important;
+  	.bg-hero-image{
+  		background-color: rgba(0,0,0,0.4);
+  	}
+	.btn-hero{
+		border-radius: 2px;
 	}
 }

@@ -14,15 +14,33 @@
   Used in text-control partials
 */
 /* PROJECT ESPECIFIC FONTS */
+.thin {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
 .light {
-  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
+.book {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .medium {
-  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
+  font-style: normal;
+}
+
+.bold {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -996,6 +1014,15 @@ html::-webkit-scrollbar {
 body {
   background-color: #fff;
 }
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Ailerons";
+}
+body p {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body span {
+  font-family: "museo-sans", Georgia, "Times New Roman", Times, serif;
+}
 
 .site-wrapper,
 .site-content {
@@ -1005,22 +1032,11 @@ body {
 /*
 	Media queries
 */
-@font-face {
-  font-family: "Roboto-Regular";
-  src: url(../fonts/Roboto-Regular.ttf);
-}
+/* Fonts */
 @font-face {
   font-family: "Ailerons";
   src: url(../fonts/Ailerons.ttf);
 }
-@font-face {
-  font-family: "Roboto-Light";
-  src: url(../fonts/Roboto-Light.ttf);
-}
-* {
-  font-size: "Roboto-Regular";
-}
-
 /*MENU*/
 #menu {
   position: fixed;
@@ -1038,7 +1054,6 @@ body {
   font-size: 0.875rem;
   padding: 0 10px;
   text-decoration: none;
-  font-family: museo-sans;
 }
 #menu nav a img {
   position: absolute;
@@ -1092,62 +1107,20 @@ body {
   visibility: visible !important;
 }
 
+.text-black {
+  color: black;
+}
+
 /*HER0 IMAGE*/
 #hero-image {
   background-repeat: no-repeat;
   background-size: cover !important;
 }
-#hero-image .overlay {
-  width: 100%;
+#hero-image .bg-hero-image {
   background-color: rgba(0, 0, 0, 0.4);
-  position: absolute;
 }
-#hero-image .central-text {
-  position: absolute;
-  bottom: 45%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-#hero-image .central-text h2 {
-  font-size: 40px;
-  font-size: 2.5rem;
-  font-family: "Ailerons";
-}
-#hero-image .central-text p {
-  font-size: 26px;
-  font-size: 1.625rem;
-  line-height: 1.2;
-  font-family: "Roboto-Light";
-}
-#hero-image .central-text .fecha {
-  font-size: 16px;
-  font-size: 1rem;
-  padding-top: 10px;
-}
-#hero-image .central-text .botons .btn {
-  /*width: 203px;*/
-  height: 40px;
-  font-size: 13px;
-  font-size: 0.8125rem;
-}
-
-/*DESCRIPTION*/
-#description .container {
-  padding: 4% 10%;
-}
-#description .container p {
-  font-size: 24px;
-  font-size: 1.5rem;
-  /*Roboto light*/
-}
-#description .container h3 {
-  font-size: 30px;
-  font-size: 1.875rem;
-  /*Ailerons regular*/
+#hero-image .btn-hero {
+  border-radius: 2px;
 }
 
 /*# sourceMappingURL=style.css.map */
