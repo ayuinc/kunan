@@ -42,6 +42,10 @@ $xxl-desktop: 1980px;
 	font-family: "Ailerons";
 	src: url(../fonts/Ailerons.ttf);
 }
+@font-face{
+	font-family: "Roboto-Light";
+	src: url(../fonts/Roboto-Light.ttf);
+}
 * {
 	font-size: "Roboto-Regular";
 }
@@ -50,12 +54,42 @@ $xxl-desktop: 1980px;
 	position: fixed;
 	z-index: 10;
 	padding-top: 18px;
+	@include transition(all .2s ease-in);
 	nav {
+		.hidden {
+			visibility: hidden;
+		}
 		a {
 			font-size: 14px;
 			font-size: rem(14px);
 			padding: 0 10px; 
 			text-decoration: none;
+			font-family: museo-sans;
+			img {
+				position: absolute;
+			}
+			.votacion,
+			img {
+				visibility: hidden;
+			}
+		}
+	}
+}
+.active {
+	background-color: #fff;
+	height: 129px;
+	padding-top: 0!important;
+	padding-left: 0!important;
+	@include flex-column-center;
+	nav a {
+		color: rgb(106, 106, 106)!important;
+		img {
+			width: 85px;
+			position: relative!important;
+		}
+		img, 
+		.votacion{
+			visibility: visible!important;
 		}
 	}
 }
@@ -66,7 +100,7 @@ $xxl-desktop: 1980px;
   background-size: cover!important;
 	.overlay {
 		width: 100%;
-		background-color: rgba(0,0,0,0.3);
+		background-color: rgba(0,0,0,0.4);
 		position: absolute;
 	}
 	.central-text {
@@ -83,10 +117,12 @@ $xxl-desktop: 1980px;
 			font-size: 26px;
 			font-size: rem(26px);
 			line-height: 1.2;
+			font-family: "Roboto-Light";
 		}
 		.fecha {
 			font-size: 16px;
 			font-size: rem(16px);
+			padding-top: 10px;
 		}
 		.botons {
 			.btn {

@@ -14,6 +14,18 @@
   Used in text-control partials
 */
 /* PROJECT ESPECIFIC FONTS */
+.light {
+  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.medium {
+  font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 /* Background image blocks */
 .bg-img-block {
   background-repeat: no-repeat;
@@ -1001,6 +1013,10 @@ body {
   font-family: "Ailerons";
   src: url(../fonts/Ailerons.ttf);
 }
+@font-face {
+  font-family: "Roboto-Light";
+  src: url(../fonts/Roboto-Light.ttf);
+}
 * {
   font-size: "Roboto-Regular";
 }
@@ -1010,12 +1026,70 @@ body {
   position: fixed;
   z-index: 10;
   padding-top: 18px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+#menu nav .hidden {
+  visibility: hidden;
 }
 #menu nav a {
   font-size: 14px;
   font-size: 0.875rem;
   padding: 0 10px;
   text-decoration: none;
+  font-family: museo-sans;
+}
+#menu nav a img {
+  position: absolute;
+}
+#menu nav a .votacion,
+#menu nav a img {
+  visibility: hidden;
+}
+
+.active {
+  background-color: #fff;
+  height: 129px;
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+.active nav a {
+  color: #6a6a6a !important;
+}
+.active nav a img {
+  width: 85px;
+  position: relative !important;
+}
+.active nav a img,
+.active nav a .votacion {
+  visibility: visible !important;
 }
 
 /*HER0 IMAGE*/
@@ -1025,7 +1099,7 @@ body {
 }
 #hero-image .overlay {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
 }
 #hero-image .central-text {
@@ -1047,10 +1121,12 @@ body {
   font-size: 26px;
   font-size: 1.625rem;
   line-height: 1.2;
+  font-family: "Roboto-Light";
 }
 #hero-image .central-text .fecha {
   font-size: 16px;
   font-size: 1rem;
+  padding-top: 10px;
 }
 #hero-image .central-text .botons .btn {
   /*width: 203px;*/
