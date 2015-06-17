@@ -18,7 +18,11 @@ body {
 	span{
 		font-family: $font-family-serif;
 	}
+	a:hover{
+		text-decoration: none;
+	}
 }
+
 
 .site-wrapper,
 .site-content {
@@ -112,9 +116,6 @@ $xxl-desktop: 1980px;
   	.bg-hero-image{
   		background-color: rgba(0,0,0,0.4);
   	}
-	.btn-hero{
-		border-radius: 2px;
-	}
 }
 
 #estadisticas {
@@ -122,5 +123,4 @@ $xxl-desktop: 1980px;
 		font-size: 130px;
 		letter-spacing: -12px;
 	}
-
 }

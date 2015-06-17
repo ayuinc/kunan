@@ -1023,6 +1023,9 @@ body p {
 body span {
   font-family: "museo-sans", Georgia, "Times New Roman", Times, serif;
 }
+body a:hover {
+  text-decoration: none;
+}
 
 .site-wrapper,
 .site-content {
@@ -1122,9 +1125,6 @@ body span {
 }
 #hero-image .bg-hero-image {
   background-color: rgba(0, 0, 0, 0.4);
-}
-#hero-image .btn-hero {
-  border-radius: 2px;
 }
 
 #estadisticas .numbers {
