@@ -1133,4 +1133,12 @@ body a:hover {
   letter-spacing: -12px;
 }
 
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #b5b6b7;
+  width: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */

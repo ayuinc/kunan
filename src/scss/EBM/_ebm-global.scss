@@ -125,3 +125,11 @@ $xxl-desktop: 1980px;
 		letter-spacing: -12px;
 	}
 }
+
+input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid $gray-light;
+    width: 20px;
+}
