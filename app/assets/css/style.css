@@ -1055,7 +1055,6 @@ body a:hover {
 }
 #menu nav a {
   font-size: 14px;
-  font-size: 0.875rem;
   padding: 0 10px;
   text-decoration: none;
 }
@@ -1123,6 +1122,7 @@ body a:hover {
 #hero-image {
   background-repeat: no-repeat;
   background-size: cover !important;
+  background-position: center;
 }
 #hero-image .bg-hero-image {
   background-color: rgba(0, 0, 0, 0.4);

@@ -69,7 +69,6 @@ $xxl-desktop: 1980px;
 		}
 		a {
 			font-size: 14px;
-			font-size: rem(14px);
 			padding: 0 10px; 
 			text-decoration: none;
 			// font-family: museo-sans;
@@ -114,6 +113,7 @@ $xxl-desktop: 1980px;
 #hero-image {
 	background-repeat: no-repeat;
   	background-size: cover!important;
+  	background-position: center;
   	.bg-hero-image{
   		background-color: rgba(0,0,0,0.4);
   	}

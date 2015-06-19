@@ -8,17 +8,17 @@ html {
   }
   @media #{$sm-only} {
     font-size: $font-size-base - 2;
-    #{$headings-list},
-    #{$headings-class-list} {
-      line-height: $headings-line-height - 0.1;
-    }
+    // #{$headings-list},
+    // #{$headings-class-list} {
+    //   line-height: $headings-line-height - 0.1;
+    // }
   }
   @media #{$xs-only} {
     font-size: $font-size-base - 3;
-    #{$headings-list},
-    #{$headings-class-list} {
-      line-height: $headings-line-height - 0.2;
-    }
+    // #{$headings-list},
+    // #{$headings-class-list} {
+    //   line-height: $headings-line-height - 0.2;
+    // }
   }
 }
 
