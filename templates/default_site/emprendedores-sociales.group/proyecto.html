@@ -1,0 +1,64 @@
+{exp:channel:entries channel="proyecto" limit="1" disable="member_data"}
+{embed="includes/header"}
+{embed="includes/navegacion"} 
+    <main class="site-content">
+      <section class="minh-70"></section>
+      {proyecto-imagen-bg}
+      <section id="hero-image" class="minhp-70 mt-56" style="background:url({image:url:large})">
+	    {/proyecto-imagen-bg}
+        <div class="bg-hero-image minhp-70">
+          <div class="container-md minh-350"></div>  
+          <div class="container-md text-white pb-21">
+            <div class="row">
+              <div class="col-md-3">
+	              {proyecto-imagen-organizacion}
+                <img class="absolute border-top-gray-dark border-bottom-gray-dark border-left-gray-dark border-right-gray-dark" src="{image:url:small}">
+                {/proyecto-imagen-organizacion}
+              </div>
+              <div class="col-md-9">
+                <h2 class="text-uppercase m-0 pv-14">{proyecto-titulo-proyecto}</h2>
+                <p>{proyecto-introduccion}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- DESCRIPTION -->
+      <section class="text-left" id="description">
+        <div class="container-md pv-70">
+          <div class="row">
+            <div class="col-md-3 minh-280 light text-gray">
+              <h2 class="m-0 mb-7 text-gray-darker">{title}</h2>
+              <p class="small m-0"><dfn>{proyecto-sector}</dfn></p>
+              <p class="small m-0"><dfn>{proyecto-ciudad}</dfn></p>
+              <p class="small m-0"><dfn><a href="mailto:{proyecto-correoelectrnico}">{proyecto-correoelectrnico}</a></dfn></p>
+              <div class="row pl-14 mt-28 text-center">
+                <div class="col-md-8 border-left-primary border-top-primary border-bottom-primary border-right-primary border-radius ph-0">
+                  <div class="bg-primary ">
+                    <div class="col-md-4 bg-white">
+                      <p class="text-primary mv-7">24</p>
+                    </div>
+                    <div class="col-md-8 bg-primary">
+                      <p class="text-white mv-7">VOTOS</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-9 minh-280 light text-center">
+              <div class="text-left text-gray">
+                {proyecto-contenido}
+              </div>
+              
+              <img class="pv-56"src="{site_url}app/assets/img/linea-separadora.png">
+              {embed="includes/otros-proyectos"}
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: DESCRIPTION -->
+{/exp:channel:entries}      
+			{embed="includes/formulario"}
+      {embed="includes/estadistica"}
+    </main>
+{embed="includes/footer"} 
