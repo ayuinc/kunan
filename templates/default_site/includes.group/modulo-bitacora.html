@@ -10,7 +10,11 @@
 	            </a>
               <a href="{site_url}la-bitacora/articulo/{url_title}"><p class="h5 mt-21 mb-0">{title}</p></a>
               <p class="small m-0 light"><dfn>{entry_date format="%d-%m-%Y"}</dfn></p>
-              <p class="lh-sm small m-0 pt-14 light">{bitacora-descripcion}</p>
+              <p class="lh-sm small m-0 pt-14 light">
+	              {exp:char_limit total="200" exact="no"}
+	              	{bitacora-descripcion}
+								{/exp:char_limit}
+	            </p>
               {bitacora-autor}
               <div class="row pt-28">
                 <div class="col-md-2 col-xs-2 pr-0">

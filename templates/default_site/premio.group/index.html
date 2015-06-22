@@ -108,7 +108,11 @@
 	                  <a href="{site_url}jurado/{url_title}">{title}</a>
 	                </h3>
                   <p class="text-gray text-uppercase small">{jurado-cargo}</p>
-                  <p class="small lh-sm text-gray">{jurado-introduccion}</p>
+                  <p class="small lh-sm text-gray">
+	                  {exp:char_limit total="100" exact="no"}
+	                  	{jurado-introduccion}
+										{/exp:char_limit}
+	                </p>
                 </div>
                 <div class="col-md-1 mt-14">
                   <img src="{site_url}app/assets/img/flecha-mariel.png">
@@ -130,7 +134,11 @@
 	                  <a href="{site_url}jurado/{url_title}">{title}</a>
 	                </h3>
                   <p class="text-gray text-uppercase small">{jurado-cargo}</p>
-                  <p class="small lh-sm text-gray">{jurado-introduccion}</p>
+                  <p class="small lh-sm text-gray">
+	                  {exp:char_limit total="100" exact="no"}
+	                  	{jurado-introduccion}
+										{/exp:char_limit}
+	                </p>
                 </div>
                 <div class="col-md-1 mt-14">
                   <img src="{site_url}app/assets/img/flecha-alvaro.png">
@@ -149,7 +157,11 @@
 	                  <a href="{site_url}jurado/{url_title}">{title}</a>
 	                </h3>
                   <p class="text-gray text-uppercase small">{jurado-cargo}</p>
-                  <p class="small lh-sm text-gray">{jurado-introduccion}</p>
+                  <p class="small lh-sm text-gray">
+	                  {exp:char_limit total="100" exact="no"}
+	                  	{jurado-introduccion}
+										{/exp:char_limit}
+	                </p>
                 </div>
               </div>
               {/exp:channel:entries}
@@ -170,7 +182,11 @@
 	                  <a href="{site_url}jurado/{url_title}">{title}</a>
 	                </h3>
                   <p class="text-gray text-uppercase small">{jurado-cargo}</p>
-                  <p class="small lh-sm text-gray">{jurado-introduccion}</p>
+                  <p class="small lh-sm text-gray">
+	                  {exp:char_limit total="100" exact="no"}
+	                  	{jurado-introduccion}
+										{/exp:char_limit}
+	                </p>
                 </div>
               </div>
               {/exp:channel:entries}
