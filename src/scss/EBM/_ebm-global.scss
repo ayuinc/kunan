@@ -74,16 +74,21 @@ $xxl-desktop: 1980px;
 	position: fixed;
 	z-index: 10;
 	padding-top: 18px;
-	@include transition(all .2s ease-in);
+	// @include transition(all .2s ease-in);
+	transition: all .1s;
+	// transition-property: top;
+	// transition-duration: 2s, 2s;
+ //  	transition-delay: 0s, 2s;
 	nav {
-		.hidden {
-
-			visibility: hidden;
-		}
+		color: #999;
 		a {
-			font-size: 13px;
+			font-size: 12px;
 			padding: 0 10px; 
 			text-decoration: none;
+			color: white;
+			&:hover{
+				color: #d1d1d1;
+			}
 			// font-family: museo-sans;
 			img {
 				position: absolute;
@@ -102,13 +107,25 @@ $xxl-desktop: 1980px;
 	padding-left: 0!important;
 	@include flex-column-center;
 	nav {
-		color: #333 !important;
+		color: #e1e1e1 !important;
 		a{
 			color: #333 !important;	
+			&:hover{
+				color: #e83f95 !important;
+			}
+		}
+		.btn{
+			border: #333;
+			position: relative;
+			left: 57px;
+		}
+		.btn.btn-white.btn-outline{
+			border: 1px solid #333;
 		}
 		img {
 			width: 60px;
 			position: relative!important;
+			right: 60px;
 		}
 		img, 
 		.votacion{

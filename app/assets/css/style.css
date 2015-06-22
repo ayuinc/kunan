@@ -1063,14 +1063,19 @@ body a:hover {
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+  transition-property: top;
 }
-#menu nav .hidden {
-  visibility: hidden;
+#menu nav {
+  color: #999;
 }
 #menu nav a {
-  font-size: 13px;
+  font-size: 12px;
   padding: 0 10px;
   text-decoration: none;
+  color: white;
+}
+#menu nav a:hover {
+  color: #d1d1d1;
 }
 #menu nav a img {
   position: absolute;
@@ -1113,14 +1118,26 @@ body a:hover {
   -ms-flex-pack: center;
 }
 .active nav {
-  color: #333 !important;
+  color: #e1e1e1 !important;
 }
 .active nav a {
   color: #333 !important;
 }
+.active nav a:hover {
+  color: #e83f95 !important;
+}
+.active nav .btn {
+  border: #333;
+  position: relative;
+  left: 57px;
+}
+.active nav .btn.btn-white.btn-outline {
+  border: 1px solid #333;
+}
 .active nav img {
   width: 60px;
   position: relative !important;
+  right: 60px;
 }
 .active nav img,
 .active nav .votacion {
