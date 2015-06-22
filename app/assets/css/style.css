@@ -1132,6 +1132,10 @@ body a:hover {
   color: #1184C6;
 }
 
+.margin-auto {
+  margin: 0 auto;
+}
+
 /*HER0 IMAGE*/
 #hero-image {
   background-repeat: no-repeat;
