@@ -11,6 +11,7 @@
 							{embed="includes/bitacora-navegacion"}
             </div>
             <div class="col-md-9 light text-left text-gray-darker">
+	            <h2 class="pb-21 text-black">{title}</h2>
 	            {bitacora-autor}
               <div class="row pb-21">
                 <div class="col-md-1 pr-0 text-left">
@@ -22,11 +23,16 @@
                 </div>
               </div>
               {/bitacora-autor}
-              {bitacora-imagen}
-              <img class="img-responsive" src="{image:url:medium}">
-              {/bitacora-imagen}	            
-              <h2 class="pb-21 text-black">{title}</h2>
+              {if bitacora-imagen!=''}
+	              {bitacora-imagen}
+	              	<img class="img-responsive" src="{image:url:medium}">
+	              {/bitacora-imagen}	 
+              {if:else} 
+              	<iframe width="698" height="424" src="https://www.youtube.com/embed/{bitacora-video}" frameborder="0" allowfullscreen></iframe>
+              {/if}
+              <div class="pv-28">
               {bitacora-contenido}
+              </div>
             </div>
           </div>
 	        <div class="row">
