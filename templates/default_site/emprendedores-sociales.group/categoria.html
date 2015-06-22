@@ -1,0 +1,55 @@
+{embed="includes/header"}
+{embed="includes/navegacion"}
+    <main class="site-content">
+      <section class="minh-70"></section>
+      <!-- DESCRIPTION -->
+      <section class="text-left" id="description">
+        <div class="container-md pv-70">
+          <div class="row">
+            <div class="col-md-3 light">
+							{embed="includes/proyecto-navegacion"}
+            </div>
+            <div class="col-md-9 light text-center">
+              <h2 class="pb-28 text-gray-darker">Comunidad Kunan</h2>
+              <div class="row text-left pb-42">
+	              {exp:channel:entries channel="proyecto" limit="12" disable="member_data" category="{segment_3_category_id}"}
+                <div class="col-md-4 ph-7">
+	                <a href="{site_url}emprendedores-sociales/proyecto/{url_title}">
+	                  <div class="bg-gray-lighter ">
+		                  {proyecto-imagen-bg}
+	                    <img class="img-responsive" src="{image:url:small}">
+	                    {/proyecto-imagen-bg}
+	                    <div class="p-14 minh-280">
+	                      <h4 class="m-0 pt-14 text-gray-darker">{proyecto-titulo-proyecto}</h4>
+	                      <p class="text-gray-light small"><a href="mailto:{proyecto-correoelectrnico}">{proyecto-correoelectrnico}</a></p>
+	                      <p class="mt-21 lh-sm h6 m-0 light">{proyecto-introduccion}</p>
+	                      <div class="row">
+	                        <div class="col-md-7">
+	                          <h5 class="m-0 pt-14 text-gray-darker">Sector</h5>
+	                          <p class="text-gray-light h6 m-0 mt-7 light small">{proyecto-sector}</p>
+	                        </div>
+	                        <div class="col-md-5 pl-0">
+	                          <h5 class="m-0 pt-14 text-gray-darker">Ubicación</h5>
+	                          <p class="text-gray-light h6 m-0 mt-7 light small">{proyecto-ciudad}</p>
+	                        </div>
+	                      </div>
+	                    </div>
+	                  </div>
+	                </a>
+                </div>
+	              {paginate}
+	              	<div class="text-gray-dark text-left">
+						        <p>Página {current_page} de {total_pages} páginas {pagination_links}</p>
+						    	</div> 
+						    {/paginate} 
+                {/exp:channel:entries}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: DESCRIPTION -->
+			{embed="includes/formulario"}
+      {embed="includes/estadistica"}
+    </main>
+{embed="includes/footer"} 

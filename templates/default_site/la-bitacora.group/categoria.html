@@ -1,0 +1,51 @@
+{embed="includes/header"}
+{embed="includes/navegacion"}
+    <main class="site-content">
+      <section class="minh-70"></section>
+      <!-- DESCRIPTION -->
+      <section class="text-left" id="description">
+        <div class="container-md pv-70">
+          <div class="row">
+            <div class="col-md-3 text-gray-darker light">
+              {embed="includes/bitacora-navegacion"}
+            </div>
+            <div class="col-md-9 light text-left text-gray-darker">
+              <h2 class="pb-28 text-center">Bitacora</h2>              
+              {exp:channel:entries channel="la_bitacora" limit="10" disable="member_data" category="{segment_3_category_id}"}
+	            {bitacora-autor}
+              <div class="row pb-21">
+                <div class="col-md-1 pr-0 text-left">
+                  <img class="img-responsive" src="{bitacora-autor:autor-imagen}">
+                </div>
+                <div class="col-md-11 pl-14 text-left">
+                  <p class="h5 m-0 pt-7">{bitacora-autor:title}</p>
+                  <p class="h6 m-0 light text-gray-light"><a href="{bitacora-autor:autor-link-organizacion}" target="_blank">{bitacora-autor:autor-organizacion}</a> - {entry_date format="%d-%m-%Y"}</p>
+                </div>
+              </div>
+              {/bitacora-autor}
+              {bitacora-imagen}
+              <img class="img-responsive" src="{image:url:medium}">
+              {/bitacora-imagen}
+              <h3>{title}</h3>
+              <p class="h4 lh-lg light text-gray">{bitacora-descripcion}</p>
+              <a href="{site_url}la-bitacora/articulo/{url_title}" class="text-hover-primary h5">
+                <p class="text-primary pv-7 light">Leer más</p>
+              </a>
+              <div class="text-center">
+                <img class="pv-28"src="{site_url}app/assets/img/linea-separadora.png">
+              </div>
+              <div class="text-gray-dark text-left">
+              {paginate}
+					        <p>Página {current_page} de {total_pages} páginas {pagination_links}</p>
+					    {/paginate}
+					    </div>
+							{/exp:channel:entries}
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: DESCRIPTION -->
+			{embed="includes/formulario"}
+			{embed="includes/estadistica"}
+    </main>
+{embed="includes/footer"}     

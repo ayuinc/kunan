@@ -1,0 +1,18 @@
+	  <!-- HEADER -->
+	    <header class="site-menu">
+	      <div id="menu" class="container-fluid text-center">
+	        <nav class="text-white text-uppercase">
+	          <a href="{site_url}"><img src="{site_url}app/assets/img/logo.png" alt=""></a>
+	          <a href="">¿Por qué estamos aquí?</a>
+	          <a href="">Nuestro reto</a>
+	          <a href="">Líneas de acción</a>
+	          <a href="{site_url}la-bitacora">La bitácora</a>
+	          {if logged_in}
+	          	<a href="{path='logout'}">{screen_name} (salir)</a>
+	          {if:else}
+	          	<a href="{site_url}login">Regístrate o Ingresa</a> 
+	          {/if}
+	        </nav>
+	      </div>
+	    </header>
+	  <!-- END: HEADER -->  

@@ -1,0 +1,73 @@
+{embed="includes/header"}
+{embed="includes/navegacion"} 
+    <main class="site-content">
+      <section class="minh-70"></section>
+      <!-- DESCRIPTION -->
+      <section class="text-left minhp-100" id="description">
+        <div class="minh-70"></div>
+        <div class="container-sm pv-70 text-center">
+          <h1 class="text-gray-darker">Regístrate o ingresa para votar</h1>
+          <p class="light h4 lh-lg mb-42">Usa estos formularios para registrarte o entrar al sistema de aplicaciones. </p>   
+	        <div class="row">
+		        <div class="col-md-6 text-left">
+			        <h3 class="text-gray-darker">Regístrate</h3>
+							{exp:user:register return="formulario/index"}
+									<p>
+										<label class="small light text-uppercase">Nombre y Apellido</label><br>
+								    <input type="text" name="screen_name"/>
+							    </p>					        
+									<p>
+										<label class="small light text-uppercase">Correo electrónico</label><br>
+								    <input type="text" name="username" />
+							    </p>
+									<p>
+										<label class="small light text-uppercase">Contraseña</label><br>
+								    <input type="password" name="password" />
+							    </p>
+									<p>
+										<label class="small light text-uppercase">Confirmar contraseña</label><br>
+								    <input type="password" name="password_confirm" />
+							    </p>
+									{if captcha}
+									<p>
+										<label class="small light text-uppercase">Por favor, introduzca la palabra que aparece a continuación:</label><br>
+									    <input type="text" name="captcha" />
+								    </p>
+								    <p>{captcha}</p>
+									{/if}
+							    <p><input type="checkbox" name="accept_terms" value="y" />Aceptar <a href="">términos y condiciones</a></p>
+							    <p><input type="submit" value="Registrarse"  class="btn btn-primary" /></p>
+									{if no_results}
+							    	<p>Para ver este formulario debes estar desconectado.</p>
+									{/if}
+							
+							{/exp:user:register}
+		        </div>
+		        <div class="col-md-6 text-left">
+			        <h3 class="text-gray-darker">Ingresa</h3>
+							{exp:member:login_form return="formulario/index"}
+									<p>
+										<label class="small light text-uppercase">Correo Electrónico</label><br>
+						        <input type="text" name="username">
+							    </p>
+									<p>
+										<label class="small light text-uppercase">Contraseña</label><br>
+						        <input type="password" name="password">
+							    </p>
+									{if auto_login}
+								    <p class="text-left">
+							        <input type="checkbox" name="auto_login" value="1">
+							        Auto-login
+								    </p>
+									{/if}
+							    <p><input type="submit" name="submit" value="Entrar" class="btn btn-primary"></p>
+							{/exp:member:login_form}
+		        </div>
+	        </div>  
+        </div>
+      </section>
+      <!-- END: DESCRIPTION -->
+			{embed="includes/formulario"}
+			{embed="includes/estadistica"}
+    </main>
+{embed="includes/footer"}  
