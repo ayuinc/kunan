@@ -35,12 +35,24 @@ body {
 */
 $xl-desktop: 1500px;
 $xxl-desktop: 1980px;
-@media #{$xs-only} {}
+@media #{$xs-only} {
+	.text-center-xs{
+		text-align: center;
+	}
+}
 @media #{$sm-only} {}
 @media #{$md-only} {}
 @media #{$lg-only} {}
 @media #{$sm-down} {}
-@media #{$md-down} {}
+@media #{$md-down} {
+	#estadisticas{
+		text-align: center;
+	}
+	.footer{
+		text-align: center;
+	}
+
+}
 @media #{$lg-down} {}
 @media #{$sm-up} {}
 @media #{$md-up} {}
@@ -131,5 +143,4 @@ input {
     outline: 0;
     background: transparent;
     border-bottom: 1px solid $gray-light;
-    width: 20px;
 }

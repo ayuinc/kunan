@@ -1036,6 +1036,20 @@ body a:hover {
 /*
 	Media queries
 */
+@media only screen and (max-width: 480px) {
+  .text-center-xs {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #estadisticas {
+    text-align: center;
+  }
+
+  .footer {
+    text-align: center;
+  }
+}
 /* Fonts */
 @font-face {
   font-family: "Ailerons";
@@ -1138,7 +1152,6 @@ input {
   outline: 0;
   background: transparent;
   border-bottom: 1px solid #b5b6b7;
-  width: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
