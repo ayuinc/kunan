@@ -4,9 +4,13 @@
             {exp:channel:entries channel="la_bitacora" limit="3" disable="member_data"}
             <li class="grid-list-item">
               <a href="{site_url}la-bitacora/articulo/{url_title}">
+              {if bitacora-imagen!=''}
 	              {bitacora-imagen}
-	              <img class="img-responsive" src="{image:url:small}">
-								{/bitacora-imagen}
+	              	<img class="img-responsive" src="{image:url:medium}">
+	              {/bitacora-imagen}	 
+              {if:else} 
+              	<img class="img-responsive" src="http://img.youtube.com/vi/{bitacora-video}/mqdefault.jpg" width="100%">
+              {/if}
 	            </a>
               <a href="{site_url}la-bitacora/articulo/{url_title}"><p class="h5 mt-21 mb-0">{title}</p></a>
               <p class="small m-0 light"><dfn>{entry_date format="%d-%m-%Y"}</dfn></p>
