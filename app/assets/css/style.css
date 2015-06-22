@@ -1165,6 +1165,10 @@ body a:hover {
   letter-spacing: -12px;
 }
 
+.icon-lineas-de-accion {
+  width: 90px;
+}
+
 input {
   border: 0;
   outline: 0;
