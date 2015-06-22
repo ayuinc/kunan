@@ -1081,8 +1081,8 @@ body a:hover {
 }
 
 .active {
-  background-color: #fff;
-  height: 129px;
+  background-color: #f7f7f7;
+  height: 90px;
   padding-top: 0 !important;
   padding-left: 0 !important;
   display: -webkit-box;
@@ -1116,7 +1116,7 @@ body a:hover {
   color: #6a6a6a !important;
 }
 .active nav a img {
-  width: 85px;
+  width: 60px;
   position: relative !important;
 }
 .active nav a img,

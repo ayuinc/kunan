@@ -95,15 +95,15 @@ $xxl-desktop: 1980px;
 	}
 }
 .active {
-	background-color: #fff;
-	height: 129px;
+	background-color: #f7f7f7;
+	height: 90px;
 	padding-top: 0!important;
 	padding-left: 0!important;
 	@include flex-column-center;
 	nav a {
 		color: rgb(106, 106, 106)!important;
 		img {
-			width: 85px;
+			width: 60px;
 			position: relative!important;
 		}
 		img, 
