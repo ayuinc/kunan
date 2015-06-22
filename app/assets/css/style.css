@@ -1068,7 +1068,7 @@ body a:hover {
   visibility: hidden;
 }
 #menu nav a {
-  font-size: 14px;
+  font-size: 13px;
   padding: 0 10px;
   text-decoration: none;
 }
@@ -1112,15 +1112,18 @@ body a:hover {
   justify-content: center;
   -ms-flex-pack: center;
 }
-.active nav a {
-  color: #6a6a6a !important;
+.active nav {
+  color: #333 !important;
 }
-.active nav a img {
+.active nav a {
+  color: #333 !important;
+}
+.active nav img {
   width: 60px;
   position: relative !important;
 }
-.active nav a img,
-.active nav a .votacion {
+.active nav img,
+.active nav .votacion {
   visibility: visible !important;
 }
 

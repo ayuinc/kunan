@@ -77,10 +77,11 @@ $xxl-desktop: 1980px;
 	@include transition(all .2s ease-in);
 	nav {
 		.hidden {
+
 			visibility: hidden;
 		}
 		a {
-			font-size: 14px;
+			font-size: 13px;
 			padding: 0 10px; 
 			text-decoration: none;
 			// font-family: museo-sans;
@@ -100,8 +101,11 @@ $xxl-desktop: 1980px;
 	padding-top: 0!important;
 	padding-left: 0!important;
 	@include flex-column-center;
-	nav a {
-		color: rgb(106, 106, 106)!important;
+	nav {
+		color: #333 !important;
+		a{
+			color: #333 !important;	
+		}
 		img {
 			width: 60px;
 			position: relative!important;
