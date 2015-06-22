@@ -73,14 +73,12 @@ $xxl-desktop: 1980px;
 #menu {
 	position: fixed;
 	z-index: 10;
+	height: 90px;
 	padding-top: 18px;
-	// @include transition(all .2s ease-in);
-	transition: all .1s;
-	// transition-property: top;
-	// transition-duration: 2s, 2s;
- //  	transition-delay: 0s, 2s;
+	@include transition(all .2s);
 	nav {
 		color: #999;
+		padding-left: 50px;
 		a {
 			font-size: 12px;
 			padding: 0 10px; 
@@ -98,6 +96,10 @@ $xxl-desktop: 1980px;
 				visibility: hidden;
 			}
 		}
+		.btn{
+			position: relative;
+			left: 57px;
+		}
 	}
 }
 .active {
@@ -108,6 +110,7 @@ $xxl-desktop: 1980px;
 	@include flex-column-center;
 	nav {
 		color: #e1e1e1 !important;
+		padding-left: 0 !important;
 		a{
 			color: #333 !important;	
 			&:hover{
@@ -115,7 +118,6 @@ $xxl-desktop: 1980px;
 			}
 		}
 		.btn{
-			border: #333;
 			position: relative;
 			left: 57px;
 		}

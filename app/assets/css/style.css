@@ -1059,14 +1059,15 @@ body a:hover {
 #menu {
   position: fixed;
   z-index: 10;
+  height: 90px;
   padding-top: 18px;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-  transition-property: top;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
 }
 #menu nav {
   color: #999;
+  padding-left: 50px;
 }
 #menu nav a {
   font-size: 12px;
@@ -1083,6 +1084,10 @@ body a:hover {
 #menu nav a .votacion,
 #menu nav a img {
   visibility: hidden;
+}
+#menu nav .btn {
+  position: relative;
+  left: 57px;
 }
 
 .active {
@@ -1119,6 +1124,7 @@ body a:hover {
 }
 .active nav {
   color: #e1e1e1 !important;
+  padding-left: 0 !important;
 }
 .active nav a {
   color: #333 !important;
@@ -1127,7 +1133,6 @@ body a:hover {
   color: #e83f95 !important;
 }
 .active nav .btn {
-  border: #333;
   position: relative;
   left: 57px;
 }
