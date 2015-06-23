@@ -1,4 +1,5 @@
 {embed="includes/header"}
+{if logged_in} 
 {embed="includes/navegacion-vistas"}
     <main class="site-content">
       <section class="minh-70"></section>
@@ -7,15 +8,24 @@
         <div class="container-md pv-70">
           <div class="row">
             <div class="col-md-12">
-							{exp:freeform:composer
-							    form_name="formulario_registro"
-							    composer_template_name="composer_formulario_registro"
-							    return="gracias/index"
-							}
+              {exp:query sql="SELECT * FROM exp_freeform_form_entries_1 WHERE author_id={embed:miembro}"}
+                {exp:freeform:edit 
+                  form_name="formulario_registro"
+                  return="gracias/index" 
+                  entry_id="{entry_id}" 
+                }
+                {if no_results}
+                  {redirect='formulario/index' status_code="301"}
+                {/if}  
+              {/exp:query}
             </div>
           </div>
         </div>
       </section>
       <!-- END: DESCRIPTION -->
     </main>
+    {/if}
+    {if logged_out}
+      {redirect='login/index'}
+    {/if}
 {embed="includes/footer"}    
