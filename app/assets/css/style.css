@@ -1050,7 +1050,6 @@ body a:hover {
     text-align: center;
   }
 }
-/* Fonts */
 /*MENU*/
 #menu, #menu-vistas {
   position: fixed;
@@ -1070,10 +1069,18 @@ body a:hover {
 #menu nav a:hover, #menu-vistas nav a:hover {
   color: #d1d1d1;
 }
+#menu nav .btn, #menu-vistas nav .btn {
+  position: relative;
+  left: 57px;
+}
 
 .home nav a img {
   visibility: hidden;
   position: absolute;
+}
+.home nav a .btn.btn-outline.btn-white {
+  position: relative;
+  left: 55px;
 }
 
 .vistas {
@@ -1084,11 +1091,9 @@ body a:hover {
   position: relative !important;
   right: 60px;
 }
-.vistas nav a .btn.btn-primary {
+.vistas nav .btn {
   position: relative;
-  left: 57px;
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
+  left: 0 !important;
 }
 
 .active {

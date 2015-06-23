@@ -61,15 +61,7 @@ $xxl-desktop: 1980px;
 @media only screen and (min-width: $xxl-desktop) {}
 
 
-/* Fonts */
-
-
-
-
 /*MENU*/
-
-
-
 
 #menu, #menu-vistas {
 	position: fixed;
@@ -87,6 +79,10 @@ $xxl-desktop: 1980px;
 				color: #d1d1d1;
 			}
 		}
+		.btn{
+			position: relative;
+			left: 57px;
+		}
 	}
 }
 
@@ -95,6 +91,10 @@ $xxl-desktop: 1980px;
 		img{
 			visibility: hidden;
 			position: absolute;
+		}
+		.btn.btn-outline.btn-white{
+			position: relative;
+			left: 55px;
 		}
 	}
 }
@@ -106,14 +106,13 @@ $xxl-desktop: 1980px;
 		position: relative !important;
 		right: 60px;
 	}
-	nav a{
-		.btn.btn-primary{
+	nav {
+		.btn{
 			position: relative;
-			left: 57px;
-			padding-top: 10px !important;
-			padding-bottom: 10px !important;
+			left: 0 !important;
 		}
 	}
+	
 }
 
 .active {
