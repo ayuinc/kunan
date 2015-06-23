@@ -1,11 +1,11 @@
-              <h3 class="pb-14 text-center-xs">Otros Jurados</h3>
+              <h3 class="pb-14 text-uppercase h4 lighttext-center-xs">Otros Jurados</h3>
               <div class="row ph-21-xs">
 								{exp:channel:entries channel="jurado" limit="3" disable="member_data|pagination" dynamic="off"}
                 <div class="col-md-4 pb-21">
 			            {imgen-jurado}
 		              <img class="img-responsive margin-auto" src="{image:url:small}">
 		              {/imgen-jurado}
-                  <h3 class="mb-7 mt-14">{title}</h3>
+                  <h3 class="text-uppercase light h4 mb-7 mt-14">{title}</h3>
                   <p class="small mt-0 light text-gray">{jurado-cargo}</p>
                 </div>
                 {/exp:channel:entries}

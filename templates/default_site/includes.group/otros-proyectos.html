@@ -1,4 +1,4 @@
-              <h2 class="pb-28 text-gray-darker">Otros proyectos que te recomendamos</h2>
+              <h2 class="pb-28 text-uppercase light h3 text-gray-darker">Otros proyectos que te recomendamos</h2>
               <div class="row text-left pb-42">
 	              {exp:channel:entries channel="proyecto" limit="3" disable="member_data" category="25"}
                 <div class="col-md-4 ph-7">
@@ -8,16 +8,16 @@
 	                    <img class="img-responsive" src="{image:url:small}">
 	                    {/proyecto-imagen-bg}
 	                    <div class="p-14 minh-280">
-	                      <h4 class="m-0 pt-14 text-gray-darker">{proyecto-titulo-proyecto}</h4>
+	                      <h4 class="text-uppercase light h5 m-0 pt-14 text-gray-darker">{proyecto-titulo-proyecto}</h4>
 	                      <p class="text-gray-light small"><a href="mailto:{proyecto-correoelectrnico}">{proyecto-correoelectrnico}</a></p>
 	                      <p class="mt-21 lh-sm h6 m-0 light">{proyecto-introduccion}</p>
 	                      <div class="row">
 	                        <div class="col-md-7">
-	                          <h5 class="m-0 pt-14 text-gray-darker">Sector</h5>
+	                          <h5 class="text-uppercase light h6 m-0 pt-14 text-gray-darker">Sector</h5>
 	                          <p class="text-gray-light h6 m-0 mt-7 light small">{proyecto-sector}</p>
 	                        </div>
 	                        <div class="col-md-5 pl-0">
-	                          <h5 class="m-0 pt-14 text-gray-darker">Ubicación</h5>
+	                          <h5 class="text-uppercase light h6 m-0 pt-14 text-gray-darker">Ubicación</h5>
 	                          <p class="text-gray-light h6 m-0 mt-7 light small">{proyecto-ciudad}</p>
 	                        </div>
 	                      </div>
