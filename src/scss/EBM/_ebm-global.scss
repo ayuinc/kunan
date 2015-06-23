@@ -272,3 +272,40 @@ input {
 		}
 	}
 }
+
+
+/* FORMULARIO */
+.ff_composer{
+	.line{
+		label{
+			font-weight: 400;
+			display: block;
+		}
+		.field_label{
+			font-weight: 400;
+		}
+		p{
+			display: inline;
+		}
+	}
+}
+
+
+label[for="freeform_region_de_nacimiento"],
+label[for="freeform_edad"],
+label[for="freeform_genero_1"],
+label[for="freeform_genero_2"]{
+	display: inline !important;
+}
+
+label[for="freeform_region_de_nacimiento"] {
+	padding-right: 50px;
+}
+
+label[for="freeform_edad"] {
+	padding-right: 30px;
+}
+
+input[type="radio"]{
+	width: 14px;
+}
