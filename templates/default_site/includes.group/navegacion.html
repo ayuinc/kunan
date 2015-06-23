@@ -3,12 +3,12 @@
 	      <div id="menu" class="home hidden-xs container-fluid text-center">
 	        <nav class="text-white text-uppercase container-md">
 	          <a href="{site_url}"><img src="{site_url}app/assets/img/logo.png" alt=""></a>
-	          <a href="{site_url}porqueestamos">¿Por qué estamos aquí?</a>
-	          <a href="{site_url}nuestroreto">Nuestro reto</a>
-	          <a href="{site_url}lineasdeaccion">Líneas de acción</a>
-	          <a class="pr-14" href="{site_url}la-bitacora">La bitácora</a>
+	          <a href="{site_url}porqueestamos">¿Por qué estamos aquí?</a>|
+	          <a href="{site_url}nuestroreto">Nuestro reto</a>|
+	          <a href="{site_url}lineasdeaccion">Líneas de acción</a>|
+	          <a href="{site_url}la-bitacora">La bitácora</a>
 	          {if logged_in}
-	          	<a href="{path='logout'}">{screen_name} (salir)</a>
+	          	<a class="btn text-white pv-7" href="{path='logout'}">{screen_name} (salir)</a>
 	          {if:else}
 	          	<a class="btn btn-outline btn-white pv-7" href="{site_url}login">Regístrate o Ingresa</a> 
 	          {/if}

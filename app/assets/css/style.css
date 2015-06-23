@@ -1055,7 +1055,7 @@ body a:hover {
   position: fixed;
   z-index: 100;
   height: 90px;
-  padding-top: 18px;
+  padding-top: 10px;
 }
 #menu nav, #menu-vistas nav {
   color: #999;
