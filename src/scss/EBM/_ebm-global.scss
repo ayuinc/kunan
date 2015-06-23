@@ -156,8 +156,7 @@ $xxl-desktop: 1980px;
 
 #estadisticas {
 	.numbers{
-		font-size: 130px;
-		letter-spacing: -12px;
+		font-size: 80px;
 	}
 }
 
@@ -167,6 +166,7 @@ $xxl-desktop: 1980px;
 
 
 input {
+		width: 100%;
     border: 0;
     outline: 0;
     background: transparent;
