@@ -107,10 +107,11 @@ $xxl-desktop: 1980px;
 		right: 65px;
 	}
 	nav a{
-		padding: 0 15px !important;
-		.btn{
+		.btn.btn-primary{
 			position: relative;
 			left: 57px;
+			padding-top: 10px !important;
+			padding-bottom: 10px !important;
 		}
 	}
 }

@@ -1084,12 +1084,11 @@ body a:hover {
   position: relative !important;
   right: 65px;
 }
-.vistas nav a {
-  padding: 0 15px !important;
-}
-.vistas nav a .btn {
+.vistas nav a .btn.btn-primary {
   position: relative;
   left: 57px;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 }
 
 .active {
