@@ -71,7 +71,7 @@ $xxl-desktop: 1980px;
 
 
 
-#menu {
+#menu, #menu-vistas {
 	position: fixed;
 	z-index: 100;
 	height: 90px;
@@ -86,11 +86,28 @@ $xxl-desktop: 1980px;
 			&:hover{
 				color: #d1d1d1;
 			}
-			img {
-				visibility: hidden;
-				position: absolute;
-			}
 		}
+	}
+}
+
+.home{
+	nav a{
+		img{
+			visibility: hidden;
+			position: absolute;
+		}
+	}
+}
+
+.vistas{
+	background-color: white;
+	img {
+		width: 60px;
+		position: relative !important;
+		right: 65px;
+	}
+	nav a{
+		padding: 0 15px !important;
 		.btn{
 			position: relative;
 			left: 57px;
@@ -113,7 +130,6 @@ $xxl-desktop: 1980px;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   -webkit-transform: translateZ(0);
-
 	nav {
 		color: #e1e1e1 !important;
 		padding-left: 0 !important;
