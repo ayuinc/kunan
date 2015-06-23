@@ -1,5 +1,5 @@
-
 {embed="includes/header"}
+{if logged_in} 
 {embed="includes/navegacion-vistas"}
     <main class="site-content">
       <section class="minh-70"></section>
@@ -19,4 +19,8 @@
       </section>
       <!-- END: DESCRIPTION -->
     </main>
+    {/if}
+    {if logged_out}
+      {redirect='login/index'}
+    {/if}
 {embed="includes/footer"}    
