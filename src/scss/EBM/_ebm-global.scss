@@ -282,7 +282,7 @@ input {
 			display: block;
 		}
 		.field_label{
-			font-weight: 400;
+			font-weight: 300;
 		}
 		p{
 			display: inline;
@@ -291,21 +291,37 @@ input {
 }
 
 
-label[for="freeform_region_de_nacimiento"],
-label[for="freeform_edad"],
+
 label[for="freeform_genero_1"],
-label[for="freeform_genero_2"]{
+label[for="freeform_genero_2"],
+label[for="freeform_esta_inscrita_en_registros_publicos_1"],
+label[for="freeform_esta_inscrita_en_registros_publicos_2"],
+label[for="freeform_fuente_de_financiamiento_1"],
+label[for="freeform_fuente_de_financiamiento_2"],
+label[for="freeform_fuente_de_financiamiento_3"],
+label[for="freeform_fuente_de_financiamiento_4"],
+label[for="freeform_fuente_de_financiamiento_5"],
+label[for="freeform_fondos_administrados_durante_el_ano_2014_1"],
+label[for="freeform_fondos_administrados_durante_el_ano_2014_2"],
+label[for="freeform_fondos_administrados_durante_el_ano_2014_3"],
+label[for="freeform_fondos_administrados_durante_el_ano_2014_4"],
+label[for="freeform_fondos_administrados_durante_el_ano_2014_5"],
+label[for="freeform_fondos_administrados_durante_el_ano_2014_6"]{
 	display: inline !important;
 }
 
-label[for="freeform_region_de_nacimiento"] {
-	padding-right: 50px;
+input[id="freeform_link_video"]{
+	display: block;
+	margin-bottom: 10px;
 }
 
-label[for="freeform_edad"] {
-	padding-right: 30px;
+select[id="freeform_edad"]{
+	width: 100px;
+	text-indent: 35%;
 }
 
-input[type="radio"]{
+
+input[type="radio"], 
+input[type="checkbox"]{
 	width: 14px;
 }
