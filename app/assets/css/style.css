@@ -1204,6 +1204,10 @@ body a:hover {
   width: 40px;
 }
 
+.triangle-down {
+  width: 30px;
+}
+
 input {
   width: 100%;
   border: 0;
