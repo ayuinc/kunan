@@ -71,6 +71,8 @@ OLDREADME.md
 system/expressionengine/config/database.php
 system/expressionengine/config/config.php
 
+.htaccess
+
 # Caches
 sized/
 thumbs/
