@@ -3,11 +3,11 @@
           <div class="container-sm">
 	          {exp:channel:entries channel="cronograma_comunidad" limit="10" disable="member_data"}
             <div class="row text-gray-darker mb-14">
-              <div class="col-md-2 text-right border-right-gray">
+              <div class="col-md-2 col-xs-3 text-right border-right-gray">
                 <h1 class="m-0">{cronograma-fecha-evento format="%d"}</h1>
                 <h4 class="m-0 mb-7">{cronograma-fecha-evento format="%M"}</h4>
               </div>
-              <div class="col-md-10 m-ch-0 mt-ch-7 text-left lh-sm">
+              <div class="col-md-10 m-ch-0 mt-ch-7 text-left lh-sm col-xs-9">
 	              <h3>{title}</h3>
                 <p class="text-gray-light light pb-7">{cronograma-descripcion-evento}</p>
                 <small><a href="{cronograma-link-url}">{cronograma-link-texto}</a></small>
