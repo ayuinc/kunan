@@ -1127,6 +1127,12 @@ body a:hover {
 #hero-image .bg-hero-image {
   background-color: rgba(0, 0, 0, 0.4);
 }
+@media only screen and (max-width: 480px) {
+  #hero-image {
+    background-image: url(http://s18.postimg.org/ry766p1mh/kunan_main.png);
+    background-position-x: -191px !important;
+  }
+}
 
 #estadisticas .numbers {
   font-size: 130px;
@@ -1139,6 +1145,62 @@ input {
   background: transparent;
   border-bottom: 1px solid #b5b6b7;
   width: 20px;
+}
+
+.hero-unit.video-bg {
+  overflow: hidden;
+  height: 491px;
+  position: relative;
+}
+
+.video-js {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 230px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 480px) {
+  #content-estadistica .col-md-3,
+  #content-estadistica .col-md-2 {
+    text-align: center;
+  }
+  #content-estadistica .col-md-3 p,
+  #content-estadistica .col-md-2 p {
+    text-align: center !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #ofrecemos .asesoria {
+    color: #259b4a;
+  }
+  #ofrecemos .asesoria-legal {
+    color: #ef7c31;
+  }
+  #ofrecemos .red-jovenes {
+    color: #1785c9;
+  }
+  #ofrecemos .capacitacion {
+    color: #be1d88;
+  }
+  #ofrecemos .apoyo {
+    color: #e8e96a;
+  }
+  #ofrecemos .difusion {
+    color: #61afe6;
+  }
+  #ofrecemos .col-xs-12 {
+    text-align: center !important;
+    padding: 21px 0 !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
