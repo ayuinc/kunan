@@ -1,3 +1,7 @@
+{if logged_in}
+  {redirect='formulario/index'}  
+{/if}
+{if logged_out}
 {embed="includes/header"}
 {embed="includes/navegacion"} 
     <main class="site-content">
@@ -70,4 +74,5 @@
 			{embed="includes/formulario"}
 			{embed="includes/estadistica"}
     </main>
+{/if}
 {embed="includes/footer"}  
