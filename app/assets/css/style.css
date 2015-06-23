@@ -1052,31 +1052,43 @@ body a:hover {
 }
 /* Fonts */
 /*MENU*/
-#menu {
+#menu, #menu-vistas {
   position: fixed;
   z-index: 100;
   height: 90px;
   padding-top: 18px;
 }
-#menu nav {
+#menu nav, #menu-vistas nav {
   color: #999;
   padding-left: 50px;
 }
-#menu nav a {
+#menu nav a, #menu-vistas nav a {
   font-size: 12px;
   padding: 0 10px;
   text-decoration: none;
 }
-#menu nav a:hover {
+#menu nav a:hover, #menu-vistas nav a:hover {
   color: #d1d1d1;
 }
-#menu nav a img {
+
+.home nav a img {
   visibility: hidden;
   position: absolute;
 }
-#menu nav .btn {
+
+.vistas {
+  background-color: white;
+}
+.vistas img {
+  width: 60px;
+  position: relative !important;
+  right: 65px;
+}
+.vistas nav a .btn.btn-primary {
   position: relative;
   left: 57px;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 }
 
 .active {

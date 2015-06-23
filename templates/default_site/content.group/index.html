@@ -1,22 +1,36 @@
 {embed="includes/header"}
 {embed="includes/navegacion"}
     <main class="site-content">
-      <section id="hero-image" class="minhp-100" style="background-image:url({site_url}app/assets/img/kunan_main.png)">
-        <div class="bg-hero-image minhp-100">
-          <div class="container-sm minh-280-lg minh-140-xs"></div>  
-          <div class="container-md ph-35-xs text-white text-center pt-70">
-            <h1 class="m-0 pv-14 pb-42-xs light text-uppercase">Innovación que transforma</h1>
-            <p class="lead">Kunan es un programa que impulsa, integra e inspira el emprendimiento y la innovación social de jóvenes “millennials” en el Perú.</p>
-            <!--<img class="hidden-xs" src="{site_url}app/assets/img/Ovalos.png" alt="">
-            <p class="pv-7 small"><em>Cierre el 27 de Julio</em></p>-->
-            <div class="container-xs row pb-63">
-              <div class="col-md-6 col-xs-12 pb-14-xs"><a href="" class="btn btn-primary col-md-12 col-xs-12"><p class="small m-0">CONOCE LAS BASES</p></a></div>
-              <div class="col-md-6 col-xs-12"><a href="" class="btn btn-primary col-md-12 col-xs-12"><p class="small m-0">COMPLETE EL FORMULARIO</p></a></div>
-            </div>
-            <a href="">
-              <img src="{site_url}app/assets/img/triangulo-bajada.png" alt="">
-            </a>
+      <section id="hero-image" class="hero-unit video-bg minhp-100">
+        <video
+          id="videocover"
+          autoplay
+          loop
+          class="video-js videocover vjs-default-skin hidden-xs"
+          muted
+          preload="none">
+            <source src="assets/video/kunan_1.webm" type='video/webm' />
+            <source src="assets/video/kunan_1.ogv" type='video/ogv' />
+            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+        </video>
+
+        <div class="video-overlay flex-middle-center text-white">
+          <div class="container-sm text-center mb-ch-35 hero-text-shadow on-scroll relative">
+            <!-- content -->
+             <h1 class="text-uppercase m-0 pv-14 pb-42-xs">Innovación que transforma</h1>
+              <p class="lead">Kunan quiere consolidad un ecosistema de apoya a la innovación y emprendimiento social de los jóvenes</p>
+              <img class="hidden-xs" src="assets/img/Ovalos.png" alt="">
+              <p class="pv-7">Cierre el 27 de Julio</p>
+              <div class="container-xs row pb-14">
+                <div class="col-md-6 col-xs-12 pb-14-xs"><a href="" class="btn btn-primary col-md-12 col-xs-12"><p class="small m-0">CONOCE LAS BASES</p></a></div>
+                <div class="col-md-6 col-xs-12"><a href="" class="btn btn-primary col-md-12 col-xs-12"><p class="small m-0">COMPLETE EL FORMULARIO</p></a></div>
+              </div>
+              <a href=""><img src="assets/img/triangulo-bajada.png" alt=""></a>
+
           </div>
+          <a class="scroll-down scroll-down-sq size lg" href="#sec-1" rel="nofollow">
+            <i class="icon-arrows-down bg-primary text-white"></i>
+          </a>
         </div>
       </section>
       <!-- DESCRIPTION -->
@@ -65,9 +79,9 @@
               <img class="icon-lineas-de-accion" src="{site_url}app/assets/img/icon-comunidad.png">
               <h3 class="mt-14 h5 light text-uppercase">Comunidad</h3>
               <p class="lh-sm small m-0 light text-gray">Emprendedores sociales con una identidad común, conectados, comparten y cooperan.</p>
-              <a href="{site_url}comunidad">
+              <!--<a href="{site_url}comunidad">
                 <p class="pv-7 small text-primary text-hover-primary light">Leer más ›</p>
-              </a>
+              </a>-->
             </li>
             <li class="grid-list-item">
               <img class="icon-lineas-de-accion" src="{site_url}app/assets/img/icon-comunicacion.png">
@@ -85,39 +99,8 @@
 
           <img class="pv-56 separador"src="{site_url}app/assets/img/linea-separadora.png">
 
-          <h2 class="pb-14 text-gray-darker h3 light text-uppercase">Socios estratégicos</h2>
-          <div class="row pt-56">
-            <div class="col-md-4 hidden-xs"></div>
-            <div class="col-md-4 col-xs-12">
-              <div class="col-md-6 col-xs-6">
-                <img class="img-responsive" src="{site_url}app/assets/img/global.jpg">
-              </div>
-              <div class="col-md-6 col-xs-6">
-                <img class="img-responsive" src="{site_url}app/assets/img/gaston.jpg">
-              </div>
-            </div>
-            <div class="col-md-4 hidden-xs"></div>
-          </div>
-          <div class="row pv-56">
-            <div class="col-md-2 col-xs-4">
-              <img class="img-responsive" src="{site_url}app/assets/img/ey.jpg">
-            </div>
-            <div class="col-md-2 col-xs-4">
-              <img class="img-responsive" src="{site_url}app/assets/img/echecopar.jpg">
-            </div>
-            <div class="col-md-2 col-xs-4">
-              <img class="img-responsive" src="{site_url}app/assets/img/ipae.jpg">
-            </div>
-            <div class="col-md-2 col-xs-4">
-              <img class="img-responsive" src="{site_url}app/assets/img/ey.jpg">
-            </div>
-            <div class="col-md-2 col-xs-4">
-              <img class="img-responsive" src="{site_url}app/assets/img/echecopar.jpg">
-            </div>
-            <div class="col-md-2 col-xs-4">
-              <img class="img-responsive" src="{site_url}app/assets/img/ipae.jpg">
-            </div>
-          </div>
+					{embed="includes/socios-estrategicos"}
+					
         </div>
       </section>
       <!-- END: DESCRIPTION -->
