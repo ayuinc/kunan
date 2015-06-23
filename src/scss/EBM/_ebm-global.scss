@@ -10,8 +10,8 @@ html {
 body {
 	background-color: $body-bg;	
 	h1, h2, h3, h4, h5, h6{
-		font-family: "Ailerons";
-		letter-spacing: -2px;
+		font-family: $font-family-sans-serif;
+		font-weight: 300;
 	}
 	p{
 		font-family: $font-family-sans-serif;
@@ -35,12 +35,24 @@ body {
 */
 $xl-desktop: 1500px;
 $xxl-desktop: 1980px;
-@media #{$xs-only} {}
+@media #{$xs-only} {
+	.text-center-xs{
+		text-align: center;
+	}
+}
 @media #{$sm-only} {}
 @media #{$md-only} {}
 @media #{$lg-only} {}
 @media #{$sm-down} {}
-@media #{$md-down} {}
+@media #{$md-down} {
+	#estadisticas{
+		text-align: center;
+	}
+	.footer{
+		text-align: center;
+	}
+
+}
 @media #{$lg-down} {}
 @media #{$sm-up} {}
 @media #{$md-up} {}
@@ -51,48 +63,77 @@ $xxl-desktop: 1980px;
 
 /* Fonts */
 
-@font-face{
-	font-family: "Ailerons";
-	src: url(../fonts/Ailerons.ttf);
-}
+
 
 
 /*MENU*/
+
+
+
+
 #menu {
 	position: fixed;
-	z-index: 10;
+	z-index: 100;
+	height: 90px;
 	padding-top: 18px;
-	@include transition(all .2s ease-in);
 	nav {
-		.hidden {
-			visibility: hidden;
-		}
+		color: #999;
+		padding-left: 50px;
 		a {
-			font-size: 14px;
+			font-size: 12px;
 			padding: 0 10px; 
 			text-decoration: none;
-			// font-family: museo-sans;
-			img {
-				position: absolute;
+			&:hover{
+				color: #d1d1d1;
 			}
-			.votacion,
 			img {
 				visibility: hidden;
+				position: absolute;
 			}
+		}
+		.btn{
+			position: relative;
+			left: 57px;
 		}
 	}
 }
+
 .active {
-	background-color: #fff;
-	height: 129px;
+	background-color: #f7f7f7;
+	height: 90px;
 	padding-top: 0!important;
 	padding-left: 0!important;
 	@include flex-column-center;
-	nav a {
-		color: rgb(106, 106, 106)!important;
+	webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: translateZ(0);
+  
+	nav {
+		color: #e1e1e1 !important;
+		padding-left: 0 !important;
+		a{
+			color: #333 !important;	
+			&:hover{
+				color: #e83f95 !important;
+			}
+		}
+		.btn{
+			position: relative;
+			left: 57px;
+		}
+		.btn.btn-white.btn-outline{
+			border: 1px solid #333;
+		}
 		img {
-			width: 85px;
+			width: 60px;
 			position: relative!important;
+			right: 60px;
 		}
 		img, 
 		.votacion{
@@ -107,6 +148,10 @@ $xxl-desktop: 1980px;
 
 .text-blue-banner{
 	color: #1184C6;
+}
+
+.margin-auto{
+	margin: 0 auto;
 }
 
 /*HER0 IMAGE*/
@@ -125,17 +170,21 @@ $xxl-desktop: 1980px;
 
 #estadisticas {
 	.numbers{
-		font-size: 130px;
-		letter-spacing: -12px;
+		font-size: 80px;
 	}
 }
 
+.icon-lineas-de-accion{
+	width: 90px;
+}
+
+
 input {
+		width: 100%;
     border: 0;
     outline: 0;
     background: transparent;
     border-bottom: 1px solid $gray-light;
-    width: 20px;
 }
 
 .hero-unit {

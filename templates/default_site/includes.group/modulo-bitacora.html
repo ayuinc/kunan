@@ -1,16 +1,20 @@
-          <h2 class="pb-14">La bitácora</h2>
-          <p class="h4 light m-0 pb-21">El día a día de los eventos y noticias más importantes de la comunidad de emprendimiento social.</p>
+          <h2 class="pb-21 h4 light text-uppercase">La bitácora</h2>
+          <p class="h4 light m-0 pb-35 text-gray">El día a día de los eventos y noticias más importantes de la comunidad de emprendimiento social.</p>
           <ul class="grid-list grid-list-3 grid-list-1-xs text-left">
             {exp:channel:entries channel="la_bitacora" limit="3" disable="member_data"}
             <li class="grid-list-item">
               <a href="{site_url}la-bitacora/articulo/{url_title}">
+              {if bitacora-imagen!=''}
 	              {bitacora-imagen}
-	              <img class="img-responsive" src="{image:url:small}">
-								{/bitacora-imagen}
+	              	<img class="img-responsive" src="{image:url:medium}">
+	              {/bitacora-imagen}	 
+              {if:else} 
+              	<img class="img-responsive" src="http://img.youtube.com/vi/{bitacora-video}/mqdefault.jpg" width="100%">
+              {/if}
 	            </a>
-              <a href="{site_url}la-bitacora/articulo/{url_title}"><p class="h5 mt-21 mb-0">{title}</p></a>
-              <p class="small m-0 light"><dfn>{entry_date format="%d-%m-%Y"}</dfn></p>
-              <p class="lh-sm small m-0 pt-14 light">
+              <a href="{site_url}la-bitacora/articulo/{url_title}"><p class="h5 mt-21 mb-0 light text-uppercase">{title}</p></a>
+              <p class="small m-0 light text-gray-light"><dfn>{entry_date format="%d-%m-%Y"}</dfn></p>
+              <p class="lh-sm small m-0 pt-14 light text-gray">
 	              {exp:char_limit total="200" exact="no"}
 	              	{bitacora-descripcion}
 								{/exp:char_limit}
@@ -22,7 +26,7 @@
                 </div>
                 <div class="col-md-10 col-xs-10">
                   <p class="h6 m-0 light pt-7">{bitacora-autor:title}</p>
-                  <p class="h6 m-0 light"><dfn>{bitacora-autor:autor-organizacion}</dfn></p>
+                  <p class="h6 m-0 light text-gray-light"><dfn>{bitacora-autor:autor-organizacion}</dfn></p>
                 </div>
               </div>
               {/bitacora-autor}

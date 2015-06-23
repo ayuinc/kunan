@@ -1015,8 +1015,8 @@ body {
   background-color: #fff;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
-  font-family: "Ailerons";
-  letter-spacing: -2px;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
 body p {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1036,39 +1036,52 @@ body a:hover {
 /*
 	Media queries
 */
-/* Fonts */
-@font-face {
-  font-family: "Ailerons";
-  src: url(../fonts/Ailerons.ttf);
+@media only screen and (max-width: 480px) {
+  .text-center-xs {
+    text-align: center;
+  }
 }
+@media only screen and (max-width: 992px) {
+  #estadisticas {
+    text-align: center;
+  }
+
+  .footer {
+    text-align: center;
+  }
+}
+/* Fonts */
 /*MENU*/
 #menu {
   position: fixed;
-  z-index: 10;
+  z-index: 100;
+  height: 90px;
   padding-top: 18px;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
 }
-#menu nav .hidden {
-  visibility: hidden;
+#menu nav {
+  color: #999;
+  padding-left: 50px;
 }
 #menu nav a {
-  font-size: 14px;
+  font-size: 12px;
   padding: 0 10px;
   text-decoration: none;
 }
-#menu nav a img {
-  position: absolute;
+#menu nav a:hover {
+  color: #d1d1d1;
 }
-#menu nav a .votacion,
 #menu nav a img {
   visibility: hidden;
+  position: absolute;
+}
+#menu nav .btn {
+  position: relative;
+  left: 57px;
 }
 
 .active {
-  background-color: #fff;
-  height: 129px;
+  background-color: #f7f7f7;
+  height: 90px;
   padding-top: 0 !important;
   padding-left: 0 !important;
   display: -webkit-box;
@@ -1097,16 +1110,40 @@ body a:hover {
   -o-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
+  webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: translateZ(0);
+}
+.active nav {
+  color: #e1e1e1 !important;
+  padding-left: 0 !important;
 }
 .active nav a {
-  color: #6a6a6a !important;
+  color: #333 !important;
 }
-.active nav a img {
-  width: 85px;
+.active nav a:hover {
+  color: #e83f95 !important;
+}
+.active nav .btn {
+  position: relative;
+  left: 57px;
+}
+.active nav .btn.btn-white.btn-outline {
+  border: 1px solid #333;
+}
+.active nav img {
+  width: 60px;
   position: relative !important;
+  right: 60px;
 }
-.active nav a img,
-.active nav a .votacion {
+.active nav img,
+.active nav .votacion {
   visibility: visible !important;
 }
 
@@ -1116,6 +1153,10 @@ body a:hover {
 
 .text-blue-banner {
   color: #1184C6;
+}
+
+.margin-auto {
+  margin: 0 auto;
 }
 
 /*HER0 IMAGE*/
@@ -1135,16 +1176,19 @@ body a:hover {
 }
 
 #estadisticas .numbers {
-  font-size: 130px;
-  letter-spacing: -12px;
+  font-size: 80px;
+}
+
+.icon-lineas-de-accion {
+  width: 90px;
 }
 
 input {
+  width: 100%;
   border: 0;
   outline: 0;
   background: transparent;
   border-bottom: 1px solid #b5b6b7;
-  width: 20px;
 }
 
 .hero-unit.video-bg {
