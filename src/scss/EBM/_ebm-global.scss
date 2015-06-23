@@ -219,6 +219,7 @@ input {
 	}
 }
 
+
 .video-js {
 	position: relative !important;
   width: 100% !important;
@@ -320,8 +321,11 @@ select[id="freeform_edad"]{
 	text-indent: 35%;
 }
 
-
-input[type="radio"], 
+ 
 input[type="checkbox"]{
+	width: 14px;
+}
+
+input[type="radio"]{
 	width: 14px;
 }

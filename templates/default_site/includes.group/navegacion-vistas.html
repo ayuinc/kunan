@@ -7,7 +7,12 @@
 		        <a href="{site_url}nuestroreto"><span class="ph-7">Nuestro reto</span></a>|
 		        <a href="{site_url}lineasdeaccion"><span class="ph-7">Líneas de acción</span></a>|
 		        <a href="{site_url}la-bitacora"><span class="pl-7 pr-14 ">La bitácora</span></a>
-		        <a href="{site_url}" class="btn btn-primary pv-7"><span class="ph-21">VOTA</span></a>
+		        <!--<a href="{site_url}" class="btn btn-primary pv-7"><span class="ph-21">VOTA</span></a>-->
+	          {if logged_in}
+	          	<a class="btn text-primary pv-7" href="{path='logout'}">{screen_name} (salir)</a>
+	          {if:else}
+	          	<a class="btn btn-primary btn-white pv-7" href="{site_url}login">Regístrate o Ingresa</a> 
+	          {/if}
 		      </nav>
 		    </div>
 	    </header>
