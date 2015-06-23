@@ -13,6 +13,16 @@
 							    composer_template_name="composer_formulario_registro"
 							    return="gracias/index"
 							}
+							
+							{if freeform:general_errors}
+							    <h2>There were some error(s) with your submission:</h2>
+							    <ul>
+							        {freeform:general_errors}
+							        <li>{freeform:error_message}</li>
+							        {/freeform:general_errors}
+							    </ul>
+							{/if}
+							{/exp:freeform:composer}
             </div>
           </div>
         </div>
