@@ -9,6 +9,7 @@
   <link rel="shortcut icon" href="assets/img/favicon_kunan.png">
   <link href="assets/css/style.css" rel="stylesheet"> <!-- App styles -->
   <link href="assets/css/ebm.css" rel="stylesheet">
+  <link href="assets/css/video-js.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500' rel='stylesheet' type='text/css'>
   <script src="//use.typekit.net/cit1oun.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
@@ -27,22 +28,40 @@
       </div>
     </header>
     <main class="site-content">
-      <section id="hero-image" class="minhp-100" style="background-image:url(assets/img/kunan_main.png)">
-        <div class="bg-hero-image minhp-100">
-          <div class="container-sm minh-280-lg minh-140-xs"></div>  
-          <div class="container-sm ph-35-xs text-white text-center">
-            <h1 class="text-uppercase m-0 pv-14 pb-42-xs">Innovación que transforma</h1>
-            <p class="lead">Kunan quiere consolidad un ecosistema de apoya a la innovación y emprendimiento social de los jóvenes</p>
-            <img class="hidden-xs" src="assets/img/Ovalos.png" alt="">
-            <p class="pv-7">Cierre el 27 de Julio</p>
-            <div class="container-xs row pb-63">
-              <div class="col-md-6 col-xs-12 pb-14-xs"><a href="" class="btn btn-primary col-md-12 col-xs-12"><p class="small m-0">CONOCE LAS BASES</p></a></div>
-              <div class="col-md-6 col-xs-12"><a href="" class="btn btn-primary col-md-12 col-xs-12"><p class="small m-0">COMPLETE EL FORMULARIO</p></a></div>
-            </div>
-            <a href=""><img src="assets/img/triangulo-bajada.png" alt=""></a>
+      <section id="hero-image" class="hero-unit video-bg minhp-100">
+
+        <video
+          id="videocover"
+          autoplay
+          loop
+          class="video-js videocover vjs-default-skin hidden-xs"
+          muted
+          preload="none">
+            <source src="assets/video/kunan_1.webm" type='video/webm' />
+            <source src="assets/video/kunan_1.ogv" type='video/ogv' />
+            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+        </video>
+        <div class="video-overlay flex-middle-center text-white">
+          <div class="container-sm text-center mb-ch-35 hero-text-shadow on-scroll relative">
+            <!-- content -->
+             <h1 class="text-uppercase m-0 pv-14 pb-42-xs">Innovación que transforma</h1>
+              <p class="lead">Kunan quiere consolidad un ecosistema de apoya a la innovación y emprendimiento social de los jóvenes</p>
+              <img class="hidden-xs" src="assets/img/Ovalos.png" alt="">
+              <p class="pv-7">Cierre el 27 de Julio</p>
+              <div class="container-xs row pb-14">
+                <div class="col-md-6 col-xs-12 pb-14-xs"><a href="" class="btn btn-primary col-md-12 col-xs-12"><p class="small m-0">CONOCE LAS BASES</p></a></div>
+                <div class="col-md-6 col-xs-12"><a href="" class="btn btn-primary col-md-12 col-xs-12"><p class="small m-0">COMPLETE EL FORMULARIO</p></a></div>
+              </div>
+              <a href=""><img src="assets/img/triangulo-bajada.png" alt=""></a>
+
           </div>
+          <a class="scroll-down scroll-down-sq size lg" href="#sec-1" rel="nofollow">
+              <i class="icon-arrows-down bg-primary text-white"></i>
+            </a>
         </div>
       </section>
+
+
       <!-- DESCRIPTION -->
       <section class="text-center">
         <div class="container-md text-gray-darker pv-70">
@@ -236,6 +255,7 @@
         </div>
       </section>
       <!-- END: ESTADISTICAS -->
+      </section>
     </main>
 
     <!-- FOOTER -->
@@ -271,8 +291,8 @@
 
 
 
-
   <script src="assets/js/jquery.min.js"></script> <!-- App scripts -->
   <script src="assets/js/scripts.min.js"></script>
   <script src="assets/js/menu-control.js"></script>
+  <script src="assets/js/video.js"></script>
 </html>
