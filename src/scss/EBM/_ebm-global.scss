@@ -104,6 +104,16 @@ $xxl-desktop: 1980px;
 	padding-top: 0!important;
 	padding-left: 0!important;
 	@include flex-column-center;
+	webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: translateZ(0);
+  
 	nav {
 		color: #e1e1e1 !important;
 		padding-left: 0 !important;
