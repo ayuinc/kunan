@@ -1270,14 +1270,11 @@ input {
 }
 
 @media only screen and (max-width: 480px) {
-  #ofrecemos .asesoria {
-    color: #259b4a;
-  }
   #ofrecemos .asesoria-legal {
-    color: #ef7c31;
+    color: #1785c9;
   }
   #ofrecemos .red-jovenes {
-    color: #1785c9;
+    color: #ef7c31;
   }
   #ofrecemos .capacitacion {
     color: #be1d88;
