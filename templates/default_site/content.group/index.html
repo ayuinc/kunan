@@ -39,14 +39,21 @@
         <img class="border-right-top hidden-xs" src="{site_url}app/assets/img/borde-right-top.png">
         <div class="container-md text-gray-darker pb-70">
           <p class="m-0 lead text-gray">Son los jóvenes que motivados por su optimismo, creatividad y sensibilidad ante los problemas sociales inician proyectos sociales que ayudan a construir un mejor Perú.</p>
-          <h2 id="porqueestamos" class="pt-28 h4 light pb-7 text-pink text-uppercase">¿Por qué estamos aquí?</h2>
+          <h2 id="porqueestamos" class="pt-28 h4 pb-7 text-pink text-uppercase">¿Por qué estamos aquí?</h2>
           <p class="container-sm light lh-xs text-gray h4">Queremos consolidar el ecosistema de emprendimientos, inspirando, impulsando e integrando iniciativas innovadoras que generan valor. </p>
+
+          <!-- VIDEO -->
+          <div class="row" id="ofrecemos">
+            <div class="col-md-8 col-md-offset-2 m-ch-0 pv-35 col-xs-12">
+	            <iframe width="100%" height="415" src="https://www.youtube.com/embed/QEVMHVSc0IQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
 
           <p class="pt-21 h4 light"><dfn>Kunan significa AHORA y el futuro es AHORA.</dfn></p>
           
           <img class="pv-56 separador"src="{site_url}app/assets/img/linea-separadora.png">
           
-          <h2 id="nuestroreto" class="pb-35 h4 light text-black text-uppercase">Nuestro reto</h2>
+          <h2 id="nuestroreto" class="pb-35 h4 text-black text-uppercase">Nuestro reto</h2>
           <ul class="grid-list grid-list-3 grid-list-1-xs text-center">
             <li class="grid-list-item pv-28-xs">
             	<div class="bg-gray-lighter">
@@ -69,7 +76,7 @@
 
           <img class="pv-56 separador"src="{site_url}app/assets/img/linea-separadora.png">
 
-          <h2 id="lineasdeaccion" class="pb-21 h4 light text-uppercase">Líneas de acción</h2>
+          <h2 id="lineasdeaccion" class="pb-21 h4 text-uppercase">Líneas de acción</h2>
           <ul class="grid-list grid-list-3 grid-list-1-xs text-center text-black">
             <li class="grid-list-item">
               <img class="icon-lineas-de-accion" src="{site_url}app/assets/img/like_buttom.png">
@@ -111,6 +118,15 @@
       <!-- END: DESCRIPTION -->
       {embed="includes/formulario"}
       {embed="includes/estadistica"}
+
+      <div class="container sumate php-7 pv-21">
+        {exp:freeform:composer
+            form_name="sumate"
+            composer_template_name="sumate"
+            return="gracias/index"
+        }
+      </div>
+
     </main>
     
 {embed="includes/footer"} 
