@@ -8,6 +8,7 @@
         <div class="container-md pv-70">
           <div class="row">
             <div class="col-md-12">
+	            <p class="light ml-7">*Antes de iniciar la inscripción debes leer las <a href="{site_url}app/assets/documentos/bases_kunan_premio_2015.pdf" class="text-primary" target="_blank">bases del concurso.</a></p>
               {exp:query sql="SELECT * FROM exp_freeform_form_entries_1 WHERE author_id={embed:miembro}"}
                 {exp:freeform:edit 
                   form_name="formulario_registro"
@@ -18,6 +19,7 @@
                   {redirect='formulario/index' status_code="301"}
                 {/if}  
               {/exp:query}
+              <p class="text-center light">Encuentra información en el <a href="{site_url}general/glosario_de_terminos">glosario de términos</a></p>
             </div>
           </div>
         </div>

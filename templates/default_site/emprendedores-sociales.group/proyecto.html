@@ -28,18 +28,22 @@
         <div class="container-md pv-70">
           <div class="row">
             <div class="col-md-3 minh-280 light text-gray">
-              <h2 class="m-0 text-gray-darker">{title}</h2>
+              <h2 class="m-0 text-black">{title}</h2>
               <p class="small m-0 text-gray-darker">{proyecto-sector}</p>
-              <p class="small m-0"><dfn>{proyecto-ciudad}</dfn></p>
+              <p class="small mt-0 mb-21"><dfn>{proyecto-ciudad}</dfn></p>
+              <p class="small m-0 text-black">Contáctos</p>
               <p class="small m-0">
 	              {if proyecto-correoelectrnico}
 	              <dfn><a href="mailto:{proyecto-correoelectrnico}">{proyecto-correoelectrnico}</a></dfn><br>
 	              {/if}
+	              {if proyecto-website}
+	              <dfn><a href="{proyecto-website}">Website</a></dfn><br>
+	              {/if}
 	              {if proyecto-facebook}
-	              <dfn><a href="{proyecto-facebook}">facebook</a></dfn><br>
+	              <dfn><a href="{proyecto-facebook}">Facebook</a></dfn><br>
 	              {/if}
 	              {if proyecto-twitter}
-	              <dfn><a href="{proyecto-twitter}">twitter</a></dfn>
+	              <dfn><a href="{proyecto-twitter}">Twitter</a></dfn>
 	              {/if}
               </p>
               <!--<div class="row pl-14 mt-28 text-center">
