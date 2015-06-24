@@ -245,7 +245,7 @@ input {
 .hero-unit {
 	&.video-bg {
 		overflow: hidden;
-  	height: 652px;
+  	height: 614px;
   	position: relative;
 	}
 }
@@ -268,13 +268,29 @@ input {
 
 @media #{$xs-only} {
 	#content-estadistica {
-	 	.col-md-3,
+	 	.col-md-4,
 	 	.col-md-2 {
 	 		text-align: center;
 	 		p {
 	 			text-align: center !important;
 	 		}
 	 	}
+	}
+}
+
+//Estadistica responsive 
+.ff_composer {
+	.size1of4 {
+		@media #{$xs-only} {
+			width: 100% !important;
+		}
+	}
+}
+
+.img-socios {
+	padding-left: 0px !important;
+	@media #{$xs-only} {
+		padding-left: 14px !important;
 	}
 }
 
@@ -455,6 +471,9 @@ input[name="submit"] {
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: #ea6616;
+  @media #{$xs-only} {
+  	margin-left: 0px;
+  }
 }
 
 .sumate {

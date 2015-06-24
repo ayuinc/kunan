@@ -1225,7 +1225,7 @@ input {
 
 .hero-unit.video-bg {
   overflow: hidden;
-  height: 652px;
+  height: 614px;
   position: relative;
 }
 
@@ -1245,15 +1245,30 @@ input {
 }
 
 @media only screen and (max-width: 480px) {
-  #content-estadistica .col-md-3,
+  #content-estadistica .col-md-4,
   #content-estadistica .col-md-2 {
     text-align: center;
   }
-  #content-estadistica .col-md-3 p,
+  #content-estadistica .col-md-4 p,
   #content-estadistica .col-md-2 p {
     text-align: center !important;
   }
 }
+@media only screen and (max-width: 480px) {
+  .ff_composer .size1of4 {
+    width: 100% !important;
+  }
+}
+
+.img-socios {
+  padding-left: 0px !important;
+}
+@media only screen and (max-width: 480px) {
+  .img-socios {
+    padding-left: 14px !important;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   #ofrecemos .asesoria {
     color: #259b4a;
@@ -1424,6 +1439,11 @@ input[name="submit"] {
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: #ea6616;
+}
+@media only screen and (max-width: 480px) {
+  input[name="submit"] {
+    margin-left: 0px;
+  }
 }
 
 .sumate h2 {
