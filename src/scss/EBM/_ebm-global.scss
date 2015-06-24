@@ -394,15 +394,20 @@ input[type="radio"]{
 
 input[name="submit"] {
 	border: 1px solid #ea6616;
-  color: #ea6616;
+  color: white;
   width: 94px;
   border-radius: 3px;
   margin-left: 40%;
   margin-top: 21px;
   display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #ea6616;
 }
 
-// label[for="freeform_acepto_la_declaracion"] {
-// 	width: 177px !important;
-// 	float: left !important;
-// }
+.sumate {
+	h2 {
+		margin-bottom: 0px !important;
+  	margin-top: 14px !important;
+	}
+}
