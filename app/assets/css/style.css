@@ -1051,6 +1051,11 @@ body a:hover {
     text-align: center;
   }
 }
+@media only screen and (min-width: 992px) {
+  .iframe {
+    height: 415px;
+  }
+}
 /*MENU*/
 #menu, #menu-vistas {
   position: fixed;
