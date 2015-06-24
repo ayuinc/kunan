@@ -1,5 +1,5 @@
           <!-- CRONOGRAMA -->
-          <h2 class="pb-35 h4 light text-black text-uppercase">Eventos</h2>
+          <h2 class="pb-35 h4 text-black text-uppercase">Eventos</h2>
           <div class="container-sm">
 	          {exp:channel:entries channel="cronograma_comunidad" limit="10" disable="member_data"}
             <div class="row text-gray-darker mb-14">
@@ -8,8 +8,8 @@
                 <h4 class="m-0 mb-7 text-uppercase h5 light">{cronograma-fecha-evento format="%M"}</h4>
               </div>
               <div class="col-md-10 m-ch-0 mt-ch-7 text-left lh-sm col-xs-9">
-	              <h3 class="text-uppercase h4 light">{title}</h3>
-                <p class="text-gray-light light pb-7">{cronograma-descripcion-evento}</p>
+	              <h3 class=" h4 light">{title}</h3>
+                <p class="text-gray-light pb-7 small lh-sm">{cronograma-descripcion-evento}</p>
                 <small><a href="{cronograma-link-url}">{cronograma-link-texto}</a></small>
               </div>
             </div>
