@@ -1135,6 +1135,10 @@ body a:hover {
   color: #e83f95 !important;
 }
 
+.vistas {
+  background-color: white;
+}
+
 .text-black {
   color: black;
 }
