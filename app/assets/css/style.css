@@ -1151,7 +1151,8 @@ body a:hover {
 
 .border-right-top {
   width: 680px;
-  top: 534px;
+  top: 0;
+  right: 0;
   position: absolute;
 }
 
@@ -1159,7 +1160,7 @@ body a:hover {
   position: absolute;
   width: 680px;
   left: 0;
-  bottom: 655px;
+  bottom: 0;
 }
 
 #porqueestamos {
