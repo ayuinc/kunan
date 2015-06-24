@@ -24,58 +24,58 @@ $lang = array(
 'Display smiley images in entries.',
 
 'invalid_email_address' =>
-'You did not submit a valid email address',
+'Usted no envíe un email válido',
 
 'disallowed_screen_chars' =>
-'Screen Name contains illegal characters',
+'Nombre de pantalla contiene caracteres no válidos',
 
 'return_to_forum' =>
 'Return to the forums',
 
 'settings_update' =>
-'Settings Update Form',
+'Ajustes Formulario de actualización',
 
 'your_current_un_pw' =>
-'Your existing username and password',
+'Su nombre de usuario y contraseña',
 
 'access_notice' =>
-'Important notice: The administrator has changed the access requirements for this site as follows:',
+'Aviso importante: El administrador ha cambiado los requisitos de acceso a este sitio de la siguiente manera:',
 
 'choose_new_un' =>
-'Please choose a new username',
+'Por favor, elija un nuevo nombre de usuario',
 
 'choose_new_pw' =>
-'Please choose a new password',
+'Por favor elige una contraseña nueva',
 
 'confirm_new_pw' =>
-'Confirm your new password',
+'Confirme su nueva contraseña',
 
 'existing_un' =>
-'Your existing username',
+'Tu nombre de usuario existente',
 
 'un_len' =>
-'Usernames must be at least %s characters in length',
+'Los nombres de usuario deben ser al menos %s caracteres de longitud',
 
 'pw_len' =>
-'Passwords must be at least %s characters in length',
+'Las contraseñas deben tener al menos %s caracteres de longitud',
 
 'yun_len' =>
-'Your username is currently %s characters long',
+'Su nombre de usuario es actualmente %s caracteres de largo',
 
 'ypw_len' =>
-'Your password is currently %s characters long',
+'Su contraseña es actualmente %s caracteres de largo',
 
 'existing_username' =>
-'Your Existing Username',
+'Tu nombre de usuario existente',
 
 'existing_password' =>
-'Your Current Password',
+'Tu contraseña actual',
 
 'all_fields_required' =>
-'You must submit all fields',
+'Usted debe presentar todos los campos',
 
 'invalid_existing_un_pw' =>
-'The existing username and/or password you submitted are not valid',
+'El nombre de usuario existente y/o la contraseña que indicó no son válidos',
 
 'unpw_updated' =>
 'Your settings have been updated.  You may now log-in.',
