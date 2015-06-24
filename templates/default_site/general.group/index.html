@@ -1,0 +1,27 @@
+{exp:channel:entries channel="paginas_generales" limit="1" disable="member_data|pagination"}
+{embed="includes/header"}
+{embed="includes/navegacion-vistas"}
+    <main class="site-content">
+      <section class="minh-70"></section>
+      <!-- DESCRIPTION -->
+      <section class="text-left" id="description">
+        <div class="container-md pv-70">
+          <div class="row">
+            <div class="col-md-offset-1 col-md-10 light text-left text-gray-darker">
+	            <h2 class="text-uppercase light h3 pb-21 text-gray-darker">{title}</h2>
+              {general-imagen}
+              	<img class="img-responsive" src="{image:url:medium}">
+              {/general-imagen}	 
+              <div class="pv-28">
+              {general_contenido}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: DESCRIPTION -->
+{/exp:channel:entries}      
+			{embed="includes/formulario"}
+      {embed="includes/estadistica"}
+    </main>
+{embed="includes/footer"}    
