@@ -168,35 +168,6 @@ $xxl-desktop: 1980px;
 }
 
 
-// .home{
-// 	nav a{
-// 		img{
-// 			visibility: hidden;
-// 			position: absolute;
-// 		}
-// 		.btn.btn-outline.btn-white{
-// 			position: relative;
-// 			left: 55px;
-// 		}
-// 	}
-
-// }
-
-// .vistas{
-// 	background-color: white;
-// 	img {
-// 		width: 60px;
-// 		position: relative !important;
-// 		right: 60px;
-// 	}
-// 	nav {
-// 		.btn{
-// 			position: relative;
-// 			left: 0 !important;
-// 		}
-// 	}
-	
-// }
 .border-right-top{
 	width: 680px;
   	top: 534px;
@@ -472,3 +443,18 @@ nav ul{
 
 
 /* END: PRUEBA MENU-RESPONSIVE */
+input[name="submit"] {
+	border: 1px solid #ea6616;
+  color: #ea6616;
+  width: 94px;
+  border-radius: 3px;
+  margin-left: 40%;
+  margin-top: 21px;
+  display: block;
+}
+
+// label[for="freeform_acepto_la_declaracion"] {
+// 	width: 177px !important;
+// 	float: left !important;
+// }
+

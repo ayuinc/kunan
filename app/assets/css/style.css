@@ -1412,5 +1412,14 @@ nav ul a {
 }
 
 /* END: PRUEBA MENU-RESPONSIVE */
+input[name="submit"] {
+  border: 1px solid #ea6616;
+  color: #ea6616;
+  width: 94px;
+  border-radius: 3px;
+  margin-left: 40%;
+  margin-top: 21px;
+  display: block;
+}
 
 /*# sourceMappingURL=style.css.map */
