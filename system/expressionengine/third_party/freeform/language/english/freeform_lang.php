@@ -1872,7 +1872,7 @@ Here are the details:
 "Invalid Composer Data Submitted.",
 
 'non_valid_email' =>
-"%email% is not a valid email.",
+"%email% no es una dirección de correo electrónico válida.",
 
 'invalid_entry_data' =>
 "Invalid Entry Data",
@@ -1962,44 +1962,44 @@ Here are the details:
 "The from name is required for notifications",
 
 'email_subject_required' =>
-"The email subject is required for notifications",
+"El asunto del correo electrónico es necesaria para las notificaciones",
 
 "no_duplicates" =>
-"No duplicate postings are allowed for this form.",
+"No hay publicaciones duplicadas se permite para este formulario.",
 
 'required_field_missing' =>
-"Required field missing input",
+"Los campos obligatorios de entrada faltante",
 
 'fields_do_not_match' =>
 "The following required matching fields do not match: ",
 
 'generic_invalid_field_input' =>
-"Invalid input.",
+"Entrada inválida.",
 
 'not_a_number' =>
-"Not a number",
+"No es un número",
 
 'not_an_integer' =>
-"Not an integer",
+"No es un número entero",
 
 'not_a_decimal' =>
-"Not a decimal",
+"No es un decimal",
 
 'not_valid_email' =>
-"Not a valid email",
+"No es una dirección de correo electrónico válida",
 
 'number_exceeds_limit' =>
-"Number exceeds allowed maximum",
+"Número excede máximo permitido",
 
 'max_length_exceeded' =>
-"Maximum field length of %num% exceeded.",
+"Longitud máxima del campo %num% superó.",
 
 'field_settings_error' =>
-"Options for this field type had errors.",
+"Opciones para este tipo de campo tenían errores.",
 
 //this is for concatenating to a standard field with a required match
 'confirm' =>
-"Confirm",
+"Confirmar",
 
 //general errors
 'invalid_request' =>
@@ -2042,52 +2042,52 @@ to the module's control panel in the ExpressionEngine Control Panel",
 // -------------------------------------
 
 'upload_userfile_not_set' =>
-"Unable to find a post variable called user file.",
+"Incapaz de encontrar una variable post llamado archivo de usuario.",
 
 'upload_file_exceeds_limit' =>
-"The uploaded file exceeds the maximum allowed size in your PHP configuration file.",
+"El archivo subido excede el tamaño máximo permitido en el archivo de configuración de PHP.",
 
 'upload_file_exceeds_form_limit' =>
-"The uploaded file exceeds the maximum size allowed by the submission form.",
+"El archivo subido excede el tamaño máximo permitido por el formulario de envío.",
 
 'upload_file_partial' =>
-"The file was only partially uploaded.",
+"El archivo fue sólo parcialmente subido.",
 
 'upload_no_temp_directory' =>
-"The temporary folder is missing.",
+"La carpeta temporal no se encuentra.",
 
 'upload_unable_to_write_file' =>
-"The file could not be written to disk.",
+"El archivo no se puede escribir en el disco.",
 
 'upload_stopped_by_extension' =>
-"The file upload was stopped by extension.",
+"La carga de archivos fue detenido por extensión.",
 
 'upload_no_file_selected' =>
-"You did not select a file to upload.",
+"No ha seleccionado un archivo para cargar.",
 
 'upload_invalid_filetype' =>
-"The filetype you are attempting to upload is not allowed.",
+"El tipo de archivo que está intentando subir no está permitido.",
 
 'upload_invalid_filesize' =>
-"The file you are attempting to upload is larger than the permitted size.",
+"El archivo que está intentando subir es mayor que el tamaño permitido.",
 
 'upload_invalid_dimensions' =>
-"The image you are attempting to upload exceeds the maximum height or width.",
+"La imagen que está intentando cargar excede la altura o anchura máxima.",
 
 'upload_destination_error' =>
-"A problem was encountered while attempting to move the uploaded file to the final destination.",
+"Se encontró un problema al intentar mover el archivo subido hasta el destino final.",
 
 'upload_no_filepath' =>
-"The upload path does not appear to be valid.",
+"El camino de subida no parece ser válida.",
 
 'upload_no_file_types' =>
-"You have not specified any allowed file types.",
+"No ha especificado ningún tipo de archivo permitidos.",
 
 'upload_bad_filename' =>
-"The file name you submitted already exists on the server.",
+"El nombre de archivo que ya se ha enviado existe en el servidor.",
 
 'upload_not_writable' =>
-"The upload destination folder does not appear to be writable.",
+"La carpeta de destino de la carga no parece tener permisos de escritura.",
 
 //----------------------------------------
 //  Update routine

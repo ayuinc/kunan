@@ -483,55 +483,55 @@ content associated with your account will also be deleted.',
 
 
 'mbr_form_empty' =>
-'You must submit your username and password',
+'Usted debe presentar su nombre de usuario y contraseña',
 
 'mbr_account_not_active' =>
-'Your membership account has not been activated yet.',
+'Tu cuenta de miembro no se ha activado todavía.',
 
 'mbr_you_are_logged_in' =>
-'You are now logged in.',
+'Ahora está conectado.',
 
 'mbr_you_are_logged_out' =>
-'You are now logged out.',
+'Ahora está desconectado.',
 
 'mbr_no_reset_id' =>
-'The password reset token does not appear to be valid.  Please check the link you followed.',
+'El testigo de restablecimiento de contraseña no parece ser válida. Por favor, consulte el enlace has seguido.',
 
 'mbr_id_not_found' =>
-'The code number you submitted was not found in the database.',
+'El número de código que ha enviado no se encontró en la base de datos.',
 
 'mbr_username' =>
-'Username',
+'Nombre de usuario',
 
 'mbr_password' =>
-'Password',
+'Contraseña',
 
 'mbr_submit' =>
-'Submit',
+'Enviar',
 
 'mbr_update' =>
-'Update',
+'Actualizar',
 
 'mbr_password_confirm' =>
-'Confirm Password',
+'Confirmar contraseña',
 
 'mbr_auto_login' =>
-'Auto-login on future visits',
+'Auto-login en futuras visitas',
 
 'mbr_show_name' =>
-'Show my name in the online users list',
+'Mostrar mi nombre en la lista de usuarios',
 
 'mbr_forgot_password' =>
-'Forgot your password?',
+'Olvidaste tu contraseña?',
 
 'mbr_email_address' =>
-'Email Address',
+'Dirección de correo electrónico',
 
 'mbr_email_confirm' =>
-'Confirm Email Address',
+'Confirmar El Correo',
 
 'mbr_your_email' =>
-'Your Email Address',
+'Tu correo electrónico',
 
 'mbr_email_short' =>
 'Email',
@@ -582,10 +582,10 @@ content associated with your account will also be deleted.',
 'Registration Complete',
 
 'mbr_registration_completed' =>
-'Your registration has been successfully completed.',
+'Su inscripción se ha realizado correctamente.',
 
 'mbr_admin_will_activate' =>
-'A site administrator will activate your account and notify you when it is ready for use.',
+'Un administrador del sitio se activará su cuenta y le notificaremos cuando está listo para su uso.',
 
 'mbr_membership_instructions_email' =>
 'You have just been sent an email containing membership activation instructions.',
