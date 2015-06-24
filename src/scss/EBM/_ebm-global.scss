@@ -463,3 +463,9 @@ input[name="submit"] {
 	}
 }
 
+label[for="freeform_nombre_sumate"],
+label[for="freeform_mail_sumate"],
+#freeform_nombre_sumate,
+#freeform_mail_sumate {
+	color: #b5b6b7 !important;
+}
