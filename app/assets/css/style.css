@@ -1325,6 +1325,93 @@ input[type="radio"] {
   width: 14px;
 }
 
+/* END: FORMULARIO */
+/* PRUEBA MENU-RESPONSIVE */
+.menu-toggle {
+  width: 40px;
+  height: 35px;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  cursor: pointer;
+  z-index: 100;
+}
+.menu-toggle.on .one {
+  -webkit-transform: rotate(45deg) translate(7px, 7px);
+  -moz-transform: rotate(45deg) translate(7px, 7px);
+  -ms-transform: rotate(45deg) translate(7px, 7px);
+  -o-transform: rotate(45deg) translate(7px, 7px);
+  transform: rotate(45deg) translate(7px, 7px);
+}
+.menu-toggle.on .two {
+  opacity: 0;
+}
+.menu-toggle.on .three {
+  -webkit-transform: rotate(-45deg) translate(8px, -10px);
+  -moz-transform: rotate(-45deg) translate(8px, -10px);
+  -ms-transform: rotate(-45deg) translate(8px, -10px);
+  -o-transform: rotate(-45deg) translate(8px, -10px);
+  transform: rotate(-45deg) translate(8px, -10px);
+}
+
+.logo-responsive {
+  width: 60px;
+  margin-left: 25px;
+  margin-top: 4px;
+}
+
+.one,
+.two,
+.three {
+  width: 100%;
+  height: 3px;
+  background: white;
+  margin: 8px auto;
+  backface-visibility: hidden;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+nav ul {
+  list-style: none;
+  margin: 4em auto;
+  padding-top: 110px;
+  padding-left: 32px;
+}
+nav ul.hidden {
+  display: none;
+}
+nav ul a {
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  text-decoration: none;
+  line-height: 1.5;
+  width: 100%;
+  display: block;
+}
+
+.menu-section {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  background-color: black;
+  z-index: 100;
+}
+.menu-section.on {
+  z-index: 100;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  background-image: url(../img/bg-kunan-responsive.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+}
+
+/* END: PRUEBA MENU-RESPONSIVE */
 input[name="submit"] {
   border: 1px solid #ea6616;
   color: #ea6616;
