@@ -10,7 +10,7 @@
               {embed="includes/bitacora-navegacion"}
             </div>
             <div class="col-md-9 light text-left text-gray-darker">
-              <h2 class="text-uppercase light h3 pb-28 text-center">Bitacora</h2>              
+              <h2 class="text-uppercase light h3 pb-28 text-left">Komunicación</h2>              
               {exp:channel:entries channel="la_bitacora" limit="10" disable="member_data"}
               {if bitacora-imagen!=''}
 	              {bitacora-imagen}
@@ -33,7 +33,7 @@
               {/bitacora-autor}              
               <p class="h4 lh-lg light text-gray">{bitacora-descripcion}</p>
               <a href="{site_url}la-bitacora/articulo/{url_title}" class="text-hover-primary h5">
-                <p class="text-primary pv-7 light">Leer más</p>
+                <p class="pv-7 small text-primary text-hover-primary light ">Leer más ›</p>
               </a>
               <div class="text-center">
                 <img class="pv-28 separador" src="{site_url}app/assets/img/linea-separadora.png">
