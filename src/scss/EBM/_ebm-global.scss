@@ -95,6 +95,9 @@ $xxl-desktop: 1980px;
 				color: #d1d1d1;
 			}
 		}
+		.btn-out{
+			visibility: hidden;
+		}
 	}
 }
 
@@ -141,15 +144,26 @@ $xxl-desktop: 1980px;
   			}
   		}
   	}
-  	.header-right{}
+  	.header-right{
+  		.btn-out{
+			visibility: visible !important;
+		}
+  	}
 }
 
 
 .vistas{
 	background-color: white;
+	padding-top: 10px;
 	.header-left{
 	}
-	.header-center{}
+	.header-center{
+		nav{
+			a{
+				color: $gray-darker;
+			}
+		}
+	}
 	.header-right{}
 }
 
@@ -185,6 +199,9 @@ $xxl-desktop: 1980px;
 // }
 
 
+#porqueestamos{
+	color: #e83f95;
+}
 
 .text-black{
 	color: black;

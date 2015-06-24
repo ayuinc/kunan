@@ -1078,6 +1078,9 @@ body a:hover {
 #menu .header-right a:hover, #menu-vistas .header-right a:hover {
   color: #d1d1d1;
 }
+#menu .header-right .btn-out, #menu-vistas .header-right .btn-out {
+  visibility: hidden;
+}
 
 .home .header-left img {
   visibility: hidden;
@@ -1134,9 +1137,20 @@ body a:hover {
 .active .header-center nav a:hover {
   color: #e83f95 !important;
 }
+.active .header-right .btn-out {
+  visibility: visible !important;
+}
 
 .vistas {
   background-color: white;
+  padding-top: 10px;
+}
+.vistas .header-center nav a {
+  color: #3E3F40;
+}
+
+#porqueestamos {
+  color: #e83f95;
 }
 
 .text-black {
