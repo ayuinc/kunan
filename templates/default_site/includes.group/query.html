@@ -1,0 +1,19 @@
+
+{exp:query sql="SELECT * FROM exp_freeform_form_entries_2 WHERE author_id='{embed:miembro}'"}
+  {exp:freeform:composer_edit 
+    form_name="formulario_registro"
+    composer_template_name="composer_formulario_registro"
+    return="gracias/index" 
+    entry_id="{entry_id}" 
+  }
+  {if no_results}
+    {redirect='formulario/index' status_code="301"}
+  {/if}    
+{/exp:query}
+              
+
+
+              
+              
+
+              

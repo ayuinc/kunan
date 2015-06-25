@@ -1,19 +1,19 @@
 {embed="includes/header"}
-{if logged_in} 
+{if logged_in}
 {embed="includes/navegacion-vistas"}
     <main class="site-content">
       <section class="minh-70"></section>
       <!-- DESCRIPTION -->
       <section class="text-left">
         <div class="container-md pv-70">
-          <div class="row formulario-text">
+          <div class="row">
             <div class="col-md-12">
-              <p class="light ml-7">*Antes de iniciar la inscripción debes leer las <a href="{site_url}app/assets/documentos/bases_kunan_premio_2015.pdf" class="text-primary" target="_blank">bases del concurso.</a></p>
-							{exp:freeform:composer
-							    form_name="formulario_registro"
-							    composer_template_name="composer_formulario_registro"
-							    return="gracias/index"
-							}
+              <p class="light ml-7">
+	              *Antes de iniciar la inscripción debes leer las <a href="{site_url}app/assets/documentos/bases_kunan_premio_2015.pdf" class="text-primary" target="_blank">bases del concurso.</a>
+	            </p>
+	            {exp:member:custom_profile_data}			    
+								{embed="includes/query" miembro="{member_id}"}
+							{/exp:member:custom_profile_data}
 							<p class="text-center light">Encuentra información en el <a href="{site_url}general/glosario_de_terminos">glosario de términos</a></p>
             </div>
           </div>
@@ -25,4 +25,5 @@
 {if logged_out}
   {redirect='login/index'}
 {/if}
+
 {embed="includes/footer"}    

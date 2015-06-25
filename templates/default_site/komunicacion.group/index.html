@@ -6,7 +6,7 @@
       <section class="text-left" id="description">
         <div class="container-md pv-70">
           <div class="row">
-            <div class="col-md-9 light text-left text-gray-darker">
+            <div class="col-md-9 col-md-offset-2 light text-left text-gray-darker">
               <h2 class="text-uppercase light h3 pb-28 text-left text-center-xs">Komunicación</h2>              
               {exp:channel:entries channel="la_bitacora" limit="10" disable="member_data"}
               {if bitacora-imagen!=''}
@@ -14,15 +14,15 @@
 	              	<img class="img-responsive" src="{image:url:medium}">
 	              {/bitacora-imagen}	 
               {if:else} 
-              	<iframe width="698" height="424" src="https://www.youtube.com/embed/{bitacora-video}" frameborder="0" allowfullscreen></iframe>
+              	<iframe width="100%" class="iframe" src="https://www.youtube.com/embed/{bitacora-video}" frameborder="0" allowfullscreen></iframe>
               {/if}
 	            <h3 class="text-uppercase h4 light pb-7">{title}</h3>
 	            {bitacora-autor}
               <div class="row">
-                <div class="col-md-1 pr-0 text-left">
+                <div class="col-md-1 col-xs-2 pr-0 text-left">
                   <img class="img-responsive" src="{bitacora-autor:autor-imagen}">
                 </div>
-                <div class="col-md-11 pl-14 text-left">
+                <div class="col-md-11 col-xs-10 pl-14 text-left">
                   <p class="h5 m-0 pt-7">{bitacora-autor:title}</p>
                   <p class="h6 m-0 light text-gray-light"><a href="{bitacora-autor:autor-link-organizacion}" target="_blank">{bitacora-autor:autor-organizacion}</a> - {entry_date format="%d-%m-%Y"}</p>
                 </div>

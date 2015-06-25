@@ -1,7 +1,15 @@
 /*
 	EBM Global styles
 */
+<<<<<<< HEAD
 
+=======
+html {
+	// &::-webkit-scrollbar { 
+ //    display: none; 
+	// }
+}
+>>>>>>> 21a181c0c4499d1839fb81e1b284fef91b5fae9b
 
 body {
 	background-color: $body-bg;	
@@ -39,7 +47,8 @@ $xxl-desktop: 1980px;
 }
 @media #{$sm-only} {}
 @media #{$md-only} {}
-@media #{$lg-only} {}
+@media #{$lg-only} {
+}
 @media #{$sm-down} {}
 @media #{$md-down} {
 	#estadisticas{
@@ -52,7 +61,11 @@ $xxl-desktop: 1980px;
 }
 @media #{$lg-down} {}
 @media #{$sm-up} {}
-@media #{$md-up} {}
+@media #{$md-up} {
+	.iframe{
+		height: 415px;
+	}
+}
 @media #{$lg-up} {}
 @media only screen and (min-width: $xl-desktop) {}
 @media only screen and (min-width: $xxl-desktop) {}
@@ -178,6 +191,10 @@ $xxl-desktop: 1980px;
 	  bottom: 0;
 }
   
+.icon-footer{
+	height: 30px;
+}
+
 #porqueestamos{
 	color: #e83f95;
 }
@@ -292,14 +309,11 @@ input {
 
 @media #{$xs-only} {
 	#ofrecemos {
-		.asesoria {
-			color: #259b4a;
-		}
 		.asesoria-legal {
-			color: #ef7c31;
+			color: #1785c9;
 		}
 		.red-jovenes {
-			color: #1785c9;
+			color: #ef7c31;
 		}
 		.capacitacion {
 			color: #be1d88;

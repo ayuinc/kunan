@@ -113,7 +113,7 @@ $lang = array(
 'La URL que ha enviado no es válido.',
 
 'submission_error' =>
-'La forma que ha enviado contenía los siguientes errores',
+'El formulario que has enviado contenía los siguientes errores',
 
 'general_error' =>
 'Se encontraron los siguientes errores',
@@ -134,7 +134,7 @@ $lang = array(
 'Debe enviar la palabra que aparece en la imagen',
 
 'captcha_incorrect' =>
-'Usted no envíe la palabra exactamente como aparece en la imagen',
+'Usted no envió la palabra exactamente como aparece en la imagen',
 
 'nonexistent_page' =>
 'La página solicitada no fue encontrada',
