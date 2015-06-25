@@ -1448,6 +1448,10 @@ input[name="submit"] {
   }
 }
 
+.formulario-text input[name="submit"] {
+  margin-left: 90%;
+}
+
 .sumate h2 {
   margin-bottom: 0px !important;
   margin-top: 14px !important;

@@ -15,37 +15,10 @@
       <!-- END: ESTADISTICAS -->
 
       <div class="container sumate php-7 pv-21">
-        <!-- {exp:freeform:composer
+        {exp:freeform:composer
             form_name="sumate"
             composer_template_name="sumate"
             return="gracias/index"
-        } -->
-
-
-        {exp:freeform:form
-          form_name="sumate"
-          return="gracias/index"
         }
-          <div class="row">
-            <div class="col-md-3">
-              <h2>SÚMATE</h2>
-            </div>
-            {freeform:all_form_fields}
-            <div class="col-md-3" id="signupForm">
-              <label class="light sumate-label">{freeform:field_label}</label>
-              {freeform:field_output}
-            </div>
-            {/freeform:all_form_fields}
-            <div class="col-md-3">
-              <input type="submit" name="submit" value="Enviar" class="btn-sm">
-            </div>
-          </div>
-          {if freeform:no_results}
-              <p>
-                  Specified form was not found. Please make sure you have
-                  specified the correct short name of the form in the
-                  <b>form_name</b> parameter.
-              </p>
-          {/if}
-    {/exp:freeform:form}
+
       </div>      
