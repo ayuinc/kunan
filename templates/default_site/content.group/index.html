@@ -22,7 +22,12 @@
               <div class="container-xs row pb-7">
                 <!-- <div class="col-md-6 col-xs-12 pb-14-xs"><a href="" class="btn btn-primary col-md-12 col-xs-12"><p class="small m-0">CONOCE LAS BASES</p></a></div>
                 <div class="col-md-6 col-xs-12"><a href="{site_url}login" class="btn btn-primary col-md-12 col-xs-12"><p class="small m-0">COMPLETE EL FORMULARIO</p></a></div> -->
-                <a href="{site_url}login" class="btn btn-primary text-uppercase"><span class="small">Postula ahora</span></a>
+                {if logged_in}
+                	<a href="{site_url}formulario-edicion" class="btn btn-primary text-uppercase"><span class="small">Edita tu Aplicación</span></a>
+                {/if}
+								{if logged_out}
+								  <a href="{site_url}login" class="btn btn-primary text-uppercase"><span class="small">Postula ahora</span></a>
+								{/if}
                 <a href="{site_url}app/assets/documentos/bases_kunan_premio_2015.pdf" target="_blank"><p class="small light mt-7 text-hover-gray-lighter">Conoce las bases</p></a>
               </div>
               <a href="{site_url}content#porqueestamos"><img class="triangle-down" src="{site_url}app/assets/img/triangulo-bajada.png" alt=""></a>
