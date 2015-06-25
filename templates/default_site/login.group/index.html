@@ -1,5 +1,5 @@
 {if logged_in}
-  {redirect='formulario/index'}  
+  {redirect='formulario-edicion/index'}  
 {/if}
 {if logged_out}
 {embed="includes/header"}
@@ -15,7 +15,7 @@
 	        <div class="row">
 		        <div class="col-md-6 text-left">
 			        <h3 class="text-gray-darker text-uppercase light h4">Regístrate</h3>
-							{exp:user:register return="formulario/index"}
+							{exp:user:register return="formulario-edicion/index"}
 									<p>
 										<label class="small light text-uppercase">Nombre y Apellido</label><br>
 								    <input type="text" name="screen_name"/>
@@ -49,7 +49,7 @@
 		        </div>
 		        <div class="col-md-6 text-left">
 			        <h3 class="text-gray-darker text-uppercase light h4">Ingresa</h3>
-							{exp:member:login_form return="formulario/index"}
+							{exp:member:login_form return="formulario-edicion/index"}
 									<p>
 										<label class="small light text-uppercase">Correo Electrónico</label><br>
 						        <input type="text" name="username">
