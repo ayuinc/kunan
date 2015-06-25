@@ -216,8 +216,10 @@ $xxl-desktop: 1980px;
 	background-repeat: no-repeat;
 	background-size: cover!important;
 	background-position: center;
+	background-image:url(http://s18.postimg.org/ry766p1mh/kunan_main.png);
 	.bg-hero-image{
 		background-color: rgba(0,0,0,0.4);
+		height: 100%;
 	}
 	@media #{$xs-only} {
 		background-image:url(http://s18.postimg.org/ry766p1mh/kunan_main.png);  
