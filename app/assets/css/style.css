@@ -1232,14 +1232,13 @@ input {
 
 .hero-unit.video-bg {
   overflow: hidden;
-  height: 614px;
+  height: 667px;
   position: relative;
 }
 
 .video-js {
   position: relative !important;
-  width: 100% !important;
-  height: auto !important;
+  height: 667px !important;
 }
 
 .video-overlay {
