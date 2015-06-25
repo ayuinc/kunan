@@ -12,6 +12,13 @@
                 <p class="text-gray-light pb-7 small lh-sm">{cronograma-descripcion-evento}</p>
                 <small><a href="{cronograma-link-url}">{cronograma-link-texto}</a></small>
               </div>
+	            {if no_results}
+	            <div class="row text-gray-darker mb-14">
+	              <div class="col-md-12 col-xs-12 m-ch-0 mt-ch-7 text-left lh-sm">
+		              <p class="text-gray-light light pb-7 small lh-sm  text-center">No hay eventos programados.</p>
+	              </div>
+	            </div>
+	            {/if}      
             </div>
             {/exp:channel:entries}
           </div>
