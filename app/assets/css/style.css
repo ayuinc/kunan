@@ -1007,10 +1007,6 @@
 /*
 	EBM Global styles
 */
-html::-webkit-scrollbar {
-  display: none;
-}
-
 body {
   background-color: #fff;
 }
@@ -1049,6 +1045,11 @@ body a:hover {
 
   .footer {
     text-align: center;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .iframe {
+    height: 415px;
   }
 }
 /*MENU*/
@@ -1163,6 +1164,10 @@ body a:hover {
   bottom: 0;
 }
 
+.icon-footer {
+  height: 30px;
+}
+
 #porqueestamos {
   color: #e83f95;
 }
@@ -1270,14 +1275,11 @@ input {
 }
 
 @media only screen and (max-width: 480px) {
-  #ofrecemos .asesoria {
-    color: #259b4a;
-  }
   #ofrecemos .asesoria-legal {
-    color: #ef7c31;
+    color: #1785c9;
   }
   #ofrecemos .red-jovenes {
-    color: #1785c9;
+    color: #ef7c31;
   }
   #ofrecemos .capacitacion {
     color: #be1d88;
