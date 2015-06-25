@@ -169,7 +169,7 @@ $xxl-desktop: 1980px;
 
 
 .border-right-top{
-	width: 680px;
+	width: 400px;
   	top: 0;
   	right: 0;
   	position: absolute;
@@ -177,7 +177,7 @@ $xxl-desktop: 1980px;
 
 .border-left-bottom{
 	  position: absolute;
-	  width: 680px;
+	  width: 400px;
 	  left: 0;
 	  bottom: 0;
 }
@@ -211,8 +211,10 @@ $xxl-desktop: 1980px;
 	background-repeat: no-repeat;
 	background-size: cover!important;
 	background-position: center;
+	background-image:url(http://s18.postimg.org/ry766p1mh/kunan_main.png);
 	.bg-hero-image{
 		background-color: rgba(0,0,0,0.4);
+		height: 100%;
 	}
 	@media #{$xs-only} {
 		background-image:url(http://s18.postimg.org/ry766p1mh/kunan_main.png);  
@@ -249,7 +251,7 @@ input {
 .hero-unit {
 	&.video-bg {
 		overflow: hidden;
-  	height: 614px;
+  	height: 667px;
   	position: relative;
 	}
 }
@@ -257,8 +259,7 @@ input {
 
 .video-js {
 	position: relative !important;
-  width: 100% !important;
-  height: auto !important;
+  height: 667px !important;
 }
 
 .video-overlay {
