@@ -1,11 +1,7 @@
 /*
 	EBM Global styles
 */
-html {
-	&::-webkit-scrollbar { 
-    display: none; 
-	}
-}
+
 
 body {
 	background-color: $body-bg;	
@@ -245,7 +241,7 @@ input {
 .hero-unit {
 	&.video-bg {
 		overflow: hidden;
-  	height: : 614px;
+  	height: 614px;
   	position: relative;
 	}
 }
@@ -483,9 +479,70 @@ input[name="submit"] {
 	}
 }
 
-label[for="freeform_nombre_sumate"],
-label[for="freeform_mail_sumate"],
-#freeform_nombre_sumate,
-#freeform_mail_sumate {
+.sumate-label {
 	color: #b5b6b7 !important;
+}
+
+
+/*Formulario*/
+label[for="freeform_provincia"],
+label[for="freeform_distrito"],
+label[for="freeform_regiones"],
+label[for="freeform_cantidad_de_remunerados_a_tiempo_completo"],
+label[for="freeform_cantidad_de_talento_voluntario"],
+label[for="freeform_otro_recursos_humanos"],
+label[for="freeform_si_llenas_otros_ingresa_la_cantidad"],
+label[for="freeform_como_considera_que_el_apoyo_integral_de_kunan_podra_ayudarlo_a_superar_sus_desafios_y_crecer"],
+label[for="freeform_fanpage_link"],
+label[for="freeform_twitter"],
+label[for="freeform_telefono_fijo"],
+label[for="freeform_telefono_celular"],
+label[for="freeform_email"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria"],
+label[for="freeform_si_selecciono_otros_medios"],
+label[for="freeform_cuando_se_constituyeron_dd_mm_yyyy"],
+label[for="freeform_cual_es_el_publico_objetivo_directo_e_indirecto"],
+label[for="freeform_la_organizacion_ha_sido_premiada_antes_dentro_o_fuera_de_peru"],
+label[for="freeform_efectividad_del_modelo"],
+label[for="freeform_calidad_del_servicio_y_o_producto"],
+label[for="freeform_impacto_social"] {
+	margin-top: 21px !important;
+}
+
+.formulario-text {
+	p,
+	h4,
+	label[for="freeform_fuente_de_financiamiento_1"],
+	label[for="freeform_fuente_de_financiamiento_2"],
+	label[for="freeform_fuente_de_financiamiento_3"],
+	label[for="freeform_fuente_de_financiamiento_4"],
+	label[for="freeform_fuente_de_financiamiento_5"],
+	label[for="freeform_fondos_administrados_durante_el_ano_2014_1"],
+	label[for="freeform_fondos_administrados_durante_el_ano_2014_2"],
+	label[for="freeform_fondos_administrados_durante_el_ano_2014_3"],
+	label[for="freeform_fondos_administrados_durante_el_ano_2014_4"],
+	label[for="freeform_fondos_administrados_durante_el_ano_2014_5"],
+	label[for="freeform_fondos_administrados_durante_el_ano_2014_6"] {
+		font-weight: 300 !important;
+	}
+}
+
+label[for="freeform_fuente_de_financiamiento"],
+label[for="freeform_fondos_administrados_durante_el_ano_2014"],
+label[for="freeform_regiones"] {
+	color: black;
+}
+
+#freeform_describa_el_principal_problema_social,
+#freeform_cual_es_el_publico_objetivo_directo_e_indirecto,
+#freeform_enuncie_como_su_organizacion_aporta,
+#freeform_efectividad_del_modelo,
+#freeform_calidad_del_servicio_y_o_producto,
+#freeform_impacto_social,
+#freeform_innovacion,
+#freeform_aliados_estrategicos,
+#freeform_la_organizacion_ha_sido_premiada_antes_dentro_o_fuera_de_peru,
+#freeform_cual_es_el_principal_desafio_que_debe_afrontar_para_alcanzar_el_proposito_que_persigue_su_iniciativa_y_como_lo_resolvera,
+#freeform_como_considera_que_el_apoyo_integral_de_kunan_podra_ayudarlo_a_superar_sus_desafios_y_crecer {
+	width: 100% !important;
 }
