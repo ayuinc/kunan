@@ -24,7 +24,7 @@ $lang = array(
 'Display smiley images in entries.',
 
 'invalid_email_address' =>
-'Usted no envíe un email válido',
+'El correo electrónico enviado no es válido',
 
 'disallowed_screen_chars' =>
 'Nombre de pantalla contiene caracteres no válidos',

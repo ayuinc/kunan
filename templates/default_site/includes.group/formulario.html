@@ -3,10 +3,17 @@
         <div class="container-md pv-70 text-white">
           <h2 class="pb-14 h3 light text-uppercase">Completa el formulario</h2>
           <p class="lead">Recuerda que para concursar, debes haber leído las bases del concurso y estar de acuerdo con los términos y condiciones del premio.</p>
-          <p class="small"><em>Cierre el 27 de Julio</em></p>
-          <a href="{site_url}login" class="btn btn-white">
-            <span class="text-blue-banner ph-7">POSTULA AHORA</span>
-          </a>
+          <p class="small"><em>Cierre el 26 de Agosto</em></p>
+            {if logged_in}
+		          <a href="{site_url}formulario-edicion" class="btn btn-white">
+		            <span class="text-blue-banner ph-7">EDITA TU APLICACIÓN</span>
+		          </a>  
+            {/if}
+						{if logged_out}
+		          <a href="{site_url}login" class="btn btn-white">
+		            <span class="text-blue-banner ph-7">POSTULA AHORA</span>
+		          </a>  
+						{/if}             
         </div>
       </section>
       <!-- END: FORMULARIO -->

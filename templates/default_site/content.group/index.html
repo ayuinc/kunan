@@ -7,8 +7,6 @@
             id="videocover"
             autoplay
             loop
-            src = "kunan3f_1_1.webm"
-            src = "kunan3f_1_1.ovg"
             class="video-js videocover vjs-default-skin hidden-xs"
             muted
             preload="none">
@@ -21,18 +19,18 @@
               <!-- content -->
                <h1 class="text-uppercase text-white m-0 pv-14 pb-42-xs">Innovación que transforma</h1>
                 <p class="lead">Kunan es un programa que impulsa, integra e inspira el emprendimiento y la innovación social<br> de jóvenes en el Perú.</p>
-
-                <div class="container-xs row pb-7">
-                  <!-- <div class="col-md-6 col-xs-12 pb-14-xs"><a href="" class="btn btn-primary col-md-12 col-xs-12"><p class="small m-0">CONOCE LAS BASES</p></a></div>
-                  <div class="col-md-6 col-xs-12"><a href="{site_url}login" class="btn btn-primary col-md-12 col-xs-12"><p class="small m-0">COMPLETE EL FORMULARIO</p></a></div> -->
-                  <a href="{site_url}login" class="btn btn-primary text-uppercase"><span class="small">Postula ahora</span></a>
-                  <a href="{site_url}app/assets/documentos/bases_kunan_premio_2015.pdf" target="_blank"><p class="small light mt-7 text-hover-gray-lighter">Conoce las bases</p></a>
-                </div>
-                <a href="{site_url}content#porqueestamos"><img class="triangle-down" src="{site_url}app/assets/img/triangulo-bajada.png" alt=""></a>
-            </div>
-            <a class="scroll-down scroll-down-sq size lg" href="{site_url}content/index#porqueestamos">
-              <i class="icon-arrows-down bg-primary text-white"></i>
-            </a>
+              <div class="container-xs row pb-7">
+                <!-- <div class="col-md-6 col-xs-12 pb-14-xs"><a href="" class="btn btn-primary col-md-12 col-xs-12"><p class="small m-0">CONOCE LAS BASES</p></a></div>
+                <div class="col-md-6 col-xs-12"><a href="{site_url}login" class="btn btn-primary col-md-12 col-xs-12"><p class="small m-0">COMPLETE EL FORMULARIO</p></a></div> -->
+                {if logged_in}
+                	<a href="{site_url}formulario-edicion" class="btn btn-primary text-uppercase"><span class="small">Edita tu Aplicación</span></a>
+                {/if}
+								{if logged_out}
+								  <a href="{site_url}login" class="btn btn-primary text-uppercase"><span class="small">Postula ahora</span></a>
+								{/if}
+                <a href="{site_url}app/assets/documentos/bases_kunan_premio_2015.pdf" target="_blank"><p class="small light mt-7 text-hover-gray-lighter">Conoce las bases</p></a>
+              </div>
+              <a href="{site_url}content#porqueestamos"><img class="triangle-down" src="{site_url}app/assets/img/triangulo-bajada.png" alt=""></a>
           </div>
         </div>
       </section>
@@ -42,7 +40,7 @@
       <section class="text-center relative pv-70" id="description">
         <img class="border-right-top hidden-xs" src="{site_url}app/assets/img/borde-right-top.png">
         <div class="container-md text-gray-darker pt-70 pb-70">
-          <p class="m-0 lead text-gray">Son los jóvenes que motivados por su optimismo, creatividad y sensibilidad ante los problemas sociales inician proyectos sociales que ayudan a construir un mejor Perú.</p>
+          <p class="m-0 lead text-gray">Son los jóvenes que motivados por su optimismo, creatividad y sensibilidad ante los problemas sociales inician proyectos que ayudan a construir un mejor Perú.</p>
           <h2  class="pt-28 h4 pb-7 text-pink text-uppercase">¿Por qué estamos aquí?</h2>
           <p class="container-sm light lh-xs text-gray h4">Queremos consolidar el ecosistema de emprendimientos, inspirando, impulsando e integrando iniciativas innovadoras que generan valor. </p>
 
