@@ -706,7 +706,7 @@ We reserve the right to remove, edit, or move any messages for any reason.',
 'I agree to the terms of service',
 
 'mbr_terms_of_service_required' =>
-'You must click the \'agree to terms of service\' checkbox',
+'Debes aceptar \'los términos y condiciones\'',
 
 'mbr_emails_not_match' =>
 'The provided emails do not match',
