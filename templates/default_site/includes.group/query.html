@@ -8,7 +8,7 @@
     entry_id="{entry_id}" 
   }
   {if:else}
-  
+  	{redirect='gracias/aplicacion-entregada' status_code="301"}
   {/if}
   {if no_results}
     {redirect='formulario/index' status_code="301"}
