@@ -507,7 +507,12 @@ input[name="submit"] {
 .sumate {
 	h2 {
 		margin-bottom: 0px !important;
-  	margin-top: 14px !important;
+	}
+	p{
+		line-height: 1.5 !important;
+		font-size: 12px;
+		padding-right: 33px;
+		margin-top: 5px;
 	}
 }
 
