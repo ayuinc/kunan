@@ -1052,6 +1052,16 @@ body a:hover {
     height: 415px;
   }
 }
+@media only screen and (min-width: 1500px) {
+  video {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1980px) {
+  video {
+    display: none;
+  }
+}
 /*MENU*/
 #menu, #menu-vistas {
   position: fixed;
@@ -1085,6 +1095,10 @@ body a:hover {
 
 .home .header-left img {
   visibility: hidden;
+}
+
+.img-socios {
+  z-index: 100;
 }
 
 .active {
@@ -1162,6 +1176,7 @@ body a:hover {
   width: 400px;
   left: 0;
   bottom: 0;
+  z-index: 0;
 }
 
 .icon-footer {
@@ -1204,6 +1219,12 @@ body a:hover {
     background-image: url(http://s18.postimg.org/ry766p1mh/kunan_main.png);
     background-position-x: -191px !important;
   }
+}
+
+#formulario {
+  background-image: url(../img/completa-el-formulario.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #estadisticas .numbers {

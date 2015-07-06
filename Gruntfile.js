@@ -329,11 +329,11 @@ module.exports = function (grunt) {
 
   // Default task
   grunt.registerTask('default', [
-    // 'sass:ebm',
+    'sass:ebm',
     'sass:dev',
-    // 'bower:dev',
+    'bower:dev',
     'connect:livereload',
-    'uglify',
+    //'uglify',
     'open',
     'watch'
   ]);
@@ -341,11 +341,11 @@ module.exports = function (grunt) {
   // Watch for images in the src/img folder 
   grunt.registerTask('responsive', [
     'coffee:dev',
-    // 'sass:ebm',
+    'sass:ebm',
     'sass:dev',
-    // 'bower:dev',
-    // 'responsive_images:dev',
-    // 'responsive_images_extender:dev',
+    'bower:dev',
+    'responsive_images:dev',
+    'responsive_images_extender:dev',
     'connect:livereload',
     'uglify',
     'open',
@@ -355,10 +355,10 @@ module.exports = function (grunt) {
   // JavaScript Ninja task
   grunt.registerTask('js-ninja', [
     'coffee:dev',
-    // 'sass:ebm',
+    'sass:ebm',
     'sass:dev',
-    // 'bower:dev',
-    // 'jshint',
+    'bower:dev',
+    'jshint',
     'connect:livereload',
     'uglify',
     'open',

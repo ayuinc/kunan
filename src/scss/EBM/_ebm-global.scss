@@ -58,8 +58,16 @@ $xxl-desktop: 1980px;
 	}
 }
 @media #{$lg-up} {}
-@media only screen and (min-width: $xl-desktop) {}
-@media only screen and (min-width: $xxl-desktop) {}
+@media only screen and (min-width: $xl-desktop) {
+	video{
+		display: none;
+	}
+}
+@media only screen and (min-width: $xxl-desktop) {
+	video{
+		display: none;
+	}
+}
 
 
 /*MENU*/
@@ -113,6 +121,10 @@ $xxl-desktop: 1980px;
 	.header-right{
 
 	}
+}
+
+.img-socios{
+	z-index: 100;
 }
 
 .active{
@@ -180,6 +192,7 @@ $xxl-desktop: 1980px;
 	  width: 400px;
 	  left: 0;
 	  bottom: 0;
+	  z-index: 0;
 }
   
 .icon-footer{
@@ -221,6 +234,13 @@ $xxl-desktop: 1980px;
 		background-position-x: -191px !important;
 	}
 }
+
+#formulario{
+	background-image: url(../img/completa-el-formulario.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 
 #estadisticas {
 	.numbers{
@@ -487,7 +507,13 @@ input[name="submit"] {
 .sumate {
 	h2 {
 		margin-bottom: 0px !important;
-  	margin-top: 14px !important;
+	}
+	p{
+		line-height: 1.5 !important;
+		font-size: 12px;
+		padding-right: 33px;
+		margin-top: 5px;
+		display: inline-block;
 	}
 }
 
