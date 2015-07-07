@@ -60,12 +60,12 @@ $xxl-desktop: 1900px;
 @media #{$lg-up} {}
 @media only screen and (min-width: $xl-desktop) {
 	video{
-		display: none;
+		display: none !important;
 	}
 }
 @media only screen and (min-width: $xxl-desktop) {
 	video{
-		display: none;
+		display: none !important;
 	}
 }
 
