@@ -1089,9 +1089,6 @@ body a:hover {
 #menu .header-right a:hover, #menu-vistas .header-right a:hover {
   color: #d1d1d1;
 }
-#menu .header-right .btn-out, #menu-vistas .header-right .btn-out {
-  visibility: hidden;
-}
 
 .home .header-left img {
   visibility: hidden;
