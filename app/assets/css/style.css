@@ -1054,12 +1054,12 @@ body a:hover {
 }
 @media only screen and (min-width: 1500px) {
   video {
-    display: none;
+    display: none !important;
   }
 }
-@media only screen and (min-width: 1980px) {
+@media only screen and (min-width: 1900px) {
   video {
-    display: none;
+    display: none !important;
   }
 }
 /*MENU*/
@@ -1098,7 +1098,7 @@ body a:hover {
 }
 
 .img-socios {
-  z-index: 100;
+  z-index: 99;
 }
 
 .active {
@@ -1481,8 +1481,8 @@ input[name="submit"] {
   line-height: 1.5 !important;
   font-size: 12px;
   padding-right: 33px;
-  margin-top: 5px;
-  display: inline-block;
+  margin-top: 5px !important;
+  display: block !important;
 }
 
 .sumate-label {
