@@ -1510,7 +1510,9 @@ label[for="freeform_cual_es_el_publico_objetivo_directo_e_indirecto"],
 label[for="freeform_la_organizacion_ha_sido_premiada_antes_dentro_o_fuera_de_peru"],
 label[for="freeform_efectividad_del_modelo"],
 label[for="freeform_calidad_del_servicio_y_o_producto"],
-label[for="freeform_impacto_social"] {
+label[for="freeform_impacto_social"],
+label[for="freeform_edad_sumate"],
+label[for="freeform_correo_electronico_sumate"] {
   margin-top: 21px !important;
 }
 
