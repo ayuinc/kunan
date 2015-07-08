@@ -123,6 +123,35 @@ $(document).ready(function() {
 });
 
 
+$(document).ready(function() {
+
+    var total_letras = 9;
+
+    $('#freeform_telefono_celular').keyup(function() {
+    var longitud = $(this).val().length;
+    var resto = total_letras - longitud;
+    $('#numero').html(resto);
+    if(resto <= 0){
+        $('#freeform_telefono_celular').attr("maxlength", 9);
+    }
+    });
+
+});
+
+$(document).ready(function() {
+
+    var total_letras = 9;
+
+    $('#freeform_telefono_fijo').keyup(function() {
+    var longitud = $(this).val().length;
+    var resto = total_letras - longitud;
+    $('#numero').html(resto);
+    if(resto <= 0){
+        $('#freeform_telefono_fijo').attr("maxlength", 9);
+    }
+    });
+
+});
 
 // Limitación a solo numeros
 $(document).ready(function() {
