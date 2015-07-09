@@ -503,20 +503,34 @@ input[name="submit"] {
 		margin-left: 90%;
 	}
 }
-
 .sumate {
-	h2 {
-		margin-bottom: 0px !important;
-	}
-
-	p{
-		line-height: 1.5 !important;
-		font-size: 12px;
-		padding-right: 33px;
-		margin-top: 5px !important;
-		display: block !important;
+	input[name="submit"] {
+	  border: 1px solid #ea6616;
+	  color: #ea6616;
+	  width: 94px;
+	  border-radius: 3px;
+	  margin-left: 40%;
+	  margin-top: 21px;
+	  display: block;
+	  padding-top: 5px;
+	  padding-bottom: 5px;
+	  text-transform: uppercase;
+	  background-color: white !important;
 	}
 }
+// .sumate {
+// 	h2 {
+// 		margin-bottom: 0px !important;
+// 	}
+
+// 	p{
+// 		line-height: 1.5 !important;
+// 		font-size: 12px;
+// 		padding-right: 33px;
+// 		margin-top: 5px !important;
+// 		display: block !important;
+// 	}
+// }
 
 .sumate-label {
 	color: #b5b6b7 !important;
@@ -544,9 +558,7 @@ label[for="freeform_cual_es_el_publico_objetivo_directo_e_indirecto"],
 label[for="freeform_la_organizacion_ha_sido_premiada_antes_dentro_o_fuera_de_peru"],
 label[for="freeform_efectividad_del_modelo"],
 label[for="freeform_calidad_del_servicio_y_o_producto"],
-label[for="freeform_impacto_social"],
-label[for="freeform_edad_sumate"],
-label[for="freeform_correo_electronico_sumate"] {
+label[for="freeform_impacto_social"] {
 
 	margin-top: 21px !important;
 }
