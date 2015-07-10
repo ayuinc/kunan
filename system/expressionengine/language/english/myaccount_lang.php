@@ -453,7 +453,7 @@ $lang = array(
 'El correo electrónico que usted eligió no está disponible',
 
 'valid_user_email' =>
-'The email you chose is not valid',
+'La dirección de correo electrónico que usted eligió no es valido',
 
 'password_based_on_username' =>
 'The password cannot be based on the username',

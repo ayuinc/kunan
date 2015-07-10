@@ -1052,6 +1052,16 @@ body a:hover {
     height: 415px;
   }
 }
+@media only screen and (min-width: 1500px) {
+  video {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  video {
+    display: none !important;
+  }
+}
 /*MENU*/
 #menu, #menu-vistas {
   position: fixed;
@@ -1079,12 +1089,13 @@ body a:hover {
 #menu .header-right a:hover, #menu-vistas .header-right a:hover {
   color: #d1d1d1;
 }
-#menu .header-right .btn-out, #menu-vistas .header-right .btn-out {
-  visibility: hidden;
-}
 
 .home .header-left img {
   visibility: hidden;
+}
+
+.img-socios {
+  z-index: 99;
 }
 
 .active {
@@ -1138,9 +1149,6 @@ body a:hover {
 .active .header-center nav a:hover {
   color: #e83f95 !important;
 }
-.active .header-right .btn-out {
-  visibility: visible !important;
-}
 
 .vistas {
   background-color: white;
@@ -1162,6 +1170,7 @@ body a:hover {
   width: 400px;
   left: 0;
   bottom: 0;
+  z-index: 0;
 }
 
 .icon-footer {
@@ -1204,6 +1213,12 @@ body a:hover {
     background-image: url(http://s18.postimg.org/ry766p1mh/kunan_main.png);
     background-position-x: -191px !important;
   }
+}
+
+#formulario {
+  background-image: url(../img/completa-el-formulario.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #estadisticas .numbers {
@@ -1453,9 +1468,18 @@ input[name="submit"] {
   margin-left: 90%;
 }
 
-.sumate h2 {
-  margin-bottom: 0px !important;
-  margin-top: 14px !important;
+.sumate input[name="submit"] {
+  border: 1px solid #ea6616;
+  color: #ea6616;
+  width: 94px;
+  border-radius: 3px;
+  margin-left: 40%;
+  margin-top: 21px;
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  background-color: white !important;
 }
 
 .sumate-label {

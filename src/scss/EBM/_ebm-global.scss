@@ -30,7 +30,7 @@ body {
 	Media queries
 */
 $xl-desktop: 1500px;
-$xxl-desktop: 1980px;
+$xxl-desktop: 1900px;
 @media #{$xs-only} {
 	.text-center-xs{
 		text-align: center;
@@ -58,8 +58,16 @@ $xxl-desktop: 1980px;
 	}
 }
 @media #{$lg-up} {}
-@media only screen and (min-width: $xl-desktop) {}
-@media only screen and (min-width: $xxl-desktop) {}
+@media only screen and (min-width: $xl-desktop) {
+	video{
+		display: none !important;
+	}
+}
+@media only screen and (min-width: $xxl-desktop) {
+	video{
+		display: none !important;
+	}
+}
 
 
 /*MENU*/
@@ -95,9 +103,9 @@ $xxl-desktop: 1980px;
 				color: #d1d1d1;
 			}
 		}
-		.btn-out{
-			visibility: hidden;
-		}
+		// .btn-out{
+		// 	visibility: hidden;
+		// }
 	}
 }
 
@@ -113,6 +121,10 @@ $xxl-desktop: 1980px;
 	.header-right{
 
 	}
+}
+
+.img-socios{
+	z-index: 99;
 }
 
 .active{
@@ -145,9 +157,9 @@ $xxl-desktop: 1980px;
   		}
   	}
   	.header-right{
-  		.btn-out{
-			visibility: visible !important;
-		}
+  // 		.btn-out{
+		// 	visibility: visible !important;
+		// }
   	}
 }
 
@@ -180,6 +192,7 @@ $xxl-desktop: 1980px;
 	  width: 400px;
 	  left: 0;
 	  bottom: 0;
+	  z-index: 0;
 }
   
 .icon-footer{
@@ -221,6 +234,13 @@ $xxl-desktop: 1980px;
 		background-position-x: -191px !important;
 	}
 }
+
+#formulario{
+	background-image: url(../img/completa-el-formulario.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 
 #estadisticas {
 	.numbers{
@@ -483,13 +503,34 @@ input[name="submit"] {
 		margin-left: 90%;
 	}
 }
-
 .sumate {
-	h2 {
-		margin-bottom: 0px !important;
-  	margin-top: 14px !important;
+	input[name="submit"] {
+	  border: 1px solid #ea6616;
+	  color: #ea6616;
+	  width: 94px;
+	  border-radius: 3px;
+	  margin-left: 40%;
+	  margin-top: 21px;
+	  display: block;
+	  padding-top: 5px;
+	  padding-bottom: 5px;
+	  text-transform: uppercase;
+	  background-color: white !important;
 	}
 }
+// .sumate {
+// 	h2 {
+// 		margin-bottom: 0px !important;
+// 	}
+
+// 	p{
+// 		line-height: 1.5 !important;
+// 		font-size: 12px;
+// 		padding-right: 33px;
+// 		margin-top: 5px !important;
+// 		display: block !important;
+// 	}
+// }
 
 .sumate-label {
 	color: #b5b6b7 !important;
@@ -518,6 +559,7 @@ label[for="freeform_la_organizacion_ha_sido_premiada_antes_dentro_o_fuera_de_per
 label[for="freeform_efectividad_del_modelo"],
 label[for="freeform_calidad_del_servicio_y_o_producto"],
 label[for="freeform_impacto_social"] {
+
 	margin-top: 21px !important;
 }
 
