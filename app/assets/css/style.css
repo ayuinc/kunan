@@ -1560,6 +1560,7 @@ label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_9"] {
   color: white;
   background-color: #00B9AC !important;
   width: 100% !important;
+  border: none !important;
 }
 
 .btn-skyblue {
