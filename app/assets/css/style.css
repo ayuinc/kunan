@@ -1511,6 +1511,34 @@ label[for="freeform_impacto_social"] {
   margin-top: 21px !important;
 }
 
+label[for="freeform_regiones_1"],
+label[for="freeform_regiones_2"],
+label[for="freeform_regiones_3"],
+label[for="freeform_regiones_4"],
+label[for="freeform_regiones_5"],
+label[for="freeform_regiones_6"],
+label[for="freeform_regiones_7"],
+label[for="freeform_regiones_8"],
+label[for="freeform_regiones_9"],
+label[for="freeform_regiones_10"],
+label[for="freeform_regiones_11"],
+label[for="freeform_regiones_12"],
+label[for="freeform_regiones_13"],
+label[for="freeform_regiones_14"],
+label[for="freeform_regiones_15"],
+label[for="freeform_regiones_16"],
+label[for="freeform_regiones_17"],
+label[for="freeform_regiones_18"],
+label[for="freeform_regiones_19"],
+label[for="freeform_regiones_20"],
+label[for="freeform_regiones_21"],
+label[for="freeform_regiones_22"],
+label[for="freeform_regiones_23"],
+label[for="freeform_regiones_24"],
+label[for="freeform_regiones_25"] {
+  display: inline-block !important;
+}
+
 .formulario-text p,
 .formulario-text h4,
 .formulario-text label[for="freeform_fuente_de_financiamiento_1"],
