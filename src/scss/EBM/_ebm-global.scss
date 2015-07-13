@@ -613,11 +613,19 @@ label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_9"] {
 	background-color: #00B9AC !important;
 	width: 100% !important;
 	border: none !important;
+	&:hover {
+		color: white !important;
+		opacity: 0.8;
+	}
 }
 
 .btn-skyblue {
 	color: white;
 	background-color: #4FAAE5 !important;
+	&:hover {
+		color: white !important;
+		opacity: 0.8;
+	}
 }
 
 

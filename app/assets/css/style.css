@@ -1562,10 +1562,18 @@ label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_9"] {
   width: 100% !important;
   border: none !important;
 }
+.btn-sky:hover {
+  color: white !important;
+  opacity: 0.8;
+}
 
 .btn-skyblue {
   color: white;
   background-color: #4FAAE5 !important;
+}
+.btn-skyblue:hover {
+  color: white !important;
+  opacity: 0.8;
 }
 
 .formulario-text p,
