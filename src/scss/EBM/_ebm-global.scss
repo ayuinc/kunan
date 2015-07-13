@@ -604,10 +604,21 @@ label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_9"] {
 	border: 1px solid #4FAAE5;
 }
 
-.border-sky {
-	border: 1px solid #00B9AC;
+.btn-sky {
+	color: white;
+	background-color: #00B9AC;
+	
 }
 
+.border-sky {
+	border: 1px solid #00B9AC;
+	width: 100% !important;
+}
+
+.btn-skyblue {
+	color: white;
+	background-color: #4FAAE5;
+}
 
 
 .formulario-text {
