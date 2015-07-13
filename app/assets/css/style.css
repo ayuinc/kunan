@@ -1535,7 +1535,16 @@ label[for="freeform_regiones_21"],
 label[for="freeform_regiones_22"],
 label[for="freeform_regiones_23"],
 label[for="freeform_regiones_24"],
-label[for="freeform_regiones_25"] {
+label[for="freeform_regiones_25"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_1"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_2"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_3"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_4"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_5"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_6"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_7"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_8"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_9"] {
   display: inline-block !important;
 }
 
