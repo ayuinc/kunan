@@ -1544,7 +1544,9 @@ label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_5"],
 label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_6"],
 label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_7"],
 label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_8"],
-label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_9"] {
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_9"],
+label[for="freeform_sexo_1"],
+label[for="freeform_sexo_2"] {
   display: inline-block !important;
 }
 
