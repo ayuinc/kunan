@@ -1464,10 +1464,6 @@ input[name="submit"] {
   }
 }
 
-.formulario-text input[name="submit"] {
-  margin-left: 90%;
-}
-
 .sumate input[name="submit"] {
   border: 1px solid #ea6616;
   color: #ea6616;
