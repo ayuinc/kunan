@@ -535,7 +535,7 @@ class Freeform_notifications extends Addon_builder_freeform
 		//	post hook var prep
 		// -------------------------------------
 
-		$recipients			= "";
+		$recipients			= $this->variables['cc_recipients'];
 		$cc_recipients		= $this->variables['cc_recipients'];
 		$bcc_recipients		= $this->variables['bcc_recipients'];
 		$reply_to_email		= $this->variables['reply_to_email'];
