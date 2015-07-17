@@ -4869,11 +4869,11 @@ a.text-pinterest:not(.btn):hover {
   color: #DC4335;
 }
 .text-google-plus a:not(.btn):hover {
-  color: #8d2219;
+  color: #8d2218;
 }
 
 a.text-google-plus:not(.btn):hover {
-  color: #8d2219;
+  color: #8d2218;
 }
 
 .text-youtube {
@@ -5081,7 +5081,7 @@ a.text-linkedin:not(.btn):hover {
 }
 
 .bg-google-plus-shade {
-  background-color: #8d2219;
+  background-color: #8d2218;
 }
 
 .bg-youtube {
