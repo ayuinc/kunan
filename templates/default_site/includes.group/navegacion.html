@@ -1,48 +1,49 @@
 	  <!-- HEADER -->
-	    <header class="site-menu">
-	      <div id="menu" class="home hidden-xs container-fluid text-center">
+		<header class="site-menu">
+		  <div id="menu" class="home hidden-xs container-fluid text-center">
 				  <div class="container-md row">
-				    <div class="header-left text-left col-md-1 p-0" >
-				      <a href="{site_url}"><img class="ml-14" src="{site_url}app/assets/img/logo.png"></a>
-				    </div>
-				    <div class="header-center col-md-9 pr-0 text-center">
-				      <nav class="text-white text-uppercase" >
-				        <a href="#porqueestamos"><span>¿Por qué estamos aquí?</span></a>|
-				        <a href="#nuestroreto"><span>Nuestro reto</span></a>|
-				        <a href="#lineasdeaccion"><span>Líneas de acción</span></a>|
-				        <a href="{site_url}komunicacion"><span>Komunicación</span></a> |
-				        <a href="#unete"><span>Súmate</span></a>
-				      </nav>
-				    </div>
-				    <div class="header-right col-md-2 pt-14 pr-21 text-right">
-				    {if logged_in}
-				    	<a class="btn btn-outline small text-uppercase btn-primary pv-7" href="{path='logout'}">{screen_name} (salir)</a>
-				    {if:else}
-				    	<a class="btn-out btn text-white small text-uppercase btn-primary pv-7" href="{site_url}login"><span>Postula Ahora</span></a>
-				    {/if}
-				    </div>    
+					<div class="header-left text-left col-md-1 p-0" >
+					  <a href="{site_url}"><img class="ml-14" src="{site_url}app/assets/img/logo.png"></a>
+					</div>
+					<div class="header-center col-md-9 pr-0 text-center">
+					  <nav class="text-white text-uppercase" >
+						<a href="#porqueestamos"><span>¿Por qué estamos aquí?</span></a>|
+						<a href="#nuestroreto"><span>Nuestro reto</span></a>|
+						<a href="#lineasdeaccion"><span>Líneas de acción</span></a>|
+						<a href="{site_url}komunicacion"><span>Komunicación</span></a> |
+						<a href="#unete"><span>Súmate</span></a>
+					  </nav>
+					</div>
+					<div class="header-right col-md-2 pt-14 pr-21 text-right text-primary btn">
+					{if logged_in}
+						<a href="{site_url}formulario/editar/{member_id}" class="btn text-uppercase">Editar</a> | 
+						<a class="btn small text-uppercase pv-7" href="{path='logout'}">{screen_name} (salir)</a>
+					{if:else}
+						<a class="btn-out btn text-white small text-uppercase btn-primary pv-7" href="{site_url}login"><span>Postula Ahora</span></a>
+					{/if}
+					</div>    
 				  </div>
 				</div>
 				<div class="menu-section hidden-lg">
-	        <a href="{site_url}"><img class="logo-responsive" src="{site_url}app/assets/img/logo-kunan-responsive.png"></a>
-	        <div class="menu-toggle">
-	          <div class="one"></div>
-	          <div class="two"></div>
-	          <div class="three"></div>
-	        </div>
-	        <nav>
-	          <ul role="navigation" class="hidden">
-	           <!--  <li><a href="{site_url}content/index#porqueestamos"><h3 class="text-uppercase text-white">Por que estamos aquí</h3></a></li>
-	            <li><a href="{site_url}content/index#nuestroreto"><h3 class="text-uppercase text-white">Nuestro reto</h3></a></li>
-	            <li><a href="{site_url}content/index#lineasdeaccion"><h3 class="text-uppercase text-white">Linea de acción</h3></a></li> -->
-	            <li><a href="{site_url}comunidad	"><h3 class="text-uppercase text-white">Comunidad</h3></a></li>
-	            <li><a href="{site_url}premio"><h3 class="text-uppercase text-white">Premio</h3></a></li>
-	            <li><a href="{site_url}komunicacion"><h3 class="text-uppercase text-white">Komunicación</h3></a></li>
-	            <a href="{site_url}login" class="mt-14 col-xs-7 btn btn-primary borderless"><h4 class="m-0 pv-7 text-uppercase text-white">Postula Ahora</h4></a>
-	          </ul>
-	        </nav>
-	      </div>
-	    </header>
+			<a href="{site_url}"><img class="logo-responsive" src="{site_url}app/assets/img/logo-kunan-responsive.png"></a>
+			<div class="menu-toggle">
+			  <div class="one"></div>
+			  <div class="two"></div>
+			  <div class="three"></div>
+			</div>
+			<nav>
+			  <ul role="navigation" class="hidden">
+			   <!--  <li><a href="{site_url}content/index#porqueestamos"><h3 class="text-uppercase text-white">Por que estamos aquí</h3></a></li>
+				<li><a href="{site_url}content/index#nuestroreto"><h3 class="text-uppercase text-white">Nuestro reto</h3></a></li>
+				<li><a href="{site_url}content/index#lineasdeaccion"><h3 class="text-uppercase text-white">Linea de acción</h3></a></li> -->
+				<li><a href="{site_url}comunidad	"><h3 class="text-uppercase text-white">Comunidad</h3></a></li>
+				<li><a href="{site_url}premio"><h3 class="text-uppercase text-white">Premio</h3></a></li>
+				<li><a href="{site_url}komunicacion"><h3 class="text-uppercase text-white">Komunicación</h3></a></li>
+				<a href="{site_url}login" class="mt-14 col-xs-7 btn btn-primary borderless"><h4 class="m-0 pv-7 text-uppercase text-white">Postula Ahora</h4></a>
+			  </ul>
+			</nav>
+		  </div>
+		</header>
 	  <!-- END: HEADER -->  
 	  
 		
