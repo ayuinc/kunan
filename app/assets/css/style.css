@@ -1149,9 +1149,6 @@ body a:hover {
 .active .header-center nav a:hover {
   color: #e83f95 !important;
 }
-.active .header-right .btn-out {
-  visibility: visible !important;
-}
 
 .vistas {
   background-color: white;
