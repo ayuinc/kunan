@@ -210,3 +210,29 @@ $(document).ready(function() {
       validar(e);
   });
 });
+
+
+
+/*ACCION HIDEN*/
+// $(document).ready(function(){
+//   $(".ff_composer").children().eq(9).children().eq(1).addClass( "hidden" );
+
+// });
+
+$(document).ready(function() {
+    $('#freeform_esta_inscrita_en_registros_publicos_1').attr( "checked","checked" );
+    console.log($('#freeform_esta_inscrita_en_registros_publicos_1')),
+    $("input[name$='esta_inscrita_en_registros_publicos']").click(function() {
+        // var test = $(this).();
+        console.log($(this).val());
+        if ($(this).val() != 'Si') {
+
+          $(".ff_composer").children().eq(9).children().eq(1).hide();
+        }
+        else {
+          $(".ff_composer").children().eq(9).children().eq(1).show();
+        }
+
+    });
+});
+

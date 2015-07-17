@@ -1,5 +1,9 @@
 {embed="includes/header"}
+{if logged_in}
+{embed="includes/navegacion" miembro={member_id}}
+{if:else}
 {embed="includes/navegacion"}
+{/if}
     <main class="site-content">
       <section id="hero-image" class="hero-unit video-bg">
         <div class="bg-hero-image">
