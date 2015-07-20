@@ -1464,10 +1464,6 @@ input[name="submit"] {
   }
 }
 
-.formulario-text input[name="submit"] {
-  margin-left: 90%;
-}
-
 .sumate input[name="submit"] {
   border: 1px solid #ea6616;
   color: #ea6616;
@@ -1509,6 +1505,87 @@ label[for="freeform_efectividad_del_modelo"],
 label[for="freeform_calidad_del_servicio_y_o_producto"],
 label[for="freeform_impacto_social"] {
   margin-top: 21px !important;
+}
+
+label[for="freeform_regiones_1"],
+label[for="freeform_regiones_2"],
+label[for="freeform_regiones_3"],
+label[for="freeform_regiones_4"],
+label[for="freeform_regiones_5"],
+label[for="freeform_regiones_6"],
+label[for="freeform_regiones_7"],
+label[for="freeform_regiones_8"],
+label[for="freeform_regiones_9"],
+label[for="freeform_regiones_10"],
+label[for="freeform_regiones_11"],
+label[for="freeform_regiones_12"],
+label[for="freeform_regiones_13"],
+label[for="freeform_regiones_14"],
+label[for="freeform_regiones_15"],
+label[for="freeform_regiones_16"],
+label[for="freeform_regiones_17"],
+label[for="freeform_regiones_18"],
+label[for="freeform_regiones_19"],
+label[for="freeform_regiones_20"],
+label[for="freeform_regiones_21"],
+label[for="freeform_regiones_22"],
+label[for="freeform_regiones_23"],
+label[for="freeform_regiones_24"],
+label[for="freeform_regiones_25"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_1"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_2"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_3"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_4"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_5"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_6"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_7"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_8"],
+label[for="freeform_por_que_medio_te_enteraste_de_la_convocatoria_9"],
+label[for="freeform_sexo_1"],
+label[for="freeform_sexo_2"],
+label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_1"],
+label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_2"],
+label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_3"],
+label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_4"],
+label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_5"],
+label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_6"],
+label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_7"],
+label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_8"],
+label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_9"],
+label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_10"],
+label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_11"],
+label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_12"],
+label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_13"],
+label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_14"] {
+  display: inline-block !important;
+}
+
+.border-skyblue {
+  border: 1px solid #4FAAE5;
+}
+
+.border-sky {
+  border: 1px solid #00B9AC;
+}
+
+.btn-sky {
+  color: white;
+  background-color: #00B9AC !important;
+  width: 100% !important;
+  border: none !important;
+}
+.btn-sky:hover {
+  color: white !important;
+  opacity: 0.8;
+}
+
+.btn-skyblue {
+  color: white;
+  background-color: #4FAAE5 !important;
+}
+.btn-skyblue:hover {
+  color: white !important;
+  opacity: 0.8;
 }
 
 .formulario-text p,
