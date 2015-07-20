@@ -450,7 +450,7 @@ $lang = array(
 'The screen name you chose is not available',
 
 'email_taken' =>
-'The email you chose is not available',
+'El correo electrónico que usted eligió no está disponible',
 
 'valid_user_email' =>
 'La dirección de correo electrónico que usted eligió no es valido',
