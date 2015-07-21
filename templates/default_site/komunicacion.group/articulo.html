@@ -1,5 +1,19 @@
 {exp:channel:entries channel="la_bitacora" limit="10" disable="member_data|pagination"}
-{embed="includes/header"}
+{if bitacora-imagen!=''}
+{bitacora-imagen}
+{embed="includes/header" 
+	titulo="{title}" 
+	descripcion="{bitacora-descripcion}" 
+	imagen="{image:url:medium}" 
+}
+{/bitacora-imagen}
+{if:else}
+{embed="includes/header" 
+	titulo="{title}" 
+	descripcion="{bitacora-descripcion}" 
+	imagen="http://img.youtube.com/vi/{bitacora-video}/maxresdefault.jpg" 
+}
+{/if}
 {embed="includes/navegacion-vistas"}
     <main class="site-content">
       <section class="minh-70"></section>
