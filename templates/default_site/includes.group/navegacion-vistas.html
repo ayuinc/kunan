@@ -46,6 +46,9 @@
 	            <li><a href="{site_url}comunidad"><h3 class="text-uppercase text-white">Comunidad</h3></a></li>
 	            <li><a href="{site_url}premio"><h3 class="text-uppercase text-white">Premio</h3></a></li>
 	            <li><a href="{site_url}komunicacion"><h3 class="text-uppercase text-white">Komunicación</h3></a></li>
+							{if logged_in}
+							<li><a href="{site_url}formulario-edicion"><h3 class="text-uppercase text-white">Editar Postulación</h3></a></li>
+							{/if}		            
 	            <a href="{site_url}login" class="mt-14 col-xs-7 btn btn-primary borderless"><h4 class="m-0 pv-7 text-uppercase text-white">Postula Ahora</h4></a>
 	          </ul>
 	        </nav>
