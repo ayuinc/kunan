@@ -1,8 +1,6 @@
 
 {exp:query sql="SELECT * FROM exp_freeform_form_entries_2 WHERE author_id='{embed:miembro}'"}
-  {if no_results}
-    {redirect='formulario/index' status_code="301"}
-  {if:else}
+		{form_field_59}
 		{if form_field_59=='n'}
 	  {exp:freeform:composer_edit 
 	    form_name="formulario_registro"
@@ -13,5 +11,7 @@
 	  {if:else}
 	  	{redirect='gracias/aplicacion-entregada' status_code="301"}
 	  {/if}
+  {if no_results}
+    {redirect='formulario/index' status_code="301"}	  
   {/if}   
 {/exp:query}
