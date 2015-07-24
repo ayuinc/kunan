@@ -240,9 +240,9 @@ $(document).ready(function() {
 $(document).ready(function() {
     $("input[id=freeform_quiero_enviar_mi_aplicacion]").click(function(){
     if($(this).is(':checked')) {  
-            $('input[value="Enviar"]').val('Guardar');
-        } else {  
             $('input[value="Guardar"]').val('Enviar');
+        } else {  
+            $('input[value="Enviar"]').val('Guardar');
         }  
     });
 });
