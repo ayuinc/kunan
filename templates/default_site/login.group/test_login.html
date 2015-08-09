@@ -1,0 +1,21 @@
+{exp:fbc:prepare_page}
+<body>
+{exp:fbc:login
+    permissions="public_profile|email|user_friends"
+    return_when_logged_in="content/index"
+    return_when_logged_out="comunidad/index"
+    return_for_passive_register="content/index"
+    return_on_failure="comunidad/index"
+    login_button_label="Facebook Login"
+    button_size="large"
+}
+    {if fbc_logged_out == "y"}
+    	<div>
+        {fbc_login_button}
+      </div>
+    {/if}
+    {if fbc_logged_in == "y"}
+        <a href="{path='logout'}">Log Out</a>
+    {/if}
+{/exp:fbc:login}
+</body>
