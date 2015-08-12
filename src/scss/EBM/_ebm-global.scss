@@ -711,18 +711,22 @@ label[for="freeform_regiones"] {
 }
 
 .fz-proyectos {
-	font-size: 12px !important;
+	font-size: 13px !important;
 }
 
 .btn-votacion-perfil {
-	font-size: 17px !important;
+	font-size: 19px !important;
   border: none;
   float: left;
   border-radius: 3px 0px 0px 3px !important;
-  padding: 1px 31px 0 7px !important
+  padding: 3px 38px 3px 7px !important;
 }
 
 .btn-vota-perfil {
-	padding: 0px 14px !important;
+	padding: 4px 25px !important;
   border-radius: 1px 3px 3px 1px !important;
+}
+
+.icon-perfil {
+	width: 22px;
 }
