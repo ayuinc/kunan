@@ -612,10 +612,14 @@ label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolv
 label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_11"],
 label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_12"],
 label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_13"],
-label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_14"]
+label[for="freeform_cual_es_el_sector_de_la_problematica_social_que_busca_resolver_su_organizacion_puede_marcar_mas_de_una_14"],
+label[for="freeform_fuente_de_financiamiento_6"]
+
 {
 	display: inline-block !important;
 }
+
+
 
 .border-skyblue {
 	border: 1px solid #4FAAE5;
@@ -682,4 +686,43 @@ label[for="freeform_regiones"] {
 #freeform_cual_es_el_principal_desafio_que_debe_afrontar_para_alcanzar_el_proposito_que_persigue_su_iniciativa_y_como_lo_resolvera,
 #freeform_como_considera_que_el_apoyo_integral_de_kunan_podra_ayudarlo_a_superar_sus_desafios_y_crecer {
 	width: 100% !important;
+}
+
+/*VOTACIÓN*/
+
+.fz-sm {
+	font-size: 18px !important;
+}
+
+.fz-xs {
+	font-size: 10px !important;
+}
+
+.btn-vota {
+	padding: 0px 14px !important;
+  border-radius: 1px 3px 3px 1px !important;
+}
+
+.btn-votacion {
+	float: left;
+  border: 1px #b5b6b7 solid;
+  border-radius: 3px 0px 0px 3px !important;
+  padding: 1px 31px 0 7px !important;
+}
+
+.fz-proyectos {
+	font-size: 12px !important;
+}
+
+.btn-votacion-perfil {
+	font-size: 17px !important;
+  border: none;
+  float: left;
+  border-radius: 3px 0px 0px 3px !important;
+  padding: 1px 31px 0 7px !important
+}
+
+.btn-vota-perfil {
+	padding: 0px 14px !important;
+  border-radius: 1px 3px 3px 1px !important;
 }

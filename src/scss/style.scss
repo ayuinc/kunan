@@ -6,6 +6,9 @@
 	
 	Optional without Grunt:
   sass --watch src/scss/style.scss:app/assets/css/style.css
+
+  Or with EE:
+  sass --watch src/scss/style.scss:../../app/assets/css/style.css
 */
 @import "b3/variables";
 @import "b3/mixins";
