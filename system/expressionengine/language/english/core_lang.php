@@ -113,7 +113,7 @@ $lang = array(
 'La URL que ha enviado no es válido.',
 
 'submission_error' =>
-'Encontramos los siguientes errores',
+'ATENCIÓN',
 
 'general_error' =>
 'Se encontraron los siguientes errores',

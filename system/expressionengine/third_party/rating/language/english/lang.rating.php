@@ -738,7 +738,7 @@ to the module's control panel in the ExpressionEngine Control Panel",
 "No está permitido calificar en este momento.",
 
 "no_duplicates" =>
-"Este voto ya fue recibido. No están permitidos los duplicados.",
+"Ya votaste por este proyecto. No esta permitido duplicar el voto.",
 
 "no_duplicate_ratings" =>
 "No están permitidos los votos duplicadas.",

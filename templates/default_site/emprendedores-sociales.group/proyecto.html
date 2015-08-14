@@ -51,36 +51,7 @@
 	                
 
 	                
-									{if logged_in}
-	                	{exp:rating:form
-									    entry_id="{entry_id}"
-									    collection="Votos"
-									    return="gracias/voto/{title}"
-									    anonymous="no" 
-									    allow_duplicates="no"
-										}	                    
-										<input type="hidden" name="rating" id="rating" value="1">
-		                <button type="submit" name="submit" value="Vota" class="btn btn-icon-custom btn-primary">
-		                  <i>
-		                    {exp:rating:stats entry_id="{entry_id}"}
-		                      {overall_count}
-		                      {if rating_no_results}
-		                        0
-		                      {/if}
-		                    {/exp:rating:stats}
-		                  </i>
-		                  <span><small>VOTAR</small></span>
-		                </button> 
-		                {/exp:rating:form}			
-									{if:else}
-										Aqui va el link al registro<br>
-										{exp:rating:stats entry_id="{entry_id}"}
-                      {overall_count}
-                      {if rating_no_results}
-                        0 Voto(s)
-                      {/if}
-                    {/exp:rating:stats}
-									{/if}
+									
                 </div>
               </div>
             </div>

@@ -2,38 +2,82 @@
 {embed="includes/navegacion-vistas"}
 <main class="site-content">
       <section class="minh-70 hidden-xs"></section>
-      <section id="hero-image" class="minhp-70 minhp-20-xs" style="background:url({site_url}app/assets/img/voluntades-slide.png)">
+    {exp:channel:entries channel="votacion" limit="1" disable="member_data" entry_id="{segment_3}"}
+      <section id="hero-image" class="minhp-70 minhp-20-xs" style="background:url({imagen_de_portada})">
         <div class="bg-hero-image minhp-70">
           <div class="container-md minh-350 minh-70-xs"></div>  
           <div class="container-md text-white pb-21">
             <div class="row">
               <div class="col-md-2 absolute col-xs-6 bg-gray-lighter p-14">
-                <img class="img-responsive" width="" src="{site_url}app/assets/img/voluntades.png">
+                <img class="img-responsive" width="" src="{logo}">
 	              <div class="row pt-28 mb-14">
 	                <div class="col-md-3 col-xs-2 pr-0">
-	                  <img src="{site_url}app/assets/img/mariana.png" class="img-responsive">
+	                  <img src="{foto_autoridad}" class="img-responsive">
 	                </div>
 	                <div class="col-md-9 col-xs-10 light">
-	                  <p class="h6 m-0 text-gray-dark pt-7">Mariana Costa</p>
-	                  <p class="h6 m-0 text-gray light"><dfn>CEO Voluntades</dfn></p>
+	                  <p class="h6 m-0 text-gray-dark pt-7">{nombre_autoridad}</p>
+	                  <p class="h6 m-0 text-gray light"><dfn>{cargo}</dfn></p>
 	                </div>
 	              </div>
-	                <p class="small text-gray fz-proyectos m-0"><span class="text-black light">E-mail:</span> email@gmail.com</p>
-	                <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Website:</span> http://voluntades.pe</p>
-	                <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Teléfono:</span> 987654321</p>
+	              	{if email_proyecto}
+	                <p class="small text-gray fz-proyectos m-0"><span class="text-black light">E-mail:</span> {email_proyecto}</p>
+	                {/if}
+	              	{if website}
+	                <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Website:</span> {website}</p>
+	                {/if}
+	              	{if telefono_proyecto}
+	                <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Teléfono:</span> {telefono_proyecto}</p>
+	                {/if}
 
 	                <p class="m-0"><span class="text-black light mt-21 fz-proyectos">Síguenos en:</span></p>
-	                <a href="" target="_blank"><img class="icon-perfil" src="{site_url}app/assets/img/facebook-negro.png"></a>
-			            <a href="" target="_blank"><img class="icon-perfil mh-7" src="{site_url}app/assets/img/instagram-negro.png"></a>
-			            <a href="" target="_blank"><img class="icon-perfil" src="{site_url}app/assets/img/twitter-negro.png"></a>
+	                {if facebook_proyecto}
+	                <a href="{facebook_proyecto}" target="_blank"><img class="icon-perfil" src="{site_url}app/assets/img/facebook-negro.png"></a>
+	                {/if}
+		              {if twitter_proyecto}
+			            <a href="" target="_blank"><img class="icon-perfil mh-7" src="{site_url}app/assets/img/twitter-negro.png"></a>
+			            {/if}
+		              {if youtube_proyecto}
+			            <a href="{youtube_proyecto}" target="_blank"><img class="icon-perfil mh-7" src="{site_url}app/assets/img/youtube-negro.png"></a>
+			            {/if}
 
 			            <h6 class="text-uppercase mt-14 text-primary fz-xs light mb-7">VOTOS RECIBIDOS</h6>
+		            {if logged_in}
+	                	{exp:rating:form
+									    entry_id="{entry_id}"
+									    collection="Votos"
+									    return="gracias/voto/{title}"
+									    anonymous="no" 
+									    allow_duplicates="no"
+										}	                    
+										<input type="hidden" name="rating" id="rating" value="1" class="text-gray light small bg-white btn-outline btn-votacion-perfil">
+		                  <i class="text-gray light small bg-white btn-outline btn-votacion-perfil">
+		                    {exp:rating:stats entry_id="{entry_id}"}
+		                      {overall_count}
+		                      {if rating_no_results}
+		                        0
+		                      {/if}
+		                    {/exp:rating:stats}
+		                  </i>
+		                <button type="submit" name="submit" value="Vota" class="text-uppercase btn-primary text-white btn btn-vota-perfil btn-icon-custom btn-primary">
+		                  <span><small>VOTAR</small></span>
+		                </button> 
+		                {/exp:rating:form}			
+									{if:else}
+										Aqui va el link al registro<br>
+										{exp:rating:stats entry_id="{entry_id}"}
+                      {overall_count}
+                      {if rating_no_results}
+                        0 Voto(s)
+                      {/if}
+                    {/exp:rating:stats}
+									{/if}
+			            <!-- 
 									<p class="text-gray light small bg-white btn-outline btn-votacion-perfil">131,1253</p>
-									<a href="" class="text-uppercase btn-primary text-white btn btn-vota-perfil"> <span class="light ">Vota</span></a>
+									<a href="" class="text-uppercase btn-primary text-white btn btn-vota-perfil"> <span class="light ">Vota</span></a> -->
               </div>
               <div class="col-md-9 col-xs-6 light col-md-offset-3">
-                <h2 class="text-white m-0 pl-35-xs pt-35-xs pv-14">Construye identidad</h2>
-                <p class="hidden-xs">It was a humorously perilous business for both of us. For, before we proceed further, it must be said that the monkey-rope was fast at both ends; fast to Queequeg's broad canvas belt, and fast.</p>
+                <h2 class="text-white m-0 pl-35-xs pt-35-xs pv-14">{nombre_del_proyecto}</h2>
+                <p class="hidden-xs">{texto_introductorio}</p>
               </div>
             </div>
           </div>
@@ -43,50 +87,24 @@
       <section class="text-left" id="description">
         <div class="container-md pv-70">
           <div class="row">
-            <!-- <div class="col-md-3 col-xs-12 pb-35-xs light text-gray">
-              <div class="col-md-12 col-xs-8">
-                <h2 class="m-0 mb-7 text-gray-darker pt-28-xs">Voluntades</h2>
-                <p class="small m-0"><dfn>Medio Ambiente</dfn></p>
-                <p class="small m-0"><dfn>Lima</dfn></p>
-                <p class="small m-0"><dfn>email@gmail.com</dfn></p>
-              </div>
-              <div class="col-md-12 col-xs-4 pl-14-lg mt-28-lg pt-28-xs mt-14-xs text-center">
-                <div class="col-md-8 col-xs-12 border-left-primary border-top-primary border-bottom-primary border-right-primary border-radius ph-0">
-                  <div class="bg-primary">
-                    <div class="col-md-4 col-xs-12 bg-white">
-                      <p class="text-primary mv-7-lg mv-14-xs">24</p>
-                    </div>
-                    <div class="col-md-8 col-xs-12 p-0-xs bg-primary">
-                      <p class="text-white mv-7-lg mv-0-xs text-center">VOTOS</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-
             
             <div class="col-md-9 light text-center col-md-offset-3">
 
               <div class="text-left text-gray container-sm">
-                <p class="h4 light lh-lg mt-7 mb-56">It was a humorously perilous business for both of us. For, before we proceed further, it must be said that the monkey-rope was fast at both ends; fast to Queequeg's broad canvas belt, and fast to my narrow leather one. So that for better or for worse, we two, for the time, were wedded; and should poor Queequeg's sink to rise no more, then both usage and honour demanded, that instead of cutting the cord, it should drag me down in his wake. So, then, an elingated Siamese ligature united us. Queequeg was my own inseparable twin brother, nor could I any way get rid of the dangerous liabilities which the hempen bond entailed.</p>
-
-                <h2 class="mb-21 text-gray-darker">Subtítulo</h2>
-
-                <p class="h4 light lh-lg">It was a humorously perilous business for both of us. For, before we proceed further, it must be said that the monkey-rope was fast at both ends; fast to Queequeg's broad canvas belt, and fast to my narrow leather one. So that for better or for worse, we two, for the time, were wedded; and should poor Queequeg's sink to rise no more.</p>
+                <p class="h4 light lh-lg m-0">{contenido_proyecto}</p>
               </div>
               
-              <img class="pv-56"src="{site_url}app/assets/img/linea-separadora.png">
             </div>
           </div>
         </div>
+    {/exp:channel:entries}
         <div class="container">
         	<h2 class="pb-28 text-gray-darker">Otros proyectos que te recomendamos</h2>
 
-              <ul class="grid-list grid-list-4 grid-list-1-xs ph-28-xs text-left">
+              <ul class="grid-list grid-list-4 grid-list-1-xs ph-28-xs text-left mb-42">
                 <li class="grid-list-item">
                   <div class="bg-gray-lighter">
-                  	<!-- <div style="background:url({site_url}app/assets/img/rojo.png)" class="minh-70"></div>
- -->                    <img class="img-responsive" src="{site_url}app/assets/img/rojo.png">
+                   <img class="img-responsive" src="{site_url}app/assets/img/fruta.jpg">
                     <div class="p-14 minh-280">
                       <h4 class="m-0 pt-14 text-gray-darker">Construye identidad</h4>
                       <p class="text-gray-light small">nombre@gmail.com</p>
@@ -101,12 +119,15 @@
                           <p class="text-gray-light small m-0 light small">Lima</p>
                         </div>
                       </div>
+                      <h6 class="text-uppercase mt-14 text-primary fz-xs light mb-7">VOTOS RECIBIDOS</h6>
+											<p class="text-gray light small bg-white btn-outline btn-votacion-perfil">131,1253</p>
+											<a href="" class="text-uppercase btn-primary text-white btn btn-vota-perfil"> <span class="light ">Vota</span></a>
                     </div>
                   </div>
                 </li>
                 <li class="grid-list-item">
                   <div class="bg-gray-lighter">
-                    <img class="img-responsive" src="{site_url}app/assets/img/vasos.png">
+                    <img class="img-responsive" src="{site_url}app/assets/img/fruta.jpg">
                     <div class="p-14 minh-280">
                       <h4 class="m-0 pt-14 text-gray-darker">Construye identidad</h4>
                       <p class="text-gray-light small">nombre@gmail.com</p>
@@ -121,12 +142,15 @@
                           <p class="text-gray-light small m-0 light small">Lima</p>
                         </div>
                       </div>
+                      <h6 class="text-uppercase mt-14 text-primary fz-xs light mb-7">VOTOS RECIBIDOS</h6>
+											<p class="text-gray light small bg-white btn-outline btn-votacion-perfil">131,1253</p>
+											<a href="" class="text-uppercase btn-primary text-white btn btn-vota-perfil"> <span class="light ">Vota</span></a>
                     </div>
                   </div>
                 </li>
                 <li class="grid-list-item">
                   <div class="bg-gray-lighter">
-                    <img class="img-responsive" src="{site_url}app/assets/img/vasos.png">
+                    <img class="img-responsive" src="{site_url}app/assets/img/fruta.jpg">
                     <div class="p-14 minh-280">
                       <h4 class="m-0 pt-14 text-gray-darker">Construye identidad</h4>
                       <p class="text-gray-light small">nombre@gmail.com</p>
@@ -141,12 +165,15 @@
                           <p class="text-gray-light small m-0 light small">Lima</p>
                         </div>
                       </div>
+                      <h6 class="text-uppercase mt-14 text-primary fz-xs light mb-7">VOTOS RECIBIDOS</h6>
+											<p class="text-gray light small bg-white btn-outline btn-votacion-perfil">131,1253</p>
+											<a href="" class="text-uppercase btn-primary text-white btn btn-vota-perfil"> <span class="light ">Vota</span></a>
                     </div>
                   </div>
                 </li>
                 <li class="grid-list-item">
                   <div class="bg-gray-lighter">
-                    <img class="img-responsive" src="{site_url}app/assets/img/uvas.png">
+                    <img class="img-responsive" src="{site_url}app/assets/img/fruta.jpg">
                     <div class="p-14 minh-280">
                       <h4 class="m-0 pt-14 text-gray-darker">Construye identidad</h4>
                       <p class="text-gray-light small">nombre@gmail.com</p>
@@ -161,6 +188,9 @@
                           <p class="text-gray-light small m-0 light small">Lima</p>
                         </div>
                       </div>
+                      <h6 class="text-uppercase mt-14 text-primary fz-xs light mb-7">VOTOS RECIBIDOS</h6>
+											<p class="text-gray light small bg-white btn-outline btn-votacion-perfil">131,1253</p>
+											<a href="" class="text-uppercase btn-primary text-white btn btn-vota-perfil"> <span class="light ">Vota</span></a>
                     </div>
                   </div>
                 </li>

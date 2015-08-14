@@ -701,6 +701,13 @@ label[for="freeform_regiones"] {
 .btn-vota {
 	padding: 0px 14px !important;
   border-radius: 1px 3px 3px 1px !important;
+  border: none !important;
+  border-top: 2px solid #EB6F24 !important;
+  border-bottom: 1px solid #EB6F24 !important;
+  &:hover {
+  	border-top: 2px solid #a4470f !important;
+    border-bottom: 1px solid #a4470f !important;
+  }
 }
 
 .btn-votacion {
@@ -719,7 +726,7 @@ label[for="freeform_regiones"] {
   border: none;
   float: left;
   border-radius: 3px 0px 0px 3px !important;
-  padding: 3px 7px 3px 7px !important;
+  padding: 3px 9px 3px 9px !important;
 }
 
 .btn-vota-perfil {
@@ -729,4 +736,18 @@ label[for="freeform_regiones"] {
 
 .icon-perfil {
 	width: 22px;
+}
+
+.error_designado {
+	ul {
+		list-style-type: none !important;
+		li {
+  		list-style: none !important;
+		}
+		padding-left: 0;
+	}
+
+	p {
+		text-align: center !important;
+	}
 }
