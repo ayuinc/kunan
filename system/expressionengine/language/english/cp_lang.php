@@ -285,7 +285,7 @@ $lang = array(
 'INVALID LICENSE',
 
 'forgot_password' =>
-'Forgot your password?',
+'Olvidaste tu contraseña?',
 
 'e_no_css' =>
 'The requested CSS file could not be opened.',
