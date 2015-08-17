@@ -1465,6 +1465,11 @@ label[for="freeform_regiones"] {
 #freeform_como_considera_que_el_apoyo_integral_de_kunan_podra_ayudarlo_a_superar_sus_desafios_y_crecer {
   width: 100% !important; }
 
+label[for="freeform_cuando_comenzaron_a_operar_dd_mm_yyyy"],
+label[for="freeform_tipo_de_organizacion"],
+label[for="freeform_tipo_de_organizacion_otros"] {
+  margin-top: 35px !important; }
+
 /*VOTACI├ôN*/
 .fz-sm {
   font-size: 18px !important; }

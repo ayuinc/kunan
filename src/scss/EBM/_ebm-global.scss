@@ -688,6 +688,14 @@ label[for="freeform_regiones"] {
 	width: 100% !important;
 }
 
+label[for="freeform_cuando_comenzaron_a_operar_dd_mm_yyyy"],
+label[for="freeform_tipo_de_organizacion"],
+label[for="freeform_tipo_de_organizacion_otros"] {
+	margin-top: 35px !important;
+}
+
+
+
 /*VOTACIÓN*/
 
 .fz-sm {

@@ -221,22 +221,22 @@ $(document).ready(function() {
 
 /*Acción de ocultar y mostrar elemento*/
 
-// $(document).ready(function() {
-//     $('#freeform_esta_inscrita_en_registros_publicos_1').attr( "checked","checked" );
-//     console.log($('#freeform_esta_inscrita_en_registros_publicos_1')),
-//     $("input[name$='esta_inscrita_en_registros_publicos']").click(function() {
-//         // var test = $(this).();
-//         console.log($(this).val());
-//         if ($(this).val() != 'Si') {
+$(document).ready(function() {
+    $('#freeform_esta_inscrita_en_registros_publicos_1').attr( "checked","checked" );
+    console.log($('#freeform_esta_inscrita_en_registros_publicos_1')),
+    $("input[name$='esta_inscrita_en_registros_publicos']").click(function() {
+        // var test = $(this).();
+        console.log($(this).val());
+        if ($(this).val() != 'Si') {
 
-//           $(".ff_composer").children().eq(9).children().eq(1).hide();
-//         }
-//         else {
-//           $(".ff_composer").children().eq(9).children().eq(1).show();
-//         }
+          $(".ff_composer").children().eq(10).children().eq(1).addClass('hidden');
+        }
+        else {
+          $(".ff_composer").children().eq(10).children().eq(1).removeClass('hidden');
+        }
 
-//     });
-// });
+    });
+});
 
 
 $(document).ready(function() {
@@ -248,3 +248,113 @@ $(document).ready(function() {
         }  
     });
 });
+
+
+
+
+
+// // VALIDACIÓN: CAMPOS REQUERIDOS
+// $(document).ready(function(){
+//     // add the rule here
+//     $.validator.addMethod("valueNotEquals", function(value, element, arg){
+//      return arg != value;
+//     }, "* Ingresa Uso de Vehículo"); 
+
+//    $("#register-form").validate({
+//     rules: {
+//       nombres: "required",
+//       apellidos: "required",
+//       fecha_nacimiento: {
+//         required: true,
+//       },  
+//       ciudad: {
+//         valueNotEquals: "-1" 
+//       },
+//       telefono: {
+//         required: true,
+//         minlength: 5
+//       },   
+//       placa: {
+//         required: true,
+//         minlength: 5
+//       },             
+//       uso_del_vehiculo: {
+//         valueNotEquals: "-1" 
+//       },
+//       agree: "required"
+//     },
+//     messages: {
+//       nombre: "* Ingresa tu Nombre",
+//       apellido: "* Ingresa tu Apellido",
+//       telefono:"* Ingresa tu Teléfono",
+//       placa:"* Ingresa tu Placa",
+//       ciudad:"* Ingresa tu Ciudad",
+//       correo: "* Ingresa tu Correo electrónico",
+//       uso_de_vehiculo: "* Ingresa tu uso de vehiculo",
+//     },
+//     submitHandler: function(form) {
+//       form.submit();
+//     }
+//   });
+// });
+// // Agregando clase "required"
+// $(document).ready(function() {
+//   $( "#freeform_apellidos, #freeform_nombres, #freeform_fecha_nacimiento " ).addClass( "required" );
+// });
+
+// $(document).ready(function() {
+//   $( "#freeform_edad, #freeform_region_de_nacimiento, #freeform_region_de_residencia" ).addClass( "required" );
+// });
+
+// $(document).ready(function() {
+//   $( "#freeform_sexo_1, #freeform_sexo_2, #freeform_profesion" ).addClass( "required" );
+// });
+
+// $(document).ready(function() {
+//   $( "#freeform_cargo_organizacion, #freeform_tiempo_en_dicho_cargo_en_cantidad_de_meses" ).addClass( "required" );
+// });
+
+// $(document).ready(function() {
+//   $( "#freeform_tiempo_en_la_organizacion_en_cantidad_de_meses, #freeform_nombre_de_la_entidad" ).addClass( "required" );
+// });
+
+// $(document).ready(function() {
+//   $( "#freeform_regiones_1, #freeform_cuando_comenzaron_a_operar_dd_mm_yyyy, #freeform_esta_inscrita_en_registros_publicos_1 " ).addClass( "required" );
+// });
+
+// $(document).ready(function() {
+//   $( "#freeform_esta_inscrita_en_registros_publicos_2, #freeform_regiones_2, #freeform_regiones_3 " ).addClass( "required" );
+// });
+
+// $(document).ready(function() {
+//   $( "#freeform_regiones_4, #freeform_regiones_5, #freeform_regiones_6 " ).addClass( "required" );
+// });
+
+// $(document).ready(function() {
+//   $( "#freeform_regiones_7, #freeform_regiones_8, #freeform_regiones_9 " ).addClass( "required" );
+// });
+
+// $(document).ready(function() {
+//   $( "#freeform_regiones_10, #freeform_regiones_11, #freeform_regiones_12" ).addClass( "required" );
+// });
+
+// $(document).ready(function() {
+//   $( "#freeform_regiones_13, #freeform_regiones_14, #freeform_regiones_15" ).addClass( "required" );
+// });
+
+// $(document).ready(function() {
+//   $( "#freeform_regiones_16, #freeform_regiones_17, #freeform_regiones_18" ).addClass( "required" );
+// });
+
+// $(document).ready(function() {
+//   $( "#freeform_regiones_19, #freeform_regiones_20, #freeform_regiones_21" ).addClass( "required" );
+// });
+
+// $(document).ready(function() {
+//   $( "#freeform_regiones_22, #freeform_regiones_23, freeform_regiones_24" ).addClass( "required" );
+// });
+
+// $(document).ready(function() {
+//   $( "#freeform_regiones_25, #freeform_provincia, #freeform_distrito" ).addClass( "required" );
+// });
+//     
