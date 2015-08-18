@@ -268,6 +268,8 @@ $(document).ready(function() {
     });
 });
 
+$('#freeform_fuente_de_financiamiento_6').attr( "checked" , "checked" );
+
 $("#freeform_fuente_de_financiamiento_6").click(function(e) {
   if($(this).is(":checked")) {
     $("#freeform_otro_fuentes_de_financiamiento").parent().parent().removeClass("hidden");
