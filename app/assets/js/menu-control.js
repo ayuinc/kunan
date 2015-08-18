@@ -37,6 +37,7 @@ $(function() {
 
 // Limitación de palabras
 $(document).ready(function() {
+  $("#freeform_otras_fuentes_de_financiamiento").parent().parent().addClass("hidden");
   $("#freeform_describa_el_principal_problema_social").on('keyup', function() {
       var words = this.value.match(/\S+/g).length;
       if (words > 80) {
@@ -133,6 +134,37 @@ $(document).ready(function() {
     $('#numero').html(resto);
     if(resto <= 0){
         $('#freeform_telefono_celular').attr("maxlength", 9);
+    }
+    });
+
+});
+
+
+$(document).ready(function() {
+
+    var total_letras = 10;
+
+    $('#freeform_cuando_comenzaron_a_operar_dd_mm_yyyy').keyup(function() {
+    var longitud = $(this).val().length;
+    var resto = total_letras - longitud;
+    $('#numero').html(resto);
+    if(resto <= 0){
+        $('#freeform_cuando_comenzaron_a_operar_dd_mm_yyyy').attr("maxlength", 10);
+    }
+    });
+
+});
+
+$(document).ready(function() {
+
+    var total_letras = 10;
+
+    $('#freeform_cuando_se_constituyeron_dd_mm_yyyy').keyup(function() {
+    var longitud = $(this).val().length;
+    var resto = total_letras - longitud;
+    $('#numero').html(resto);
+    if(resto <= 0){
+        $('#freeform_cuando_se_constituyeron_dd_mm_yyyy').attr("maxlength", 10);
     }
     });
 
@@ -236,21 +268,13 @@ $(document).ready(function() {
     });
 });
 
-// $(document).ready(function() {
-//     $('#freeform_fuente_de_financiamiento_6').attr( "checked","checked" );
-//     $("input[name$='fuente_de_financiamiento']").click(function() {
-//         // var test = $(this).();
-//         if ($(this).val() != 'Otros') {
-
-//           $(".ff_composer").children().eq(18).children().eq(0).removeClass('hidden');
-//         }
-//         else {
-//           $(".ff_composer").children().eq(18).children().eq(0).addClass('hidden');
-//         }
-
-//     });
-// });
-
+$("#freeform_fuente_de_financiamiento_6").click(function(e) {
+  if($(this).is(":checked")) {
+    $("#freeform_otras_fuentes_de_financiamiento").parent().parent().removeClass("hidden");
+  } else {
+    $("#freeform_otras_fuentes_de_financiamiento").parent().parent().addClass("hidden");
+  }
+});
 
 
 
@@ -270,6 +294,9 @@ $(document).ready(function() {
 
 function addRequired() {
   $(".ff_composer").find("input").each(function(index, element) { 
+    if ($(element).attr("type") == "checkbox") { return true; }
+    if ($(element).attr("name").indexOf("otro") >= 0) { return true; }
+    if ($(element).attr("name").indexOf("link") >= 0) { return true; }
     if(!$(element).parent().parent().hasClass("hidden")) { 
       $(element).attr("required", "true"); 
     } 
@@ -277,21 +304,6 @@ function addRequired() {
   $(".ff_composer").find("textarea").each(function(index, element) { 
     if(!$(element).parent().parent().hasClass("hidden")) { 
       $(element).attr("required", "true"); 
-    } 
-  });
-  $(".ff_composer").find("input").each(function(index, element) { 
-    if($(element).attr("type") == "checkbox") { 
-      $(element).removeAttr("required", "true"); 
-    } 
-  });
-  $(".ff_composer").find("input").each(function(index, element) { 
-    if($(element).attr("name").indexOf("otro") >= 0) { 
-      $(element).removeAttr("required", "true"); 
-    } 
-  });
-  $(".ff_composer").find("input").each(function(index, element) { 
-    if($(element).attr("name").indexOf("link") >= 0) { 
-      $(element).removeAttr("required", "true"); 
     } 
   });
 } 
