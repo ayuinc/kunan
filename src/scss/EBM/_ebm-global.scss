@@ -303,7 +303,7 @@ input {
 	}
 }
 
-//Estadistica responsive 
+//Estadistica responsive
 .ff_composer {
 	.size1of4 {
 		@media #{$xs-only} {
@@ -378,7 +378,7 @@ label[for="freeform_fondos_administrados_durante_el_ano_2014_6"]{
 	display: inline !important;
 }
 
-input[id="freeform_link_video"]{
+input[id="freeform_video"]{
 	display: block;
 	margin-bottom: 10px;
 }
