@@ -74,6 +74,7 @@ $mimes = array(
 				'jpe'	=>	array('image/jpeg', 'image/pjpeg'),
 				'jpeg'	=>	array('image/jpeg', 'image/pjpeg'),
 				'js'	=>	'application/x-javascript',
+				'json'    =>    array('application/json', 'text/javascript'), 
 				'lha'	=>	'application/octet-stream',
 				'log'	=>	array('text/plain', 'text/x-log'),
 				'lzh'	=>	'application/octet-stream',

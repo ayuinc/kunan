@@ -1,0 +1,37 @@
+{embed="includes/header"}
+    <main class="site-content">
+      <section class="minh-70"></section>
+      <!-- DESCRIPTION -->
+      <section class="text-left minhp-100" id="description">
+        <div class="minh-70 text-center"><img src="{site_url}app/assets/img/logo.png" class="text-center" width="100" alt="KUNAN"></div>
+        <div class="container-sm pt-42 pb-70 text-center text-black">
+          <h5 class="light">Gracias por votar por:</h5>
+          <h1 class="text-uppercase h2 light mt-0">{segment_3}</h1>
+          <p class="text-gray light h4 lh-lg mb-42">Recuerda que puedes compartir este proyecto con familia y amigos y hacer que tu elección gane más votos.</p>   
+					<!-- Go to www.addthis.com/dashboard to generate a new set of sharing buttons -->
+					<a href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=http%3A%2F%2Fwww.addthis.com&pubid=ra-558a3b7841972204&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/facebook.png" border="0" alt="Facebook"/></a>
+					<a href="https://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=http%3A%2F%2Fwww.addthis.com&pubid=ra-558a3b7841972204&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/twitter.png" border="0" alt="Twitter"/></a>
+					<a href="https://api.addthis.com/oexchange/0.8/forward/email/offer?url=http%3A%2F%2Fwww.addthis.com&pubid=ra-558a3b7841972204&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/email.png" border="0" alt="Email"/></a>
+					<a href="https://www.addthis.com/bookmark.php?source=tbx32nj-1.0&v=300&url=http%3A%2F%2Fwww.addthis.com&pubid=ra-558a3b7841972204&ct=1&title=AddThis%20-%20Get%20likes%2C%20get%20shares%2C%20get%20followers&pco=tbxnj-1.0" target="_blank"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/addthis.png" border="0" alt="Addthis"/></a> 
+      
+        </div>
+          <p class="helvetica-16 text-center">Serás redirigido en <span id="timeshift">10</span> segundos...
+              </p>
+      </section>
+      <!-- END: DESCRIPTION -->
+    </main>
+    <script src="http://kunan.com.pe/app/assets/js/jquery.min.js"></script> <!-- App scripts -->
+  <script src="http://kunan.com.pe/app/assets/js/scripts.min.js"></script>
+    <script>
+      var interval = setInterval(function() {
+          var seconds = $('#timeshift').html();
+          seconds = seconds - 1;
+          if (seconds < 10 && length.seconds != 2) seconds = seconds;
+            $('#timeshift').html(seconds);
+          
+          if ( seconds == 0){
+              clearInterval(interval);
+              window.location.href = "http://localhost/kunan/";
+          }
+      }, 1000);    
+    </script>

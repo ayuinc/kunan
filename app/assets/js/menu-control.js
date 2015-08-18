@@ -219,20 +219,72 @@ $(document).ready(function() {
 
 // });
 
+/*Acción de ocultar y mostrar elemento*/
+
 $(document).ready(function() {
     $('#freeform_esta_inscrita_en_registros_publicos_1').attr( "checked","checked" );
-    console.log($('#freeform_esta_inscrita_en_registros_publicos_1')),
     $("input[name$='esta_inscrita_en_registros_publicos']").click(function() {
         // var test = $(this).();
-        console.log($(this).val());
         if ($(this).val() != 'Si') {
 
-          $(".ff_composer").children().eq(9).children().eq(1).hide();
+          $(".ff_composer").children().eq(10).children().eq(1).addClass('hidden');
         }
         else {
-          $(".ff_composer").children().eq(9).children().eq(1).show();
+          $(".ff_composer").children().eq(10).children().eq(1).removeClass('hidden');
         }
 
     });
 });
+
+
+
+
+$(document).ready(function() {
+    $("input[id=freeform_quiero_enviar_mi_aplicacion]").click(function(){
+    if($(this).is(':checked')) {
+            addRequired();  
+            $('input[value="Guardar"]').val('Enviar');
+        } else {
+            removeRequired();  
+            $('input[value="Enviar"]').val('Guardar');
+        }  
+    });
+});
+     
+
+
+function addRequired() {
+  $(".ff_composer").find("input").each(function(index, element) { 
+    if(!$(element).parent().parent().hasClass("hidden")) { 
+      $(element).attr("required", "true"); 
+    } 
+  });
+  $(".ff_composer").find("textarea").each(function(index, element) { 
+    if(!$(element).parent().parent().hasClass("hidden")) { 
+      $(element).attr("required", "true"); 
+    } 
+  });
+  $(".ff_composer").find("input").each(function(index, element) { 
+    if($(element).attr("type") == "checkbox") { 
+      $(element).removeAttr("required", "true"); 
+    } 
+  });
+  $(".ff_composer").find("input").each(function(index, element) { 
+    if($(element).attr("name").indexOf("otro") >= 0) { 
+      $(element).removeAttr("required", "true"); 
+    } 
+  });
+  $(".ff_composer").find("input").each(function(index, element) { 
+    if($(element).attr("name").indexOf("link") >= 0) { 
+      $(element).removeAttr("required", "true"); 
+    } 
+  });
+} 
+
+function removeRequired() {
+  $(".ff_composer").find("input").each(function(index, element) { 
+      $(element).removeAttr("required"); 
+  });
+}
+ 
 
