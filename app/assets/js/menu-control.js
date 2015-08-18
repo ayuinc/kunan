@@ -270,9 +270,9 @@ $(document).ready(function() {
 
 $("#freeform_fuente_de_financiamiento_6").click(function(e) {
   if($(this).is(":checked")) {
-    $("#freeform_otras_fuentes_de_financiamiento").parent().parent().removeClass("hidden");
+    $("#freeform_otro_fuentes_de_financiamiento").parent().parent().removeClass("hidden");
   } else {
-    $("#freeform_otras_fuentes_de_financiamiento").parent().parent().addClass("hidden");
+    $("#freeform_otro_fuentes_de_financiamiento").parent().parent().addClass("hidden");
   }
 });
 
