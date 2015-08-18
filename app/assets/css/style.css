@@ -1470,6 +1470,12 @@ label[for="freeform_tipo_de_organizacion"],
 label[for="freeform_tipo_de_organizacion_otros"] {
   margin-top: 35px !important; }
 
+.ff_composer :nth-child(18n) :nth-child(1) li {
+  margin-top: 14px !important; }
+
+.ff_composer :nth-child(19n) :nth-child(1) {
+  padding-top: 0px !important; }
+
 /*VOTACI├ôN*/
 .fz-sm {
   font-size: 18px !important; }

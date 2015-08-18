@@ -63,13 +63,18 @@
 		                </button> 
 		                {/exp:rating:form}			
 									{if:else}
-										Aqui va el link al registro<br>
+										<input type="hidden" name="rating" id="rating" value="1" class="text-gray light small bg-white btn-outline btn-votacion-perfil">
+                      <i class="text-gray light small bg-white btn-outline btn-votacion-perfil">
 										{exp:rating:stats entry_id="{entry_id}"}
                       {overall_count}
                       {if rating_no_results}
-                        0 Voto(s)
+                        0 
                       {/if}
                     {/exp:rating:stats}
+                    </i>
+                    <a href="{site_url}login" class="text-uppercase btn-primary text-white btn btn-vota-perfil btn-icon-custom btn-primary">
+                      <span><small>Voto(s)</small></span>
+                    </a> 
 									{/if}
 			            <!-- 
 									<p class="text-gray light small bg-white btn-outline btn-votacion-perfil">131,1253</p>
