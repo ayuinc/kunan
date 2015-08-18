@@ -236,6 +236,21 @@ $(document).ready(function() {
     });
 });
 
+// $(document).ready(function() {
+//     $('#freeform_fuente_de_financiamiento_6').attr( "checked","checked" );
+//     $("input[name$='fuente_de_financiamiento']").click(function() {
+//         // var test = $(this).();
+//         if ($(this).val() != 'Otros') {
+
+//           $(".ff_composer").children().eq(18).children().eq(0).removeClass('hidden');
+//         }
+//         else {
+//           $(".ff_composer").children().eq(18).children().eq(0).addClass('hidden');
+//         }
+
+//     });
+// });
+
 
 
 

@@ -1212,7 +1212,7 @@ label[for="freeform_fondos_administrados_durante_el_ano_2014_5"],
 label[for="freeform_fondos_administrados_durante_el_ano_2014_6"] {
   display: inline !important; }
 
-input[id="freeform_link_video"] {
+input[id="freeform_video"] {
   display: block;
   margin-bottom: 10px; }
 
