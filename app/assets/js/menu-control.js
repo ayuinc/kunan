@@ -285,6 +285,9 @@ function removeRequired() {
   $(".ff_composer").find("input").each(function(index, element) { 
       $(element).removeAttr("required"); 
   });
+  $(".ff_composer").find("textarea").each(function(index, element) { 
+      $(element).removeAttr("required"); 
+  });
 }
  
 
