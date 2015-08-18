@@ -278,6 +278,16 @@ $("#freeform_fuente_de_financiamiento_6").click(function(e) {
   }
 });
 
+$('#freeform_por_que_medio_te_enteraste_de_la_convocatoria_9').attr( "checked" , "checked" );
+
+$("#freeform_por_que_medio_te_enteraste_de_la_convocatoria_9").click(function(e) {
+  if($(this).is(":checked")) {
+    $("#freeform_si_selecciono_otros_medios").parent().parent().removeClass("hidden");
+  } else {
+    $("#freeform_si_selecciono_otros_medios").parent().parent().addClass("hidden");
+  }
+});
+
 
 
 $(document).ready(function() {
