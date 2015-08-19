@@ -4,14 +4,16 @@
 {embed="includes/header" 
 	titulo="{title}" 
 	descripcion="{bitacora-descripcion}" 
-	imagen="{image:url:medium}" 
+	imagen="{image:url}"
+  url="{site_url}komunicacion/articulo/{url_title}" 
 }
 {/bitacora-imagen}
 {if:else}
 {embed="includes/header" 
 	titulo="{title}" 
 	descripcion="{bitacora-descripcion}" 
-	imagen="http://img.youtube.com/vi/{bitacora-video}/maxresdefault.jpg" 
+	imagen="http://img.youtube.com/vi/{bitacora-video}/maxresdefault.jpg"
+  url="{site_url}komunicacion/articulo/{url_title}" 
 }
 {/if}
 {embed="includes/navegacion-vistas"}
@@ -36,7 +38,7 @@
               {/bitacora-autor}
               {if bitacora-imagen!=''}
 	              {bitacora-imagen}
-	              	<img class="img-responsive" src="{image:url:medium}">
+	              	<img class="img-responsive" src="{image:url}">
 	              {/bitacora-imagen}	 
               {if:else} 
               	<iframe width="100%" class="iframe" src="https://www.youtube.com/embed/{bitacora-video}" frameborder="0" allowfullscreen></iframe>
