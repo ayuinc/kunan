@@ -5,14 +5,15 @@
 	titulo="{title}" 
 	descripcion="{bitacora-descripcion}" 
 	imagen="{image:url:medium}"
-  url="{site_url}komunicacion/articulo/{url_title}" 
+  url="{site_url}/komunicacion/articulo/{url_title}" 
 }
 {/bitacora-imagen}
 {if:else}
 {embed="includes/header" 
 	titulo="{title}" 
 	descripcion="{bitacora-descripcion}" 
-	imagen="http://img.youtube.com/vi/{bitacora-video}/maxresdefault.jpg" 
+	imagen="http://img.youtube.com/vi/{bitacora-video}/maxresdefault.jpg"
+  url="{site_url}/komunicacion/articulo/{url_title}" 
 }
 {/if}
 {embed="includes/navegacion-vistas"}
