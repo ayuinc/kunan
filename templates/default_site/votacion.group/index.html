@@ -26,10 +26,43 @@
 					</div>
 					<div class="col-md-6 pl-0">
 						<h4 class="book mt-14 mb-0">{nombre_del_proyecto}</h4>
-						<span class="small"><dfn>Inclusión Social, Lima</dfn></span>
-						<h6 class="text-uppercase mt-35 text-primary fz-xs light mb-7">VOTOS RECIBIDOS</h6>
-						<p class="text-gray light btn-outline btn-gray btn-votacion">13,123</p>
-						<a href="{site_url}votacion/proyecto-perfil/{entry_id}" class="text-uppercase btn-primary text-white btn btn-vota"> <span class="light small">Vota</span></a>
+						<span class="small"><dfn>{sector}</dfn></span>
+						<h6 class="text-uppercase mt-14 text-primary fz-xs light mb-7">VOTOS RECIBIDOS</h6>
+		            {if logged_in}
+	                	{exp:rating:form
+									    entry_id="{entry_id}"
+									    collection="Votos"
+									    return="gracias/voto/{title}"
+									    anonymous="no" 
+									    allow_duplicates="no"
+										}	                    
+										<input type="hidden" name="rating" id="rating" value="1" class="text-gray light btn-outline btn-gray btn-votacion">
+		                  <i class="text-gray light btn-outline btn-gray btn-votacion">
+		                    {exp:rating:stats entry_id="{entry_id}"}
+		                      {overall_count}
+		                      {if rating_no_results}
+		                        0
+		                      {/if}
+		                    {/exp:rating:stats}
+		                  </i>
+		                <a href="{site_url}votacion/proyecto-perfil/{entry_id}" class="text-uppercase btn-primary text-white btn btn-vota">
+		                  <span><small>VOTAR</small></span>
+		                </a> 
+		                {/exp:rating:form}			
+									{if:else}
+										<input type="hidden" name="rating" id="rating" value="1" class="text-gray light btn-outline btn-gray btn-votacion">
+                      <i class="text-gray light btn-outline btn-gray btn-votacion">
+										{exp:rating:stats entry_id="{entry_id}"}
+                      {overall_count}
+                      {if rating_no_results}
+                        0 
+                      {/if}
+                    {/exp:rating:stats}
+                    </i>
+                    <a href="{site_url}votacion/proyecto-perfil/{entry_id}" class="text-uppercase btn-primary text-white btn btn-vota">
+                      <span><small>Voto(s)</small></span>
+                    </a> 
+									{/if}
 
 					</div>
 				</div>
