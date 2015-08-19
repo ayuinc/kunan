@@ -85,7 +85,7 @@
 				<div style="float: left; width:50%; padding:14px;">
 					<div class="border-skyblue" style="padding:14px;">
 						<h3 style=" color: #3E3F40; text-transform: uppercase; font-weight: 300;">Regístrate</h3>
-						{exp:user:register return="voto/index"}					        
+						{exp:user:register return="votacion/index"}					        
 							<p>
 								<label class="small light text-uppercase" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Correo electrónico</label><br>
 						    <input type="text" name="username" />
@@ -115,7 +115,7 @@
 							<div style="margin-bottom: 14px;">
 								{exp:fbc:login
 								    permissions="public_profile|email|user_friends"
-								    return_when_logged_in="votacion/proyecto-perfil/{entry_id}"
+								    return_when_logged_in="content/index"
 								    return_when_logged_out="comunidad/index"
 								    return_for_passive_register="content/index"
 								    return_on_failure="comunidad/index"
