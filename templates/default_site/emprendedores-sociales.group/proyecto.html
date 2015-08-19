@@ -1,5 +1,12 @@
 {exp:channel:entries channel="proyecto" limit="1" disable="member_data"}
-{embed="includes/header"}
+{proyecto-imagen-organizacion limit="1"}
+{embed="includes/header"
+  titulo="{title}" 
+  descripcion="{proyecto-introduccion}" 
+  imagen="{image:url}"
+  url="{site_url}emprendedores-sociales/proyecto/{url_title}"
+}
+{/proyecto-imagen-organizacion}
 {embed="includes/navegacion-vistas"} 
     <main class="site-content">
       <section class="minh-70"></section>
