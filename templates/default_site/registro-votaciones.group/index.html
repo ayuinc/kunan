@@ -2,7 +2,7 @@
   {redirect='votacion/proyecto-perfil/{segment_1}'}  
 {/if}
 {if logged_out}
-{embed="includes/header"}
+
     <main class="site-content">
       <section class="minh-70"></section>
       <!-- DESCRIPTION -->
@@ -32,15 +32,8 @@
 											<label class="small light text-uppercase">Confirmar contraseña</label><br>
 									    <input type="password" name="password_confirm" />
 								    </p>
-										{if captcha}
-										<p>
-											<label class="small light text-uppercase">Por favor, introduzca la palabra que aparece a continuación:</label><br>
-										    <input type="text" name="captcha" />
-									    </p>
-									    <p>{captcha}</p>
-										{/if}
-								    <p><input type="checkbox" name="accept_terms" value="y" /> Aceptar <a href="{site_url}app/assets/documentos/bases_kunan_premio_2015_version_4.pdf">términos y condiciones</a></p>
-								    <p><input type="submit" value="Registrarse"  class="btn btn-skyblue"  /></p>
+<!-- 								    <p><input type="checkbox" name="accept_terms" value="y" /> Aceptar <a href="{site_url}app/assets/documentos/bases_kunan_premio_2015_version_4.pdf">términos y condiciones</a></p>
+								    <p><input type="submit" value="Registrarse"  class="btn btn-skyblue"  /></p> -->
 										{if no_results}
 								    	<p>Para ver este formulario debes estar desconectado.</p>
 										{/if}
