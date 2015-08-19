@@ -1,21 +1,143 @@
-{exp:fbc:prepare_page}
-<body>
-{exp:fbc:login
-    permissions="public_profile|email|user_friends"
-    return_when_logged_in="content/index"
-    return_when_logged_out="comunidad/index"
-    return_for_passive_register="content/index"
-    return_on_failure="comunidad/index"
-    login_button_label="Facebook Login"
-    button_size="large"
-}
-    {if fbc_logged_out == "y"}
-    	<div>
-        {fbc_login_button}
-      </div>
-    {/if}
-    {if fbc_logged_in == "y"}
-        <a href="{path='logout'}">Log Out</a>
-    {/if}
-{/exp:fbc:login}
-</body>
+{if logged_in}
+  {redirect='votacion/index'}  
+{/if}
+{if logged_out}
+<!doctype html>
+<html>
+	<head>
+		<link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,500" rel="stylesheet" type="text/css">
+		<style>
+			* {
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+			}
+			body {
+			  background-color: #fff; }
+			  body h1, body h2, body h3, body h4, body h5, body h6 {
+			    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			    font-weight: 300;
+			    color: black; 
+			  }
+			  body p {
+			    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+			  }
+			  body span {
+			    font-family: "museo-sans", Georgia, "Times New Roman", Times, serif; 
+			  }
+			  body a:hover {
+			    text-decoration: none; 
+			  }
+			.font-family {
+				font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			}
+
+			input {
+			  width: 100%;
+			  border: 0;
+			  outline: 0;
+			  background: transparent;
+			  border-bottom: 1px solid #b5b6b7;
+			  margin-top: 14px; 
+			}
+			.border-skyblue {
+			  border: 1px solid #4FAAE5;
+			}
+			.btn {
+		    display: inline-block;
+		    margin-bottom: 0;
+		    font-weight: normal;
+		    text-align: center;
+		    vertical-align: middle;
+		    touch-action: manipulation;
+		    cursor: pointer;
+		    background-image: none;
+		    border: 1px solid transparent;
+		    white-space: nowrap;
+		    padding: 6px 12px;
+		    font-size: 16px;
+		    line-height: 1.71429;
+		    border-radius: 4px;
+		    -webkit-user-select: none;
+		    -moz-user-select: none;
+		    -ms-user-select: none;
+		    user-select: none;
+			}
+			.btn-skyblue {
+			  color: white;
+			  background-color: #4FAAE5 !important;
+			}
+
+			.border-sky {
+			  border: 1px solid #00B9AC;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="width: 748px; padding-left: 14px; padding-right: 14px; margin: 0 auto;">
+			<section>
+        <div style="min-height: 70px !important; text-align: center;">
+        	<img src="{site_url}app/assets/img/logo.png" class="text-center" width="100" alt="KUNAN" style="margin-top: 21px; margin-bottom: 21px;">
+        	<h4>Para poder votar primero debes registrarte. </h4>
+        </div>
+      </section>
+			<div style="margin-left: -14px; margin-right: -14px; content: " "; display: table;">
+				<div style="float: left; width:50%; padding:14px;">
+					<div class="border-skyblue" style="padding:14px;">
+						<h3 style=" color: #3E3F40; text-transform: uppercase; font-weight: 300;">Regístrate</h3>
+						{exp:user:register return="voto/index"}					        
+							<p>
+								<label class="small light text-uppercase" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Correo electrónico</label><br>
+						    <input type="text" name="username" />
+					    </p>
+							<p>
+								<label class="small light text-uppercase" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Contraseña</label><br>
+						    <input type="password" name="password" />
+					    </p>
+							{if captcha}
+							<p>
+								<label style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Por favor, introduzca la palabra que aparece a continuación:</label><br>
+							    <input type="text" name="captcha" />
+						    </p>
+						    <p>{captcha}</p>
+							{/if}
+							<p><input type="submit" value="Registrarse"  class="btn btn-skyblue"  /></p>
+							{if no_results}
+					    	<p>Para ver este formulario debes estar desconectado.</p>
+							{/if}
+
+						{/exp:user:register}
+					</div>
+				</div>
+
+				{exp:fbc:prepare_page}
+				<div style="width:50%; float: left; padding:14px;">
+					<div class="border-sky" style="padding:14px;">
+						<h3 style=" color: #3E3F40; text-transform: uppercase; font-weight: 300;">También puedes registrarte con Facebook</h3>
+							<div style="margin-bottom: 14px;">
+								{exp:fbc:login
+								    permissions="public_profile|email|user_friends"
+								    return_when_logged_in="content/index"
+								    return_when_logged_out="comunidad/index"
+								    return_for_passive_register="content/index"
+								    return_on_failure="comunidad/index"
+								    login_button_label="Facebook Login"
+								    button_size="large"
+								}
+								    {if fbc_logged_out == "y"}
+								    	<div>
+								        {fbc_login_button}
+								      </div>
+								    {/if}
+								    {if fbc_logged_in == "y"}
+								        <a href="{path='logout'}">Log Out</a>
+								    {/if}
+								{/exp:fbc:login}
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+{/if}
