@@ -731,11 +731,16 @@ label[for="freeform_tipo_de_organizacion_otros"] {
   }
 }
 
+.titulo-proyecto {
+	margin-top: 3px;
+  margin-bottom: 2px;
+}
+
 .btn-votacion {
 	float: left;
   border: 1px #b5b6b7 solid;
   border-radius: 3px 0px 0px 3px !important;
-  padding: 1px 31px 0 7px !important;
+  padding: 1px 7px 0 7px !important
 }
 
 .fz-proyectos {
