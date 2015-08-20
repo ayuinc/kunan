@@ -731,9 +731,9 @@ label[for="freeform_tipo_de_organizacion_otros"] {
   }
 }
 
-.titulo-proyecto {
-	font-size: 18px !important;
-}
+// .titulo-proyecto {
+// 	font-size: 17px !important;
+// }
 
 .btn-votacion {
 	float: left;
@@ -775,4 +775,9 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 	p {
 		text-align: center !important;
 	}
+}
+
+.img-ovarlay {
+	-webkit-filter: contrast(0.8);
+  filter: contrast(0.8);
 }

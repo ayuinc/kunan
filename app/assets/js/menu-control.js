@@ -45,6 +45,7 @@ $(document).ready(function() {
           $(this).val(trimmed + " ");
       }
   });
+
 }); 
 
 $(document).ready(function() {
@@ -265,6 +266,14 @@ $(document).ready(function() {
           $(".ff_composer").children().eq(10).children().eq(1).removeClass('hidden');
         }
 
+    });
+
+    $('#freeform_esta_inscrita_en_registros_publicos_2').click(function() {
+        if ($(this).val() == 'No') {
+
+          $("input[name='ruc']").val("");
+          $("input[name='cuando_se_constituyeron_dd_mm_yyyy']").val("");
+        }
     });
 });
 

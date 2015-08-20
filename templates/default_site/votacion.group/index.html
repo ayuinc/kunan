@@ -21,12 +21,12 @@
 			<div class="row mt-35">
 				{exp:channel:entries channel="votacion" limit="10" disable="member_data"}
 				<div class="col-md-6 mt-28">
-					<div class="col-md-5 col-md-offset-1">
-						<img src="{logo}" alt="" class="img-responsive">
+					<div class="col-md-5 col-md-offset-1 col-xs-5">
+							<img src="{logo}" alt="" class="img-responsive img-overlay">
 					</div>
 					<div class="col-md-6 pl-0">
-						<h4 class="book titulo-proyecto mt-7 mb-0">{nombre_del_proyecto}</h4>
-						<span class="small"><dfn>{sector_proyecto}</dfn></span>
+						<h5 class="book titulo-proyecto mt-7 mb-0">{nombre_del_proyecto}</h5>
+						<small><dfn>{sector_proyecto}</dfn></small>
 						<h6 class="text-uppercase mt-14 text-primary fz-xs light mb-7">VOTOS RECIBIDOS</h6>
 		            {if logged_in}
 	                	{exp:rating:form
