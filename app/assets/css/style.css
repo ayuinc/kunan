@@ -1494,8 +1494,7 @@ label[for="freeform_tipo_de_organizacion_otros"] {
     border-bottom: 1px solid #a4470f !important; }
 
 .titulo-proyecto {
-  margin-top: 3px;
-  margin-bottom: 2px; }
+  font-size: 18px !important; }
 
 .btn-votacion {
   float: left;
