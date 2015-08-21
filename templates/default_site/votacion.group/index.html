@@ -1,4 +1,4 @@
-<!-- {embed="includes/header"}
+{embed="includes/header"}
 {embed="includes/navegacion-vistas"}
 
 <main class="site-content">
@@ -24,11 +24,13 @@
 
 				<div class="col-md-6 mt-28">
 					<div class="col-md-5 col-md-offset-1 col-xs-5">
-							<img src="{logo}" alt="" class="img-responsive img-overlay">
+							<div class="img-overlay absolute"><h1 class="bold text-primary">{count}</h1></div>
+							<img src="{logo}" alt="" class="img-responsive">
 					</div>
 					<div class="col-md-6 pl-0">
 						<h5 class="book titulo-proyecto mt-7 mb-0">{nombre_del_proyecto}</h5>
-						<small><dfn>{sector_proyecto}</dfn></small>
+						<small><dfn>{sector_proyecto}, {lugar_proyecto}</dfn></small>
+
 						<h6 class="text-uppercase mt-14 text-primary fz-xs light mb-7">VOTOS RECIBIDOS</h6>
 		            {if logged_in}
 	                	{exp:rating:form
@@ -72,7 +74,9 @@
 				{/exp:query}
 
 			</div>
-
+			<div class="text-center">			
+				<img class="pv-56 separador"src="{site_url}app/assets/img/linea-separadora.png">
+			</div>
 		</div>
 	</section>
 	<section class="text-center">
@@ -88,4 +92,3 @@
 </main>
     
 {embed="includes/footer"} 
- -->

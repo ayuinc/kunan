@@ -1524,8 +1524,13 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 .error_designado p {
   text-align: center !important; }
 
-.img-ovarlay {
-  -webkit-filter: contrast(0.8);
-  filter: contrast(0.8); }
+.img-overlay {
+  width: 116px;
+  height: 116px;
+  background-color: rgba(0, 0, 0, 0.3); }
+  .img-overlay h1 {
+    top: 46px;
+    position: relative;
+    margin-left: 7px; }
 
 /*# sourceMappingURL=style.css.map */
