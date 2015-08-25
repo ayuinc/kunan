@@ -5,6 +5,7 @@
   url="{site_url}{segment_1}"
 }
 {embed="includes/navegacion-vistas"} 
+
     <main class="site-content">
       <section id="hero-image" class="minhp-80" style="background:url({site_url}app/assets/img/premio.png)">
         <div class="bg-hero-image minhp-80">
@@ -125,120 +126,177 @@
          <!--  <img class="pv-56 separador"src="{site_url}app/assets/img/linea-separadora.png"> -->
 
           <!-- JURADO -->
-          <h2 class="pb-35">El jurado</h2>
-          <div class="row">
-            <div class="col-md-6">
-	            {exp:channel:entries channel="jurado" entry_id="6" disable="member_data|pagination" dynamic="off"}
-              <div class="row pb-14 text-right">
-              	{imgen-jurado}
-	              <a href="{site_url}jurado/{url_title}">
-		              <img src="{image:url:small}">
-	              </a>  
-	              {/imgen-jurado}
+          <div class="container-md" id="cajas">
+            <h2 class="pb-35">El jurado</h2>
+            <div class="row fila-cajas equipo filadecajas">
+            {exp:channel:entries channel="jurado" entry_id="9" disable="member_data|pagination" dynamic="off"}
+              <div class="col-md-4 p-0 ">
+              <a href="{site_url}jurado/{url_title}">
+                <article class="caja persona relative heightauto" id="caja-persona-1" data-row="1" data-col="1">
+                  <div class="inner">
+
+                    <img src="{site_url}app/assets/img/equipo/alvaro-defrente.jpg" class="normal mirando1"  />
+
+
+                    <img src='{site_url}app/assets/img/equipo/alvaro-n.jpg' class='mirando mirando3' />
+                    <img src='{site_url}app/assets/img/equipo/alvaro-s.jpg' class='mirando mirando8' />
+                    <img src='{site_url}app/assets/img/equipo/alvaro-e.jpg' class='mirando mirando6' />
+                    <img src='{site_url}app/assets/img/equipo/alvaro-o.jpg' class='mirando mirando5' />
+                    <img src='{site_url}app/assets/img/equipo/alvaro-no.jpg' class='mirando mirando2' />
+                    <img src='{site_url}app/assets/img/equipo/alvaro-ne.jpg' class='mirando mirando4' />
+                    <img src='{site_url}app/assets/img/equipo/alvaro-so.jpg' class='mirando mirando7' />
+                    <img src='{site_url}app/assets/img/equipo/alvaro-se.jpg' class='mirando mirando9' />
+                    <div class="contenido">
+                      <h3><span>Alvaro Valdéz</span></h3>
+                      <p class="cargo">Telefónica</p>
+                    </div>
+                  </div>
+                </article>
+              </a>
+              </div>
+            {/exp:channel:entries}
+            {exp:channel:entries channel="jurado" entry_id="8" disable="member_data|pagination" dynamic="off"}
+            
+              <div class="col-md-4 p-0 ">
+              <a href="{site_url}jurado/{url_title}">
+                <article class="caja persona relative heightauto" id="caja-persona-2" data-row="1" data-col="2">
+                  <div class="inner"> 
+
+                    <img src="{site_url}app/assets/img/equipo/vm_12.jpg" class="normal mirando1"  />
+
+
+                    <img src='{site_url}app/assets/img/equipo/vania-n.jpg' class='mirando mirando3' />
+                    <img src='{site_url}app/assets/img/equipo/vania-down.jpg' class='mirando mirando8' />
+                    <img src='{site_url}app/assets/img/equipo/vania-e.jpg' class='mirando mirando6' />
+                    <img src='{site_url}app/assets/img/equipo/vania-o.jpg' class='mirando mirando5' />
+                    <img src='{site_url}app/assets/img/equipo/vania-no.jpg' class='mirando mirando2' />
+                    <img src='{site_url}app/assets/img/equipo/vania-ne.jpg' class='mirando mirando4' />
+                    <img src='{site_url}app/assets/img/equipo/vania-so.jpg' class='mirando mirando7' />
+                    <img src='{site_url}app/assets/img/equipo/vania-se.jpg' class='mirando mirando9' />
+                    <div class="contenido">
+                      <h3><span>Vania Masias </span></h3>
+                      <p class="cargo">Bailarina</p>
+                      <!-- <p class="links"><a href="http://twitter.com/matiasrojasdl" target="_blank" class="twitter">Twitter</a> <a href="http://www.linkedin.com/profile/view?id=150977664&trk=tab_pro" target="_blank" class="linkedin">Linkedin</a></p>      -->  
+                    </div>
+
+                  </div>
+                </article>
+              </a>
               </div>
               {/exp:channel:entries}
-              {exp:channel:entries channel="jurado" entry_id="7" disable="member_data|pagination" dynamic="off"}
-              <div class="row pb-14 text-right ">
-                <div class="col-md-6 pb-14 pr-0">
-                  <h3 class="mv-7">
-	                  <a href="{site_url}jurado/{url_title}">{title}</a>
-	                </h3>
-                  <p class="text-gray text-uppercase small">{jurado-cargo}</p>
-                  <p class="small lh-sm text-gray">
-	                  {exp:char_limit total="100" exact="no"}
-	                  	{jurado-introduccion}
-										{/exp:char_limit}
-	                </p>
-                </div>
-                <div class="col-md-1 mt-14">
-                  <img src="{site_url}app/assets/img/flecha-mariel.png">
-                </div>
-                <div class="col-md-5 pr-0">
-	              	{imgen-jurado}
-		              <a href="{site_url}jurado/{url_title}">
-			              <img class="img-responsive"  src="{image:url:small}">
-		              </a> 		              
-		              {/imgen-jurado}     
-                </div>
-              </div>
-              {/exp:channel:entries}
-              {exp:channel:entries channel="jurado" entry_id="9" disable="member_data|pagination" dynamic="off"}
-              <div class="row text-right">
-                <div class="col-md-4"></div>
-                <div class="col-md-7 pr-0">
-                  <h3 class="mv-7">
-	                  <a href="{site_url}jurado/{url_title}">{title}</a>
-	                </h3>
-                  <p class="text-gray text-uppercase small">{jurado-cargo}</p>
-                  <p class="small lh-sm text-gray">
-	                  {exp:char_limit total="100" exact="no"}
-	                  	{jurado-introduccion}
-										{/exp:char_limit}
-	                </p>
-                </div>
-                <div class="col-md-1 mt-14">
-                  <img src="{site_url}app/assets/img/flecha-alvaro.png">
-                </div>  
+              {exp:channel:entries channel="jurado" entry_id="6" disable="member_data|pagination" dynamic="off"}
+              <div class="col-md-4 p-0 ">
+              <a href="{site_url}jurado/{url_title}">
+                <article class="caja persona relative heightauto" id="caja-persona-3" data-row="1" data-col="3">
+                  <div class="inner">
+
+                    <img src="{site_url}app/assets/img/equipo/ga_11.jpg" class="normal mirando1"  />
+
+                    <img src='{site_url}app/assets/img/equipo/gaston-n.jpg' class='mirando mirando3' />
+                    <img src='{site_url}app/assets/img/equipo/gaston-s.jpg' class='mirando mirando8' />
+                    <img src='{site_url}app/assets/img/equipo/gaston-e.jpg' class='mirando mirando6' />
+                    <img src='{site_url}app/assets/img/equipo/gaston-o.jpg' class='mirando mirando5' />
+                    <img src='{site_url}app/assets/img/equipo/gaston-no.jpg' class='mirando mirando2' />
+                    <img src='{site_url}app/assets/img/equipo/gaston-ne.jpg' class='mirando mirando4' />
+                    <img src='{site_url}app/assets/img/equipo/gaston-so.jpg' class='mirando mirando7' />
+                    <img src='{site_url}app/assets/img/equipo/gaston-se.jpg' class='mirando mirando9' />
+                    <div class="contenido">
+                      <h3><span>Gaston Acurio </span></h3>
+                      <p class="cargo">Chef</p>
+                      <!-- <p class="links"><a href="http://twitter.com/askanstraume" target="_blank" class="twitter">Twitter</a> <a href="http://www.linkedin.com/in/askanstraume" target="_blank" class="linkedin">Linkedin</a></p> -->      
+                    </div> 
+
+                  </div>
+                </article>
+                </a>
               </div>
               {/exp:channel:entries}
             </div>
-            <div class="col-md-6 text-left">
-	            {exp:channel:entries channel="jurado" entry_id="6" disable="member_data|pagination" dynamic="off"}
-              <div class="row pb-14">
-                <div class="col-md-1 mt-14">
-                  <img src="{site_url}app/assets/img/flecha-gaston.png">
-                </div>
-                <div class="col-md-7 pl-0">
-                  <h3 class="mv-7">
-	                  <a href="{site_url}jurado/{url_title}">{title}</a>
-	                </h3>
-                  <p class="text-gray text-uppercase small">{jurado-cargo}</p>
-                  <p class="small lh-sm text-gray">
-	                  {exp:char_limit total="100" exact="no"}
-	                  	{jurado-introduccion}
-										{/exp:char_limit}
-	                </p>
-                </div>
+            <div class="row fila-cajas equipo filadecajas">
+              {exp:channel:entries channel="jurado" entry_id="7" disable="member_data|pagination" dynamic="off"}
+              <div class="col-md-4 p-0 ">
+              <a href="{site_url}jurado/{url_title}">
+                <article class="caja persona relative heightauto" id="caja-persona-4" data-row="2" data-col="1">
+                  <div class="inner">
+
+                    <img src="{site_url}app/assets/img/equipo/Irene_1.jpg" class="normal mirando1"  />
+
+
+                    <img src='{site_url}app/assets/img/equipo/irene-n.jpg' class='mirando mirando3' />
+                    <img src='{site_url}app/assets/img/equipo/irene-s.jpg' class='mirando mirando8' />
+                    <img src='{site_url}app/assets/img/equipo/irene-e.jpg' class='mirando mirando6' />
+                    <img src='{site_url}app/assets/img/equipo/irene-o.jpg' class='mirando mirando5' />
+                    <img src='{site_url}app/assets/img/equipo/irene-no.jpg' class='mirando mirando2' />
+                    <img src='{site_url}app/assets/img/equipo/irene-ne.jpg' class='mirando mirando4' />
+                    <img src='{site_url}app/assets/img/equipo/irene-so.jpg' class='mirando mirando7' />
+                    <img src='{site_url}app/assets/img/equipo/irene-se.jpg' class='mirando mirando9' />
+
+                    <div class="contenido">
+                      <h3><span>Irene Hofmeijer </span></h3>
+                      <p class="cargo">Loop</p>
+    
+                    </div>
+
+                  </div>
+                </article>
+                </a>
               </div>
               {/exp:channel:entries}
-              {exp:channel:entries channel="jurado" entry_id="8" disable="member_data|pagination" dynamic="off"}
-              <div class="row pb-14">
-                <div class="col-md-5 pr-0">
-	              	{imgen-jurado}
-		              <a href="{site_url}jurado/{url_title}">
-			              <img class="img-responsive"  src="{image:url:small}">
-		              </a> 		              
-		              {/imgen-jurado}  
-                </div>
-                <div class="col-md-1 mt-14">
-                  <img src="{site_url}app/assets/img/flecha-vania.png">
-                </div>
-                <div class="col-md-6 pr-0 pl-0">
-	                <h3 class="mv-7">
-	                  <a href="{site_url}jurado/{url_title}">{title}</a>
-	                </h3>
-                  <p class="text-gray text-uppercase small">{jurado-cargo}</p>
-                  <p class="small lh-sm text-gray">
-	                  {exp:char_limit total="100" exact="no"}
-	                  	{jurado-introduccion}
-										{/exp:char_limit}
-	                </p>
-                </div>
+              {exp:channel:entries channel="jurado" entry_id="32" disable="member_data|pagination" dynamic="off"}
+              <div class="col-md-4 p-0 ">
+              <a href="{site_url}jurado/{url_title}">
+                <article class="caja persona relative heightauto" id="caja-persona-5" data-row="2" data-col="2">
+                  <div class="inner">
+
+                    <img src="{site_url}app/assets/img/equipo/JD_1.jpg" class="normal mirando1"  />
+
+                    <img src='{site_url}app/assets/img/equipo/jd-n.jpg' class='mirando mirando3' />
+                    <img src='{site_url}app/assets/img/equipo/jd-s.jpg' class='mirando mirando8' />
+                    <img src='{site_url}app/assets/img/equipo/jd-e.jpg' class='mirando mirando6' />
+                    <img src='{site_url}app/assets/img/equipo/jd-o.jpg' class='mirando mirando5' />
+                    <img src='{site_url}app/assets/img/equipo/jd-no.jpg' class='mirando mirando2' />
+                    <img src='{site_url}app/assets/img/equipo/jd-ne.jpg' class='mirando mirando4' />
+                    <img src='{site_url}app/assets/img/equipo/jd-so.jpg' class='mirando mirando7' />
+                    <img src='{site_url}app/assets/img/equipo/jd-se.jpg' class='mirando mirando9' />
+                    <div class="contenido">
+                      <h3><span>Juan Diego Calisto </span></h3>
+                      <p class="cargo">Ruwasunchis</p>
+                      <!-- <p class="links"><a href="http://twitter.com/marioorellanag" target="_blank" class="twitter">Twitter</a> </p> -->       
+                    </div>
+                  </div>
+                </article>
+                </a> 
               </div>
               {/exp:channel:entries}
-              {exp:channel:entries channel="jurado" entry_id="9" disable="member_data|pagination" dynamic="off"}
-              <div class="row text-left">
-                <div class="col-md-12">
-	                {imgen-jurado}
-		              <a href="{site_url}jurado/{url_title}">
-                  	<img class="img-responsive" src="{image:url:small}">
-		              </a>
-		              {/imgen-jurado}
-                </div>
+              {exp:channel:entries channel="jurado" entry_id="33" disable="member_data|pagination" dynamic="off"}
+              <div class="col-md-4 p-0 ">
+              <a href="{site_url}jurado/{url_title}">
+                <article class="caja persona relative heightauto" id="caja-persona-6" data-row="2" data-col="3">
+                  <div class="inner">
+
+                    <img src="{site_url}app/assets/img/equipo/laura.jpg" class="normal mirando1" />
+                    <img src='{site_url}app/assets/img/equipo/jd-n.jpg' class='mirando mirando3' />
+                    <img src='{site_url}app/assets/img/equipo/jd-s.jpg' class='mirando mirando8' />
+                    <img src='{site_url}app/assets/img/equipo/jd-e.jpg' class='mirando mirando6' />
+                    <img src='{site_url}app/assets/img/equipo/jd-o.jpg' class='mirando mirando5' />
+                    <img src='{site_url}app/assets/img/equipo/jd-no.jpg' class='mirando mirando2' />
+                    <img src='{site_url}app/assets/img/equipo/jd-ne.jpg' class='mirando mirando4' />
+                    <img src='{site_url}app/assets/img/equipo/jd-so.jpg' class='mirando mirando7' />
+                    <img src='{site_url}app/assets/img/equipo/jd-se.jpg' class='mirando mirando9' />
+                    <div class="contenido">
+                      <h3><span>Piero Ghezzi </span></h3>
+                      <p class="cargo">Ministro de la Producción</p>
+                              </div>
+
+                  </div>
+                </article>
+                </a>
               </div>
               {/exp:channel:entries}
+              
             </div>
           </div>
+          
           <!-- END: JURADO -->
 
           <img class="pv-56 separador"src="{site_url}app/assets/img/linea-separadora.png">
@@ -257,4 +315,5 @@
 			{embed="includes/formulario"}
       {embed="includes/estadistica"}
     </main>
-{embed="includes/footer"} 
+
+{embed="includes/footer"}

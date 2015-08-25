@@ -739,7 +739,7 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 	float: left;
   border: 1px #b5b6b7 solid;
   border-radius: 3px 0px 0px 3px !important;
-  padding: 1px 7px 0 7px !important
+  padding: 1px 7px 0 7px !important;
 }
 
 .fz-proyectos {
@@ -781,9 +781,226 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 	width: 116px;
   height: 116px;
   background-color: rgba(0,0,0,0.3);
-  h1 {
-  	top: 46px;
+  h2 {
+  	top: 48px;
     position: relative;
     margin-left: 7px;
+    color: #ffffff;
   }
 }
+
+
+//Jurado
+body.cargando img.show {
+  opacity: 1;
+}
+
+.caja.persona {
+  overflow: hidden;
+
+  background-color: #999;
+}
+.caja.persona .inner {
+  opacity: 0.8;
+  padding: 0 !important;
+  background: #fff;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.caja.persona .inner:hover {
+  opacity: 1;
+}
+.caja.persona .inner .contenido {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+.caja.persona .inner .contenido h3 {
+  margin: 20px 20px 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: translate(-400px, 0);
+  -moz-transform: translate(-400px, 0);
+  -ms-transform: translate(-400px, 0);
+  -o-transform: translate(-400px, 0);
+  transform: translate(-400px, 0);
+}
+.caja.persona .inner .contenido h3 span {
+  display: inline-block;
+  background: #ec008c;
+  padding: 6px 12px 4px;
+}
+.caja.persona .inner .contenido .cargo {
+  -webkit-transition: all 0.4s 0.1s ease-in-out;
+  -moz-transition: all 0.4s 0.1s ease-in-out;
+  -ms-transition: all 0.4s 0.1s ease-in-out;
+  -o-transition: all 0.4s 0.1s ease-in-out;
+  transition: all 0.4s 0.1s ease-in-out;
+  -webkit-transform: translate(400px, 0);
+  -moz-transform: translate(400px, 0);
+  -ms-transform: translate(400px, 0);
+  -o-transform: translate(400px, 0);
+  transform: translate(400px, 0);
+  margin: 0 20px;
+  background: #fff;
+  color: #777;
+  padding: 5px 12px;
+  display: inline-block;
+  font-family: octin_college_freeregular, arial, sans-serif;
+}
+.caja.persona .inner .contenido .links {
+  -webkit-transition: all 0.4s 0.2s ease-in-out;
+  -moz-transition: all 0.4s 0.2s ease-in-out;
+  -ms-transition: all 0.4s 0.2s ease-in-out;
+  -o-transition: all 0.4s 0.2s ease-in-out;
+  transition: all 0.4s 0.2s ease-in-out;
+  -webkit-transform: translate(-400px, 0);
+  -moz-transform: translate(-400px, 0);
+  -ms-transform: translate(-400px, 0);
+  -o-transform: translate(-400px, 0);
+  transform: translate(-400px, 0);
+  margin: 0 20px;
+}
+.caja.persona .inner .contenido .links a {
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  display: block;
+  text-indent: 50px;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  float: left;
+}
+.caja.persona .inner .contenido .links a.linkedin {
+  background: #009de6 url("../img/social-linkedin.png") center center no-repeat;
+}
+.caja.persona .inner .contenido .links a.twitter {
+  background: #00aeff url("../img/social-twitter.png") center center no-repeat;
+}
+.caja.persona .inner .contenido .links a:hover {
+  background-color: #222;
+}
+.caja.persona .inner .contenido .links a:active {
+  background-color: #ec008c;
+}
+.caja.persona .inner img.normal {
+  position: relative;
+  opacity: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: block;
+}
+.caja.persona .inner img.mirando {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
+  opacity: 0;
+}
+.caja.persona .inner img.mirando.mostrar {
+  opacity: 1;
+}
+.caja.persona .inner:hover {
+  background: #00aeff;
+}
+.caja.persona .inner:hover img.normal {
+  opacity: 1;
+}
+.caja.persona .inner:hover .contenido h3,
+.caja.persona .inner:hover .contenido .cargo,
+.caja.persona .inner:hover .contenido .links {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.caja.persona:nth-child(odd) .inner h3 span {
+  background-color: #ea6616;
+}
+.caja.persona:nth-child(odd) .inner:hover {
+  background-color: #ec008c;
+}
+.caja.persona .inner img.pixelado {
+  display: none;
+}
+.caja.persona .inner img.normal {
+  opacity: 1;
+  // -webkit-transition: all 5s ease-in;
+  // -moz-transition: all 5s ease-in;
+  // -ms-transition: all 5s ease-in;
+  // -o-transition: all 5s ease-in;
+  // transition: all 5s ease-in;
+}
+@media all and (max-width: 1200px) {
+  .caja.persona .inner .contenido h3 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .caja.persona .inner .contenido .cargo {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media all and (max-width: 1020px) {
+  .caja.persona .inner .contenido {
+    bottom: 0;
+  }
+  .caja.persona .inner .contenido h3 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .caja.persona .inner .contenido .cargo {
+    margin: 0;
+    font-size: 13px;
+    line-height: 13px;
+  }
+  .caja.persona .inner .contenido .links {
+    position: absolute;
+    top: auto;
+    bottom: 100%;
+    right: auto;
+    left: -20px;
+  }
+  .caja.persona .inner .contenido .links a {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.fila-cajas {
+	margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  clear: both;
+}
+
