@@ -1,0 +1,40 @@
+{embed="includes/header"}
+{embed="includes/navegacion-vistas"}
+    <main class="site-content">
+      <section class="minh-70"></section>
+      <!-- DESCRIPTION -->
+      <section class="text-left minhp-100" id="description">
+        <div class="minh-70"></div>
+        <div class="container-md pv-63 text-center text-black">
+          <h1 class="text-primary">¿Perdiste tu contraseña?</h1>
+          <div class="row">
+          <p class="text-gray">
+              Si has olvidado tu contraseña, introduce la dirección de correo electrónico que registraste<br> y recibirás un correo electrónico con instrucciones para restablecer tu contraseña.
+          </p>
+            <div class="col-md-4 col-md-offset-4">
+              
+              {exp:user:forgot_password
+                  password_reset_template="login/resetear-contrasena/%id%"
+                  password_reset_email_subject="Pedido de cambio de contraseña"
+                  password_reset_email_template="login/email-reseteo-contrasena"
+                  return="login/gracias-cambio-contrasena"
+              }
+              
+              <p>
+                  <label for="email" class="light text-gray">
+                      Correo electrónico <span class="required text-danger">*</span>
+                  </label>
+                  <input type="text" name="email" id="email" />
+              </p>
+              <p>
+                  <input type="submit" name="submit" value="Cambiar Contraseña" class="btn btn-sky ml-0" />
+              </p>
+            </div>
+          </div>
+          
+          {/exp:user:forgot_password}          
+        </div>
+      </section>
+      <!-- END: DESCRIPTION -->
+    </main>
+{embed="includes/footer"} 
