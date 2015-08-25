@@ -1576,7 +1576,7 @@ body.cargando img.show {
 
 .caja.persona .inner .contenido h3 span {
   display: inline-block;
-  background: #ec008c;
+  background: #ea6616;
   padding: 6px 12px 4px; }
 
 .caja.persona .inner .contenido .cargo {
@@ -1634,7 +1634,7 @@ body.cargando img.show {
   background-color: #222; }
 
 .caja.persona .inner .contenido .links a:active {
-  background-color: #ec008c; }
+  background-color: #ea6616; }
 
 .caja.persona .inner img.normal {
   position: relative;
@@ -1682,7 +1682,7 @@ body.cargando img.show {
   background-color: #ea6616; }
 
 .caja.persona:nth-child(odd) .inner:hover {
-  background-color: #ec008c; }
+  background-color: #ea6616; }
 
 .caja.persona .inner img.pixelado {
   display: none; }
