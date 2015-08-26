@@ -193,51 +193,52 @@ $(document).ready(function() {
 // Limitación a solo numeros
 $(document).ready(function() {
 
-  function validar(e) {
-    return /[0-9]|\./.test(String.fromCharCode(e.keyCode)) && !e.shiftKey;
+  function validar(event) {
+    console.log("kasdsad");
+     return /[0-9]|\./.test(String.fromCharCode(event.keyCode)) && !event.shiftKey;
   }
 
-  $('#freeform_fecha_nacimiento').keydown(function(e) {
-      validar(e);
+  $('#freeform_fecha_nacimiento').keypress(function(e) {
+      return validar(e);
   });
-  $('#freeform_tiempo_en_dicho_cargo_en_cantidad_de_meses').keydown(function(e) {
-      validar(e);
+  $('#freeform_tiempo_en_dicho_cargo_en_cantidad_de_meses').keypress(function(e) {
+      return validar(e);
   });
-  $('#freeform_tiempo_en_la_organizacion_en_cantidad_de_meses').keydown(function(e) {
-      validar(e);
+  $('#freeform_tiempo_en_la_organizacion_en_cantidad_de_meses').keypress(function(e) {
+      return validar(e);
   });
-  $('#freeform_cuando_comenzaron_a_operar_dd_mm_yyyy').keydown(function(e) {
-      validar(e);
+  $('#freeform_cuando_comenzaron_a_operar_dd_mm_yyyy').keypress(function(e) {
+      return validar(e);
   });
-  $('#freeform_ruc').keydown(function(e) {
-      validar(e);
+  $('#freeform_ruc').keypress(function(e) {
+      return validar(e);
   });
-  $('#freeform_cuando_se_constituyeron_dd_mm_yyyy').keydown(function(e) {
-      validar(e);
+  $('#freeform_cuando_se_constituyeron_dd_mm_yyyy').keypress(function(e) {
+      return validar(e);
   });
-  $('#freeform_cuanta_gente_se_encarga_de_dirigir_y_gestionar_la_iniciativa').keydown(function(e) {
-      validar(e);
+  $('#freeform_cuanta_gente_se_encarga_de_dirigir_y_gestionar_la_iniciativa').keypress(function(e) {
+      return validar(e);
   });
-  $('#freeform_cantidad_de_remunerados_a_tiempo_parcial').keydown(function(e) {
-      validar(e);
+  $('#freeform_cantidad_de_remunerados_a_tiempo_parcial').keypress(function(e) {
+      return validar(e);
   });
-  $('#freeform_cantidad_de_remunerados_a_tiempo_completo').keydown(function(e) {
-      validar(e);
+  $('#freeform_cantidad_de_remunerados_a_tiempo_completo').keypress(function(e) {
+      return validar(e);
   });
-  $('#freeform_cantidad_de_talento_voluntario').keydown(function(e) {
-      validar(e);
+  $('#freeform_cantidad_de_talento_voluntario').keypress(function(e) {
+      return validar(e);
   });
-  $('#freeform_si_llenas_otros_ingresa_la_cantidad').keydown(function(e) {
-      validar(e);
+  $('#freeform_si_llenas_otros_ingresa_la_cantidad').keypress(function(e) {
+      return validar(e);
   });
-  $('#freeform_monto_exacto_s').keydown(function(e) {
-      validar(e);
+  $('#freeform_monto_exacto_s').keypress(function(e) {
+      return validar(e);
   });
-  $('#freeform_telefono_fijo').keydown(function(e) {
-      validar(e);
+  $('#freeform_telefono_fijo').keypress(function(e) {
+      return validar(e);
   });
-  $('#freeform_telefono_celular').keydown(function(e) {
-      validar(e);
+  $('#freeform_telefono_celular').keypress(function(e) {
+      return validar(e);
   });
 });
 
