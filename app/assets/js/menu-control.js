@@ -186,18 +186,15 @@ $(document).ready(function() {
 
 });
 
+ $('#telefono').keypress(function (event) {
+   
+  });
+
 // Limitación a solo numeros
 $(document).ready(function() {
 
   function validar(e) {
-    var inputVal = String.fromCharCode(e.keyCode);
-      var numericReg = /^[0-9\b]+$/
-      if(!numericReg.test(inputVal)) {
-        e.preventDefault();
-      }
-      else {
-        return;
-      }
+    return /[0-9]|\./.test(String.fromCharCode(e.keyCode)) && !e.shiftKey;
   }
 
   $('#freeform_fecha_nacimiento').keydown(function(e) {
