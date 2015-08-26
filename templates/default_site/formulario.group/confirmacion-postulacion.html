@@ -1,17 +1,6 @@
 {embed:correo}
-{exp:send_email 
-    from_name="KUNAN" 
-    from_email="hoyemprende@kunan.com.pe" 
-    to="{webmaster_email}" 
-    subject="Confirmación de Postulación"
-    return="{site_url}"
-    parse="inward"
-}
-	Dear Wacky Silly Hairpieces,
+{exp:email_from_template to="coloradomarin@gmail.com" from="hoyemprende@kunan.com.pe" subject="Hello!" echo="off"}
 
-	Can you do something about {screen_name}s hair? Though he does got to get back to work.
+This tag content is being viewed at {uri_string}. Sending notification to {to}!
 
-	Thank you,
-
-	Equipo impulsor KUNAN
-{/exp:send_email} 
+{/exp:email_from_template}	
