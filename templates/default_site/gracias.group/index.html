@@ -1,3 +1,7 @@
+{if logged_in}
+{embed="formulario/confirmacion-postulacion"}
+{/if}
+
 {embed="includes/header"}
 {embed="includes/navegacion-vistas"}
     <main class="site-content">
@@ -9,7 +13,7 @@
           <h1 class="text-uppercase h2 light">Gracias por participar</h1>
           <p class="text-gray light h4 lh-lg mb-42">Tus datos han sido guardados con éxito. Regresa al <a href="{site_url}">inicio.</a></p>   
           
-          
+          {email}
         </div>
       </section>
       <!-- END: DESCRIPTION -->
