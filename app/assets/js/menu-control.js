@@ -194,7 +194,6 @@ $(document).ready(function() {
 $(document).ready(function() {
 
   function validar(event) {
-    console.log("kasdsad");
      return /[0-9]|\./.test(String.fromCharCode(event.keyCode)) && !event.shiftKey;
   }
 
