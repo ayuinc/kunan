@@ -1734,4 +1734,12 @@ body.cargando img.show {
   vertical-align: baseline;
   clear: both; }
 
+.border-bottom-none {
+  border-bottom: none !important; }
+
+.modal-dialog {
+  width: 600px !important;
+  margin-top: 150px !important;
+  z-index: 10000 !important; }
+
 /*# sourceMappingURL=style.css.map */

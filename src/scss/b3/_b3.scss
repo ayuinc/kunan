@@ -22,7 +22,7 @@
 // @import "tables";
 
 // Components
-// @import "component-animations";
+@import "component-animations";
 // @import "dropdowns";
 // @import "button-groups";
 // @import "input-groups";
@@ -42,10 +42,10 @@
 // @import "responsive-embed"
 // @import "panels";
 // @import "wells";
-// @import "close";
+@import "close";
 
 // Components w/ JavaScript
-//@import "modals";
+@import "modals";
 //@import "tooltip";
 //@import "popovers";
 //@import "carousel";
