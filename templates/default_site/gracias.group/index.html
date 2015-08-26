@@ -1,5 +1,12 @@
 {if logged_in}
-{embed="formulario/confirmacion-postulacion" correo="{email}"}
+{exp:user:stats dynamic="off"}
+{email}
+{exp:email_from_template to="{email}" from="hoyemprende@kunan.com.pe" subject="Hello!" echo="off"}
+
+This tag content is being viewed at {uri_string}. Sending notification to {to}!
+
+{/exp:email_from_template}	
+{/exp:user:stats}
 {/if}
 
 {embed="includes/header"}
@@ -12,8 +19,6 @@
         <div class="container-sm pv-70 text-center text-black">
           <h1 class="text-uppercase h2 light">Gracias por participar</h1>
           <p class="text-gray light h4 lh-lg mb-42">Tus datos han sido guardados con éxito. Regresa al <a href="{site_url}">inicio.</a></p>   
-          
-          {email}
         </div>
       </section>
       <!-- END: DESCRIPTION -->
