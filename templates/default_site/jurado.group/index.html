@@ -1,0 +1,38 @@
+{exp:channel:entries channel="jurado" limit="1" disable="member_data|pagination"}
+{embed="includes/header"}
+{embed="includes/navegacion-vistas"}    
+    <main class="site-content">
+      <section class="minh-70"></section>
+      <!-- DESCRIPTION -->
+      <section class="text-left" id="description">
+        <div class="container-md pv-70">
+          <div class="row">
+            <div class="col-md-3 pt-35 light">
+	            {imgen-jurado}
+              <img class="img-responsive margin-auto" src="{image:url:small}">
+              {/imgen-jurado}
+              <h3 class="text-uppercase light h4mb-0 text-gray-darker">{title}</h3>
+              <p class="small light text-gray-light mt-0 pt-7">{jurado-cargo}</p>
+            </div>
+            <div class="col-md-9 light mt-21 text-gray-darker">
+              <p class="h4 light lh-lg mt-7 mb-56">{jurado-introduccion}</p>
+              {jurado-imagen-interna}
+              <img class="img-responsive" src="{image:url:large}">
+              {/jurado-imagen-interna}
+              <div class="mt-56">
+	              {jurado-contenido}
+	            </div>
+              <div class="text-center">
+                <img class="pv-56 separador"src="{site_url}app/assets/img/linea-separadora.png">
+              </div>
+							{embed="includes/otros-jurados"}
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: DESCRIPTION -->
+{/exp:channel:entries}         
+			{embed="includes/formulario"}
+			{embed="includes/estadistica"}
+    </main>
+{embed="includes/footer"}  
