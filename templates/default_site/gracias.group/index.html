@@ -1,19 +1,14 @@
 {if logged_in}
-{member_id}
-	{exp:query sql="SELECT * FROM exp_freeform_form_entries_2 WHERE author_id='{member_id}'"}
-			{if form_field_59=='n'}
-				{exp:user:stats dynamic="off"}
-					{exp:email_from_template to="{email}" from="hoyemprende@kunan.com.pe" subject="Tu postulación fue enviada con éxito!" echo="off"}
-					{screen_name},
-					Gracias por postular a KUNAN!
-					Muy pronto anunciaremos los proyectos seleccionados para la ronda de votaciones. 
-					Equipo impulsor KUNAN
-					{/exp:email_from_template}	
-				{/exp:user:stats}		
-		  {if:else}
-		  	{redirect='{site_url}'}
-		  {/if}  
-	{/exp:query}		
+	{if segment_3=='enviado'}
+		{exp:user:stats dynamic="off"}
+			{exp:email_from_template to="{email}" from="hoyemprende@kunan.com.pe" subject="Tu postulación fue enviada con éxito!" echo="off"}
+			{screen_name},
+			Gracias por postular a KUNAN!
+			Muy pronto anunciaremos los proyectos seleccionados para la ronda de votaciones. 
+			Equipo impulsor KUNAN
+			{/exp:email_from_template}	
+		{/exp:user:stats}		
+	{/if}
 {/if}
 
 {embed="includes/header"}
