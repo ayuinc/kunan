@@ -1,15 +1,6 @@
-{if logged_in}
-	{if segment_3=='enviado'}
-		{exp:user:stats dynamic="off"}
-			{exp:email_from_template to="{email}" from="hoyemprende@kunan.com.pe" subject="Tu postulación fue enviada con éxito!" echo="off"}
-			{screen_name},
-			Gracias por postular a KUNAN!
-			Muy pronto anunciaremos los proyectos seleccionados para la ronda de votaciones. 
-			Equipo impulsor KUNAN
-			{/exp:email_from_template}	
-		{/exp:user:stats}		
-	{/if}
-{/if}
+{exp:user:stats dynamic="off"}
+	{embed="includes/query-check" miembro="{member_id}"}
+{/exp:user:stats}	
 
 {embed="includes/header"}
 {embed="includes/navegacion-vistas"}

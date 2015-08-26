@@ -84,7 +84,7 @@ class Beforesendnotification_ext
 		ee()->db->delete('extensions');
 	}
 
-	function before_send_notification($hook_name, $fields, $entry_id, $variables, $form_id, $class) 
+	function before_send_notification($fields, $e_id, $vars, $f_id, $obj) 
 	{
 		var_dump($_POST);exit();
 	}
