@@ -1,9 +1,11 @@
 {if logged_in}
 {exp:user:stats dynamic="off"}
-{email}
-{exp:email_from_template to="{email}" from="hoyemprende@kunan.com.pe" subject="Hello!" echo="off"}
+{exp:email_from_template to="{email}" from="hoyemprende@kunan.com.pe" subject="Tu postulación fue enviada con éxito!" echo="off"}
 
-This tag content is being viewed at {uri_string}. Sending notification to {to}!
+{screen_name},
+Gracias por postular a KUNAN!
+Muy pronto anunciaremos los proyectos seleccionados para la ronda de votaciones. 
+Equipo impulsor KUNAN
 
 {/exp:email_from_template}	
 {/exp:user:stats}
