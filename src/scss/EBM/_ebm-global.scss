@@ -778,14 +778,25 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 }
 
 .img-overlay {
-	width: 116px;
-  height: 116px;
-  background-color: rgba(0,0,0,0.3);
-  h2 {
-  	top: 48px;
+	width: 162px;
+  height: 162px;
+  background-color: rgba(0, 0, 0, 0.7);
+  h1 {
+  	top: 86px;
     position: relative;
-    margin-left: 7px;
-    color: #ffffff;
+    margin-left: 10px;
+    color: #f7a138;
+  }
+  &:hover {
+  	background: none !important;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    h1 {
+    	display: none;
+    }
   }
 }
 

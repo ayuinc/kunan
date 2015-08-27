@@ -186,9 +186,6 @@ $(document).ready(function() {
 
 });
 
- $('#telefono').keypress(function (event) {
-   
-  });
 
 // Limitación a solo numeros
 $(document).ready(function() {
