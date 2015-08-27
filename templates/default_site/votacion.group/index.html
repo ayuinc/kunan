@@ -24,11 +24,15 @@
 
 				<div class="col-md-6 mt-28">
 					<div class="col-md-5 col-md-offset-1 col-xs-5">
-							<div class="img-overlay absolute hidden-xs"><h1 class="medium">{count}</h1></div>
-							<img src="{logo}" alt="" class="img-responsive">
+							<a href="{site_url}votacion/proyecto-perfil/{entry_id}">
+								<div class="img-overlay absolute hidden-xs"><h1 class="medium">{count}</h1></div>
+								<img src="{logo}" alt="" class="img-responsive">
+							</a>
 					</div>
 					<div class="col-md-6 pl-0">
-						<h5 class="book titulo-proyecto mt-7 mb-0">{nombre_del_proyecto}</h5>
+						<a href="{site_url}votacion/proyecto-perfil/{entry_id}">
+							<h5 class="book titulo-proyecto mt-7 mb-0">{nombre_del_proyecto}</h5>
+						</a>
 						<small><dfn>{sector_proyecto}, {lugar_proyecto}</dfn></small>
 
 						<h6 class="text-uppercase mt-14 text-primary fz-xs light mb-7">VOTOS RECIBIDOS</h6>
@@ -66,8 +70,7 @@
                     <a href="{site_url}votacion/proyecto-perfil/{entry_id}" class=" btn-primary text-white btn btn-vota">
                       <span><small>Voto(s)</small></span>
                     </a> 
-									{/if}
-
+								{/if}
 					</div>
 				</div>
 				{/exp:channel:entries}
