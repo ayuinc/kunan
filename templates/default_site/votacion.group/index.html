@@ -17,7 +17,7 @@
 	</section>
 	<section>
 		<div class="container-md">
-			<h4 class="text-center text-gray lh-lg fz-sm mt-7">Hemos seleccionado a los 10 mejores proyectos de innovación social del 2015 en el Perú. Vota por uno de ellos y ayudalos a ganar el premio KUNAN. </h4>
+			<h4 class="text-center text-gray lh-lg fz-sm mt-7">Hemos seleccionado a los 10 mejores proyectos de innovación social del 2015 en el Perú. Vota por uno de ellos y ayudalós a ganar el premio KUNAN. </h4>
 			<div class="row mt-35">
 				{exp:query sql="SELECT entry_id, count(rating) as cantidad_votos FROM exp_ratings group by entry_id order by cantidad_votos DESC"}
 				{exp:channel:entries channel="votacion" limit="1" entry_id="{entry_id}" dynamic="off" disable="member_data"}

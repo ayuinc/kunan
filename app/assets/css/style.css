@@ -1751,4 +1751,7 @@ body.cargando img.show {
   margin-top: 150px !important;
   z-index: 10000 !important; }
 
+.text-gray-link {
+  color: #7D7E7F !important; }
+
 /*# sourceMappingURL=style.css.map */
