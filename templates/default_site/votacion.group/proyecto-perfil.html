@@ -26,10 +26,10 @@
 	                </div>
 	              </div>
 	              	{if email_proyecto}
-	                <p class="small text-gray fz-proyectos m-0"><span>E-mail:</span><a href="mailto:{email_proyecto}" class="text-gray-link light"> {email_proyecto}</a> </p>
+	                <p class="small text-gray fz-proyectos m-0"><span class="text-black light">E-mail:</span><a href="mailto:{email_proyecto}" class="text-gray-link light"> {email_proyecto}</a> </p>
 	                {/if}
 	              	{if website}
-	                <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Website:</span> {website}</p>
+	                <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Website:</span><a href="{website}" target="_blank" class="text-gray-link"> {website}</a> </p>
 	                {/if}
 	              	{if telefono_proyecto}
 	                <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Teléfono:</span> {telefono_proyecto}</p>
@@ -112,9 +112,5 @@
 
       </section>
       <!-- END: DESCRIPTION --> 
-    </main>
-    <div id="unete">
-      {embed="includes/estadistica"}
-    </div>
-    
+    </main>    
 {embed="includes/footer"} 

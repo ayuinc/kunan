@@ -777,27 +777,37 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 	}
 }
 
-.img-overlay {
-	width: 162px;
-  height: 162px;
-  background-color: rgba(0, 0, 0, 0.7);
-  h1 {
-  	top: 86px;
+.text-counter {
+	 h1 {
+  	top: -28px;
     position: relative;
     margin-left: 10px;
     color: #f7a138;
+    z-index: 1;
   }
-  &:hover {
-  	background: none !important;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    h1 {
-    	display: none;
-    }
-  }
+}
+
+.caja-ranking {
+	&:hover {
+		img {
+		-webkit-filter: none;
+  	filter: none;
+  	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+		}
+		h1 {
+			display: none;
+		}
+	}
+
+}
+
+.img-scale {
+	-webkit-filter: grayscale(1);
+  filter: grayscale(1);
 }
 
 
