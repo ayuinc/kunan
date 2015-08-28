@@ -2,91 +2,91 @@
 {embed="includes/navegacion-vistas"}
 
 <main class="site-content">
-	<section class="minh-140"></section>
-	<section class="text-center">
-		<div class="container">
-			<div class="row text-center">
-				<div class="col-md-8 col-md-offset-2">
-					<img src="{site_url}app/assets/img/logo.png" alt="" width="80" class="">
-					<h4 class="light text-gray-darker lh-lg">Kunan es un programa que impulsa, integra e inspira el emprendimiento y la innovación social de jóvenes en el Perú.</h4>
-				<img class="pv-56 separador"src="{site_url}app/assets/img/linea-separadora.png">
-				</div>
+  <section class="minh-140"></section>
+  <section class="text-center">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-8 col-md-offset-2">
+          <img src="{site_url}app/assets/img/logo.png" alt="" width="80" class="">
+          <h4 class="light text-gray-darker lh-lg">Kunan es un programa que impulsa, integra e inspira el emprendimiento y la innovación social de jóvenes en el Perú.</h4>
+        <img class="pv-56 separador"src="{site_url}app/assets/img/linea-separadora.png">
+        </div>
 
-			</div>
-		</div>
-	</section>
-	<section>
-		<div class="container-sm">
-			<h4 class="text-center text-gray lh-lg fz-sm mt-7">Hemos seleccionado a los 10 mejores proyectos de innovación social del 2015 en el Perú. Vota por uno de ellos y ayudalos a ganar el premio KUNAN. </h4>
-			<div class="row mt-35">
-				{exp:query sql="SELECT entry_id, count(rating) as cantidad_votos FROM exp_ratings group by entry_id order by cantidad_votos DESC"}
-				{exp:channel:entries channel="votacion" limit="1" entry_id="{entry_id}" dynamic="off" disable="member_data"}
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container-md">
+      <h4 class="text-center text-gray lh-lg fz-sm mt-7">Hemos seleccionado a los 10 mejores proyectos de innovación social del 2015 en el Perú. Vota por uno de ellos y ayudalós a ganar el premio KUNAN. </h4>
+      <div class="row mt-35">
+        {exp:query sql="SELECT entry_id, count(rating) as cantidad_votos FROM exp_ratings group by entry_id order by cantidad_votos DESC"}
+        {exp:channel:entries channel="votacion" limit="1" entry_id="{entry_id}" dynamic="off" disable="member_data"}
 
-				<div class="col-md-6 mt-28">
-					<div class="col-md-5 col-md-offset-1 col-xs-5">
-							<div class="img-overlay absolute"><h2 class="medium">{count}</h2></div>
-							<img src="{logo}" alt="" class="img-responsive">
-					</div>
-					<div class="col-md-6 pl-0">
-						<h5 class="book titulo-proyecto mt-7 mb-0">{nombre_del_proyecto}</h5>
-						<small><dfn>{sector_proyecto}, {lugar_proyecto}</dfn></small>
+        <div class="col-md-6 mt-28">
+          <div class="col-md-5 col-md-offset-1 col-xs-5">
+              <a href="{site_url}votacion/proyecto-perfil/{entry_id}">
+                <div class=" absolute hidden-xs"><h1 class="medium">{count}</h1></div>
+                <img src="{logo}" alt="" class="img-responsive img-scale">
+              </a>
+          </div>
+          <div class="col-md-6 pl-0">
+            <a href="{site_url}votacion/proyecto-perfil/{entry_id}">
+              <h5 class="book titulo-proyecto mt-7 mb-0">{nombre_del_proyecto}</h5>
+            </a>
+            <small><dfn>{sector_proyecto}, {lugar_proyecto}</dfn></small>
 
-						<h6 class="text-uppercase mt-14 text-primary fz-xs light mb-7">VOTOS RECIBIDOS</h6>
-		            {if logged_in}
-	                	{exp:rating:form
-									    entry_id="{entry_id}"
-									    collection="Votos"
-									    return="gracias/voto/{title}"
-									    anonymous="no" 
-									    allow_duplicates="no"
-										}	                    
-										<input type="hidden" name="rating" id="rating" value="1" class="text-gray light btn-outline btn-gray btn-votacion">
-		                  <i class="text-gray light btn-outline btn-gray btn-votacion">
-		                    {exp:rating:stats entry_id="{entry_id}"}
-		                      {overall_count}
-		                      {if rating_no_results}
-		                        0
-		                      {/if}
-		                    {/exp:rating:stats}
-		                  </i>
-		                <a href="{site_url}votacion/proyecto-perfil/{entry_id}" class="text-uppercase btn-primary text-white btn btn-vota">
-		                  <span><small>VOTAR</small></span>
-		                </a> 
-		                {/exp:rating:form}			
-									{if:else}
-										<input type="hidden" name="rating" id="rating" value="1" class="text-gray light btn-outline btn-gray btn-votacion">
+            <h6 class="text-uppercase mt-14 text-primary fz-xs light mb-7">VOTOS RECIBIDOS</h6>
+                {if logged_in}
+                    {exp:rating:form
+                      entry_id="{entry_id}"
+                      collection="Votos"
+                      return="gracias/voto/{title}"
+                      anonymous="no" 
+                      allow_duplicates="no"
+                    }                     
+                    <input type="hidden" name="rating" id="rating" value="1" class="text-gray light btn-outline btn-gray btn-votacion">
                       <i class="text-gray light btn-outline btn-gray btn-votacion">
-										{exp:rating:stats entry_id="{entry_id}"}
+                        {exp:rating:stats entry_id="{entry_id}"}
+                          {overall_count}
+                          {if rating_no_results}
+                            0
+                          {/if}
+                        {/exp:rating:stats}
+                      </i>
+                    <a href="{site_url}votacion/proyecto-perfil/{entry_id}" class=" btn-primary text-white btn btn-vota">
+                      <span><small>VOTAR</small></span>
+                    </a> 
+                    {/exp:rating:form}      
+                  {if:else}
+                    <input type="hidden" name="rating" id="rating" value="1" class="text-gray light btn-outline btn-gray btn-votacion">
+                      <i class="text-gray light btn-outline btn-gray btn-votacion">
+                    {exp:rating:stats entry_id="{entry_id}"}
                       {overall_count}
                       {if rating_no_results}
                         0 
                       {/if}
                     {/exp:rating:stats}
                     </i>
-                    <a href="{site_url}votacion/proyecto-perfil/{entry_id}" class="text-uppercase btn-primary text-white btn btn-vota">
+                    <a href="{site_url}votacion/proyecto-perfil/{entry_id}" class=" btn-primary text-white btn btn-vota">
                       <span><small>Voto(s)</small></span>
                     </a> 
-									{/if}
+                {/if}
+          </div>
+        </div>
+        {/exp:channel:entries}
+        {/exp:query}
 
-					</div>
-				</div>
-				{/exp:channel:entries}
-				{/exp:query}
-
-			</div>
-			<div class="text-center">			
-				<img class="pv-56 separador"src="{site_url}app/assets/img/linea-separadora.png">
-			</div>
-		</div>
-	</section>
-	<section class="text-center">
-		<div class="container-md text-gray-darker pb-70">
-			{embed="includes/modulo-bitacora"}
-			<img class="pv-56 separador"src="{site_url}app/assets/img/linea-separadora.png">
-			{embed="includes/socios-estrategicos"}
-		</div>
-	</section>
-	<div id="unete">
+      </div>
+    </div>
+  </section>
+  <section class="text-center mtp-7">
+    <div class="container-md text-gray-darker pb-70">
+      {embed="includes/modulo-bitacora"}
+      <img class="pv-56 separador"src="{site_url}app/assets/img/linea-separadora.png">
+      {embed="includes/socios-estrategicos"}
+    </div>
+  </section>
+  <div id="unete">
      {embed="includes/estadistica"}
    </div>
 </main>
