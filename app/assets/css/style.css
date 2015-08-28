@@ -1524,12 +1524,22 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 .error_designado p {
   text-align: center !important; }
 
-.text-counter h1 {
-  top: -28px;
-  position: relative;
-  margin-left: 10px;
-  color: #f7a138;
+.border-esquina {
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 63px 65px 0 0;
+  border-color: #16a6e3 transparent transparent transparent; }
+
+.text-counter {
+  position: absolute;
   z-index: 1; }
+  .text-counter h3 {
+    color: white;
+    margin-left: 8px;
+    top: -20px;
+    position: absolute; }
 
 .caja-ranking:hover img {
   -webkit-filter: none;
@@ -1539,7 +1549,9 @@ label[for="freeform_tipo_de_organizacion_otros"] {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
-.caja-ranking:hover h1 {
+.caja-ranking:hover .border-esquina {
+  display: none; }
+.caja-ranking:hover h3 {
   display: none; }
 
 .img-scale {

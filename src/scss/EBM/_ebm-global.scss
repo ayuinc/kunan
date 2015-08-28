@@ -777,13 +777,24 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 	}
 }
 
+.border-esquina {
+	z-index: 1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 63px 65px 0 0;
+  border-color: #16a6e3 transparent transparent transparent;
+}
+
 .text-counter {
-	 h1 {
-  	top: -28px;
-    position: relative;
-    margin-left: 10px;
-    color: #f7a138;
-    z-index: 1;
+	position: absolute;
+  z-index: 1;
+  
+	h3 {
+  	color: white;
+    margin-left: 8px;
+    top: -20px;
+    position: absolute;
   }
 }
 
@@ -798,7 +809,10 @@ label[for="freeform_tipo_de_organizacion_otros"] {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 		}
-		h1 {
+		.border-esquina {
+			display: none;
+		}
+		h3 {
 			display: none;
 		}
 	}
