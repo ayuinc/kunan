@@ -50,7 +50,13 @@
 		                    {/exp:rating:stats}
 		                  </i>
 		                <a href="{site_url}votacion/proyecto-perfil/{entry_id}" class="text-uppercase btn-primary text-white btn btn-vota">
-		                  <span><small>VOTAR</small></span>
+		                  <span><small>
+                      {if logged_in}
+                        Quiero votar
+                      {if:else}
+                        VOTO(s)
+                      {/if}
+                      </small></span>
 		                </a> 
 		                {/exp:rating:form}			
 									{if:else}

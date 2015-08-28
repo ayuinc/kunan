@@ -1,0 +1,8 @@
+{exp:member:custom_profile_data member_id={member_id}}
+  {proyecto-voto}
+  {if proyecto-voto != ''}
+	{redirect='/votacion/proyecto-perfil/{proyecto-voto}'}
+  {if:else}
+	{redirect='/votacion'}
+  {/if}
+{/exp:member:custom_profile_data}
