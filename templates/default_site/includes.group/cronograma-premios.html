@@ -3,11 +3,11 @@
           <div class="container-xs">
 	          {exp:channel:entries channel="crongrama_premio" limit="10" disable="member_data"}
             <div class="row text-gray-darker mb-14">
-              <div class="col-md-2 col-xs-3 text-right border-right-gray">
+              <div class="col-md-2 col-md-offset-2 col-xs-3 text-right border-right-gray">
                 <h1 class="m-0">{cronograma-fecha-evento format="%d"}</h1>
                 <h4 class="text-uppercase h5 light m-0 mb-7">{cronograma-fecha-evento format="%M"}</h4>
               </div>
-              <div class="col-md-10 col-xs-9 m-ch-0 mt-ch-7 text-left lh-sm">
+              <div class="col-md-8 col-xs-9 m-ch-0 mt-ch-7 text-left lh-sm">
 	              <h3 class="light h4">{title}</h3>
                 <p class="text-gray-light light pb-7 small lh-sm">{cronograma-descripcion-evento}</p>
                 <small><a href="{cronograma-link-url}">{cronograma-link-texto}</a></small>
