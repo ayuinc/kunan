@@ -16,24 +16,24 @@
             <div class="row">
               <div class="col-md-2 absolute col-xs-6 bg-gray-lighter p-14">
                 <img class="img-responsive" width="" src="{logo}">
-                <div class="row pt-28 mb-14">
-                  <div class="col-md-3 col-xs-2 pr-0">
-                    <img src="{foto_autoridad}" class="img-responsive">
-                  </div>
-                  <div class="col-md-9 col-xs-10 light">
-                    <p class="h6 m-0 text-gray-dark pt-7">{nombre_autoridad}</p>
-                    <p class="h6 m-0 text-gray light"><dfn>{cargo}</dfn></p>
-                  </div>
-                </div>
-                  {if email_proyecto}
-                  <p class="small text-gray fz-proyectos m-0"><span>E-mail:</span><a href="mailto:{email_proyecto}" class="text-gray-link light"> {email_proyecto}</a> </p>
-                  {/if}
-                  {if website}
-                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Website:</span> {website}</p>
-                  {/if}
-                  {if telefono_proyecto}
-                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Teléfono:</span> {telefono_proyecto}</p>
-                  {/if}
+	              <div class="row pt-28 mb-14">
+	                <div class="col-md-3 col-xs-2 pr-0">
+	                  <img src="{foto_autoridad}" class="img-responsive">
+	                </div>
+	                <div class="col-md-9 col-xs-10 light">
+	                  <p class="h6 m-0 text-gray-dark pt-7">{nombre_autoridad}</p>
+	                  <p class="h6 m-0 text-gray light"><dfn>{cargo}</dfn></p>
+	                </div>
+	              </div>
+	              	{if email_proyecto}
+	                <p class="small text-gray fz-proyectos m-0"><span class="text-black light">E-mail:</span><a href="mailto:{email_proyecto}" class="text-gray-link light"> {email_proyecto}</a> </p>
+	                {/if}
+	              	{if website}
+	                <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Website:</span><a href="{website}" target="_blank" class="text-gray-link"> {website}</a> </p>
+	                {/if}
+	              	{if telefono_proyecto}
+	                <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Teléfono:</span> {telefono_proyecto}</p>
+	                {/if}
 
                   <p class="m-0"><span class="text-black light mt-21 fz-proyectos">Síguenos en:</span></p>
                   {if facebook_proyecto}
@@ -112,9 +112,5 @@
 
       </section>
       <!-- END: DESCRIPTION --> 
-    </main>
-    <div id="unete">
-      {embed="includes/estadistica"}
-    </div>
-    
+    </main>    
 {embed="includes/footer"} 

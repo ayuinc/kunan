@@ -12,28 +12,31 @@
         <img class="pv-56 separador"src="{site_url}app/assets/img/linea-separadora.png">
         </div>
 
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="container-md">
-      <h4 class="text-center text-gray lh-lg fz-sm mt-7">Hemos seleccionado a los 10 mejores proyectos de innovación social del 2015 en el Perú. Vota por uno de ellos y ayudalós a ganar el premio KUNAN. </h4>
-      <div class="row mt-35">
-        {exp:query sql="SELECT entry_id, count(rating) as cantidad_votos FROM exp_ratings group by entry_id order by cantidad_votos DESC"}
-        {exp:channel:entries channel="votacion" limit="1" entry_id="{entry_id}" dynamic="off" disable="member_data"}
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container-md">
+			<h2 class="text-center text-black mb-21 lh-lg mt-7">Candidatos Kunan 2015</h2>
+			<h4 class="text-center text-gray lh-lg fz-sm mt-7">Hemos seleccionado a los 10 mejores proyectos de innovación social del 2015 en el Perú. Vota por uno de ellos y ayudalós a ganar el premio KUNAN. </h4>
+			<div class="row mt-35">
+				{exp:query sql="SELECT entry_id, count(rating) as cantidad_votos FROM exp_ratings group by entry_id order by cantidad_votos DESC"}
+				{exp:channel:entries channel="votacion" limit="1" entry_id="{entry_id}" dynamic="off" disable="member_data"}
 
-        <div class="col-md-6 mt-28">
-          <div class="col-md-5 col-md-offset-1 col-xs-5">
-              <a href="{site_url}votacion/proyecto-perfil/{entry_id}">
-                <div class=" absolute hidden-xs"><h1 class="medium">{count}</h1></div>
-                <img src="{logo}" alt="" class="img-responsive img-scale">
-              </a>
-          </div>
-          <div class="col-md-6 pl-0">
-            <a href="{site_url}votacion/proyecto-perfil/{entry_id}">
-              <h5 class="book titulo-proyecto mt-7 mb-0">{nombre_del_proyecto}</h5>
-            </a>
-            <small><dfn>{sector_proyecto}, {lugar_proyecto}</dfn></small>
+				<div class="col-md-6 mt-28">
+					<div class="col-md-5 col-md-offset-1 col-xs-5">
+							<div class="caja-ranking">
+								<div class="border-esquina absolute"></div>
+								<div class="text-counter"><h3 class="medium">{count}</h3></div>
+								<img src="{logo}" alt="" class="img-responsive img-scale">
+							</div>
+					</div>
+					<div class="col-md-6 pl-0">
+						<a href="{site_url}votacion/proyecto-perfil/{entry_id}">
+							<h5 class="book titulo-proyecto mt-7 mb-0">{nombre_del_proyecto}</h5>
+						</a>
+						<small><dfn>{sector_proyecto}, {lugar_proyecto}</dfn></small>
+
 
             <h6 class="text-uppercase mt-14 text-primary fz-xs light mb-7">VOTOS RECIBIDOS</h6>
                 {if logged_in}
