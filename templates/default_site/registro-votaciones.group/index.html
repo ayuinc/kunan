@@ -141,11 +141,12 @@
 					<div class="border-sky" style="padding:14px;">
 						<h3 style=" color: #3E3F40; text-transform: uppercase; font-weight: 300;">También puedes registrarte con Facebook</h3>
 							<div style="margin-bottom: 14px;">
+							{if segment_2 != ''}
 								{exp:fbc:login
 								    permissions="public_profile|email|user_friends"
-								    return_when_logged_in="votacion/proyecto-perfil/{segment_3}"
+								    return_when_logged_in="votacion/proyecto-perfil/{segment_2}"
 								    return_when_logged_out="comunidad/index"
-								    return_for_passive_register="votacion/proyecto-perfil/{segment_3}"
+								    return_for_passive_register="votacion/proyecto-perfil/{segment_2}"
 								    return_on_failure="comunidad/index"
 								    login_button_label="Facebook Login"
 								    button_size="large"
@@ -159,6 +160,26 @@
 								        <a href="{path='logout'}">Log Out</a>
 								    {/if}
 								{/exp:fbc:login}
+							{if:else}
+								{exp:fbc:login
+								    permissions="public_profile|email|user_friends"
+								    return_when_logged_in="votacion/"
+								    return_when_logged_out="comunidad/index"
+								    return_for_passive_register="votacion/"
+								    return_on_failure="comunidad/index"
+								    login_button_label="Facebook Login"
+								    button_size="large"
+								}
+								    {if fbc_logged_out == "y"}
+								    	<div>
+								        {fbc_login_button}
+								      </div>
+								    {/if}
+								    {if fbc_logged_in == "y"}
+								        <a href="{path='logout'}">Log Out</a>
+								    {/if}
+								{/exp:fbc:login}
+							{/if}
 							</div>
 						</div>
 				</div>
