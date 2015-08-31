@@ -1,8 +1,9 @@
 {exp:fbc:prepare_page}
 {if logged_in}
-  {redirect='formulario-edicion/index'}  
+  {redirect='votacion/index'}  
 {/if}
 {if logged_out}
+<!doctype html>
     <html>
       <head>
 
@@ -138,10 +139,10 @@
                   <div style="margin-bottom: 14px;">
                     {exp:fbc:login
                         permissions="public_profile|email|user_friends"
-                        return_when_logged_in="{site_url}content/index"
-                        return_when_logged_out="{site_url}comunidad/index"
-                        return_for_passive_register="{site_url}content/index"
-                        return_on_failure="{site_url}comunidad/index"
+                        return_when_logged_in="content/index"
+                        return_when_logged_out="comunidad/index"
+                        return_for_passive_register="content/index"
+                        return_on_failure="comunidad/index"
                         login_button_label="Facebook Login"
                         button_size="large"
                     }

@@ -731,9 +731,19 @@ label[for="freeform_tipo_de_organizacion_otros"] {
   }
 }
 
+.votos-perfil {
+	border-color: #EB6F24 !important;
+  overflow: hidden !important;
+  cursor: initial !important;
+}
+
 // .titulo-proyecto {
 // 	font-size: 17px !important;
 // }
+
+.pv-min {
+	padding: 3px 9px !important;
+}
 
 .btn-votacion {
 	float: left;
@@ -750,13 +760,13 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 	font-size: 19px !important;
   border: none;
   float: left;
-  border-radius: 3px 0px 0px 3px !important;
+  border-radius: 3px !important;
   padding: 3px 9px 3px 9px !important;
 }
 
 .btn-vota-perfil {
 	padding: 4px 25px !important;
-  border-radius: 1px 3px 3px 1px !important;
+  border-radius: 3px !important;
 }
 
 .icon-perfil {
