@@ -5,7 +5,14 @@
   imagen="{logo}"
   url="{site_url}{segment_1}"
 }
-{embed="includes/header"}
+{if:else}
+{embed="includes/header" 
+  titulo="{title}" 
+  descripcion="{bitacora-descripcion}" 
+  imagen="http://img.youtube.com/vi/{bitacora-video}/maxresdefault.jpg"
+  url="{site_url}komunicacion/articulo/{url_title}" 
+}
+{/if}
 {embed="includes/navegacion-vistas"}
 <main class="site-content">
       <section id="hero-image" class="minhp-70 minhp-20-xs" style="background:url({imagen_de_portada})">
