@@ -1,17 +1,16 @@
+{exp:channel:entries channel="votacion" limit="1" disable="member_data" entry_id="{segment_3}"}
 {embed="includes/header" 
-  titulo="Kunan" 
-  descripcion="Kunan es un programa que impulsa, integra e inspira el emprendimiento y la innovación social de jóvenes en el Perú." 
-  imagen="{site_url}app/assets/img/logo-meta.png"
+  titulo="{title}" 
+  descripcion="{texto_introductorio}" 
+  imagen="{logo}"
   url="{site_url}{segment_1}"
 }
 {embed="includes/header"}
 {embed="includes/navegacion-vistas"}
 <main class="site-content">
-      <section class="minh-70 hidden-xs"></section>
-    {exp:channel:entries channel="votacion" limit="1" disable="member_data" entry_id="{segment_3}"}
       <section id="hero-image" class="minhp-70 minhp-20-xs" style="background:url({imagen_de_portada})">
         <div class="bg-hero-image minhp-70">
-          <div class="container-md minh-350 minh-70-xs"></div>  
+          <div class="container-md minh-280 minh-70-xs"></div>  
           <div class="container-md text-white pb-21">
             <div class="row banner-perfil">
               <div class="col-md-2 absolute col-xs-6 bg-gray-lighter p-14 perfil-lg">
