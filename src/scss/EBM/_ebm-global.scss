@@ -35,6 +35,11 @@ $xxl-desktop: 1900px;
 	.text-center-xs{
 		text-align: center;
 	}
+
+	.banner-xs {
+		height: 362px;
+	}
+
 }
 @media #{$sm-only} {}
 @media #{$md-only} {}

@@ -7,12 +7,21 @@
 }
 {embed="includes/navegacion-vistas"}
 <main class="site-content">
+      <section class="minh-70 hidden-lg"></section>
       <section id="hero-image" class="minhp-70 minhp-20-xs" style="background:url({imagen_de_portada})">
         <div class="bg-hero-image minhp-70">
-          <div class="container-md minh-280 minh-70-xs"></div>  
+          <div class="container-md minh-280 minh-70-xs banner-xs">
+            <div class="row hidden-lg">
+              <div class="col-xs-8 col-xs-offset-2 text-center">
+                <img class="img-responsive mt-42" width="" src="{logo}">
+                <h2 class="text-white">{nombre_del_proyecto}</h2>
+                <p class="text-white">{texto_introductorio}</p>
+              </div>
+            </div>
+          </div>  
           <div class="container-md text-white pb-21">
             <div class="row banner-perfil">
-              <div class="col-md-2 absolute col-xs-6 bg-gray-lighter p-14 perfil-lg">
+              <div class="col-md-2 absolute col-xs-6 bg-gray-lighter p-14 perfil-lg hidden-xs">
                 <img class="img-responsive" width="" src="{logo}">
 	              <div class="row pt-28 mb-14">
 	                <div class="col-md-3 col-xs-2 pr-0">
@@ -95,7 +104,7 @@
                     <a href="" class="text-uppercase btn-primary text-white btn btn-vota-perfil"> <span class="light ">Vota</span></a> -->
                 </div>
               </div>
-              <div class="col-md-9 col-xs-6 light col-md-offset-3">
+              <div class="col-md-9 col-xs-6 light col-md-offset-3 hidden-xs">
                 <h2 class="text-white m-0 pl-35-xs pt-35-xs pv-14">{nombre_del_proyecto}</h2>
                 <p class="hidden-xs">{texto_introductorio}</p>
               </div>
@@ -107,8 +116,91 @@
       <section class="text-left" id="description">
         <div class="container-md pv-70 minhp-70">
           <div class="row">
+            <div class="col-xs-offset-2 col-xs-8 bg-gray-lighter p-14 perfil-lg hidden-lg mb-35">
+                <img class="img-responsive hidden-xs" width="" src="{logo}">
+                <div class="row pt-28 mb-14">
+                  <div class="col-md-3 col-xs-2 pr-0">
+                    <img src="{foto_autoridad}" class="img-responsive">
+                  </div>
+                  <div class="col-md-9 col-xs-10 light">
+                    <p class="h6 m-0 text-gray-dark pt-7">{nombre_autoridad}</p>
+                    <p class="h6 m-0 text-gray light"><dfn>{cargo}</dfn></p>
+                  </div>
+                </div>
+                  {if email_proyecto}
+                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">E-mail:</span><a href="mailto:{email_proyecto}" class="text-gray-link light"> {email_proyecto}</a> </p>
+                  {/if}
+                  {if website}
+                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Website:</span><a href="{website}" target="_blank" class="text-gray-link"> {website}</a> </p>
+                  {/if}
+                  {if telefono_proyecto}
+                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Teléfono:</span> {telefono_proyecto}</p>
+                  {/if}
+
+                  <p class="m-0"><span class="text-black light mt-21 fz-proyectos">Síguenos en:</span></p>
+                  {if facebook_proyecto}
+                  <a href="{facebook_proyecto}" target="_blank"><img class="icon-perfil" src="{site_url}app/assets/img/facebook-negro.png"></a>
+                  {/if}
+                  {if twitter_proyecto}
+                  <a href="" target="_blank"><img class="icon-perfil mh-7" src="{site_url}app/assets/img/twitter-negro.png"></a>
+                  {/if}
+                  {if youtube_proyecto}
+                  <a href="{youtube_proyecto}" target="_blank"><img class="icon-perfil mh-7" src="{site_url}app/assets/img/youtube-negro.png"></a>
+                  {/if}
+
+                <div class="text-center">
+                  {if logged_in}
+                      {exp:rating:form
+                        entry_id="{entry_id}"
+                        collection="Votos"
+                        return="gracias/voto/{title}"
+                        anonymous="no" 
+                        allow_duplicates="no"
+                      } 
+                      {exp:rating:stats entry_id="{entry_id}"}               
+                      <input type="hidden" name="rating" id="rating" value="1" class="text-gray light small bg-white btn-outline btn-votacion-perfil">
+                        <p class="mt-21 btn p-0 mb-7 votos-perfil"> <i class="book pv-7 ph-14  bg-primary text-white">
+                          
+                            {overall_count}
+                            {if rating_no_results}
+                              0
+                            {/if}
+                          
+                      
+                        </i><small class="text-gray mt-14 light mb-7 pv-min">Votos recibidos</small></p>
+                       {if not_already_voted} 
+                      <button type="submit" name="submit" value="Vota" class="text-uppercase btn-primary text-white btn btn-vota-perfil btn-icon-custom btn-primary">
+
+                        <span><small> VOTAR</small></span>
+                      
+                      </button> 
+                      {/if}
+
+                      {/exp:rating:stats}
+                      {/exp:rating:form}
+
+                    {if:else}
+                      <input type="hidden" name="rating" id="rating" value="1" class="text-gray light small bg-white btn-outline btn-votacion-perfil">
+                       <p class="mt-21 btn p-0 mb-7 votos-perfil"> <i class="book pv-7 ph-14  bg-primary text-white">
+                      {exp:rating:stats entry_id="{entry_id}"}
+                        {overall_count}
+                        {if rating_no_results}
+                          0 
+                        {/if}
+                      {/exp:rating:stats}
+                      </i><small class="text-gray mt-14 light mb-7 pv-min">Votos recibidos</small></p>
+                      <a href="{site_url}registro-votaciones/{entry_id}" class="text-uppercase btn-primary text-white btn btn-vota-perfil btn-icon-custom btn-primary">
+                        <span><small>Quiero Votar</small></span>
+                      </a> 
+                    {/if}
+
+                    <!-- 
+                    <p class="text-gray light small bg-white btn-outline btn-votacion-perfil">131,1253</p>
+                    <a href="" class="text-uppercase btn-primary text-white btn btn-vota-perfil"> <span class="light ">Vota</span></a> -->
+                </div>
+              </div>
             
-            <div class="col-md-9 light text-center col-md-offset-3">
+            <div class="col-md-9 col-xs-12 light col-md-offset-3 text-center-xs">
 
               <div class="text-left text-gray container-sm">
                 <p class="h4 light lh-lg m-0">{contenido_proyecto}</p>

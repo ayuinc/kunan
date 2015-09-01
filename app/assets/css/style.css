@@ -973,7 +973,10 @@ body {
 */
 @media only screen and (max-width: 480px) {
   .text-center-xs {
-    text-align: center; } }
+    text-align: center; }
+
+  .banner-xs {
+    height: 362px; } }
 @media only screen and (max-width: 992px) {
   #estadisticas {
     text-align: center; }
