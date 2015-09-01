@@ -38,8 +38,7 @@ $xxl-desktop: 1900px;
 }
 @media #{$sm-only} {}
 @media #{$md-only} {}
-@media #{$lg-only} {
-}
+@media #{$lg-only} {}
 @media #{$sm-down} {}
 @media #{$md-down} {
 	#estadisticas{
@@ -57,7 +56,14 @@ $xxl-desktop: 1900px;
 		height: 415px;
 	}
 }
-@media #{$lg-up} {}
+@media #{$lg-up} {
+	.banner-perfil {
+		margin-top: 144px !important;
+	}
+	.perfil-lg {
+		width: 228px !important;
+	}
+}
 @media only screen and (min-width: $xl-desktop) {
 	video{
 		display: none !important;
@@ -487,7 +493,7 @@ input[name="submit"] {
   color: white;
   width: 94px;
   border-radius: 3px;
-  margin-left: 40%;
+  margin-left: 44%;
   margin-top: 21px;
   display: block;
   padding-top: 5px;
@@ -712,7 +718,7 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 /*VOTACIÓN*/
 
 .fz-sm {
-	font-size: 18px !important;
+	font-size: 1.125rem !important;
 }
 
 .fz-xs {
