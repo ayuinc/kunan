@@ -4,6 +4,9 @@
   imagen="{site_url}app/assets/img/logo-meta.png"
   url="{site_url}{segment_1}"
 }
+{if segment_3 == ''}
+ {redirect="/votacion"}
+{/if}
 {embed="includes/header"}
 {embed="includes/navegacion-vistas"}
 <main class="site-content">

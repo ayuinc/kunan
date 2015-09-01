@@ -114,7 +114,7 @@ class Fbc_actions extends Addon_builder_fbc
 		$data	= array(
 			'email'						=> $member_data['email'],
 			'screen_name'				=> $member_data['screen_name'],
-			'username'					=> $member_data['username'],
+			'username'					=> $member_data['email'],
 			'facebook_connect_user_id'	=> $uid,
 			'password'					=> ee()->functions->random('encrypt'),
 			'unique_id'					=> ee()->functions->random('encrypt'),
