@@ -973,7 +973,7 @@ body {
 */
 @media only screen and (max-width: 480px) {
   .text-center-xs {
-    text-align: center; }
+    text-align: center !important; }
 
   .banner-xs {
     height: 362px; } }

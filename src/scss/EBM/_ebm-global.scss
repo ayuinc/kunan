@@ -33,7 +33,7 @@ $xl-desktop: 1500px;
 $xxl-desktop: 1900px;
 @media #{$xs-only} {
 	.text-center-xs{
-		text-align: center;
+		text-align: center !important;
 	}
 
 	.banner-xs {
