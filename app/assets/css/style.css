@@ -973,7 +973,10 @@ body {
 */
 @media only screen and (max-width: 480px) {
   .text-center-xs {
-    text-align: center; } }
+    text-align: center !important; }
+
+  .banner-xs {
+    height: 362px; } }
 @media only screen and (max-width: 992px) {
   #estadisticas {
     text-align: center; }
@@ -1313,7 +1316,7 @@ input[name="submit"] {
   color: white;
   width: 94px;
   border-radius: 3px;
-  margin-left: 44%;
+  margin-left: 40%;
   margin-top: 21px;
   display: block;
   padding-top: 5px;
@@ -1328,7 +1331,7 @@ input[name="submit"] {
   color: #ea6616;
   width: 94px;
   border-radius: 3px;
-  margin-left: 40%;
+  margin-left: 44%;
   margin-top: 21px;
   display: block;
   padding-top: 5px;
