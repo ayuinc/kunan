@@ -412,7 +412,7 @@ class Fbc_actions extends Addon_builder_fbc
 		$data = array(
 			'id'         => '',
 			'member_id'  => ( empty( $member_data['member_id'] ) ) ? '1': $member_data['member_id'],
-			'username'   => ( empty( $member_data['username'] ) ) ? 'Solspace Facebook Connect Module': $member_data['username'],
+			'username'   => ( empty( $member_data['email'] ) ) ? 'Solspace Facebook Connect Module': $member_data['email'],
 			'ip_address' => ee()->input->ip_address(),
 			'act_date'   => ee()->localize->now,
 			'action'     => 'Facebook: ' . $msg
@@ -478,7 +478,8 @@ class Fbc_actions extends Addon_builder_fbc
 
 		$default_member_data['email']		= $member_data['email'] = md5( time() . $uid ) . '@facebook.com';
 		$default_member_data['screen_name']	= $member_data['screen_name']	= 'facebook' . $uid;
-		$default_member_data['username']	= $member_data['username']	= 'facebook' . $uid;
+		// $default_member_data['username']	= $member_data['username']	= 'facebook' . $uid;
+		$default_member_data['username'] = $default_member_data['email'];
 
 		if ( ( $data = $this->api->get_user_info() ) !== FALSE )
 		{
@@ -486,14 +487,15 @@ class Fbc_actions extends Addon_builder_fbc
 
 			if ( ! empty( $data['name'] ) )
 			{
-				$member_data['username']	= strtolower( str_replace( ' ', '_', $data['name'] ) );
+				// $member_data['username']	= strtolower( str_replace( ' ', '_', $data['name'] ) );
 				$member_data['screen_name']	= $data['name'];
 			}
 			elseif ( ! empty( $data['first_name'] ) AND ! empty( $data['last_name'] ) )
 			{
-				$member_data['username']	= strtolower( str_replace( ' ', '_', $data['first_name'] . ' ' . $data['last_name'] ) );
+				// $member_data['username']	= strtolower( str_replace( ' ', '_', $data['first_name'] . ' ' . $data['last_name'] ) );
 				$member_data['screen_name']	= $data['first_name'] . ' ' . $data['last_name'];
 			}
+		
 		}
 
 		// --------------------------------------------
@@ -507,7 +509,7 @@ class Fbc_actions extends Addon_builder_fbc
 			'fetch_lang'	=> TRUE,
 			'require_cpw'	=> FALSE,
 			'enable_log'	=> FALSE,
-			'username'		=> $member_data['username'],
+			'username'		=> $member_data['email'],
 			'screen_name'	=> stripslashes( $member_data['screen_name'] ),
 			'email'			=> $member_data['email']
 		 );
@@ -563,7 +565,8 @@ class Fbc_actions extends Addon_builder_fbc
 			//	Try once more
 			// --------------------------------------------
 
-			$member_data['username']	= $member_data['username'] . '_' . $random_number;
+			// $member_data['username']	= $member_data['username'] . '_' . $random_number;
+			$member_data['username']	= $member_data['email'];
 			ee()->validate->username	= $member_data['username'];
 			ee()->validate->errors	= array();
 
@@ -574,6 +577,7 @@ class Fbc_actions extends Addon_builder_fbc
 				$member_data['username']	= $default_member_data['username'];
 				ee()->validate->errors	= array();
 			}
+
 		}
 
 		// --------------------------------------------
@@ -698,7 +702,7 @@ class Fbc_actions extends Addon_builder_fbc
 				'name'					=> $name,
 				'site_name'				=> stripslashes( ee()->config->item('site_name') ),
 				'control_panel_url'		=> ee()->config->item('cp_url'),
-				'username'				=> $member_data['username'],
+				'username'				=> $member_data['email'],
 				'email'					=> $member_data['email']
 			 );
 
@@ -757,7 +761,7 @@ class Fbc_actions extends Addon_builder_fbc
 						'activation_url'	=> ee()->functions->fetch_site_index( 0, 0 ) . $qs . 'ACT=' . $action_id . '&id=' . $member_data['authcode'],
 						'site_name'			=> stripslashes(ee()->config->item('site_name')),
 						'site_url'			=> ee()->config->item('site_url'),
-						'username'			=> $member_data['username'],
+						'username'			=> $member_data['email'],
 						'email'				=> $member_data['email']
 					 );
 
