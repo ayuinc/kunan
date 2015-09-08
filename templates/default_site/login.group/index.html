@@ -98,6 +98,12 @@
           .border-sky {
             border: 1px solid #00B9AC;
           }
+          .error{
+            color: #F75734;
+            font-weight: 300; 
+            font-size:0.7em; 
+            text-transform: uppercase; 
+          }
         </style>
       </head>
       <body>
@@ -112,14 +118,14 @@
             <div style="float: left; width:50%; padding:14px;">
               <div class="border-skyblue" style="padding:14px;">
                 <h3 class="text-gray-darker text-uppercase light h4">Ingresa</h3>
-                  {exp:member:login_form return="login/verifica" group_id="7"}
+                  {exp:member:login_form return="login/verifica" group_id="7" id="formulario"}
                       <p>
-                        <label class="small light text-uppercase" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Correo Electrónico</label><br>
-                        <input type="text" name="username">
+                        <label class="small light text-uppercase required" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Correo Electrónico</label><br>
+                        <input type="text" name="username" required="true">
                       </p>
                       <p>
-                        <label class="small light text-uppercase" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Contraseña</label><br>
-                        <input type="password" name="password">
+                        <label class="small light text-uppercase required" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Contraseña</label><br>
+                        <input type="password" name="password" required="true">
                       </p>
                       {if auto_login}
                         <p class="text-left">
@@ -162,4 +168,34 @@
         </div>
       </body>
     </html>
+  <script src="{site_url}app/assets/js/modernizr.js"></script>
+  <script src="{site_url}app/assets/js/jquery.min.js"></script> <!-- App scripts -->
+  <script src="{site_url}app/assets/js/jquery.validate.min.js"></script>
+  <script src="{site_url}app/assets/js/scripts.min.js"></script>
+  <script>
+  $('.error-message').hide();
+  jQuery(document).ready(function($) {
+    $('#formulario').validate({
+      rules:{
+        username : {
+          required : true,
+          email : true,
+        },
+        password : {
+          required : true,
+          minlength : 5,
+        }
+      },
+      messages: {
+        username : {
+          required : "Ingrese su correo electrónico.",
+          email: "Ingrese un correo válido."
+        },
+        password: "Ingrese su password",
+        minlength : "Ingrese su password"
+      }
+    });
+  });
+
+  </script>
 {/if}
