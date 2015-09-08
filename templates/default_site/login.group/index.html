@@ -3,6 +3,7 @@
   {redirect='votacion/index'}  
 {/if}
 {if logged_out}
+<<<<<<< HEAD
 <!doctype html>
     <html>
       <head>
@@ -159,6 +160,77 @@
                 </div>
             </div>
           </div>
+=======
+{embed="includes/header"}
+{embed="includes/navegacion-vistas"} 
+    <main class="site-content">
+      <!-- DESCRIPTION -->
+      <section class="text-left minhp-100" id="description">
+        <div class="minh-70"></div>
+        <div class="container-sm pv-70 text-center">
+          <h1 class="text-gray-darker text-uppercase light h2">Regístrate o ingresa para votar</h1>
+          <p class="light h4 lh-lg mb-42">Usa estos formularios para registrarte o entrar al sistema de aplicaciones. </p>   
+	        <div class="row">
+		        <!--<div class="col-md-6 text-left">
+		        	<div class="p-14 border-skyblue">
+				        <h3 class="text-gray-darker text-uppercase light h4">Regístrate</h3>
+								{exp:user:register return="login/verifica"}
+										<p>
+											<label class="small light text-uppercase">Nombre y Apellido</label><br>
+									    <input type="text" name="screen_name"/>
+								    </p>					        
+										<p>
+											<label class="small light text-uppercase">Correo electrónico</label><br>
+									    <input type="text" name="username" />
+								    </p>
+										<p>
+											<label class="small light text-uppercase">Contraseña</label><br>
+									    <input type="password" name="password" />
+								    </p>
+										<p>
+											<label class="small light text-uppercase">Confirmar contraseña</label><br>
+									    <input type="password" name="password_confirm" />
+								    </p>
+										{if captcha}
+										<p>
+											<label class="small light text-uppercase">Por favor, introduzca la palabra que aparece a continuación:</label><br>
+										    <input type="text" name="captcha" />
+									    </p>
+									    <p>{captcha}</p>
+										{/if}
+								    <p><input type="checkbox" name="accept_terms" value="y" /> Aceptar <a href="{site_url}app/assets/documentos/bases_kunan_premio_2015_version_4.pdf">términos y condiciones</a></p>
+								    <p><input type="submit" value="Registrarse"  class="btn btn-skyblue"  /></p>
+										{if no_results}
+								    	<p>Para ver este formulario debes estar desconectado.</p>
+										{/if}
+								{/exp:user:register}
+							</div>-->
+		        </div>
+		        <div class="col-md-6 col-md-offset-3 text-left">
+		        	<div class="p-14 border-sky">
+				        <h3 class="text-gray-darker text-uppercase light h4">Ingresa</h3>
+								{exp:member:login_form return="login/verifica"}
+										<p>
+											<label class="small light text-uppercase">Correo Electrónico</label><br>
+							        <input type="text" name="username">
+								    </p>
+										<p>
+											<label class="small light text-uppercase">Contraseña</label><br>
+							        <input type="password" name="password">
+								    </p>
+										{if auto_login}
+									    <p class="text-left">
+								        <input type="checkbox" name="auto_login" value="1">
+								        Auto-login
+									    </p>
+										{/if}
+								    <p><input type="submit" name="submit" value="Entrar" class="btn btn-sky ml-0"></p>
+								    <a href="{path='login/perdida-contrasena'}"><p class="text-primary">¿Olvidaste tu contraseña?</p></a>
+								{/exp:member:login_form}
+							</div>
+		        </div>
+	        </div>  
+>>>>>>> 1072a931d83b5a0a9e481f5d5b1d6087059e56db
         </div>
       </body>
     </html>

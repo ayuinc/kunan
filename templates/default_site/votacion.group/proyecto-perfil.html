@@ -5,6 +5,11 @@
   imagen="{logo}"
   url="{site_url}{segment_1}/{segment_2}/{segment_3}/{segment_4}"
 }
+
+{if segment_3 == ''}
+ {redirect="/votacion"}
+{/if}
+{embed="includes/header"}
 {embed="includes/navegacion-vistas"}
 <main class="site-content">
       <section class="minh-70 hidden-lg"></section>
