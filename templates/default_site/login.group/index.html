@@ -111,11 +111,11 @@
           <section>
             <div style="min-height: 70px !important; text-align: center;">
               <a href="{site_url}"><img src="{site_url}app/assets/img/logo.png" class="text-center" width="90" alt="KUNAN" style="margin-top: 21px; margin-bottom: 21px;"></a>
-              <h4>Para poder votar primero debes iniciar sesión. </h4>
+              <h4>Para poder votar primero debes iniciar sesión. Si no tienes una cuenta registráte<a href="{site_url}registro-votaciones" style="text-decoration: none; color: #ea6616;"> AQUÍ.</a> </h4>
             </div>
           </section>
           <div style="margin-left: -14px; margin-right: -14px; content: " "; display: table;">
-            <div style="float: left; width:50%; padding:14px;">
+            <div style="float: left; width:50%; padding:14px 14px 35px 14px;">
               <div class="border-skyblue" style="padding:14px;">
                 <h3 class="text-gray-darker text-uppercase light h4">Ingresa</h3>
                   {exp:member:login_form return="login/verifica" group_id="7" id="formulario"}
@@ -135,6 +135,7 @@
                       {/if}
                       <p><input type="submit" name="submit" value="Entrar" class="btn btn-skyblue ml-0"></p>
                       <a href="{path='login/perdida-contrasena'}" style="text-decoration: none; color: #ea6616;"><p class="text-primary">¿Olvidaste tu contraseña?</p></a>
+                      <a href="{site_url}registro-votaciones" style="text-decoration: none; color: #ea6616;"><p class="text-primary">Registráte</p></a>
                   {/exp:member:login_form}
               </div>
             </div>
