@@ -3,7 +3,6 @@
   {redirect='votacion/index'}  
 {/if}
 {if logged_out}
-<<<<<<< HEAD
 <!doctype html>
     <html>
       <head>
@@ -99,6 +98,12 @@
           .border-sky {
             border: 1px solid #00B9AC;
           }
+          .error{
+            color: #F75734;
+            font-weight: 300; 
+            font-size:0.7em; 
+            text-transform: uppercase; 
+          }
         </style>
       </head>
       <body>
@@ -113,14 +118,14 @@
             <div style="float: left; width:50%; padding:14px;">
               <div class="border-skyblue" style="padding:14px;">
                 <h3 class="text-gray-darker text-uppercase light h4">Ingresa</h3>
-                  {exp:member:login_form return="login/verifica" group_id="7"}
+                  {exp:member:login_form return="login/verifica" group_id="7" id="formulario"}
                       <p>
-                        <label class="small light text-uppercase" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Correo Electrónico</label><br>
-                        <input type="text" name="username">
+                        <label class="small light text-uppercase required" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Correo Electrónico</label><br>
+                        <input type="text" name="username" required="true">
                       </p>
                       <p>
-                        <label class="small light text-uppercase" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Contraseña</label><br>
-                        <input type="password" name="password">
+                        <label class="small light text-uppercase required" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Contraseña</label><br>
+                        <input type="password" name="password" required="true">
                       </p>
                       {if auto_login}
                         <p class="text-left">
@@ -160,78 +165,37 @@
                 </div>
             </div>
           </div>
-=======
-{embed="includes/header"}
-{embed="includes/navegacion-vistas"} 
-    <main class="site-content">
-      <!-- DESCRIPTION -->
-      <section class="text-left minhp-100" id="description">
-        <div class="minh-70"></div>
-        <div class="container-sm pv-70 text-center">
-          <h1 class="text-gray-darker text-uppercase light h2">Regístrate o ingresa para votar</h1>
-          <p class="light h4 lh-lg mb-42">Usa estos formularios para registrarte o entrar al sistema de aplicaciones. </p>   
-	        <div class="row">
-		        <!--<div class="col-md-6 text-left">
-		        	<div class="p-14 border-skyblue">
-				        <h3 class="text-gray-darker text-uppercase light h4">Regístrate</h3>
-								{exp:user:register return="login/verifica"}
-										<p>
-											<label class="small light text-uppercase">Nombre y Apellido</label><br>
-									    <input type="text" name="screen_name"/>
-								    </p>					        
-										<p>
-											<label class="small light text-uppercase">Correo electrónico</label><br>
-									    <input type="text" name="username" />
-								    </p>
-										<p>
-											<label class="small light text-uppercase">Contraseña</label><br>
-									    <input type="password" name="password" />
-								    </p>
-										<p>
-											<label class="small light text-uppercase">Confirmar contraseña</label><br>
-									    <input type="password" name="password_confirm" />
-								    </p>
-										{if captcha}
-										<p>
-											<label class="small light text-uppercase">Por favor, introduzca la palabra que aparece a continuación:</label><br>
-										    <input type="text" name="captcha" />
-									    </p>
-									    <p>{captcha}</p>
-										{/if}
-								    <p><input type="checkbox" name="accept_terms" value="y" /> Aceptar <a href="{site_url}app/assets/documentos/bases_kunan_premio_2015_version_4.pdf">términos y condiciones</a></p>
-								    <p><input type="submit" value="Registrarse"  class="btn btn-skyblue"  /></p>
-										{if no_results}
-								    	<p>Para ver este formulario debes estar desconectado.</p>
-										{/if}
-								{/exp:user:register}
-							</div>-->
-		        </div>
-		        <div class="col-md-6 col-md-offset-3 text-left">
-		        	<div class="p-14 border-sky">
-				        <h3 class="text-gray-darker text-uppercase light h4">Ingresa</h3>
-								{exp:member:login_form return="login/verifica"}
-										<p>
-											<label class="small light text-uppercase">Correo Electrónico</label><br>
-							        <input type="text" name="username">
-								    </p>
-										<p>
-											<label class="small light text-uppercase">Contraseña</label><br>
-							        <input type="password" name="password">
-								    </p>
-										{if auto_login}
-									    <p class="text-left">
-								        <input type="checkbox" name="auto_login" value="1">
-								        Auto-login
-									    </p>
-										{/if}
-								    <p><input type="submit" name="submit" value="Entrar" class="btn btn-sky ml-0"></p>
-								    <a href="{path='login/perdida-contrasena'}"><p class="text-primary">¿Olvidaste tu contraseña?</p></a>
-								{/exp:member:login_form}
-							</div>
-		        </div>
-	        </div>  
->>>>>>> 1072a931d83b5a0a9e481f5d5b1d6087059e56db
         </div>
       </body>
     </html>
+  <script src="{site_url}app/assets/js/modernizr.js"></script>
+  <script src="{site_url}app/assets/js/jquery.min.js"></script> <!-- App scripts -->
+  <script src="{site_url}app/assets/js/jquery.validate.min.js"></script>
+  <script src="{site_url}app/assets/js/scripts.min.js"></script>
+  <script>
+  $('.error-message').hide();
+  jQuery(document).ready(function($) {
+    $('#formulario').validate({
+      rules:{
+        username : {
+          required : true,
+          email : true,
+        },
+        password : {
+          required : true,
+          minlength : 5,
+        }
+      },
+      messages: {
+        username : {
+          required : "Ingrese su correo electrónico.",
+          email: "Ingrese un correo válido."
+        },
+        password: "Ingrese su password",
+        minlength : "Ingrese su password"
+      }
+    });
+  });
+
+  </script>
 {/if}
