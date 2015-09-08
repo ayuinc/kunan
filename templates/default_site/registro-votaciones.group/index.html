@@ -114,13 +114,14 @@
 						<h3 style=" color: #3E3F40; text-transform: uppercase; font-weight: 300;">Regístrate</h3>
 						{exp:user:register return="gracias/confirmacion-correo" group_id="7" }					        
 							<p>
-								<label class="small light text-uppercase" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Correo electrónico</label><br>
-						    <input type="text" name="username" />
-					    </p>
+								<label class="small light text-uppercase" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Correo electrónico</label>
+								<br>
+						    	<input type="text" name="username" />
+					    	</p>
 							<p>
 								<label class="small light text-uppercase" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Contraseña</label><br>
 						    <input type="password" name="password" />
-					    </p>
+					    	</p>
 							{if captcha}
 							<p>
 								<label style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Por favor, introduzca la palabra que aparece a continuación:</label><br>
@@ -129,8 +130,9 @@
 						    <p>{captcha}</p>
 							{/if}
 							<input type="hidden" name="accept_terms" value="y" />
-							<input type="hidden" name="proyecto-voto" value="{segment_3}"/>
-
+							{if last_segment != 'registro-votaciones'}
+							<input type="hidden" name="proyecto-voto" value="{last_segment}"/>
+							{/if}
 							<p><input type="submit" value="Registrarse"  class="btn btn-skyblue"  /></p>
 							<a href="{site_url}registro-votaciones" style="text-decoration: none; color: #ea6616;"><p class="text-primary">Si ya tienes una cuenta inicia sesión aquí</p></a>
 
