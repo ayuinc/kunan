@@ -58,7 +58,6 @@
                   {if youtube_proyecto}
                   <a href="{youtube_proyecto}" target="_blank"><img class="icon-perfil mh-7" src="{site_url}app/assets/img/youtube-negro.png"></a>
                   {/if}
-
                 <div class="text-center">
                   {if logged_in}
                       {exp:rating:form
@@ -79,13 +78,14 @@
                           
                       
                         </i><small class="text-gray mt-14 light mb-7 pv-min">Votos recibidos</small></p>
-                       {if not_already_voted} 
-                      <button type="submit" name="submit" value="Vota" class="text-uppercase btn-primary text-white btn btn-vota-perfil btn-icon-custom btn-primary">
-
-                        <span><small> VOTAR</small></span>
                       
-                      </button> 
-                      {/if}
+                      {exp:rating:entries entry_id="{entry_id}" dynamic="no" rating_author_id="{member_id}"}
+                        {if rating_no_results}
+                          <button type="submit" name="submit" value="Vota" class="text-uppercase btn-primary text-white btn btn-vota-perfil btn-icon-custom btn-primary">
+                            <span><small> VOTAR</small></span>
+                          </button> 
+                        {/if}
+                      {/exp:rating:entries}
 
                       {/exp:rating:stats}
                       {/exp:rating:form}
