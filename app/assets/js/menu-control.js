@@ -291,10 +291,10 @@ $("#freeform_por_que_medio_te_enteraste_de_la_convocatoria_9").click(function(e)
   }
 });
 
-$(document).ready(function() {
-   $("#modal-entrada").removeClass('hidden');
-   $("#boton-modal").click();
- });
+// $(document).ready(function() {
+//    $("#modal-entrada").removeClass('hidden');
+//    $("#boton-modal").click();
+//  });
 
 
 

@@ -98,12 +98,6 @@
 			.border-sky {
 			  border: 1px solid #00B9AC;
 			}
-			.error{
-	            color: #F75734;
-	            font-weight: 300; 
-	            font-size:0.7em; 
-	            text-transform: uppercase; 
-          	}
 		</style>
 	</head>
 	<body>
@@ -118,7 +112,7 @@
 				<div style="float: left; width:50%; padding:14px;">
 					<div class="border-skyblue" style="padding:14px;">
 						<h3 style=" color: #3E3F40; text-transform: uppercase; font-weight: 300;">Regístrate</h3>
-						{exp:user:register return="gracias/confirmacion-correo" group_id="7" form:id="formulario"}					        
+						{exp:user:register return="gracias/confirmacion-correo" group_id="7" }					        
 							<p>
 								<label class="small light text-uppercase" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Correo electrónico</label>
 								<br>
@@ -140,7 +134,7 @@
 							<input type="hidden" name="proyecto-voto" value="{last_segment}"/>
 							{/if}
 							<p><input type="submit" value="Registrarse"  class="btn btn-skyblue"  /></p>
-							<a href="{site_url}registro-votaciones" style="text-decoration: none; color: #ea6616;"><p class="text-primary">Si ya tienes una cuenta inicia sesión aquí</p></a>
+							<a href="{site_url}login" style="text-decoration: none; color: #ea6616;"><p class="text-primary">Si ya tienes una cuenta inicia sesión aquí</p></a>
 
 						{/exp:user:register}
 					</div>
@@ -150,12 +144,12 @@
 					<div class="border-sky" style="padding:14px;">
 						<h3 style=" color: #3E3F40; text-transform: uppercase; font-weight: 300;">También puedes registrarte con Facebook</h3>
 							<div style="margin-bottom: 14px;">
-							{if last_segment != '' AND last_segment !='registro-votaciones'}
+							{if segment_2 != ''}
 								{exp:fbc:login
 								    permissions="public_profile|email|user_friends"
-								    return_when_logged_in="votacion/proyecto-perfil/{last_segment}"
+								    return_when_logged_in="votacion/proyecto-perfil/{segment_2}"
 								    return_when_logged_out="comunidad/index"
-								    return_for_passive_register="votacion/proyecto-perfil/{last_segment}"
+								    return_for_passive_register="votacion/proyecto-perfil/{segment_2}"
 								    return_on_failure="comunidad/index"
 								    login_button_label="Facebook Login"
 								    button_size="large"
@@ -194,37 +188,6 @@
 				</div>
 			</div>
 		</div>
-
-  <script src="{site_url}app/assets/js/modernizr.js"></script>
-  <script src="{site_url}app/assets/js/jquery.min.js"></script> <!-- App scripts -->
-  <script src="{site_url}app/assets/js/jquery.validate.min.js"></script>
-  <script src="{site_url}app/assets/js/scripts.min.js"></script>
-  <script>
-  $('.error-message').hide();
-  jQuery(document).ready(function($) {
-    $('#formulario').validate({
-      rules:{
-        username : {
-          required : true,
-          email : true,
-        },
-        password : {
-          required : true,
-          minlength : 5,
-        }
-      },
-      messages: {
-        username : {
-          required : "Ingrese su correo electrónico.",
-          email: "Ingrese un correo válido."
-        },
-        password: "Ingrese su contraseña.",
-        minlength : "Ingrese su contraseña."
-      }
-    });
-  });
-
-  </script>
 	</body>
 </html>
 {/if}
