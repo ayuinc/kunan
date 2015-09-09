@@ -24,7 +24,7 @@
               
                   <p>
                       <label for="password" class=" light text-gray mt-21">Nueva contraseña</label><br/>
-                      <input type="password" name="password" />
+                      <input type="password" name="password" id="password" />
                   </p>
               
                   <p>
@@ -54,12 +54,18 @@
             password_confirm:{
               required : true,
               minlength : 5,
+              equalTo: "#password"
             }
           },
           messages: {
-            email : {
-              required : "Ingrese su correo electrónico.",
-              email: "Ingrese un correo electrónico válido."
+            password : {
+              required : "Ingrese su nueva contraseña",
+              minlength: "Su contraseña debe tener al menos 5 caracteres."
+            }
+            password_confirm:{
+              required : "Ingrese su nueva contraseña",
+              minlength: "Su contraseña debe tener al menos 5 caracteres.",
+              equalTo: "Confirmar contraseña debe ser igual Nueva Contraseña"
             }
           }
     });

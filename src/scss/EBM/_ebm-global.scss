@@ -1075,3 +1075,11 @@ body.cargando img.show {
 .text-gray-link {
 	color: #7D7E7F !important;
 }
+
+// Validation errors 
+form .error {
+	color: #F75734;
+	font-weight: 300; 
+	font-size:0.7em; 
+	text-transform: uppercase; 
+}
