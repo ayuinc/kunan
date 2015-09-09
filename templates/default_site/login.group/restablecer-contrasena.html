@@ -15,6 +15,7 @@
               {exp:user:reset_password
                   reset_code="{segment_3}"
                   return="login/gracias-restablecer"
+                  form:id="restablecer-contrasena"
               }
                   {if user_no_results}
                       <h4>El token de restabecimiento es inválido.</h4>
@@ -42,4 +43,26 @@
       </section>
       <!-- END: DESCRIPTION -->
     </main>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) { 
+    $('#restablecer-contrasena').validate({
+          rules: {
+            password : {
+              required : true,
+              minlength : 5,
+            }
+            password_confirm:{
+              required : true,
+              minlength : 5,
+            }
+          },
+          messages: {
+            email : {
+              required : "Ingrese su correo electrónico.",
+              email: "Ingrese un correo electrónico válido."
+            }
+          }
+    });
+  });
+</script>
 {embed="includes/footer"} 
