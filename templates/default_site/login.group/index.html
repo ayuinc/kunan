@@ -118,7 +118,7 @@
             <div style="float: left; width:50%; padding:14px 14px 35px 14px;">
               <div class="border-skyblue" style="padding:14px;">
                 <h3 class="text-gray-darker text-uppercase light h4">Ingresa</h3>
-                  {exp:member:login_form return="login/verifica" group_id="7" id="formulario"}
+                  {exp:member:login_form return="/votacion" group_id="7" id="formulario"}
                       <p>
                         <label class="small light text-uppercase required" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Correo Electrónico</label><br>
                         <input type="text" name="username" required="true">
@@ -146,10 +146,10 @@
                   <div style="margin-bottom: 14px;">
                     {exp:fbc:login
                         permissions="public_profile|email|user_friends"
-                        return_when_logged_in="content/index"
-                        return_when_logged_out="comunidad/index"
-                        return_for_passive_register="content/index"
-                        return_on_failure="comunidad/index"
+                        return_when_logged_in="votacion/"
+                        return_when_logged_out="content/index"
+                        return_for_passive_register="votacion/"
+                        return_on_failure="votacion"
                         login_button_label="Facebook Login"
                         button_size="large"
                     }

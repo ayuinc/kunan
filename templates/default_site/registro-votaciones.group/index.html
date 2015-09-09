@@ -150,12 +150,12 @@
 					<div class="border-sky" style="padding:14px;">
 						<h3 style=" color: #3E3F40; text-transform: uppercase; font-weight: 300;">También puedes registrarte con Facebook</h3>
 							<div style="margin-bottom: 14px;">
-							{if segment_2 != ''}
+							{if last_segment != '' AND last_segment !='registro-votaciones'}
 								{exp:fbc:login
 								    permissions="public_profile|email|user_friends"
-								    return_when_logged_in="votacion/proyecto-perfil/{segment_2}"
+								    return_when_logged_in="votacion/proyecto-perfil/{last_segment}"
 								    return_when_logged_out="comunidad/index"
-								    return_for_passive_register="votacion/proyecto-perfil/{segment_2}"
+								    return_for_passive_register="votacion/proyecto-perfil/{last_segment}"
 								    return_on_failure="comunidad/index"
 								    login_button_label="Facebook Login"
 								    button_size="large"
