@@ -15,6 +15,7 @@
               {exp:user:reset_password
                   reset_code="{segment_3}"
                   return="login/gracias-restablecer"
+                  form:id="restablecer-contrasena"
               }
                   {if user_no_results}
                       <h4>El token de restabecimiento es inválido.</h4>
@@ -23,7 +24,7 @@
               
                   <p>
                       <label for="password" class=" light text-gray mt-21">Nueva contraseña</label><br/>
-                      <input type="password" name="password" />
+                      <input type="password" name="password" id="password" />
                   </p>
               
                   <p>
@@ -42,4 +43,32 @@
       </section>
       <!-- END: DESCRIPTION -->
     </main>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) { 
+    $('#restablecer-contrasena').validate({
+          rules: {
+            password : {
+              required : true,
+              minlength : 5,
+            },
+            password_confirm:{
+              required : true,
+              minlength : 5,
+              equalTo: "#password"
+            }
+          },
+          messages: {
+            password : {
+              required : "Ingrese su nueva contraseña",
+              minlength: "Su contraseña debe tener al menos 5 caracteres."
+            },
+            password_confirm:{
+              required : "Ingrese su nueva contraseña",
+              minlength: "Su contraseña debe tener al menos 5 caracteres.",
+              equalTo: "Confirmar contraseña debe ser igual Nueva Contraseña"
+            }
+          }
+    });
+  });
+</script>
 {embed="includes/footer"} 
