@@ -71,7 +71,7 @@
                       {/if}
                     {/exp:rating:stats}
                     </i><small class="text-gray mt-14 light mb-7 pv-min">Votos recibidos</small></p>  
-                      {exp:rating:entries entry_id="{entry_id}" dynamic="off" rating_author_id="CURRENT_USER"}
+                      {exp:rating:entries dynamic="off" rating_author_id="CURRENT_USER"}
                        {if rating_no_results}      
                           {exp:rating:form
                             entry_id="{entry_id}"
