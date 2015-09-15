@@ -63,14 +63,16 @@
 
                   {if logged_in}
                        
-                    <p class="mt-21 btn p-0 mb-7 votos-perfil"> <i class="book pv-7 ph-14  bg-primary text-white">
+                    <i class="text-gray light btn-outline btn-gray btn-votos-perfil">
                     {exp:rating:stats entry_id="{entry_id}"}
                       {overall_count}
                       {if rating_no_results}
                         0 
                       {/if}
                     {/exp:rating:stats}
-                    </i><small class="text-gray mt-14 light mb-7 pv-min">Votos recibidos</small></p>  
+                    </i><div href="" class=" btn-primary text-white btn votos-perfil">
+                      <span><small>Votos recibidos</small></span>
+                    </div>
                       {exp:rating:entries dynamic="off" rating_author_id="CURRENT_USER"}
                        {if rating_no_results}      
                           {exp:rating:form
@@ -104,7 +106,7 @@
                     {/exp:rating:stats}
                     </i>
                     <div href="" class=" btn-primary text-white btn votos-perfil">
-                      <span><small>Voto(s)</small></span>
+                      <span><small>Votos recibidos</small></span>
                     </div>
                     <a href="{site_url}registro-votaciones/{entry_id}" class="full-width text-uppercase btn-primary text-white btn btn-vota-perfil btn-icon-custom btn-primary">
                       <span><small>Quiero Votar</small></span>
@@ -160,17 +162,21 @@
                   <a href="{youtube_proyecto}" target="_blank"><img class="icon-perfil mh-7" src="{site_url}app/assets/img/youtube-negro.png"></a>
                   {/if}
 
-                <div class="text-center">
+                <div class="mb-ch-21 pt-21">
+
                   {if logged_in}
+                       
+                    <i class="text-gray light btn-outline btn-gray btn-votos-perfil">
                     {exp:rating:stats entry_id="{entry_id}"}
-                      <p class="mt-21 btn p-0 mb-7 votos-perfil"> <i class="book pv-7 ph-14  bg-primary text-white">
-                          {overall_count}
-                          {if rating_no_results}
-                            0
-                          {/if}
-                      </i><small class="text-gray mt-14 light mb-7 pv-min">Votos recibidos</small></p>
-                     {/exp:rating:stats}
-                     {exp:rating:entries entry_id="{entry_id}" dynamic="off" rating_author_id="CURRENT_USER"}
+                      {overall_count}
+                      {if rating_no_results}
+                        0 
+                      {/if}
+                    {/exp:rating:stats}
+                    </i><div href="" class=" btn-primary text-white btn votos-perfil">
+                      <span><small>Votos recibidos</small></span>
+                    </div>
+                      {exp:rating:entries dynamic="off" rating_author_id="CURRENT_USER"}
                        {if rating_no_results}      
                           {exp:rating:form
                             entry_id="{entry_id}"
@@ -178,29 +184,37 @@
                             return="gracias/voto/{title}"
                             anonymous="no" 
                             allow_duplicates="no"
-                            class="mt-21 btn p-0 mb-7 votos-perfil"
+                            class="mt-7 btn p-0 mb-7 votos-perfil"
                           } 
-                            <input type="hidden" name="rating" id="rating" value="1" class="text-gray light small bg-white btn-outline btn-votacion-perfil">
-                            <button type="submit" name="submit" value="Vota" class="text-uppercase btn-primary text-white btn btn-vota-perfil-li btn-icon-custom btn-primary">
-                              <span><small> VOTAR</small></span>
-                            </button> 
+                          
+                               <input type="hidden" name="rating" id="rating" value="1" class="text-gray light small bg-white btn-outline btn-votacion-perfil">
+                              
+                                <button type="submit" name="submit" value="Vota" class="text-uppercase btn-primary text-white btn btn-vota-perfil-li btn-icon-custom btn-primary full-wide">
+
+                                  <span><small> VOTAR</small></span>
+                                
+                                </button> 
+                             
                           {/exp:rating:form}
-                        {/if}
-                      {/exp:rating:entries}
-                    {if:else}
-                      <input type="hidden" name="rating" id="rating" value="1" class="text-gray light small bg-white btn-outline btn-votacion-perfil">
-                       <p class="mt-21 btn p-0 mb-7 votos-perfil"> <i class="book pv-7 ph-14  bg-primary text-white">
-                      {exp:rating:stats entry_id="{entry_id}"}
-                        {overall_count}
-                        {if rating_no_results}
-                          0 
-                        {/if}
-                      {/exp:rating:stats}
-                      </i><small class="text-gray mt-14 light mb-7 pv-min">Votos recibidos</small></p>
-                      <a href="{site_url}registro-votaciones/{entry_id}" class="text-uppercase btn-primary text-white btn btn-vota-perfil btn-icon-custom btn-primary">
-                        <span><small>Quiero Votar</small></span>
-                      </a> 
-                    {/if}
+                       {/if}
+                    {/exp:rating:entries}
+                  {if:else}
+                    <input type="hidden" name="rating" id="rating" value="1" class="text-gray light btn-outline btn-gray btn-votacion">
+                      <i class="text-gray light btn-outline btn-gray btn-votos-perfil">
+                    {exp:rating:stats entry_id="{entry_id}"}
+                      {overall_count}
+                      {if rating_no_results}
+                        0 
+                      {/if}
+                    {/exp:rating:stats}
+                    </i>
+                    <div href="" class=" btn-primary text-white btn votos-perfil">
+                      <span><small>Votos recibidos</small></span>
+                    </div>
+                    <a href="{site_url}registro-votaciones/{entry_id}" class="full-width text-uppercase btn-primary text-white btn btn-vota-perfil btn-icon-custom btn-primary">
+                      <span><small>Quiero Votar</small></span>
+                    </a> 
+                  {/if}
 
                     <!-- 
                     <p class="text-gray light small bg-white btn-outline btn-votacion-perfil">131,1253</p>
