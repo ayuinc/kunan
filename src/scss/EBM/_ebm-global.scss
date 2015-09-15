@@ -143,14 +143,14 @@ $xxl-desktop: 1900px;
 	height: 90px;
 	@include flex-column-center;
 	webkit-transform: translateY(0);
-  	-moz-transform: translateY(0);
-  	-ms-transform: translateY(0);
-  	-o-transform: translateY(0);
-  	transform: translateY(0);
-  	-webkit-transition: all 0.2s ease-in-out;
-  	-moz-transition: all 0.2s ease-in-out;
-  	transition: all 0.2s ease-in-out;
-  	-webkit-transform: translateZ(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	-webkit-transform: translateZ(0);
   	.header-left{
   		img{
   			visibility: visible;
@@ -743,7 +743,11 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 }
 
 .votos-perfil {
-	border-color: #EB6F24 !important;
+	padding: 3px 42px !important;
+  border-radius: 1px 3px 3px 1px !important;
+  border: none !important;
+  border-top: 2px solid #EB6F24 !important;
+  border-bottom: 1px solid #EB6F24 !important;
   overflow: hidden !important;
   cursor: initial !important;
 }
@@ -751,6 +755,18 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 // .titulo-proyecto {
 // 	font-size: 17px !important;
 // }
+
+.btn-votos-perfil {
+	float: left;
+  border: 1px #b5b6b7 solid;
+  border-radius: 3px 0px 0px 3px !important;
+  width: 70px;
+  padding: 4px 7px 3px 7px !important;
+}
+
+.full-width {
+	width: 100%;
+}
 
 .pv-min {
 	padding: 3px 9px !important;
