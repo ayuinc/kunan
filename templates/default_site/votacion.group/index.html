@@ -21,9 +21,7 @@
 			<h2 class="text-center text-black mb-21 lh-lg mt-7">Candidatos Kunan 2015</h2>
 			<h4 class="text-center text-gray lh-lg fz-sm mt-7">Hemos seleccionado a los 10 mejores proyectos de innovación social del 2015 en el Perú. Vota por uno de ellos y ayúdalos a ganar el premio KUNAN. </h4>
 			<div class="row mt-35">
-				{exp:query sql="SELECT entry_id, count(rating) as cantidad_votos FROM exp_ratings group by entry_id order by cantidad_votos DESC"}
-				{exp:channel:entries channel="votacion" limit="1" entry_id="{entry_id}" dynamic="off" disable="member_data"}
-
+     {exp:rating:rank display_unrated="yes" channel="votacion"} 
 				<div class="col-md-6 mt-28">
 					<div class="col-md-5 col-md-offset-1 col-xs-5">
 							<div class="caja-ranking">
@@ -40,7 +38,7 @@
 						</a>
 						<small><dfn>{sector_proyecto}, {lugar_proyecto}</dfn></small>
 
-
+      
             <h6 class="text-uppercase mt-14 text-primary fz-xs light mb-7">VOTOS RECIBIDOS</h6>
                 {if logged_in}
                     {exp:rating:form
@@ -79,9 +77,7 @@
                 {/if}
           </div>
         </div>
-        {/exp:channel:entries}
-        {/exp:query}
-
+          {/exp:rating:rank} 
       </div>
     </div>
   </section>
