@@ -21,14 +21,18 @@
 			<h2 class="text-center text-black mb-21 lh-lg mt-7">Candidatos Kunan 2015</h2>
 			<h4 class="text-center text-gray lh-lg fz-sm mt-7">Hemos seleccionado a los 10 mejores proyectos de innovación social del 2015 en el Perú. Vota por uno de ellos y ayúdalos a ganar el premio KUNAN. </h4>
 			<div class="row mt-35">
-     {exp:rating:rank display_unrated="yes" channel="votacion"} 
+     {exp:rating:rank channel="votacion" 
+                      display_unrated="yes" 
+                      collection="votos" 
+                      sort="desc"
+                      orderby="rating"} 
 				<div class="col-md-6 mt-28">
 					<div class="col-md-5 col-md-offset-1 col-xs-5">
 							<div class="caja-ranking">
 								<div class="border-esquina absolute"></div>
 								<div class="text-counter"><h3 class="light">{count}°</h3></div>
                 <a href="{site_url}votacion/proyecto-perfil/{entry_id}">
-								  <img src="{logo}" alt="" class="img-responsive img-scale">
+								  <img src="{logo}" alt="{nombre_del_proyecto}" class="img-responsive img-scale">
                 </a>
 							</div>
 					</div>
