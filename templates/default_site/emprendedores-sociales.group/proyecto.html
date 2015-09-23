@@ -1,14 +1,12 @@
-{exp:channel:entries channel="proyecto" limit="1" disable="member_data"}
-{logo limit="1"}
-{embed="includes/header"
-  titulo="{title}" 
-  descripcion="{proyecto-introduccion}" 
-  imagen="{image:url}"
-  url="{site_url}emprendedores-sociales/proyecto/{url_title}"
+{embed="includes/header" 
+  titulo="Kunan" 
+  descripcion="Kunan es un programa que impulsa, integra e inspira el emprendimiento y la innovación social de jóvenes en el Perú." 
+  imagen="{site_url}app/assets/img/logo-meta.png"
+  url="{site_url}{segment_1}"
 }
-{/logo}
 {embed="includes/header"}
 {embed="includes/navegacion-vistas"} 
+{exp:channel:entries channel="proyecto" limit="1" disable="member_data"}
     <main class="site-content">
       <section class="minh-70 hidden-xs"></section>
       <section id="hero-image" class="minhp-70 minhp-20-xs" style="background:url({imagen_de_portada})">
