@@ -7,24 +7,54 @@
   url="{site_url}emprendedores-sociales/proyecto/{url_title}"
 }
 {/proyecto-imagen-organizacion}
+{embed="includes/header"}
 {embed="includes/navegacion-vistas"} 
     <main class="site-content">
-      <section class="minh-70"></section>
-      {proyecto-imagen-bg}
-      <section id="hero-image" class="minhp-70" style="background:url({image:url:large})">
-	    {/proyecto-imagen-bg}
+      <section class="minh-70 hidden-xs"></section>
+      <section id="hero-image" class="minhp-70 minhp-20-xs" style="background:url({imagen_de_portada})">
         <div class="bg-hero-image minhp-70">
-          <div class="container-md minh-350-lg minh-280-xs"></div>  
+          <div class="container-md minh-350 minh-70-xs"></div>  
           <div class="container-md text-white pb-21">
             <div class="row">
-              <div class="col-md-3">
-	              {proyecto-imagen-organizacion}
-                <img class="absolute" src="{image:url:small}">
-                {/proyecto-imagen-organizacion}
+              <div class="col-md-2 absolute col-xs-6 bg-gray-lighter p-14">
+
+                <img class="img-responsive" width="" src="{logo}">
+                <div class="row pt-28 mb-14">
+                  <div class="col-md-3 col-xs-2 pr-0">
+                    <img src="{foto_autoridad}" class="img-responsive">
+                  </div>
+                  <div class="col-md-9 col-xs-10 light">
+                    <p class="h6 m-0 text-gray-dark pt-7">{nombre_autoridad}</p>
+                    <p class="h6 m-0 text-gray light"><dfn>{cargo}</dfn></p>
+                  </div>
+                </div>
+                  {if email_proyecto}
+                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">E-mail:</span><a href="mailto:{email_proyecto}" class="text-gray-link light"> {email_proyecto}</a> </p>
+                  {/if}
+                  {if website}
+                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Website:</span><a href="{website}" target="_blank" class="text-gray-link"> {website}</a> </p>
+                  {/if}
+                  {if telefono_proyecto}
+                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Teléfono:</span> {telefono_proyecto}</p>
+                  {/if}
+
+                  <p class="m-0"><span class="text-black light mt-21 fz-proyectos">Síguenos en:</span></p>
+                  {if facebook_proyecto}
+                  <a href="{facebook_proyecto}" target="_blank"><img class="icon-perfil" src="{site_url}app/assets/img/facebook-negro.png"></a>
+                  {/if}
+                  {if twitter_proyecto}
+                  <a href="" target="_blank"><img class="icon-perfil mh-7" src="{site_url}app/assets/img/twitter-negro.png"></a>
+                  {/if}
+                  {if youtube_proyecto}
+                  <a href="{youtube_proyecto}" target="_blank"><img class="icon-perfil mh-7" src="{site_url}app/assets/img/youtube-negro.png"></a>
+                  {/if}
+                  <!-- 
+                  <p class="text-gray light small bg-white btn-outline btn-votacion-perfil">131,1253</p>
+                  <a href="" class="text-uppercase btn-primary text-white btn btn-vota-perfil"> <span class="light ">Vota</span></a> -->
               </div>
-              <div class="col-md-9">
-                <!--<h2 class="text-uppercase m-0 pv-14">{proyecto-titulo-proyecto}</h2>
-                <p class="light">{proyecto-introduccion}</p>-->
+              <div class="col-md-9 col-xs-6 light col-md-offset-3">
+                <h2 class="text-white m-0 pl-35-xs pt-35-xs pv-14">{nombre_del_proyecto}</h2>
+                <p class="hidden-xs">{texto_introductorio}</p>
               </div>
             </div>
           </div>
@@ -32,47 +62,19 @@
       </section>
       <!-- DESCRIPTION -->
       <section class="text-left" id="description">
-        <div class="container-md pv-70 mt-42">
+        <div class="container-md pv-70 minhp-70">
           <div class="row">
-            <div class="col-md-3 minh-280 light text-gray">
-              <h2 class="m-0 text-black pb-14">{title}</h2>
-              <p class="small m-0 text-gray-darker">{proyecto-sector}</p>
-              <p class="small mt-0 mb-21"><dfn>{proyecto-ciudad}</dfn></p>
-              <p class="small m-0 text-black">Contáctos</p>
-              <p class="small m-0">
-	              {if proyecto-correoelectrnico}
-	              <dfn><a href="mailto:{proyecto-correoelectrnico}">{proyecto-correoelectrnico}</a></dfn><br>
-	              {/if}
-	              {if proyecto-website}
-	              <dfn><a href="{proyecto-website}">Website</a></dfn><br>
-	              {/if}
-	              {if proyecto-facebook}
-	              <dfn><a href="{proyecto-facebook}">Facebook</a></dfn><br>
-	              {/if}
-	              {if proyecto-twitter}
-	              <dfn><a href="{proyecto-twitter}">Twitter</a></dfn>
-	              {/if}
-              </p>
-              <div class="row pl-14 mt-28">
-                <div class="col-md-12">
-	                
+            
+            <div class="col-md-9 light text-center col-md-offset-3">
 
-	                
-									
-                </div>
+              <div class="text-left text-gray container-sm">
+                <p class="h4 light lh-lg m-0">{contenido_proyecto}</p>
               </div>
-            </div>
-            <div class="col-md-9 minh-280 light text-center">
-              <div class="text-left text-gray">
-                {proyecto-contenido}
-              </div>
-              <!--
-              <img class="pv-56 separador"src="{site_url}app/assets/img/linea-separadora.png">
-              {embed="includes/otros-proyectos"}
-              -->
+              
             </div>
           </div>
         </div>
+
       </section>
       <!-- END: DESCRIPTION -->
 {/exp:channel:entries}      
