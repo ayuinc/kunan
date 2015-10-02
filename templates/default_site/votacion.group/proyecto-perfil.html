@@ -29,25 +29,14 @@
             <div class="row banner-perfil">
               <div class="col-md-2 absolute col-xs-6 bg-gray-lighter p-14 perfil-lg hidden-xs">
                 <img class="img-responsive" width="" src="{logo}" alt="Logo {nombre_del_proyecto}">
-                <div class="row pt-28 mb-14">
-                  <div class="col-md-3 col-xs-2 pr-0">
-                    <img src="{foto_autoridad}" class="img-responsive" alt="Foto de {nombre_autoridad}">
-                  </div>
-                  <div class="col-md-9 col-xs-10 light">
-                    <p class="h6 m-0 text-gray-dark pt-7">{nombre_autoridad}</p>
-                    <p class="h6 m-0 text-gray light"><dfn>{cargo}</dfn></p>
-                  </div>
-                </div>
-                  {if email_proyecto}
-                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">E-mail:</span><a href="mailto:{email_proyecto}" class="text-gray-link light"> {email_proyecto}</a> </p>
-                  {/if}
+                  <p class="small text-gray fz-proyectos mt-21 mb-0"><span class="text-black light">Representante:</span> {nombre_autoridad} </p>
+                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Región sede:</span> {lugar_proyecto} </p>
+                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Región(s) Ámbito acción:</span> {region_ambito_accion} </p>
+
                   {if website}
                   <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Website:</span><a href="{website}" target="_blank" class="text-gray-link"> {website}</a> </p>
                   {/if}
-                  {if telefono_proyecto}
-                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Teléfono:</span> {telefono_proyecto}</p>
-                  {/if}
-
+    
                   <p class="m-0"><span class="text-black light mt-21 fz-proyectos">Síguenos en:</span></p>
                   {if facebook_proyecto}
                   <a href="{facebook_proyecto}" target="_blank"><img class="icon-perfil" src="{site_url}app/assets/img/facebook-negro.png"></a>
@@ -58,6 +47,8 @@
                   {if youtube_proyecto}
                   <a href="{youtube_proyecto}" target="_blank"><img class="icon-perfil mh-7" src="{site_url}app/assets/img/youtube-negro.png"></a>
                   {/if}
+
+                  
 
                 <div class="mb-ch-21 pt-21">
 
