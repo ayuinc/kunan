@@ -842,7 +842,7 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 
 .caja-ranking {
 	&:hover {
-		img {
+		.grid-block {
 		-webkit-filter: none;
   	filter: none;
   	-webkit-transition: all 0.3s ease-in-out;

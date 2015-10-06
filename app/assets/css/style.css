@@ -1576,7 +1576,7 @@ label[for="freeform_tipo_de_organizacion_otros"] {
     top: -20px;
     position: absolute; }
 
-.caja-ranking:hover img {
+.caja-ranking:hover .grid-block {
   -webkit-filter: none;
   filter: none;
   -webkit-transition: all 0.3s ease-in-out;
