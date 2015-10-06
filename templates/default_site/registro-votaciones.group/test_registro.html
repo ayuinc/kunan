@@ -1,0 +1,12 @@
+{if logged_in}
+{screen_name}--{username}--<a href="{path=LOGOUT}">Log out</a>
+{/if}
+{exp:social_login_pro:form return="comments/social-login"}
+Login using: 
+<select name="provider" onchange="document.getElementById('social_login_form').submit()">
+<option value="">--select a service--</option>
+{providers}
+<option value="{provider_name}">{provider_title}</option>
+{/providers}
+</select>
+<input type="checkbox" name="auto_login" value="1" />Keep me logged in {/exp:social_login_pro:form}
