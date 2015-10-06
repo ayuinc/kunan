@@ -4,15 +4,15 @@
 {/if}
 {if logged_out}
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
 
-		<meta charset="utf-8">
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	  <title>Kunan{if embed:titulo} | {embed:titulo}{/if}</title>
 	  <meta name="description" content="{if embed:descripcion}{embed:descripcion}{/if}">
 	  <meta name="keywords" content=""> 
 	  <meta name="author" content="@LaboratoriaLA">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
 	  <!-- Open Graph -->
 	  <meta property="og:type" content="website">
@@ -33,6 +33,8 @@
 	  <meta name="twitter:image" content="{if embed:imagen}{embed:imagen}{if:else}{site_url}/app/assets/img/logo.png{/if}">  
 	   <link rel="shortcut icon" href="{site_url}app/assets/img/favicon_kunan.png">
 		<link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,500" rel="stylesheet" type="text/css">
+		<link href="{site_url}app/assets/css/style.css" rel="stylesheet"> <!-- App styles -->
+  <link href="{site_url}app/assets/css/ebm.css" rel="stylesheet">
 		<style>
 			* {
 		    -webkit-box-sizing: border-box;
@@ -101,91 +103,96 @@
 		</style>
 	</head>
 	<body>
-		<div style="width: 748px; padding-left: 14px; padding-right: 14px; margin: 0 auto;">
+		<div class="container">
 			<section>
-        <div style="min-height: 70px !important; text-align: center;">
-        	<a href="{site_url}"><img src="{site_url}app/assets/img/logo.png" class="text-center" width="90" alt="KUNAN" style="margin-top: 21px; margin-bottom: 21px;"></a>
-        	<h4>Para poder votar primero debes registrarte. </h4>
+        <div style="min-height: 70px !important;" class="container text-center">
+        	<a href="{site_url}"><img src="{site_url}app/assets/img/logo.png" class="text-center" width="90" alt="KUNAN" style="margin-top: 35px;"></a>
+        	<h4 class="mv-21">Para poder votar primero debes registrarte. </h4>
         </div>
       </section>
-			<div style="margin-left: -14px; margin-right: -14px; content: " "; display: table;">
-				<div style="float: left; width:50%; padding:14px;">
-					<div class="border-skyblue" style="padding:14px;">
-						<h3 style=" color: #3E3F40; text-transform: uppercase; font-weight: 300;">Regístrate</h3>
-						{exp:user:register return="gracias/confirmacion-correo" group_id="7" }					        
-							<p>
-								<label class="small light text-uppercase" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Correo electrónico</label>
-								<br>
-						    	<input type="text" name="username" />
-					    	</p>
-							<p>
-								<label class="small light text-uppercase" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Contraseña</label><br>
-						    <input type="password" name="password" />
-					    	</p>
-							{if captcha}
-							<p>
-								<label style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Por favor, introduzca la palabra que aparece a continuación:</label><br>
-							    <input type="text" name="captcha" />
-						    </p>
-						    <p>{captcha}</p>
-							{/if}
-							<input type="hidden" name="accept_terms" value="y" />
-							{if last_segment != 'registro-votaciones'}
-							<input type="hidden" name="proyecto-voto" value="{last_segment}"/>
-							{/if}
-							<p><input type="submit" value="Registrarse"  class="btn btn-skyblue"  /></p>
-							<a href="{site_url}login" style="text-decoration: none; color: #ea6616;"><p class="text-primary">Si ya tienes una cuenta inicia sesión aquí</p></a>
+			<div class="container-sm">
+				<div class="row">
+					<div class="col-md-6 mb-21">
+						<div class="border-skyblue" style="padding:14px;">
+							<h3 style=" color: #3E3F40; text-transform: uppercase; font-weight: 300;">Regístrate</h3>
+							{exp:user:register return="gracias/confirmacion-correo" group_id="7" }					        
+								<p>
+									<label class="small light text-uppercase" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Correo electrónico</label>
+									<br>
+							    	<input type="text" name="username" />
+						    	</p>
+								<p>
+									<label class="small light text-uppercase" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Contraseña</label><br>
+							    <input type="password" name="password" />
+						    	</p>
+								{if captcha}
+								<p>
+									<label style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Por favor, introduzca la palabra que aparece a continuación:</label><br>
+								    <input type="text" name="captcha" />
+							    </p>
+							    <p>{captcha}</p>
+								{/if}
+								<input type="hidden" name="accept_terms" value="y" />
+								{if last_segment != 'registro-votaciones'}
+								<input type="hidden" name="proyecto-voto" value="{last_segment}"/>
+								{/if}
+								<p><input type="submit" value="Registrarse"  class="btn btn-skyblue"  /></p>
+								<a href="{site_url}login" style="text-decoration: none; color: #ea6616;"><p class="text-primary">Si ya tienes una cuenta inicia sesión aquí</p></a>
 
-						{/exp:user:register}
+							{/exp:user:register}
+						</div>
+					</div>
+
+					<div class="col-md-6 mb-21">
+						<div class="border-sky" style="padding:14px;">
+							<h3 style=" color: #3E3F40; text-transform: uppercase; font-weight: 300;">También puedes registrarte con Facebook</h3>
+								<div style="margin-bottom: 14px;">
+								{if segment_2 != ''}
+									{exp:fbc:login
+									    permissions="public_profile|email|user_friends"
+									    return_when_logged_in="votacion/proyecto-perfil/{segment_2}"
+									    return_when_logged_out="comunidad/index"
+									    return_for_passive_register="votacion/proyecto-perfil/{segment_2}"
+									    return_on_failure="comunidad/index"
+									    login_button_label="Facebook Login"
+									    button_size="large"
+									}
+									    {if fbc_logged_out == "y"}
+									    	<div>
+									        {fbc_login_button}
+									      </div>
+									    {/if}
+									    {if fbc_logged_in == "y"}
+									        <a href="{path='logout'}">Log Out</a>
+									    {/if}
+									{/exp:fbc:login}
+								{if:else}
+									{exp:fbc:login
+									    permissions="public_profile|email|user_friends"
+									    return_when_logged_in="votacion/"
+									    return_when_logged_out="comunidad/index"
+									    return_for_passive_register="votacion/"
+									    return_on_failure="comunidad/index"
+									    login_button_label="Facebook Login"
+									    button_size="large"
+									}
+									    {if fbc_logged_out == "y"}
+									    	<div>
+									        {fbc_login_button}
+									      </div>
+									    {/if}
+									    {if fbc_logged_in == "y"}
+									        <a href="{path='logout'}">Log Out</a>
+									    {/if}
+									{/exp:fbc:login}
+								{/if}
+								</div>
+							</div>
 					</div>
 				</div>
+				
 
-				<div style="width:50%; float: left; padding:14px;">
-					<div class="border-sky" style="padding:14px;">
-						<h3 style=" color: #3E3F40; text-transform: uppercase; font-weight: 300;">También puedes registrarte con Facebook</h3>
-							<div style="margin-bottom: 14px;">
-							{if segment_2 != ''}
-								{exp:fbc:login
-								    permissions="public_profile|email|user_friends"
-								    return_when_logged_in="votacion/proyecto-perfil/{segment_2}"
-								    return_when_logged_out="comunidad/index"
-								    return_for_passive_register="votacion/proyecto-perfil/{segment_2}"
-								    return_on_failure="comunidad/index"
-								    login_button_label="Facebook Login"
-								    button_size="large"
-								}
-								    {if fbc_logged_out == "y"}
-								    	<div>
-								        {fbc_login_button}
-								      </div>
-								    {/if}
-								    {if fbc_logged_in == "y"}
-								        <a href="{path='logout'}">Log Out</a>
-								    {/if}
-								{/exp:fbc:login}
-							{if:else}
-								{exp:fbc:login
-								    permissions="public_profile|email|user_friends"
-								    return_when_logged_in="votacion/"
-								    return_when_logged_out="comunidad/index"
-								    return_for_passive_register="votacion/"
-								    return_on_failure="comunidad/index"
-								    login_button_label="Facebook Login"
-								    button_size="large"
-								}
-								    {if fbc_logged_out == "y"}
-								    	<div>
-								        {fbc_login_button}
-								      </div>
-								    {/if}
-								    {if fbc_logged_in == "y"}
-								        <a href="{path='logout'}">Log Out</a>
-								    {/if}
-								{/exp:fbc:login}
-							{/if}
-							</div>
-						</div>
-				</div>
+				
 			</div>
 		</div>
 	</body>
