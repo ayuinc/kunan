@@ -246,11 +246,7 @@ $xxl-desktop: 1900px;
 	}
 }
 
-#formulario{
-	background-image: url(../img/completa-el-formulario.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-}
+
 
 
 #estadisticas {
@@ -765,7 +761,7 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 }
 
 .full-width {
-	width: 100%;
+	width: 100% !important;
 }
 
 .pv-min {
@@ -1125,7 +1121,7 @@ form .error {
 
 @media (max-width:480px) {
 	.modal-dialog {
-    width: 100% !important;
+     width: 465px !important;
     margin-top: 150px !important;
     z-index: 10000 !important;
 	}
@@ -1138,10 +1134,11 @@ form .error {
     z-index: 10000 !important;
 	}
 }
-@media #{$xs-only} {
+
+@media (max-width:320px){
 
 	.modal-dialog {
-    width: 100% !important;
+    width:300px !important;
     margin-top: 150px !important;
     z-index: 10000 !important;
 	}

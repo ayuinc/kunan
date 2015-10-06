@@ -33,6 +33,8 @@
         <meta name="twitter:image" content="{if embed:imagen}{embed:imagen}{if:else}{site_url}/app/assets/img/logo.png{/if}">  
          <link rel="shortcut icon" href="{site_url}app/assets/img/favicon_kunan.png">
         <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,500" rel="stylesheet" type="text/css">
+        <link href="{site_url}app/assets/css/style.css" rel="stylesheet"> <!-- App styles -->
+  <link href="{site_url}app/assets/css/ebm.css" rel="stylesheet">
         <style>
           * {
             -webkit-box-sizing: border-box;
@@ -107,42 +109,43 @@
         </style>
       </head>
       <body>
-        <div style="width: 748px; padding-left: 14px; padding-right: 14px; margin: 0 auto;">
+        <div class="container">
           <section>
-            <div style="min-height: 70px !important; text-align: center;">
-              <a href="{site_url}"><img src="{site_url}app/assets/img/logo.png" class="text-center" width="90" alt="KUNAN" style="margin-top: 21px; margin-bottom: 21px;"></a>
-              <h4>Para poder votar primero debes iniciar sesión. Si no tienes una cuenta regístrate<a href="{site_url}registro-votaciones" style="text-decoration: none; color: #ea6616;"> AQUÍ.</a> </h4>
+            <div style="min-height: 70px !important;" class="text-center container-sm">
+              <a href="{site_url}"><img src="{site_url}app/assets/img/logo.png" class="text-center" width="90" alt="KUNAN" style="margin-top: 35px;"></a>
+              <h4 class="mv-21">Para poder votar primero debes iniciar sesión. Si no tienes una cuenta regístrate<a href="{site_url}registro-votaciones" style="text-decoration: none; color: #ea6616;"> AQUÍ.</a> </h4>
             </div>
           </section>
-          <div style="margin-left: -14px; margin-right: -14px; content: " "; display: table;">
-            <div style="float: left; width:50%; padding:14px 14px 35px 14px;">
-              <div class="border-skyblue" style="padding:14px;">
-                <h3 class="text-gray-darker text-uppercase light h4">Ingresa</h3>
-                  {exp:member:login_form return="/votacion" group_id="7" id="formulario"}
-                      <p>
-                        <label class="small light text-uppercase required" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Correo Electrónico</label><br>
-                        <input type="text" name="username" required="true">
-                      </p>
-                      <p>
-                        <label class="small light text-uppercase required" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Contraseña</label><br>
-                        <input type="password" name="password" required="true">
-                      </p>
-                      {if auto_login}
-                        <p class="text-left">
-                          <input type="checkbox" name="auto_login" value="1" style="float: left; display: inline-block; width: 6%; margin-top: 4px;">
-                          Mantener sesión iniciada
+          <div class="container-sm">
+            <div class="row">
+              <div class="col-md-6 mb-21">
+                <div class="border-skyblue" style="padding:14px;">
+                  <h3 class="text-gray-darker text-uppercase light h4">Ingresa</h3>
+                    {exp:member:login_form return="/votacion" group_id="7" id="formulario"}
+                        <p>
+                          <label class="small light text-uppercase required" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Correo Electrónico</label><br>
+                          <input type="text" name="username" required="true">
                         </p>
-                      {/if}
-                      <p><input type="submit" name="submit" value="Entrar" class="btn btn-skyblue ml-0"></p>
-                      <a href="{path='login/perdida-contrasena'}" style="text-decoration: none; color: #ea6616;"><p class="text-primary">¿Olvidaste tu contraseña?</p></a>
-                      <a href="{site_url}registro-votaciones" style="text-decoration: none; color: #ea6616;"><p class="text-primary">Regístrate</p></a>
-                  {/exp:member:login_form}
+                        <p>
+                          <label class="small light text-uppercase required" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Contraseña</label><br>
+                          <input type="password" name="password" required="true">
+                        </p>
+                        {if auto_login}
+                          <p class="text-left">
+                            <input type="checkbox" name="auto_login" value="1" style="float: left; display: inline-block; width: 6%; margin-top: 4px;">
+                            Mantener sesión iniciada
+                          </p>
+                        {/if}
+                        <p><input type="submit" name="submit" value="Entrar" class="btn btn-primary full-width ml-0"></p>
+                        <a href="{path='login/perdida-contrasena'}" style="text-decoration: none; color: #ea6616;"><p class="text-primary">¿Olvidaste tu contraseña?</p></a>
+                        <a href="{site_url}registro-votaciones" style="text-decoration: none; color: #ea6616;"><p class="text-primary">Regístrate</p></a>
+                    {/exp:member:login_form}
+                </div>
               </div>
-            </div>
 
-            <div style="width:50%; float: left; padding:14px;">
-              <div class="border-sky" style="padding:14px;">
-                <h4 style=" color: #3E3F40; text-transform: uppercase; font-weight: 300;">También puedes iniciar sesión con Facebook</h4>
+              <div class="col-md-6 mb-21">
+                <div class="border-sky" style="padding:14px;">
+                  <h4 style=" color: #3E3F40; text-transform: uppercase; font-weight: 300;">También puedes iniciar sesión con Facebook</h4>
                   <div style="margin-bottom: 14px;">
                     {exp:fbc:login
                         permissions="public_profile|email|user_friends"
@@ -164,7 +167,9 @@
                     {/exp:fbc:login}
                   </div>
                 </div>
+              </div>
             </div>
+            
           </div>
         </div>
       </body>

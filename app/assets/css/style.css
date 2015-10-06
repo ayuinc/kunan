@@ -1123,11 +1123,6 @@ body {
       background-image: url(http://s18.postimg.org/ry766p1mh/kunan_main.png);
       background-position-x: -191px !important; } }
 
-#formulario {
-  background-image: url(../img/completa-el-formulario.png);
-  background-repeat: no-repeat;
-  background-size: cover; }
-
 #estadisticas .numbers {
   font-size: 80px; }
 
@@ -1519,7 +1514,7 @@ label[for="freeform_tipo_de_organizacion_otros"] {
   padding: 4px 7px 3px 7px !important; }
 
 .full-width {
-  width: 100%; }
+  width: 100% !important; }
 
 .pv-min {
   padding: 3px 9px !important; }
@@ -1823,7 +1818,7 @@ form .error {
     z-index: 10000 !important; } }
 @media (max-width: 480px) {
   .modal-dialog {
-    width: 100% !important;
+    width: 465px !important;
     margin-top: 150px !important;
     z-index: 10000 !important; } }
 @media (max-width: 375px) {
@@ -1831,9 +1826,9 @@ form .error {
     width: 355px !important;
     margin-top: 150px !important;
     z-index: 10000 !important; } }
-@media only screen and (max-width: 480px) {
+@media (max-width: 320px) {
   .modal-dialog {
-    width: 100% !important;
+    width: 300px !important;
     margin-top: 150px !important;
     z-index: 10000 !important; } }
 
