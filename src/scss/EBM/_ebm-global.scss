@@ -842,7 +842,7 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 
 .caja-ranking {
 	&:hover {
-		img {
+		.grid-block {
 		-webkit-filter: none;
   	filter: none;
   	-webkit-transition: all 0.3s ease-in-out;
@@ -1103,4 +1103,46 @@ form .error {
 	font-weight: 300; 
 	font-size:0.7em; 
 	text-transform: uppercase; 
+}
+
+.grid-block {
+	height: 150px;
+	@media #{$xs-only} {
+		height: 100px;
+	}
+}
+
+
+@media (max-width:640px){ 
+
+	.modal-dialog {
+    	width: 625px !important;
+    	margin-top: 150px !important;
+    	z-index: 10000 !important;
+	}
+}
+
+
+@media (max-width:480px) {
+	.modal-dialog {
+    width: 100% !important;
+    margin-top: 150px !important;
+    z-index: 10000 !important;
+	}
+}
+
+@media (max-width:375px){ 
+	.modal-dialog {
+    width: 355px !important;
+    margin-top: 150px !important;
+    z-index: 10000 !important;
+	}
+}
+@media #{$xs-only} {
+
+	.modal-dialog {
+    width: 100% !important;
+    margin-top: 150px !important;
+    z-index: 10000 !important;
+	}
 }
