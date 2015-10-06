@@ -37,11 +37,10 @@
 			<h4 class="text-center text-gray lh-lg fz-sm mt-7">Estos son los 10 semifinalistas que lograron pasar a la fase 3 de evaluación. Ahora te toca apoyarlos con tu voto y hacer que tu emprendimiento favorito pase directamente a la gran final. </h4>
       <h5 class="text-center text-gray lh-lg mt-7">Recuerda que el emprendimiento más votado será 1 de los 5 emprendimientos finalistas que pasará al evento de premiación y los otros 4 finalistas serán elegidos en base a la entrevista de evaluación por el Comité Evaluador de la fase 3 con un 70% de puntuación y la cantidad de votos obtenidos en la web con un 30% de puntuación.</h5>
 			<div class="row mt-35">
-     {exp:rating:rank channel="votacion" 
-                      display_unrated="yes" 
-                      collection="votos" 
-                      sort="desc"
-                      orderby="rating"} 
+     {exp:rating:rank
+          limit="10"
+          orderby="rating"
+      }
 				<div class="col-md-6 mt-28" style="height: 210px;">
 					<div class="col-md-5 col-md-offset-1 col-xs-5">
 							<div class="caja-ranking">
