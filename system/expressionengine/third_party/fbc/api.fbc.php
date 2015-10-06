@@ -165,7 +165,6 @@ class Fbc_api extends Module_builder_fbc
 		// --------------------------------------------
 		//	Connect
 		// --------------------------------------------
-
 		require_once $this->addon_path . 'lib/facebook.php';
 
 		if (! isset($this->FB->api))
