@@ -5,20 +5,20 @@
       <section class="text-left minhp-100" id="description">
         <div class="minh-70 text-center"><img src="{site_url}app/assets/img/logo.png" class="text-center" width="100" alt="KUNAN"></div>
         <div class="container-sm pt-42 pb-70 text-center text-black">
+         {exp:channel:entries channel="votacion" search:url_title="{segment_3}"}
+          {if url_title == segment_3}
           <h5 class="light">Gracias por votar por:</h5>
-          <h1 class="text-uppercase h2 light mt-0">{segment_3}{embed:entry_id}</h1>
-
-          {exp:channel:entries channel="votacion" search:nombre_del_proyecto="{segment_3}" url_title="{segment_3}" limit=1}
-  
+          <h1 class="text-uppercase h2 light mt-0">{nombre_del_proyecto}</h1>
           <p class="text-gray light h4 lh-lg mb-42">Recuerda que puedes compartir este proyecto con familia y amigos y hacer que tu elección gane más votos.</p>   
 					<!-- Go to www.addthis.com/dashboard to generate a new set of sharing buttons -->
-					<a href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url={site_url}%2Fvotacion%2F{entry_id}&ct=1&title=Vota%20por%20{segment_3}" target="_blank"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/facebook.png" border="0" alt="Facebook"/></a>
-					<a href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url={site_url}%2Fvotacion%2F{entry_id}&ct=1&title=Vota%20por%20{segment_3}" target="_blank"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/twitter.png" border="0" alt="Twitter"/></a>
-					<a href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url={site_url}%2Fvotacion%2F{entry_id}&ct=1&title=Vota%20por%20{segment_3}" target="_blank"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/email.png" border="0" alt="Email"/></a>
-					<a href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url={site_url}%2Fvotacion%2F{entry_id}&ct=1&title=Vota%20por%20{segment_3}" target="_blank"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/addthis.png" border="0" alt="Addthis"/></a> <br>
-
-          <a href="{site_url}" ><p class="text-gray mt-21 text-center">Regresar al <span class="text-primary">inicio.</span></p></a>
+					<a href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url={site_url}%2Fvotacion%2Fproyecto-perfil%2F{entry_id}&ct=1&title=Vota%20por%20{segment_3}" target="_blank"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/facebook.png" border="0" alt="Facebook"/></a>
+					<a href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url={site_url}%2Fvotacion%2Fproyecto-perfil%2F{entry_id}&ct=1&title=Vota%20por%20{segment_3}" target="_blank"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/twitter.png" border="0" alt="Twitter"/></a>
+					<a href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url={site_url}%2Fvotacion%2Fproyecto-perfil%2F{entry_id}&ct=1&title=Vota%20por%20{segment_3}" target="_blank"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/email.png" border="0" alt="Email"/></a>
+					<a href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url={site_url}%2Fvotacion%2Fproyecto-perfil%2F{entry_id}&ct=1&title=Vota%20por%20{segment_3}" target="_blank"><img src="https://cache.addthiscdn.com/icons/v2/thumbs/32x32/addthis.png" border="0" alt="Addthis"/></a> <br>
+          {/if}
           {/exp:channel:entries}
+          <a href="{site_url}" ><p class="text-gray mt-21 text-center">Regresar al <span class="text-primary">inicio.</span></p></a>
+
       
         </div>
       </section>
