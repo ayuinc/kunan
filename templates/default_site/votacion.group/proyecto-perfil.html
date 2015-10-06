@@ -156,7 +156,7 @@
                         0 
                       {/if}
                     {/exp:rating:stats}
-                    </i><div href="" class=" btn-primary text-white btn votos-perfil">
+                    </i><div href="" class=" btn-primary text-white btn votos-perfil" >
                       <span><small>Votos recibidos</small></span>
                     </div>
                       {exp:rating:entries dynamic="off" rating_author_id="CURRENT_USER"}
@@ -183,7 +183,7 @@
                     {/exp:rating:entries}
                   {if:else}
                     <input type="hidden" name="rating" id="rating" value="1" class="text-gray light btn-outline btn-gray btn-votacion">
-                      <i class="text-gray light btn-outline btn-gray btn-votos-perfil">
+                      <i class="text-gray light btn-outline btn-gray btn-votos-perfil" style="width: 59px; padding: 4px 7px 3px 3px !important;">
                     {exp:rating:stats entry_id="{entry_id}"}
                       {overall_count}
                       {if rating_no_results}
