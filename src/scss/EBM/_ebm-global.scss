@@ -1111,3 +1111,38 @@ form .error {
 		height: 100px;
 	}
 }
+
+
+@media (max-width:640px){ 
+
+	.modal-dialog {
+    	width: 625px !important;
+    	margin-top: 150px !important;
+    	z-index: 10000 !important;
+	}
+}
+
+
+@media (max-width:480px) {
+	.modal-dialog {
+    width: 100% !important;
+    margin-top: 150px !important;
+    z-index: 10000 !important;
+	}
+}
+
+@media (max-width:375px){ 
+	.modal-dialog {
+    width: 355px !important;
+    margin-top: 150px !important;
+    z-index: 10000 !important;
+	}
+}
+@media #{$xs-only} {
+
+	.modal-dialog {
+    width: 100% !important;
+    margin-top: 150px !important;
+    z-index: 10000 !important;
+	}
+}
