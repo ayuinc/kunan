@@ -1104,3 +1104,10 @@ form .error {
 	font-size:0.7em; 
 	text-transform: uppercase; 
 }
+
+.grid-block {
+	height: 150px;
+	@media #{$xs-only} {
+		height: 100px;
+	}
+}

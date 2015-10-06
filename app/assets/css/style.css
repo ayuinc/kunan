@@ -1810,4 +1810,10 @@ form .error {
   font-size: 0.7em;
   text-transform: uppercase; }
 
+.grid-block {
+  height: 150px; }
+  @media only screen and (max-width: 480px) {
+    .grid-block {
+      height: 100px; } }
+
 /*# sourceMappingURL=style.css.map */
