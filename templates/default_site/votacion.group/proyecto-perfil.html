@@ -20,10 +20,14 @@
               <div class="col-md-2 absolute col-xs-6 bg-gray-lighter p-14">
                 <img class="img-responsive" width="" src="{logo}">
 	              <div class="row pt-28 mb-14">
+		              {if foto_autoridad}
 	                <div class="col-md-3 col-xs-2 pr-0">
 	                  <img src="{foto_autoridad}" class="img-responsive">
 	                </div>
 	                <div class="col-md-9 col-xs-10 light">
+		              {if:else}
+		              <div class="col-md-12 col-xs-12 light">
+		              {/if}  
 	                  <p class="h6 m-0 text-gray-dark pt-7">{nombre_autoridad}</p>
 	                  <p class="h6 m-0 text-gray light"><dfn>{cargo}</dfn></p>
 	                </div>
@@ -67,9 +71,9 @@
                           {/if}
                         {/exp:rating:stats}
                       </i>
-                    <button type="submit" name="submit" value="Vota" class="text-uppercase btn-primary text-white btn btn-vota-perfil btn-icon-custom btn-primary">
+                    <!--<button type="submit" name="submit" value="Vota" class="text-uppercase btn-primary text-white btn btn-vota-perfil btn-icon-custom btn-primary">
                       <span><small>VOTAR</small></span>
-                    </button> 
+                    </button>--> 
                     {/exp:rating:form}      
                   {if:else}
                     <input type="hidden" name="rating" id="rating" value="1" class="text-gray light small bg-white btn-outline btn-votacion-perfil">
@@ -81,9 +85,9 @@
                       {/if}
                     {/exp:rating:stats}
                     </i>
-                    <a href="{site_url}registro-votaciones/{entry_id}" class="text-uppercase btn-primary text-white btn btn-vota-perfil btn-icon-custom btn-primary">
+                    <!--<a href="{site_url}registro-votaciones/{entry_id}" class="text-uppercase btn-primary text-white btn btn-vota-perfil btn-icon-custom btn-primary">
                       <span><small>Voto(s)</small></span>
-                    </a> 
+                    </a>--> 
                   {/if}
                   <!-- 
                   <p class="text-gray light small bg-white btn-outline btn-votacion-perfil">131,1253</p>

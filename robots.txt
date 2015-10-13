@@ -1,0 +1,8 @@
+#robots.txt 
+#not to delete
+
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /.sass-cache/
+Disallow: /images/
+Disallow: /app/
