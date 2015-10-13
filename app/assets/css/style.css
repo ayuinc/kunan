@@ -973,7 +973,10 @@ body {
 */
 @media only screen and (max-width: 480px) {
   .text-center-xs {
-    text-align: center; } }
+    text-align: center !important; }
+
+  .banner-xs {
+    height: 362px; } }
 @media only screen and (max-width: 992px) {
   #estadisticas {
     text-align: center; }
@@ -983,6 +986,12 @@ body {
 @media only screen and (min-width: 992px) {
   .iframe {
     height: 415px; } }
+@media only screen and (min-width: 1200px) {
+  .banner-perfil {
+    margin-top: 144px !important; }
+
+  .perfil-lg {
+    width: 228px !important; } }
 @media only screen and (min-width: 1500px) {
   video {
     display: none !important; } }
@@ -1005,7 +1014,7 @@ body {
       #menu .header-center nav a:hover, #menu-vistas .header-center nav a:hover {
         color: #d1d1d1; }
   #menu .header-right a, #menu-vistas .header-right a {
-    font-size: 12px;
+    font-size: 11px;
     padding: 0 10px; }
     #menu .header-right a:hover, #menu-vistas .header-right a:hover {
       color: #d1d1d1; }
@@ -1113,11 +1122,6 @@ body {
     #hero-image {
       background-image: url(http://s18.postimg.org/ry766p1mh/kunan_main.png);
       background-position-x: -191px !important; } }
-
-#formulario {
-  background-image: url(../img/completa-el-formulario.png);
-  background-repeat: no-repeat;
-  background-size: cover; }
 
 #estadisticas .numbers {
   font-size: 80px; }
@@ -1322,7 +1326,7 @@ input[name="submit"] {
   color: #ea6616;
   width: 94px;
   border-radius: 3px;
-  margin-left: 40%;
+  margin-left: 44%;
   margin-top: 21px;
   display: block;
   padding-top: 5px;
@@ -1478,7 +1482,7 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 
 /*VOTACI├ôN*/
 .fz-sm {
-  font-size: 18px !important; }
+  font-size: 1.125rem !important; }
 
 .fz-xs {
   font-size: 10px !important; }
@@ -1493,6 +1497,28 @@ label[for="freeform_tipo_de_organizacion_otros"] {
     border-top: 2px solid #a4470f !important;
     border-bottom: 1px solid #a4470f !important; }
 
+.votos-perfil {
+  padding: 3px 14px !important;
+  border-radius: 1px 3px 3px 1px !important;
+  border: none !important;
+  border-top: 2px solid #EB6F24 !important;
+  border-bottom: 1px solid #EB6F24 !important;
+  overflow: hidden !important;
+  cursor: initial !important; }
+
+.btn-votos-perfil {
+  float: left;
+  border: 1px #b5b6b7 solid;
+  border-radius: 3px 0px 0px 3px !important;
+  width: 70px;
+  padding: 4px 7px 3px 7px !important; }
+
+.full-width {
+  width: 100% !important; }
+
+.pv-min {
+  padding: 3px 9px !important; }
+
 .btn-votacion {
   float: left;
   border: 1px #b5b6b7 solid;
@@ -1506,12 +1532,16 @@ label[for="freeform_tipo_de_organizacion_otros"] {
   font-size: 19px !important;
   border: none;
   float: left;
-  border-radius: 3px 0px 0px 3px !important;
+  border-radius: 3px !important;
   padding: 3px 9px 3px 9px !important; }
 
 .btn-vota-perfil {
   padding: 4px 25px !important;
-  border-radius: 1px 3px 3px 1px !important; }
+  border-radius: 3px !important; }
+
+.btn-vota-perfil-li {
+  border-radius: 3px !important;
+  padding: 4px 52px !important; }
 
 .icon-perfil {
   width: 22px; }
@@ -1541,7 +1571,7 @@ label[for="freeform_tipo_de_organizacion_otros"] {
     top: -20px;
     position: absolute; }
 
-.caja-ranking:hover img {
+.caja-ranking:hover .grid-block {
   -webkit-filter: none;
   filter: none;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1768,5 +1798,38 @@ body.cargando img.show {
 
 .text-gray-link {
   color: #7D7E7F !important; }
+
+form .error {
+  color: #F75734;
+  font-weight: 300;
+  font-size: 0.7em;
+  text-transform: uppercase; }
+
+.grid-block {
+  height: 150px; }
+  @media only screen and (max-width: 480px) {
+    .grid-block {
+      height: 100px; } }
+
+@media (max-width: 640px) {
+  .modal-dialog {
+    width: 625px !important;
+    margin-top: 150px !important;
+    z-index: 10000 !important; } }
+@media (max-width: 480px) {
+  .modal-dialog {
+    width: 465px !important;
+    margin-top: 150px !important;
+    z-index: 10000 !important; } }
+@media (max-width: 375px) {
+  .modal-dialog {
+    width: 355px !important;
+    margin-top: 150px !important;
+    z-index: 10000 !important; } }
+@media (max-width: 320px) {
+  .modal-dialog {
+    width: 300px !important;
+    margin-top: 150px !important;
+    z-index: 10000 !important; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -14,10 +14,11 @@
             <div class="col-md-4 col-md-offset-4">
               
               {exp:user:forgot_password
-                  password_reset_template="login/resetear-contrasena/%id%"
+                  password_reset_template="login/restablecer-contrasena/%id%"
                   password_reset_email_subject="Pedido de cambio de contraseña"
-                  password_reset_email_template="login/email-reseteo-contrasena"
+                  password_reset_email_template="login/email-restablecer-contrasena"
                   return="login/gracias-cambio-contrasena"
+                  form:id="recuperar-contrasenia"
               }
               
               <p>
@@ -37,4 +38,23 @@
       </section>
       <!-- END: DESCRIPTION -->
     </main>
+  <script>
+document.addEventListener("DOMContentLoaded", function(event) { 
+  $('#recuperar-contrasenia').validate({
+        rules: {
+          email : {
+            required : true,
+            email : true,
+          }
+        },
+        messages: {
+          email : {
+            required : "Ingrese su correo electrónico.",
+            email: "Ingrese un correo electrónico válido."
+          }
+        }
+  });
+   
+});
+  </script>
 {embed="includes/footer"} 

@@ -33,13 +33,17 @@ $xl-desktop: 1500px;
 $xxl-desktop: 1900px;
 @media #{$xs-only} {
 	.text-center-xs{
-		text-align: center;
+		text-align: center !important;
 	}
+
+	.banner-xs {
+		height: 362px;
+	}
+
 }
 @media #{$sm-only} {}
 @media #{$md-only} {}
-@media #{$lg-only} {
-}
+@media #{$lg-only} {}
 @media #{$sm-down} {}
 @media #{$md-down} {
 	#estadisticas{
@@ -57,7 +61,14 @@ $xxl-desktop: 1900px;
 		height: 415px;
 	}
 }
-@media #{$lg-up} {}
+@media #{$lg-up} {
+	.banner-perfil {
+		margin-top: 144px !important;
+	}
+	.perfil-lg {
+		width: 228px !important;
+	}
+}
 @media only screen and (min-width: $xl-desktop) {
 	video{
 		display: none !important;
@@ -97,7 +108,7 @@ $xxl-desktop: 1900px;
 	}
 	.header-right{
 		a{
-			font-size: 12px;
+			font-size: 11px;
 			padding: 0 10px;
 			&:hover{
 				color: #d1d1d1;
@@ -132,14 +143,14 @@ $xxl-desktop: 1900px;
 	height: 90px;
 	@include flex-column-center;
 	webkit-transform: translateY(0);
-  	-moz-transform: translateY(0);
-  	-ms-transform: translateY(0);
-  	-o-transform: translateY(0);
-  	transform: translateY(0);
-  	-webkit-transition: all 0.2s ease-in-out;
-  	-moz-transition: all 0.2s ease-in-out;
-  	transition: all 0.2s ease-in-out;
-  	-webkit-transform: translateZ(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	-webkit-transform: translateZ(0);
   	.header-left{
   		img{
   			visibility: visible;
@@ -235,11 +246,7 @@ $xxl-desktop: 1900px;
 	}
 }
 
-#formulario{
-	background-image: url(../img/completa-el-formulario.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-}
+
 
 
 #estadisticas {
@@ -509,7 +516,7 @@ input[name="submit"] {
 	  color: #ea6616;
 	  width: 94px;
 	  border-radius: 3px;
-	  margin-left: 40%;
+	  margin-left: 44%;
 	  margin-top: 21px;
 	  display: block;
 	  padding-top: 5px;
@@ -712,7 +719,7 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 /*VOTACIÓN*/
 
 .fz-sm {
-	font-size: 18px !important;
+	font-size: 1.125rem !important;
 }
 
 .fz-xs {
@@ -731,9 +738,35 @@ label[for="freeform_tipo_de_organizacion_otros"] {
   }
 }
 
+.votos-perfil {
+	padding: 3px 14px !important;
+  border-radius: 1px 3px 3px 1px !important;
+  border: none !important;
+  border-top: 2px solid #EB6F24 !important;
+  border-bottom: 1px solid #EB6F24 !important;
+  overflow: hidden !important;
+  cursor: initial !important;
+}
+
 // .titulo-proyecto {
 // 	font-size: 17px !important;
 // }
+
+.btn-votos-perfil {
+	float: left;
+  border: 1px #b5b6b7 solid;
+  border-radius: 3px 0px 0px 3px !important;
+  width: 70px;
+  padding: 4px 7px 3px 7px !important;
+}
+
+.full-width {
+	width: 100% !important;
+}
+
+.pv-min {
+	padding: 3px 9px !important;
+}
 
 .btn-votacion {
 	float: left;
@@ -750,13 +783,18 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 	font-size: 19px !important;
   border: none;
   float: left;
-  border-radius: 3px 0px 0px 3px !important;
+  border-radius: 3px !important;
   padding: 3px 9px 3px 9px !important;
 }
 
 .btn-vota-perfil {
 	padding: 4px 25px !important;
-  border-radius: 1px 3px 3px 1px !important;
+  border-radius: 3px !important;
+}
+
+.btn-vota-perfil-li {
+	border-radius: 3px !important;
+	padding: 4px 52px !important;
 }
 
 .icon-perfil {
@@ -800,7 +838,7 @@ label[for="freeform_tipo_de_organizacion_otros"] {
 
 .caja-ranking {
 	&:hover {
-		img {
+		.grid-block {
 		-webkit-filter: none;
   	filter: none;
   	-webkit-transition: all 0.3s ease-in-out;
@@ -1053,4 +1091,55 @@ body.cargando img.show {
 
 .text-gray-link {
 	color: #7D7E7F !important;
+}
+
+// Validation errors 
+form .error {
+	color: #F75734;
+	font-weight: 300; 
+	font-size:0.7em; 
+	text-transform: uppercase; 
+}
+
+.grid-block {
+	height: 150px;
+	@media #{$xs-only} {
+		height: 100px;
+	}
+}
+
+
+@media (max-width:640px){ 
+
+	.modal-dialog {
+    	width: 625px !important;
+    	margin-top: 150px !important;
+    	z-index: 10000 !important;
+	}
+}
+
+
+@media (max-width:480px) {
+	.modal-dialog {
+     width: 465px !important;
+    margin-top: 150px !important;
+    z-index: 10000 !important;
+	}
+}
+
+@media (max-width:375px){ 
+	.modal-dialog {
+    width: 355px !important;
+    margin-top: 150px !important;
+    z-index: 10000 !important;
+	}
+}
+
+@media (max-width:320px){
+
+	.modal-dialog {
+    width:300px !important;
+    margin-top: 150px !important;
+    z-index: 10000 !important;
+	}
 }

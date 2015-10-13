@@ -1,81 +1,207 @@
+{exp:fbc:prepare_page}
 {if logged_in}
-  {redirect='formulario-edicion/index'}  
+  {redirect='votacion/index'}  
 {/if}
 {if logged_out}
-{embed="includes/header"}
-{embed="includes/navegacion-vistas"} 
-    <main class="site-content">
-      <!-- DESCRIPTION -->
-      <section class="text-left minhp-100" id="description">
-        <div class="minh-70"></div>
-        <div class="container-sm pv-70 text-center">
-          <h1 class="text-gray-darker text-uppercase light h2">Regístrate o ingresa para votar</h1>
-          <p class="light h4 lh-lg mb-42">Usa estos formularios para registrarte o entrar al sistema de aplicaciones. </p>   
-	        <div class="row">
-		        <!--<div class="col-md-6 text-left">
-		        	<div class="p-14 border-skyblue">
-				        <h3 class="text-gray-darker text-uppercase light h4">Regístrate</h3>
-								{exp:user:register return="login/verifica"}
-										<p>
-											<label class="small light text-uppercase">Nombre y Apellido</label><br>
-									    <input type="text" name="screen_name"/>
-								    </p>					        
-										<p>
-											<label class="small light text-uppercase">Correo electrónico</label><br>
-									    <input type="text" name="username" />
-								    </p>
-										<p>
-											<label class="small light text-uppercase">Contraseña</label><br>
-									    <input type="password" name="password" />
-								    </p>
-										<p>
-											<label class="small light text-uppercase">Confirmar contraseña</label><br>
-									    <input type="password" name="password_confirm" />
-								    </p>
-										{if captcha}
-										<p>
-											<label class="small light text-uppercase">Por favor, introduzca la palabra que aparece a continuación:</label><br>
-										    <input type="text" name="captcha" />
-									    </p>
-									    <p>{captcha}</p>
-										{/if}
-								    <p><input type="checkbox" name="accept_terms" value="y" /> Aceptar <a href="{site_url}app/assets/documentos/bases_kunan_premio_2015_version_4.pdf">términos y condiciones</a></p>
-								    <p><input type="submit" value="Registrarse"  class="btn btn-skyblue"  /></p>
-										{if no_results}
-								    	<p>Para ver este formulario debes estar desconectado.</p>
-										{/if}
-								{/exp:user:register}
-							</div>-->
-		        </div>
-		        <div class="col-md-6 col-md-offset-3 text-left">
-		        	<div class="p-14 border-sky">
-				        <h3 class="text-gray-darker text-uppercase light h4">Ingresa</h3>
-								{exp:member:login_form return="login/verifica"}
-										<p>
-											<label class="small light text-uppercase">Correo Electrónico</label><br>
-							        <input type="text" name="username">
-								    </p>
-										<p>
-											<label class="small light text-uppercase">Contraseña</label><br>
-							        <input type="password" name="password">
-								    </p>
-										{if auto_login}
-									    <p class="text-left">
-								        <input type="checkbox" name="auto_login" value="1">
-								        Auto-login
-									    </p>
-										{/if}
-								    <p><input type="submit" name="submit" value="Entrar" class="btn btn-sky ml-0"></p>
-								    <a href="{path='login/perdida-contrasena'}"><p class="text-primary">¿Olvidaste tu contraseña?</p></a>
-								{/exp:member:login_form}
-							</div>
-		        </div>
-	        </div>  
+<!doctype html>
+    <html>
+      <head>
+
+        <meta charset="utf-8">
+        <title>Kunan{if embed:titulo} | {embed:titulo}{/if}</title>
+        <meta name="description" content="{if embed:descripcion}{embed:descripcion}{/if}">
+        <meta name="keywords" content=""> 
+        <meta name="author" content="@LaboratoriaLA">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{if embed:url}{embed:url}{if:else}http://kunan.com.pe{/if}">
+        <meta property="og:title" content="{if embed:titulo}{embed:titulo} | KUNAN{if:else}KUNAN{/if}">
+        <meta property="og:site_name" content="KUNAN">
+        <meta property="og:description" content="{if embed:descripcion}{embed:descripcion}{if:else}KUNAN es un programa que impulsa, integra e inspira el emprendimiento y la innovación social de jóvenes en el Perú.{/if}">
+        <meta property="og:image" content="{if embed:imagen}{embed:imagen}{if:else}{site_url}/app/assets/img/logo.png{/if}">
+
+
+        <!-- Twitter Cards -->
+        <meta name="twitter:card" content="">
+        <meta name="twitter:title" content="{if embed:titulo}{embed:titulo} | KUNAN{if:else}KUNAN{/if}">
+        <meta name="twitter:url" content="http://kunan.com.pe">
+        <meta name="twitter:description" content="{if embed:descripcion}{embed:descripcion}{if:else}KUNAN es un programa que impulsa, integra e inspira el emprendimiento y la innovación social de jóvenes en el Perú.{/if}">
+        <meta name="twitter:site" content="KUNAN">
+        <meta name="twitter:creator" content="@LaboratoriaLA">
+        <meta name="twitter:image" content="{if embed:imagen}{embed:imagen}{if:else}{site_url}/app/assets/img/logo.png{/if}">  
+         <link rel="shortcut icon" href="{site_url}app/assets/img/favicon_kunan.png">
+        <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,100,500" rel="stylesheet" type="text/css">
+        <link href="{site_url}app/assets/css/style.css" rel="stylesheet"> <!-- App styles -->
+  <link href="{site_url}app/assets/css/ebm.css" rel="stylesheet">
+        <style>
+          * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+          }
+          body {
+            background-color: #fff; }
+            body h1, body h2, body h3, body h4, body h5, body h6 {
+              font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+              font-weight: 300;
+              color: black; 
+            }
+            body p {
+              font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+            }
+            body span {
+              font-family: "museo-sans", Georgia, "Times New Roman", Times, serif; 
+            }
+            body a:hover {
+              text-decoration: none; 
+            }
+          .font-family {
+            font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+          }
+
+          input {
+            width: 100%;
+            border: 0;
+            outline: 0;
+            background: transparent;
+            border-bottom: 1px solid #b5b6b7;
+            margin-top: 14px; 
+          }
+          .border-skyblue {
+            border: 1px solid #4FAAE5;
+          }
+          .btn {
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: normal;
+            text-align: center;
+            vertical-align: middle;
+            touch-action: manipulation;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            padding: 6px 12px;
+            font-size: 16px;
+            line-height: 1.71429;
+            border-radius: 4px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+          }
+          .btn-skyblue {
+            color: white;
+            background-color: #4FAAE5 !important;
+          }
+
+          .border-sky {
+            border: 1px solid #00B9AC;
+          }
+          .error{
+            color: #F75734;
+            font-weight: 300; 
+            font-size:0.7em; 
+            text-transform: uppercase; 
+          }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <section>
+            <div style="min-height: 70px !important;" class="text-center container-sm">
+              <a href="{site_url}"><img src="{site_url}app/assets/img/logo.png" class="text-center" width="90" alt="KUNAN" style="margin-top: 35px;"></a>
+              <h4 class="mv-21">Para poder votar primero debes iniciar sesión. Si no tienes una cuenta regístrate<a href="{site_url}registro-votaciones" style="text-decoration: none; color: #ea6616;"> AQUÍ.</a> </h4>
+            </div>
+          </section>
+          <div class="container-sm">
+            <div class="row">
+              <div class="col-md-6 mb-21">
+                <div class="border-skyblue" style="padding:14px;">
+                  <h3 class="text-gray-darker text-uppercase light h4">Ingresa</h3>
+                    {exp:member:login_form return="/votacion" group_id="7" id="formulario"}
+                        <p>
+                          <label class="small light text-uppercase required" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Correo Electrónico</label><br>
+                          <input type="text" name="username" required="true">
+                        </p>
+                        <p>
+                          <label class="small light text-uppercase required" style=" color: #707274;; text-transform: uppercase; font-weight: 300;">Contraseña</label><br>
+                          <input type="password" name="password" required="true">
+                        </p>
+                        {if auto_login}
+                          <p class="text-left">
+                            <input type="checkbox" name="auto_login" value="1" style="float: left; display: inline-block; width: 6%; margin-top: 4px;">
+                            Mantener sesión iniciada
+                          </p>
+                        {/if}
+                        <p><input type="submit" name="submit" value="Entrar" class="btn btn-primary full-width ml-0"></p>
+                        <a href="{path='login/perdida-contrasena'}" style="text-decoration: none; color: #ea6616;"><p class="text-primary">¿Olvidaste tu contraseña?</p></a>
+                        <a href="{site_url}registro-votaciones" style="text-decoration: none; color: #ea6616;"><p class="text-primary">Regístrate</p></a>
+                    {/exp:member:login_form}
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-21">
+                <div class="border-sky" style="padding:14px;">
+                  <h4 style=" color: #3E3F40; text-transform: uppercase; font-weight: 300;">También puedes iniciar sesión con Facebook</h4>
+                  <div style="margin-bottom: 14px;">
+                    {exp:fbc:login
+                        permissions="public_profile|email|user_friends"
+                        return_when_logged_in="votacion/"
+                        return_when_logged_out="content/index"
+                        return_for_passive_register="votacion/"
+                        return_on_failure="votacion"
+                        login_button_label="Facebook Login"
+                        button_size="large"
+                    }
+                        {if fbc_logged_out == "y"}
+                          <div>
+                            {fbc_login_button}
+                          </div>
+                        {/if}
+                        {if fbc_logged_in == "y"}
+                            <a href="{path='logout'}">Log Out</a>
+                        {/if}
+                    {/exp:fbc:login}
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
         </div>
-      </section>
-      <!-- END: DESCRIPTION -->
-			{embed="includes/formulario"}
-			{embed="includes/estadistica"}
-    </main>
+      </body>
+    </html>
+  <script src="{site_url}app/assets/js/modernizr.js"></script>
+  <script src="{site_url}app/assets/js/jquery.min.js"></script> <!-- App scripts -->
+  <script src="{site_url}app/assets/js/jquery.validate.min.js"></script>
+  <script src="{site_url}app/assets/js/scripts.min.js"></script>
+  <script>
+  $('.error-message').hide();
+  jQuery(document).ready(function($) {
+    $('#formulario').validate({
+      rules:{
+        username : {
+          required : true,
+          email : true,
+        },
+        password : {
+          required : true,
+          minlength : 5,
+        }
+      },
+      messages: {
+        username : {
+          required : "Ingrese su correo electrónico.",
+          email: "Ingrese un correo válido."
+        },
+        password: "Ingrese su contraseña",
+        minlength : "Ingrese su contraseña"
+      }
+    });
+  });
+
+  </script>
 {/if}
-{embed="includes/footer"}  

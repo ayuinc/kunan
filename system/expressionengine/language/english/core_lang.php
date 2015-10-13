@@ -134,7 +134,7 @@ $lang = array(
 'Debe enviar la palabra que aparece en la imagen',
 
 'captcha_incorrect' =>
-'Usted no envió la palabra exactamente como aparece en la imagen',
+'El texto que ingresaste no es el mismo que el de la imagen. Por favor intenta nuevamente.',
 
 'nonexistent_page' =>
 'La página solicitada no fue encontrada',

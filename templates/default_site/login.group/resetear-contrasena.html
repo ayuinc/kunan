@@ -4,9 +4,11 @@
       <section class="minh-70"></section>
       <!-- DESCRIPTION -->
       <section class="text-left minhp-100" id="description">
-        <div class="minh-42"></div>
+
+        <div class="minh-70"></div>
         <div class="container-md pv-63 text-center text-black">
-          <h1 class=" text-primary">Restablecer Contraseña</h1>
+          <h1 class="light-heading text-primary">Restablecer Contraseña</h1>
+
           <p class="text-gray">
               Este formulario te permitirá cambiar tu contraseña.
           </p>
@@ -19,21 +21,21 @@
                   {if user_no_results}
                       <h4>El token de restabecimiento es inválido.</h4>
                   {/if}
-              
+
+                  <h4>Restablecer</h4>
               
                   <p>
-                      <label for="password" class=" light text-gray mt-21">Nueva contraseña</label><br/>
+                      <label for="password">Nueva contraseña</label><br/>
                       <input type="password" name="password" />
                   </p>
               
                   <p>
-                      <label for="password_confirm" class=" light text-gray mt-21">Confirmar la nueva contraseña</label><br/>
-                      
+                     <label for="password_confirm">Confirmar la nueva contraseña</label><br/>
                       <input type="password" name="password_confirm" />
                   </p>
               
                   <p>
-                      <input type="submit" value="Enviar" class="btn btn-sky ml-0 mv-35" />
+                      <input type="submit" value="Enviar" class="btn btn-sky ml-0" />
                   </p>
               {/exp:user:reset_password}
             </div>        
