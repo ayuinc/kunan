@@ -9,10 +9,12 @@
 								</div>
 								<div class="header-center col-md-9 pr-0 text-center">
 								  <nav class="text-white text-uppercase" >
-									<a href="{site_url}content/index"><span>¿Qué es kunan?</span></a>|
-							        <a href="{site_url}#candidatos"><span>Candidatos</span></a>|
-							        <a href="{site_url}komunicacion"><span>Komunicación</span></a> |
-							        <a href="{site_url}#unete"><span>Súmate</span></a>
+						        <a href="{site_url}"><span>Inicio</span></a>|
+						        <a href="{site_url}premio"><span>Premio</span></a>|
+						        <a href="{site_url}comunidad"><span>Comunidad</span></a>|
+						        <a href="{site_url}komunicacion"><span>Komunicación</span></a> |
+						        <a href="{site_url}votacion"><span>Resultados 2015</span></a> |
+						        <a href="{site_url}#unete"><span>Súmate</span></a>
 									<!--{if logged_in}
 									| <a href="{site_url}formulario-edicion/{member_id}"><span>Editar Postulación</span></a>
 									{/if}-->
@@ -20,11 +22,11 @@
 								</div>
 									<!-- <a href="{site_url}formulario/editar/{member_id}" class="btn text-uppercase">Editar</a> |  -->
 								<div class="header-right col-md-2 pt-14 pr-21 text-right text-primary btn">
-								{if logged_in}
+								<!--{if logged_in}
 									<a class="btn-out btn text-white small text-uppercase btn-primary pv-7" href="{path='logout'}">{screen_name} (salir)</a>
 								{if:else}
 									<a class="btn-out btn text-white small text-uppercase btn-primary pv-7" href="{site_url}login"><span>Votación</span></a>
-								{/if}
+								{/if}-->
 								</div>   
 						  </div> 
 					  </div>
@@ -42,9 +44,11 @@
 			   <!--  <li><a href="{site_url}content/index#porqueestamos"><h3 class="text-uppercase text-white">Por que estamos aquí</h3></a></li>
 				<li><a href="{site_url}content/index#nuestroreto"><h3 class="text-uppercase text-white">Nuestro reto</h3></a></li>
 				<li><a href="{site_url}content/index#lineasdeaccion"><h3 class="text-uppercase text-white">Linea de acción</h3></a></li> -->
-				<li><a href="{site_url}comunidad	"><h3 class="text-uppercase text-white">Comunidad</h3></a></li>
-				<li><a href="{site_url}premio"><h3 class="text-uppercase text-white">Premio</h3></a></li>
-				<li><a href="{site_url}komunicacion"><h3 class="text-uppercase text-white">Komunicación</h3></a></li>
+	            <li><a href="{site_url}"><h3 class="text-uppercase text-white">Inicio</h3></a></li>
+	            <li><a href="{site_url}comunidad"><h3 class="text-uppercase text-white">Comunidad</h3></a></li>
+	            <li><a href="{site_url}premio"><h3 class="text-uppercase text-white">Premio</h3></a></li>
+	            <li><a href="{site_url}komunicacion"><h3 class="text-uppercase text-white">Komunicación</h3></a></li>
+	            <li><a href="{site_url}votacion"><h3 class="text-uppercase text-white">Resultados 2015</h3></a></li>
 				<!--{if logged_in}
 				<li><a href="{site_url}formulario-edicion/{member_id}"><h3 class="text-uppercase text-white">Editar Postulación</h3></a></li>
 				{/if}				

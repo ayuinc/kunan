@@ -13,15 +13,16 @@
 						        <a href="{site_url}premio"><span>Premio</span></a>|
 						        <a href="{site_url}comunidad"><span>Comunidad</span></a>|
 						        <a href="{site_url}komunicacion"><span>Komunicación</span></a> |
+						        <a href="{site_url}votacion"><span>Resultados 2015</span></a> |
 						        <a href="{site_url}#unete"><span>Súmate</span></a>
 						      </nav>
 						    </div>
 						    <div class="header-right col-md-2 pt-14 pr-21 text-right">
-						    {if logged_in}
+						    <!--{if logged_in}
 						    	<a class="btn btn-outline small text-uppercase btn-primary pv-7" href="{path='logout'}">{screen_name} (salir)</a>
 						    {if:else}
 						    	<a class="btn small text-uppercase btn-primary pv-7" href="{site_url}login"><span>Votación</span></a>
-						    {/if}
+						    {/if}-->
 						    </div>  
 						  </div>  
 					  </div> 
@@ -43,11 +44,12 @@
 	            <li><a href="{site_url}comunidad"><h3 class="text-uppercase text-white">Comunidad</h3></a></li>
 	            <li><a href="{site_url}premio"><h3 class="text-uppercase text-white">Premio</h3></a></li>
 	            <li><a href="{site_url}komunicacion"><h3 class="text-uppercase text-white">Komunicación</h3></a></li>
-							{if logged_in}
+	            <li><a href="{site_url}votacion"><h3 class="text-uppercase text-white">Resultados 2015</h3></a></li>
+							<!--{if logged_in}
 							<li><a href="{path='logout'}"><h3 class="text-uppercase text-white">{screen_name} (salir)</h3></a></li>
 							{if:else}
 							<li><a href="{site_url}login"><h3 class="text-uppercase text-white">Votación</h3></a></li>
-							{/if}	
+							{/if}-->	
 						
 	          </ul>
 	        </nav>
