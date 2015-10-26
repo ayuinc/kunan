@@ -1,46 +1,123 @@
+{exp:channel:entries channel="votacion" limit="1" disable="member_data" entry_id="{segment_3}"}
 {embed="includes/header" 
-  titulo="Kunan" 
-  descripcion="Kunan es un programa que impulsa, integra e inspira el emprendimiento y la innovación social de jóvenes en el Perú." 
-  imagen="{site_url}app/assets/img/logo-meta.png"
-  url="{site_url}{segment_1}"
+  titulo="{title}" 
+  descripcion="{texto_introductorio}" 
+  imagen="{logo}"
+  url="{site_url}{segment_1}/{segment_2}/{segment_3}/{segment_4}"
 }
+
 {if segment_3 == ''}
  {redirect="/votacion"}
 {/if}
 {embed="includes/header"}
+
 {embed="includes/navegacion-vistas"}
 <main class="site-content">
-      <section class="minh-70 hidden-xs"></section>
-    {exp:channel:entries channel="votacion" limit="1" disable="member_data" entry_id="{segment_3}"}
+      <section class="minh-70 hidden-lg hidden-md hidden-sm"></section>
       <section id="hero-image" class="minhp-70 minhp-20-xs" style="background:url({imagen_de_portada})">
         <div class="bg-hero-image minhp-70">
-          <div class="container-md minh-350 minh-70-xs"></div>  
+          <div class="container-md minh-280 minh-70-xs banner-xs">
+            <div class="row hidden-lg hidden-md hidden-sm">
+              <div class="col-xs-8 col-xs-offset-2 text-center">
+                <img class="img-responsive mt-42" width="" src="{logo}">
+                <h2 class="text-white">{nombre_del_proyecto}</h2>
+                <p class="text-white">{texto_introductorio}</p>
+              </div>
+            </div>
+          </div>  
           <div class="container-md text-white pb-21">
-            <div class="row">
-              <div class="col-md-2 absolute col-xs-6 bg-gray-lighter p-14">
-                <img class="img-responsive" width="" src="{logo}">
-	              <div class="row pt-28 mb-14">
-		              {if foto_autoridad}
-	                <div class="col-md-3 col-xs-2 pr-0">
-	                  <img src="{foto_autoridad}" class="img-responsive">
-	                </div>
-	                <div class="col-md-9 col-xs-10 light">
-		              {if:else}
-		              <div class="col-md-12 col-xs-12 light">
-		              {/if}  
-	                  <p class="h6 m-0 text-gray-dark pt-7">{nombre_autoridad}</p>
-	                  <p class="h6 m-0 text-gray light"><dfn>{cargo}</dfn></p>
-	                </div>
-	              </div>
-	              	{if email_proyecto}
-	                <p class="small text-gray fz-proyectos m-0"><span class="text-black light">E-mail:</span><a href="mailto:{email_proyecto}" class="text-gray-link light"> {email_proyecto}</a> </p>
-	                {/if}
-	              	{if website}
-	                <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Website:</span><a href="{website}" target="_blank" class="text-gray-link"> {website}</a> </p>
-	                {/if}
-	              	{if telefono_proyecto}
-	                <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Teléfono:</span> {telefono_proyecto}</p>
-	                {/if}
+            <div class="row banner-perfil">
+              <div class="col-md-2 absolute col-xs-6 bg-gray-lighter p-14 perfil-lg hidden-xs">
+                <img class="img-responsive" width="" src="{logo}" alt="Logo {nombre_del_proyecto}">
+                  <p class="small text-gray fz-proyectos mt-21 mb-0"><span class="text-black light">Representante:</span> {nombre_autoridad} </p>
+                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Región sede:</span> {lugar_proyecto} </p>
+                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Región(s) Ámbito acción:</span> {region_ambito_accion} </p>
+
+                  {if website}
+                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Website:</span><a href="{website}" target="_blank" class="text-gray-link"> Míralo aquí</a> </p>
+                  {/if}
+                  {if sector_proyecto}
+                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Sector:</span> {sector_proyecto}</p>
+                  {/if}
+    
+                  <p class="m-0"><span class="text-black light mt-21 fz-proyectos">Síguenos en:</span></p>
+                  {if facebook_proyecto}
+                  <a href="{facebook_proyecto}" target="_blank"><img class="icon-perfil" src="{site_url}app/assets/img/facebook-negro.png"></a>
+                  {/if}
+                  {if twitter_proyecto}
+                  <a href="{twitter_proyecto}" target="_blank"><img class="icon-perfil mh-7" src="{site_url}app/assets/img/twitter-negro.png"></a>
+                  {/if}
+                  {if youtube_proyecto}
+                  <a href="{youtube_proyecto}" target="_blank"><img class="icon-perfil mh-7" src="{site_url}app/assets/img/youtube-negro.png"></a>
+                  {/if}
+
+                  
+
+                <div class="mb-ch-21 pt-21">
+
+                  {if logged_in}
+                       
+                    <i class="text-gray light btn-outline btn-gray btn-votos-perfil">
+                    {exp:rating:stats entry_id="{entry_id}"}
+                      {overall_count}
+                      {if rating_no_results}
+                        0 
+                      {/if}
+                    {/exp:rating:stats}
+                    </i>
+                      {exp:rating:entries dynamic="off" rating_author_id="CURRENT_USER"}
+                       {if rating_no_results}      
+                          {exp:rating:form
+                            entry_id="{entry_id}"
+                            collection="Votos"
+                            return="gracias/voto/{title}"
+                            anonymous="no" 
+                            allow_duplicates="no"
+                            class="mt-7 btn p-0 mb-7 votos-perfil full-width"
+                          } 
+                             
+                          {/exp:rating:form}
+                       {/if}
+                    {/exp:rating:entries}
+                  {if:else}
+                    <input type="hidden" name="rating" id="rating" value="1" class="text-gray light btn-outline btn-gray btn-votacion">
+                      <i class="text-gray light btn-outline btn-gray btn-votos-perfil">
+                    {exp:rating:stats entry_id="{entry_id}"}
+                      {overall_count}
+                      {if rating_no_results}
+                        0 
+                      {/if}
+                    {/exp:rating:stats}
+                    </i>
+
+                  {/if}
+
+                    <!-- 
+                    <p class="text-gray light small bg-white btn-outline btn-votacion-perfil">131,1253</p>
+                    <a href="" class="text-uppercase btn-primary text-white btn btn-vota-perfil"> <span class="light ">Vota</span></a> -->
+                </div>
+              </div>
+              <div class="col-md-9 col-xs-6 light col-md-offset-3 hidden-xs">
+                <h2 class="text-white m-0 pl-35-xs pt-35-xs pv-14">{nombre_del_proyecto}</h2>
+                <p class="hidden-xs book">{texto_introductorio}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- DESCRIPTION -->
+      <section class="text-left" id="description">
+        <div class="container-md pv-70 minhp-70">
+          <div class="row">
+            <div class="col-xs-offset-2 col-xs-8 bg-gray-lighter p-14 perfil-lg hidden-lg hidden-md hidden-sm mb-35">
+                <img class="img-responsive hidden-xs" width="" src="{logo}">
+            
+                 <p class="small text-gray fz-proyectos mt-21 mb-0"><span class="text-black light">Representante:</span> {nombre_autoridad} </p>
+                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Región sede:</span> {lugar_proyecto} </p>
+                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Región(s) Ámbito acción:</span> {region_ambito_accion} </p>
+                  {if sector_proyecto}
+                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Sector:</span> {sector_proyecto}</p>
+                  {/if}
 
                   <p class="m-0"><span class="text-black light mt-21 fz-proyectos">Síguenos en:</span></p>
                   {if facebook_proyecto}
@@ -53,31 +130,11 @@
                   <a href="{youtube_proyecto}" target="_blank"><img class="icon-perfil mh-7" src="{site_url}app/assets/img/youtube-negro.png"></a>
                   {/if}
 
-                  <h6 class="text-uppercase mt-14 text-primary fz-xs light mb-7">VOTOS RECIBIDOS</h6>
-                {if logged_in}
-                    {exp:rating:form
-                      entry_id="{entry_id}"
-                      collection="Votos"
-                      return="gracias/voto/{title}"
-                      anonymous="no" 
-                      allow_duplicates="no"
-                    }                     
-                    <input type="hidden" name="rating" id="rating" value="1" class="text-gray light small bg-white btn-outline btn-votacion-perfil">
-                      <i class="text-gray light small bg-white btn-outline btn-votacion-perfil">
-                        {exp:rating:stats entry_id="{entry_id}"}
-                          {overall_count}
-                          {if rating_no_results}
-                            0
-                          {/if}
-                        {/exp:rating:stats}
-                      </i>
-                    <!--<button type="submit" name="submit" value="Vota" class="text-uppercase btn-primary text-white btn btn-vota-perfil btn-icon-custom btn-primary">
-                      <span><small>VOTAR</small></span>
-                    </button>--> 
-                    {/exp:rating:form}      
-                  {if:else}
-                    <input type="hidden" name="rating" id="rating" value="1" class="text-gray light small bg-white btn-outline btn-votacion-perfil">
-                      <i class="text-gray light small bg-white btn-outline btn-votacion-perfil">
+                <div class="mb-ch-21 pt-21">
+
+                  {if logged_in}
+                       
+                    <i class="text-gray light btn-outline btn-gray btn-votos-perfil">
                     {exp:rating:stats entry_id="{entry_id}"}
                       {overall_count}
                       {if rating_no_results}
@@ -85,31 +142,48 @@
                       {/if}
                     {/exp:rating:stats}
                     </i>
-                    <!--<a href="{site_url}registro-votaciones/{entry_id}" class="text-uppercase btn-primary text-white btn btn-vota-perfil btn-icon-custom btn-primary">
-                      <span><small>Voto(s)</small></span>
-                    </a>--> 
+                      {exp:rating:entries dynamic="off" rating_author_id="CURRENT_USER"}
+                       {if rating_no_results}      
+                          {exp:rating:form
+                            entry_id="{entry_id}"
+                            collection="Votos"
+                            return="gracias/voto/{title}"
+                            anonymous="no" 
+                            allow_duplicates="no"
+                            class="mt-7 btn p-0 mb-7 votos-perfil"
+                          } 
+                          
+                          {/exp:rating:form}
+                       {/if}
+                    {/exp:rating:entries}
+                  {if:else}
+                    <input type="hidden" name="rating" id="rating" value="1" class="text-gray light btn-outline btn-gray btn-votacion">
+                      <i class="text-gray light btn-outline btn-gray btn-votos-perfil" style="width: 59px; padding: 4px 7px 3px 3px !important;">
+                    {exp:rating:stats entry_id="{entry_id}"}
+                      {overall_count}
+                      {if rating_no_results}
+                        0 
+                      {/if}
+                    {/exp:rating:stats}
+                    </i>
+      
                   {/if}
-                  <!-- 
-                  <p class="text-gray light small bg-white btn-outline btn-votacion-perfil">131,1253</p>
-                  <a href="" class="text-uppercase btn-primary text-white btn btn-vota-perfil"> <span class="light ">Vota</span></a> -->
-              </div>
-              <div class="col-md-9 col-xs-6 light col-md-offset-3">
-                <h2 class="text-white m-0 pl-35-xs pt-35-xs pv-14">{nombre_del_proyecto}</h2>
-                <p class="hidden-xs">{texto_introductorio}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- DESCRIPTION -->
-      <section class="text-left" id="description">
-        <div class="container-md pv-70 minhp-70">
-          <div class="row">
-            
-            <div class="col-md-9 light text-center col-md-offset-3">
 
-              <div class="text-left text-gray container-sm">
+                    <!-- 
+                    <p class="text-gray light small bg-white btn-outline btn-votacion-perfil">131,1253</p>
+                    <a href="" class="text-uppercase btn-primary text-white btn btn-vota-perfil"> <span class="light ">Vota</span></a> -->
+                </div>
+              </div>
+            
+            <div class="col-md-9 col-xs-12 light col-md-offset-3">
+
+              <div class="text-left text-gray container-sm text-center-xs">
                 <p class="h4 light lh-lg m-0">{contenido_proyecto}</p>
+                <div class="text-center mt-42">
+                  {if votacion-video}
+                  <iframe width="100%" class="iframe" src="https://www.youtube.com/embed/{votacion-video}" frameborder="0" allowfullscreen></iframe>
+                  {/if}
+                </div>
               </div>
               
             </div>
@@ -119,5 +193,6 @@
 
       </section>
       <!-- END: DESCRIPTION --> 
-    </main>    
-{embed="includes/footer"} 
+    </main>   
+          
+{embed="includes/footer"}
