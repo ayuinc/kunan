@@ -3,7 +3,9 @@
 	          {exp:channel:entries channel="proyecto" limit="16" disable="member_data"}
             <div class="col-md-3 col-xs-6">
               	<a href="{site_url}emprendedores-sociales/proyecto/{url_title}">
-                <img class="img-responsive" width="" src="{logo}" alt="{title}">
+	              	{proyecto-imagen-organizacion}
+										<img class="img-responsive" width="100%" src="{image:url:small}" alt="{title}">
+                	{proyecto-imagen-organizacion}
 	              </a>
             </div>
             {/exp:channel:entries}
