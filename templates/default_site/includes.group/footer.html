@@ -1,4 +1,3 @@
-    <!-- FOOTER -->
     <footer class="footer pv-70 minh-280 bg-gray-darker">
       <div class="container-md text-white">
         <div class="row">
@@ -9,8 +8,6 @@
             <a href="{site_url}komunicacion" class="text-hover-gray-lighter"><p class="small mb-0">Komunicación</p></a>
           </div>
           <div class="col-md-4 hidden-xs thin ">
-            <!--<h3 class="pb-7 h4">Postula</h3>
-            <a href="{site_url}login" class="text-hover-gray-lighter"><p class="small mb-0">Formulario de Postulante</p></a>-->
           </div>
           <div class="col-md-4 col-xs-12 text-center text-center-xs">
             <h3 class="pb-7 h4">Síguenos</h3>
@@ -22,10 +19,9 @@
         </div>
       </div>
     </footer>
-    <!-- END: FOOTER -->
   </div>
   </body>
-  <script src="{site_url}app/assets/js/jquery.min.js"></script> <!-- App scripts -->
+  <script src="{site_url}app/assets/js/jquery.min.js"></script>
   <script src="{site_url}app/assets/js/scripts.min.js"></script>
   <script src="{site_url}app/assets/js/jquery.validate.min.js"></script>
   <script src="{site_url}app/assets/js/menu-control.js"></script>
@@ -34,9 +30,7 @@
   <script src="{site_url}app/assets/js/modal.js"></script>
 	{if segment_2=='articulo'}
 	<script type="text/javascript">
-	    /* * * CONFIGURATION VARIABLES * * */
 	    var disqus_shortname = 'kunan';
-	    /* * * DON'T EDIT BELOW THIS LINE * * */
 	    (function() {
 	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
@@ -62,7 +56,6 @@
   </script>
   
   {if segment_1!='login' AND segment_2!='voto'}
-  <!-- Go to www.addthis.com/dashboard to customize your tools -->
 	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-558a3b7841972204" async="async"></script>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -74,8 +67,6 @@
 	  ga('send', 'pageview');
 	</script>
 	{/if}
-	
-  <!-- begin olark code -->
 	<script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
 	f[z]=function(){
 	(a.s=a.s||[]).push(arguments)};var a=f[z]._={
@@ -92,7 +83,5 @@
 	var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
 	b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
 	loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
-	/* custom configuration goes here (www.olark.com/documentation) */
 	olark.identify('8619-385-10-4009');/*]]>*/</script><noscript><a href="https://www.olark.com/site/8619-385-10-4009/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
-	<!-- end olark code -->
 </html>
