@@ -1,5 +1,31 @@
           <div class="row container-sm pv-35">
-	          <h4 class="pb-14">Ganadores 2015</h4>
+	          <h3>Premio 2015</h3>
+	          <h4 class="pb-14">Ganador</h4>
+	          <div class="col-md-3"></div>
+	          {exp:channel:entries channel="votacion" limit="16" disable="member_data"}
+            <div class="col-md-3 col-xs-6">
+              	<a href="{site_url}emprendedores-sociales/proyecto/{url_title}">
+	              	{proyecto-imagen-organizacion}
+										<img class="img-responsive" width="100%" src="{image:url:small}" alt="{title}">
+                	{/proyecto-imagen-organizacion}
+	              </a>
+            </div>
+            {/exp:channel:entries}
+	          <h4 class="pb-14">Mención</h4>
+	          <div class="col-md-3"></div>
+	          {exp:channel:entries channel="votacion" limit="16" disable="member_data"}
+            <div class="col-md-3 col-xs-6">
+              	<a href="{site_url}emprendedores-sociales/proyecto/{url_title}">
+	              	{proyecto-imagen-organizacion}
+										<img class="img-responsive" width="100%" src="{image:url:small}" alt="{title}">
+                	{/proyecto-imagen-organizacion}
+	              </a>
+            </div>
+            {/exp:channel:entries}
+          </div>                      
+          <div class="row container-sm pv-35">
+	          <h3>Premio 2014</h3>
+	          <h4 class="pb-14">Ganadores</h4>
 	          <div class="col-md-3"></div>
 	          {exp:channel:entries channel="proyecto" limit="16" disable="member_data" category="28"}
             <div class="col-md-3 col-xs-6">
@@ -11,3 +37,4 @@
             </div>
             {/exp:channel:entries}
           </div>
+          
