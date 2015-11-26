@@ -9,14 +9,17 @@
 {exp:channel:entries channel="proyecto" limit="1" disable="member_data"}
     <main class="site-content">
       <section class="minh-70 hidden-xs"></section>
-      <section id="hero-image" class="minhp-70 minhp-20-xs" style="background:url({imagen_de_portada})">
+      {proyecto-imagen-bg}
+      <section id="hero-image" class="minhp-70 minhp-20-xs" style="background:url({image:url})">
+	    {/proyecto-imagen-bg}
         <div class="bg-hero-image minhp-70">
           <div class="container-md minh-350 minh-70-xs"></div>  
           <div class="container-md text-white pb-21">
             <div class="row">
               <div class="col-md-2 absolute col-xs-6 bg-gray-lighter p-14">
-
-                <img class="img-responsive" width="" src="{logo}">
+								{proyecto-imagen-organizacion}
+                <img class="img-responsive" width="100%" src="{image:url:small}" alt="{title}">
+                {proyecto-imagen-organizacion}
                 <div class="row pt-28 mb-14">
                   <div class="col-md-3 col-xs-2 pr-0">
                     <img src="{foto_autoridad}" class="img-responsive">
@@ -26,22 +29,22 @@
                     <p class="h6 m-0 text-gray ">{cargo}</p>
                   </div>
                 </div>
-                  {if email_proyecto}
-                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">E-mail:</span><a href="mailto:{email_proyecto}" class="text-gray-link light"> {email_proyecto}</a> </p>
+                  {if proyecto-correoelectrnico}
+                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">E-mail:</span><a href="mailto:{proyecto-correoelectrnico}" class="text-gray-link light"> {proyecto-correoelectrnico}</a> </p>
                   {/if}
-                  {if website}
-                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Website:</span><a href="{website}" target="_blank" class="text-gray-link"> {website}</a> </p>
+                  {if proyecto-website}
+                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Website:</span><a href="{proyecto-website}" target="_blank" class="text-gray-link"> {proyecto-website}</a> </p>
                   {/if}
                   {if telefono_proyecto}
                   <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Teléfono:</span> {telefono_proyecto}</p>
                   {/if}
 
                   <p class="m-0"><span class="text-black light mt-21 fz-proyectos">Síguenos en:</span></p>
-                  {if facebook_proyecto}
-                  <a href="{facebook_proyecto}" target="_blank"><img class="icon-perfil" src="{site_url}app/assets/img/facebook-negro.png"></a>
+                  {if proyecto-facebook}
+                  <a href="{proyecto-facebook}" target="_blank"><img class="icon-perfil" src="{site_url}app/assets/img/facebook-negro.png"></a>
                   {/if}
-                  {if twitter_proyecto}
-                  <a href="" target="_blank"><img class="icon-perfil mh-7" src="{site_url}app/assets/img/twitter-negro.png"></a>
+                  {if proyecto-twitter}
+                  <a href="{proyecto-twitter}" target="_blank"><img class="icon-perfil mh-7" src="{site_url}app/assets/img/twitter-negro.png"></a>
                   {/if}
                   {if youtube_proyecto}
                   <a href="{youtube_proyecto}" target="_blank"><img class="icon-perfil mh-7" src="{site_url}app/assets/img/youtube-negro.png"></a>
@@ -51,8 +54,8 @@
                   <a href="" class="text-uppercase btn-primary text-white btn btn-vota-perfil"> <span class="light ">Vota</span></a> -->
               </div>
               <div class="col-md-9 col-xs-6 light col-md-offset-3">
-                <h2 class="text-white m-0 pl-35-xs pt-35-xs pv-14">{nombre_del_proyecto}</h2>
-                <p class="hidden-xs">{texto_introductorio}</p>
+                <h2 class="text-white m-0 pl-35-xs pt-35-xs pv-14">{title}</h2>
+                <p class="hidden-xs">{proyecto-introduccion}</p>
               </div>
             </div>
           </div>
@@ -66,7 +69,7 @@
             <div class="col-md-9 light text-center col-md-offset-3">
 
               <div class="text-left text-gray container-sm">
-                <p class="h4 light lh-lg m-0">{contenido_proyecto}</p>
+                <p class="h4 light lh-lg m-0">{proyecto-contenido}</p>
               </div>
               
             </div>
