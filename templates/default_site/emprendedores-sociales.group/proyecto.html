@@ -1,22 +1,24 @@
-{embed="includes/header" 
-  titulo="Kunan" 
-  descripcion="Kunan es un programa que impulsa, integra e inspira el emprendimiento y la innovación social de jóvenes en el Perú." 
-  imagen="{site_url}app/assets/img/logo-meta.png"
-  url="{site_url}{segment_1}"
-}
-{embed="includes/header"}
-{embed="includes/navegacion-vistas"} 
 {exp:channel:entries channel="proyecto" limit="1" disable="member_data"}
+{embed="includes/header" 
+  titulo="{title} | Proyectos" 
+  descripcion="{proyecto-introduccion}" 
+  url="{current_url}"
+}
+{embed="includes/navegacion-vistas"} 
     <main class="site-content">
       <section class="minh-70 hidden-xs"></section>
-      <section id="hero-image" class="minhp-70 minhp-20-xs" style="background:url({imagen_de_portada})">
+      {proyecto-imagen-bg}
+      <section id="hero-image" class="minhp-70 minhp-20-xs" style="background:url({image:url})">
+	    {/proyecto-imagen-bg}
         <div class="bg-hero-image minhp-70">
           <div class="container-md minh-350 minh-70-xs"></div>  
           <div class="container-md text-white pb-21">
             <div class="row">
               <div class="col-md-2 absolute col-xs-6 bg-gray-lighter p-14">
-
-                <img class="img-responsive" width="" src="{logo}">
+								{proyecto-imagen-organizacion}
+                <img class="img-responsive pb-14" width="100%" src="{image:url:small}" alt="{title}">
+                {/proyecto-imagen-organizacion}
+                {if nombre_autoridad}
                 <div class="row pt-28 mb-14">
                   <div class="col-md-3 col-xs-2 pr-0">
                     <img src="{foto_autoridad}" class="img-responsive">
@@ -26,55 +28,61 @@
                     <p class="h6 m-0 text-gray ">{cargo}</p>
                   </div>
                 </div>
-                  {if email_proyecto}
-                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">E-mail:</span><a href="mailto:{email_proyecto}" class="text-gray-link light"> {email_proyecto}</a> </p>
-                  {/if}
-                  {if website}
-                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Website:</span><a href="{website}" target="_blank" class="text-gray-link"> {website}</a> </p>
-                  {/if}
-                  {if telefono_proyecto}
-                  <p class="small text-gray fz-proyectos m-0"><span class="text-black light">Teléfono:</span> {telefono_proyecto}</p>
-                  {/if}
-
-                  <p class="m-0"><span class="text-black light mt-21 fz-proyectos">Síguenos en:</span></p>
-                  {if facebook_proyecto}
-                  <a href="{facebook_proyecto}" target="_blank"><img class="icon-perfil" src="{site_url}app/assets/img/facebook-negro.png"></a>
-                  {/if}
-                  {if twitter_proyecto}
-                  <a href="" target="_blank"><img class="icon-perfil mh-7" src="{site_url}app/assets/img/twitter-negro.png"></a>
-                  {/if}
-                  {if youtube_proyecto}
-                  <a href="{youtube_proyecto}" target="_blank"><img class="icon-perfil mh-7" src="{site_url}app/assets/img/youtube-negro.png"></a>
-                  {/if}
-                  <!-- 
-                  <p class="text-gray light small bg-white btn-outline btn-votacion-perfil">131,1253</p>
-                  <a href="" class="text-uppercase btn-primary text-white btn btn-vota-perfil"> <span class="light ">Vota</span></a> -->
+                {/if}
+                {if proyecto-correoelectrnico}
+                  <p class="small text-gray fz-proyectos m-0">
+	                  <span class="text-black light">E-mail:</span>
+	                  <a href="mailto:{proyecto-correoelectrnico}" class="text-gray-link light"> {proyecto-correoelectrnico}</a> 
+	                </p>
+                {/if}
+                {if proyecto-website}
+                	<p class="small text-gray fz-proyectos m-0">
+                  	<span class="text-black light">Website:</span>
+                  	<a href="{proyecto-website}" target="_blank" class="text-gray-link">Visita su website</a> 
+                  </p>
+                {/if}
+                {if telefono_proyecto}
+                	<p class="small text-gray fz-proyectos m-0">
+                  	<span class="text-black light">Teléfono:</span> 
+                  	{telefono_proyecto}
+                  </p>
+                {/if}
+                <p class="m-0"><span class="text-black light mt-21 fz-proyectos">Síguenos en:</span></p>
+                {if proyecto-facebook}
+                	<a href="{proyecto-facebook}" target="_blank">
+                  	<img class="icon-perfil" src="{site_url}app/assets/img/facebook-negro.png">
+                  </a>
+                {/if}
+                {if proyecto-twitter}
+                	<a href="{proyecto-twitter}" target="_blank">
+                  	<img class="icon-perfil mh-7" src="{site_url}app/assets/img/twitter-negro.png">
+                  </a>
+                {/if}
+                {if youtube_proyecto}
+                	<a href="{youtube_proyecto}" target="_blank">
+                  	<img class="icon-perfil mh-7" src="{site_url}app/assets/img/youtube-negro.png">
+                  </a>
+                {/if}
               </div>
               <div class="col-md-9 col-xs-6 light col-md-offset-3">
-                <h2 class="text-white m-0 pl-35-xs pt-35-xs pv-14">{nombre_del_proyecto}</h2>
-                <p class="hidden-xs">{texto_introductorio}</p>
+                <h1 class="text-white m-0 pl-35-xs pt-35-xs pv-14 pl-14">{title}</h1>
+                <p class="hidden-xs pl-14">{proyecto-introduccion}</p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- DESCRIPTION -->
       <section class="text-left" id="description">
-        <div class="container-md pv-70 minhp-70">
+        <div class="container-md pv-56">
           <div class="row">
-            
             <div class="col-md-9 light text-center col-md-offset-3">
-
               <div class="text-left text-gray container-sm">
-                <p class="h4 light lh-lg m-0">{contenido_proyecto}</p>
+                {proyecto-contenido}
               </div>
-              
             </div>
           </div>
         </div>
-
       </section>
-      <!-- END: DESCRIPTION -->
 {/exp:channel:entries}      
 			{embed="includes/formulario"}
       <div id="unete">

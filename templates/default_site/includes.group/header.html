@@ -4,10 +4,13 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
+	<title>{if embed:titulo}{embed:titulo} | Innovación que transforma{if:else}KUNAN, Innovación que transforma{/if}</title>
+	<meta property="description" content="{if embed:descripcion}{embed:descripcion}{if:else}KUNAN es un programa que impulsa, integra e inspira el emprendimiento y la innovación social de jóvenes en el Perú.{/if}">
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="{if embed:url}{embed:url}{if:else}http://kunan.com.pe{/if}">
-  <meta property="og:title" content="{if embed:titulo}{embed:titulo} | KUNAN{if:else}KUNAN{/if}">
+  <meta property="og:title" content="{if embed:titulo}{embed:titulo} | Innovación que transforma{if:else}KUNAN, Innovación que transforma{/if}">
   <meta property="og:site_name" content="KUNAN">
   <meta property="og:description" content="{if embed:descripcion}{embed:descripcion}{if:else}KUNAN es un programa que impulsa, integra e inspira el emprendimiento y la innovación social de jóvenes en el Perú.{/if}">
   <meta property="og:image" content="{if embed:imagen}{embed:imagen}{if:else}{site_url}/app/assets/img/logo.png{/if}">
@@ -15,8 +18,8 @@
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="">
-  <meta name="twitter:title" content="{if embed:titulo}{embed:titulo} | KUNAN{if:else}KUNAN{/if}">
-  <meta name="twitter:url" content="http://kunan.com.pe">
+  <meta name="twitter:title" content="{if embed:titulo}{embed:titulo} | Innovación que transforma{if:else}KUNAN, Innovación que transforma{/if}">
+  <meta name="twitter:url" content="{if embed:url}{embed:url}{if:else}http://kunan.com.pe{/if}">
   <meta name="twitter:description" content="{if embed:descripcion}{embed:descripcion}{if:else}KUNAN es un programa que impulsa, integra e inspira el emprendimiento y la innovación social de jóvenes en el Perú.{/if}">
   <meta name="twitter:site" content="KUNAN">
   <meta name="twitter:creator" content="@LaboratoriaLA">

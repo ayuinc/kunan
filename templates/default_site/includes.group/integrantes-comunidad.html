@@ -1,10 +1,38 @@
           <div class="row container-sm pv-35">
-	          <div class="col-md-3"></div>
-	          {exp:channel:entries channel="proyecto" limit="16" disable="member_data" category="25"}
-            <div class="col-md-3 col-xs-6">
+	          <h3>Premio 2015</h3>
+	          <h4 class="pb-14">Ganador</h4>
+	          <div class="col-md-4"></div>
+	          {exp:channel:entries channel="votacion" limit="16" disable="member_data" category="29"}
+            <div class="col-md-4 col-xs-6">
               	<a href="{site_url}emprendedores-sociales/proyecto/{url_title}">
-                <img class="img-responsive" width="" src="{logo}">
+	              	<img class="img-responsive" width="100%" src="{logo}" alt="{title}">
 	              </a>
             </div>
             {/exp:channel:entries}
           </div>
+          <div class="row container-sm pv-21">  
+	          <h4 class="pb-14">Mención</h4>
+	          <div class="col-md-4"></div>
+	          {exp:channel:entries channel="votacion" limit="16" disable="member_data" category="30"}
+            <div class="col-md-4 col-xs-6">
+              	<a href="{site_url}emprendedores-sociales/proyecto/{url_title}">
+	              	<img class="img-responsive" width="100%" src="{logo}" alt="{title}">
+	              </a>
+            </div>
+            {/exp:channel:entries}
+          </div>                      
+          <div class="row container-sm pv-35">
+	          <h3>Premio 2014</h3>
+	          <h4 class="pb-14">Ganadores</h4>
+	          <div class="col-md-3"></div>
+	          {exp:channel:entries channel="proyecto" limit="16" disable="member_data" category="28"}
+            <div class="col-md-3 col-xs-6">
+              	<a href="{site_url}emprendedores-sociales/proyecto/{url_title}">
+	              	{proyecto-imagen-organizacion}
+										<img class="img-responsive" width="100%" src="{image:url:small}" alt="{title}">
+                	{/proyecto-imagen-organizacion}
+	              </a>
+            </div>
+            {/exp:channel:entries}
+          </div>
+          
