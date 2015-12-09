@@ -1,0 +1,37 @@
+{embed="includes/header" 
+	titulo="Jurados" 
+	descripcion="El premio impulsa todas las iniciativas que generan valor y que están haciendo frente a los desafíos más relevantes para el desarrollo del Perú." 
+	imagen="{site_url}app/assets/img/premio-meta.png"
+  url="{site_url}{segment_1}"
+}
+{embed="includes/navegacion-vistas"} 
+
+    <main class="site-content">
+      <section class="text-center">
+        <div class="container-md pv-70 text-gray-darker">
+          <div class="minh-70"></div>
+          <h2 class="text-center text-black mb-21 lh-lg mt-21 mb-35">Jurados Kunan 2014 - 2015</h2>
+          <div class="row">
+          {exp:channel:entries channel="jurado" limit="15" disable="member_data"}
+            <div class="col-md-4 mb-21 minh-420">
+              {imgen-jurado}
+              <div class="bg-img-block mt-7" style="height: 300px; background-image: url({image:url:large});"></div>
+              {/imgen-jurado}
+              <p class="light text-primary text-uppercase mb-0 mt-14">{title}</p>
+              <p class="light text-gray" style="line-height: 1.1;">{jurado-cargo}</p>
+            </div>
+          {/exp:channel:entries}
+          </div>
+
+
+          <img class="pv-56 separador"src="{site_url}app/assets/img/linea-separadora.png">
+          {embed="includes/modulo-bitacora"}
+          <img class="pv-56 separador"src="{site_url}app/assets/img/linea-separadora.png">
+          {embed="includes/socios-estrategicos"}
+        </div>
+      </section>
+			{embed="includes/formulario"}
+      {embed="includes/estadistica"}
+    </main>
+
+{embed="includes/footer"}
